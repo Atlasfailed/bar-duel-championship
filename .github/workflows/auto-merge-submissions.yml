@@ -5,6 +5,10 @@ on:
     types: [opened, synchronize]
     branches: [main]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   auto-merge:
     # Only run for submission PRs from bot
@@ -12,10 +16,6 @@ jobs:
       startsWith(github.head_ref, 'submissions/bo3-') &&
       github.event.pull_request.user.login == 'Atlasfailed'
     runs-on: ubuntu-latest
-    
-    permissions:
-      contents: write
-      pull-requests: write
     
     steps:
       - name: Checkout repository
@@ -61,26 +61,18 @@ jobs:
           echo "✅ Submission validation passed"
           echo "valid=true" >> $GITHUB_OUTPUT
       
-      - name: Auto-approve PR
-        if: steps.validate.outputs.valid == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "👍 Auto-approving submission PR #${{ github.event.pull_request.number }}"
-          gh pr review ${{ github.event.pull_request.number }} --approve --body "✅ Automated approval: Submission validated successfully"
-      
       - name: Merge PR
         if: steps.validate.outputs.valid == 'true'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "🔀 Merging submission PR #${{ github.event.pull_request.number }}"
           gh pr merge ${{ github.event.pull_request.number }} \
             --squash \
-            --auto \
             --delete-branch \
+            --admin \
             --subject "✅ ${{ github.event.pull_request.title }}" \
-            --body "Automated merge of validated submission"
+            --body "🤖 Automated merge of validated submission"
       
       - name: Summary
         if: always()

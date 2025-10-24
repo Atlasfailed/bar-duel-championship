@@ -1,0 +1,34 @@
+{
+  "players": [
+    "Stargamer605",
+    "lolh2o"
+  ],
+  "series_winner": "Stargamer605",
+  "wins": {
+    "Stargamer605": 2,
+    "lolh2o": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "d9df4e686c51ad803bd6c5706d95c710",
+      "map": "Ancient Bastion Remake 0.5",
+      "winner": "lolh2o",
+      "duration_ms": 8107134
+    },
+    {
+      "id": "5b2d5068ef9cd7f0890dafe2a6c7b1e3",
+      "map": "Flats and Forests v2.2",
+      "winner": "Stargamer605",
+      "duration_ms": 5038534
+    },
+    {
+      "id": "96df536848a5f027d7b9441166f3e74e",
+      "map": "Flats and Forests v2.2",
+      "winner": "Stargamer605",
+      "duration_ms": 5783534
+    }
+  ],
+  "submitted_at": "2025-10-24T15:05:23.325433+00:00",
+  "submitted_by": "atlasfailed"
+}

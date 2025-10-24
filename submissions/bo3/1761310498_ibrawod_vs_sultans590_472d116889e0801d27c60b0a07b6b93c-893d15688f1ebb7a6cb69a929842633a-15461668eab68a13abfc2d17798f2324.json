@@ -1,0 +1,34 @@
+{
+  "players": [
+    "ibrawod",
+    "sultans590"
+  ],
+  "series_winner": "ibrawod",
+  "wins": {
+    "ibrawod": 3,
+    "sultans590": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "472d116889e0801d27c60b0a07b6b93c",
+      "map": "All That Glitters v2.2",
+      "winner": "ibrawod",
+      "duration_ms": 3974867
+    },
+    {
+      "id": "893d15688f1ebb7a6cb69a929842633a",
+      "map": "Full Metal Plate 1.7",
+      "winner": "ibrawod",
+      "duration_ms": 5455967
+    },
+    {
+      "id": "15461668eab68a13abfc2d17798f2324",
+      "map": "Full Metal Plate 1.7",
+      "winner": "ibrawod",
+      "duration_ms": 14168000
+    }
+  ],
+  "submitted_at": "2025-10-24T12:54:58.257755+00:00",
+  "submitted_by": "atlasfailed"
+}

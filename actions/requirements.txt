@@ -1,3 +1,6 @@
-# No external dependencies needed for basic leaderboard processing
-# If you need advanced ranking calculations, add:
-# openskill>=5.0.0
+# OpenSkill rating system for skill-based matchmaking
+openskill>=5.0.0
+
+# If you need advanced features, add them below:
+# pandas  # For data analysis
+# numpy   # For numerical computations

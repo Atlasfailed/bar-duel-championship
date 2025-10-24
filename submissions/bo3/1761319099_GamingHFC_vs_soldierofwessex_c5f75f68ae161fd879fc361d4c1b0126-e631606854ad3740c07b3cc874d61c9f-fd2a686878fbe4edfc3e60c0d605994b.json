@@ -1,0 +1,64 @@
+{
+  "players": [
+    "GamingHFC",
+    "soldierofwessex"
+  ],
+  "series_winner": "GamingHFC",
+  "wins": {
+    "GamingHFC": 3,
+    "soldierofwessex": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "c5f75f68ae161fd879fc361d4c1b0126",
+      "map": "Asteroid_Mines_V3",
+      "winner": "GamingHFC",
+      "duration_ms": 4933600,
+      "seed_ratings": {
+        "soldierofwessex": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "GamingHFC": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "e631606854ad3740c07b3cc874d61c9f",
+      "map": "Cloud9_V2",
+      "winner": "GamingHFC",
+      "duration_ms": 4011034,
+      "seed_ratings": {
+        "soldierofwessex": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "GamingHFC": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "fd2a686878fbe4edfc3e60c0d605994b",
+      "map": "Ancient Bastion Remake 0.5",
+      "winner": "GamingHFC",
+      "duration_ms": 8725667,
+      "seed_ratings": {
+        "soldierofwessex": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "GamingHFC": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-10-24T15:18:19.304897+00:00",
+  "submitted_by": "atlasfailed"
+}

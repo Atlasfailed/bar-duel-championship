@@ -1,0 +1,34 @@
+{
+  "players": [
+    "TwoInchTiger",
+    "peterthegreat"
+  ],
+  "series_winner": "TwoInchTiger",
+  "wins": {
+    "TwoInchTiger": 3,
+    "peterthegreat": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "6ec11f684be234d16587a65da144191a",
+      "map": "All That Glitters v2.2",
+      "winner": "TwoInchTiger",
+      "duration_ms": 6499500
+    },
+    {
+      "id": "8ddb1f683607e388da90d09e3544aec8",
+      "map": "All That Glitters v2.2",
+      "winner": "TwoInchTiger",
+      "duration_ms": 6173734
+    },
+    {
+      "id": "ccf41f684d8f7088a30027825a51ab98",
+      "map": "All That Glitters v2.2",
+      "winner": "TwoInchTiger",
+      "duration_ms": 6175634
+    }
+  ],
+  "submitted_at": "2025-10-24T15:11:25.727473+00:00",
+  "submitted_by": "atlasfailed"
+}

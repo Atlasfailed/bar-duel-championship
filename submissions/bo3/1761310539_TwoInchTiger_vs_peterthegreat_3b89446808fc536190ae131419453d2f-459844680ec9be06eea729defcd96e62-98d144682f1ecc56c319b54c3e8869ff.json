@@ -1,0 +1,34 @@
+{
+  "players": [
+    "TwoInchTiger",
+    "peterthegreat"
+  ],
+  "series_winner": "TwoInchTiger",
+  "wins": {
+    "TwoInchTiger": 3,
+    "peterthegreat": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "3b89446808fc536190ae131419453d2f",
+      "map": "World In Flames v1.8",
+      "winner": "TwoInchTiger",
+      "duration_ms": 3700767
+    },
+    {
+      "id": "459844680ec9be06eea729defcd96e62",
+      "map": "World In Flames v1.8",
+      "winner": "TwoInchTiger",
+      "duration_ms": 14352801
+    },
+    {
+      "id": "98d144682f1ecc56c319b54c3e8869ff",
+      "map": "World In Flames v1.8",
+      "winner": "TwoInchTiger",
+      "duration_ms": 5432801
+    }
+  ],
+  "submitted_at": "2025-10-24T12:55:38.739127+00:00",
+  "submitted_by": "atlasfailed"
+}

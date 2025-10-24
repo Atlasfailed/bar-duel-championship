@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-10-24T14:00:00Z",
+  "players": ["jel523", "luca234"],
+  "series_winner": "luca234",
+  "wins": {
+    "jel523": 0,
+    "luca234": 3
+  },
+  "replays": [
+    {
+      "id": "abc713686b5552dc09568b8d2b83e26e",
+      "mapname": "Unknown",
+      "players": [
+        {"name": "jel523", "skill": 15.0},
+        {"name": "luca234", "skill": 18.0}
+      ],
+      "winner": "luca234",
+      "startTime": "2025-05-04T10:00:00.000Z",
+      "duration_ms": 10000000
+    },
+    {
+      "id": "2964146806f0d15134816eab79e66eda",
+      "mapname": "Unknown",
+      "players": [
+        {"name": "jel523", "skill": 15.0},
+        {"name": "luca234", "skill": 18.0}
+      ],
+      "winner": "luca234",
+      "startTime": "2025-05-04T10:30:00.000Z",
+      "duration_ms": 9500000
+    },
+    {
+      "id": "157d1468191ab37850b97d5d6414159c",
+      "mapname": "Unknown",
+      "players": [
+        {"name": "jel523", "skill": 15.0},
+        {"name": "luca234", "skill": 18.0}
+      ],
+      "winner": "luca234",
+      "startTime": "2025-05-04T11:00:00.000Z",
+      "duration_ms": 8000000
+    }
+  ]
+}

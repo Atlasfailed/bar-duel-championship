@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-10-24T15:00:00Z",
+  "players": ["DocStudios", "luca234"],
+  "series_winner": "DocStudios",
+  "wins": {
+    "DocStudios": 2,
+    "luca234": 1
+  },
+  "replays": [
+    {
+      "id": "test1111111111111111111111111111111",
+      "mapname": "Test Map",
+      "players": [
+        {"name": "DocStudios", "skill": 14.8},
+        {"name": "luca234", "skill": 18.0}
+      ],
+      "winner": "DocStudios",
+      "startTime": "2025-05-04T15:00:00.000Z",
+      "duration_ms": 12000000
+    },
+    {
+      "id": "test2222222222222222222222222222222",
+      "mapname": "Test Map",
+      "players": [
+        {"name": "DocStudios", "skill": 14.8},
+        {"name": "luca234", "skill": 18.0}
+      ],
+      "winner": "luca234",
+      "startTime": "2025-05-04T15:30:00.000Z",
+      "duration_ms": 11000000
+    },
+    {
+      "id": "test3333333333333333333333333333333",
+      "mapname": "Test Map",
+      "players": [
+        {"name": "DocStudios", "skill": 14.8},
+        {"name": "luca234", "skill": 18.0}
+      ],
+      "winner": "DocStudios",
+      "startTime": "2025-05-04T16:00:00.000Z",
+      "duration_ms": 10000000
+    }
+  ]
+}

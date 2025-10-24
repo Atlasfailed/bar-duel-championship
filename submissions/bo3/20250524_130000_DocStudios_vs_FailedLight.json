@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-10-24T13:00:00Z",
+  "players": ["DocStudios", "FailedLight"],
+  "series_winner": "FailedLight",
+  "wins": {
+    "DocStudios": 1,
+    "FailedLight": 2
+  },
+  "replays": [
+    {
+      "id": "9b001768e1e004286a06b7de3bea6fce",
+      "mapname": "Omega Valley V1.01",
+      "players": [
+        {"name": "DocStudios", "skill": 14.8},
+        {"name": "FailedLight", "skill": 17.12}
+      ],
+      "winner": "FailedLight",
+      "startTime": "2025-05-04T05:52:27.000Z",
+      "duration_ms": 13477101
+    },
+    {
+      "id": "a62f1d681b55ac6c3e5884af42ae1a40",
+      "mapname": "Unknown",
+      "players": [
+        {"name": "DocStudios", "skill": 14.8},
+        {"name": "FailedLight", "skill": 17.12}
+      ],
+      "winner": "DocStudios",
+      "startTime": "2025-05-04T06:15:00.000Z",
+      "duration_ms": 12000000
+    },
+    {
+      "id": "95d51e68ef4c1ba09cc188f6891fb759",
+      "mapname": "Unknown",
+      "players": [
+        {"name": "DocStudios", "skill": 14.8},
+        {"name": "FailedLight", "skill": 17.12}
+      ],
+      "winner": "FailedLight",
+      "startTime": "2025-05-04T06:45:00.000Z",
+      "duration_ms": 11000000
+    }
+  ]
+}

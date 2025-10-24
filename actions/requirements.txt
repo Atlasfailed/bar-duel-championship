@@ -1,0 +1,3 @@
+# No external dependencies needed for basic leaderboard processing
+# If you need advanced ranking calculations, add:
+# openskill>=5.0.0

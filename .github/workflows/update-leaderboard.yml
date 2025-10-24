@@ -1,0 +1,85 @@
+name: Update Leaderboard
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+    paths: ['submissions/bo3/**']
+  workflow_dispatch:
+  schedule:
+    # Run every hour to catch any missed updates
+    - cron: '0 * * * *'
+
+jobs:
+  update-leaderboard:
+    # Only run when PR is merged or manually triggered
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Add any dependencies if needed in the future
+          # pip install -r actions/requirements.txt
+      
+      - name: Update leaderboard
+        run: |
+          echo "🔄 Processing submissions and updating leaderboard..."
+          python actions/update_leaderboard.py
+          echo "✅ Leaderboard update complete"
+      
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet public/data/leaderboard.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ No leaderboard changes detected"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "📊 Leaderboard changes detected"
+          fi
+      
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/data/leaderboard.json
+          git commit -m "🏆 Update leaderboard [skip ci]
+
+          Automated leaderboard update from GitHub Actions
+          - Processed latest submissions
+          - Updated player rankings and statistics
+          
+          Triggered by: ${{ github.event_name }}"
+          git push
+      
+      - name: Summary
+        run: |
+          echo "## 🏆 Leaderboard Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.changes.outputs.changed }}" == "true" ]; then
+            echo "✅ **Leaderboard updated successfully**" >> $GITHUB_STEP_SUMMARY
+            echo "📊 Changes committed and pushed to repository" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ **No changes needed**" >> $GITHUB_STEP_SUMMARY
+            echo "📊 Leaderboard is already up to date" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🌐 **Live leaderboard**: https://atlasfailed.github.io/bar-duel-championship/" >> $GITHUB_STEP_SUMMARY

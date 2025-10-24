@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAR Duel Circuit Leaderboard</title>
+  <meta name="description" content="Live standings for the Beyond All Reason Duel Circuit with automatic updates and tiered rankings.">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <style>
+    body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0}
+    .container{max-width:900px;margin:2rem auto;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:2rem}
+    h1{text-align:center;border-bottom:1px solid #30363d;padding-bottom:1rem;margin-top:0}
+    .table-container{overflow-x:auto;border-radius:8px;border:1px solid #30363d}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:1rem;border-bottom:1px solid #30363d;text-align:left}
+    th{color:#8b949e;font-weight:600}
+    tbody tr:hover{background:#1c2128}
+    td.rank{text-align:center;color:#58a6ff;font-weight:700}
+    .summary-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-bottom:30px}
+    .summary-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;text-align:center}
+    .summary-number{font-size:2em;color:#58a6ff;font-weight:bold;display:block}
+    .header-status{margin:1rem auto 2rem;padding:1rem;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.05);text-align:center}
+    .footer-logo{display:block;margin:2rem auto 0;max-height:70px;opacity:.7}
+    .tier-badge img{height:1.2em;width:1.2em;vertical-align:middle;margin-right:0.3em;display:inline-block}
+    .tier-heading .tier-badge img{height:1.4em;width:1.4em}
+    .tier-chip .tier-badge img{height:1em;width:1em;margin-right:0.25em}
+    h1 .tier-badge img{height:1.5em;width:1.5em}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1 id="leaderboardTitle">
+           BAR Duel Circuit Leaderboard
+    </h1>
+
+    <section class="summary-stats" id="stats">
+      <article class="summary-card">
+        <span class="summary-number" id="total-players">-</span>
+        <span class="summary-label">Players</span>
+      </article>
+      <article class="summary-card">
+        <span class="summary-number" id="total-matches">-</span>
+        <span class="summary-label">Matches played</span>
+      </article>
+      <article class="summary-card">
+        <span class="summary-number" id="active-tiers">-</span>
+        <span class="summary-label">Active tiers</span>
+      </article>
+    </section>
+
+    <div class="last-updated" style="text-align:center;color:#8b949e;margin-bottom:1.5rem;font-style:italic;">
+      Last updated: <span id="update-time">-</span>
+    </div>
+
+    <div id="leaderboard" class="table-container">
+      <div class="loading">Loading leaderboard…</div>
+    </div>
+  </main>
+
+  <footer>
+    <img src="static/images/tiers/gold.svg" alt="" class="footer-logo">
+  </footer>
+
+  <script>
+    const LEADERBOARD_URL = 'https://raw.githubusercontent.com/Atlasfailed/bar-duel-championship/main/public/data/leaderboard.json';
+    const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
+    const TIER_ORDER = ['Master','Diamond','Platinum','Gold','Silver','Bronze'];
+    let hasRenderedLeaderboard = false;
+
+    function escapeHtml(value){
+      const div=document.createElement('div'); div.textContent=value ?? ''; return div.innerHTML;
+    }
+
+    function getTierBadgeHTML(tier){
+      const map={ Master:'master', Diamond:'diamond', Platinum:'platinum', Gold:'gold', Silver:'silver', Bronze:'bronze' };
+      const key=map[tier] || 'bronze';
+      const src=`static/images/tiers/${key}.svg`;
+      const alt=`${tier} badge`;
+      return `<span class="tier-badge" aria-hidden="true"><img src="${src}" alt="${alt}" loading="lazy"></span>`;
+    }
+
+    async function loadLeaderboard(){
+      const leaderboardEl=document.getElementById('leaderboard');
+      if (leaderboardEl && !hasRenderedLeaderboard){
+        leaderboardEl.innerHTML='<div class="loading">Loading leaderboard…</div>';
+      }
+      try{
+        const response=await fetch(`${LEADERBOARD_URL}?t=${Date.now()}`);
+        if(!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        const data=await response.json();
+        displayLeaderboard(data);
+        updateStats(data);
+      }catch(err){
+        if (!leaderboardEl) return;
+        leaderboardEl.innerHTML=`
+          <div class="error" style="text-align:center;padding:2rem;color:#dc3545;border:1px solid #dc3545;border-radius:8px;margin:20px 0;">
+            <h3 style="margin:0 0 .5rem 0;color:#dc3545">Failed to load leaderboard</h3>
+            <p style="margin:0 0 1rem 0;color:#8b949e">${escapeHtml(err.message)}</p>
+            <button class="retry-button" type="button" style="padding:.6rem 1rem;background:#58a6ff;color:#0d1117;border:1px solid #58a6ff;border-radius:6px;cursor:pointer;">Retry</button>
+          </div>`;
+        const btn=leaderboardEl.querySelector('.retry-button');
+        if(btn){ btn.addEventListener('click', ()=>{ hasRenderedLeaderboard=false; loadLeaderboard(); }); }
+      }
+    }
+
+    function displayLeaderboard(players){
+      const leaderboardEl=document.getElementById('leaderboard');
+      if(!leaderboardEl) return;
+      if(!Array.isArray(players) || players.length===0){
+        leaderboardEl.innerHTML='<div class="message" style="text-align:center;padding:2rem;color:#8b949e;">No players found</div>';
+        hasRenderedLeaderboard=true; return;
+      }
+
+      const tierGroups={};
+      players.forEach((player, idx)=>{
+        const tier=player.tier || 'Bronze';
+        (tierGroups[tier] ||= []).push({ ...player, globalRank: idx+1 });
+      });
+
+      const renderTierSection=(tier, group)=>{
+        if(!group || group.length===0) return '';
+        const safeTier=tier || 'Bronze';
+        const tierClass=`tier-${safeTier.toLowerCase()}`;
+        const tierHeading=`<span class="tier-heading-wrap">${getTierBadgeHTML(safeTier)}<span>${escapeHtml(safeTier)} Tier</span></span>`;
+
+        let html = `<tbody data-tier="${escapeHtml(safeTier)}">
+          <tr class="tier-heading ${tierClass}">
+            <td colspan="7">${tierHeading}</td>
+          </tr>`;
+
+        group.forEach(p=>{
+          const wins = Number(p.wins)||0, losses=Number(p.losses)||0;
+          const total = wins+losses, winRate = total>0 ? ((wins/total)*100).toFixed(1) : '0.0';
+          const pointsDisplay = Number.isFinite(+p.points) ? (+p.points).toLocaleString() : (p.points ?? 0);
+          const sosDisplay = Number.isFinite(+p.sos) ? (+p.sos).toFixed(1) : (p.sos ?? 0);
+          const name = escapeHtml(p.player || 'Unknown');
+          const meta = [p.team, p.country].filter(Boolean).map(escapeHtml).join(' &bull; ');
+          const metaHtml = meta ? `<span class="player-meta" style="display:block;margin-top:.2rem;color:#8b949e;font-size:.85rem;">${meta}</span>` : '';
+
+          html += `<tr class="player-row ${tierClass}">
+            <td class="rank">#${p.globalRank}</td>
+            <td><span class="player-name" style="font-weight:600;color:#c9d1d9">${name}</span>${metaHtml}</td>
+            <td class="tier-cell">
+              <span class="tier-chip" aria-label="${escapeHtml(safeTier)} tier">
+                ${getTierBadgeHTML(safeTier)}<span>${escapeHtml(safeTier)}</span>
+              </span>
+            </td>
+            <td class="points" style="font-family:'Courier New',monospace;color:#58a6ff;font-weight:600">${pointsDisplay}</td>
+            <td class="record">${wins}W-${losses}L</td>
+            <td class="win-rate">${winRate}%</td>
+            <td class="sos">${sosDisplay}</td>
+          </tr>`;
+        });
+
+        html += '</tbody>';
+        return html;
+      };
+
+      let table = `<table aria-describedby="leaderboardTitle">
+        <thead>
+          <tr>
+            <th scope="col" class="rank">Rank</th>
+            <th scope="col">Player</th>
+            <th scope="col">Tier</th>
+            <th scope="col">Points</th>
+            <th scope="col">Record</th>
+            <th scope="col">Win Rate</th>
+            <th scope="col">SoS</th>
+          </tr>
+        </thead>`;
+
+      const rendered = new Set();
+      ['Master','Diamond','Platinum','Gold','Silver','Bronze'].forEach(t=>{
+        const sec=renderTierSection(t, tierGroups[t]);
+        if (sec){ table += sec; rendered.add(t); }
+      });
+
+      Object.keys(tierGroups).filter(t=>!rendered.has(t)).sort().forEach(t=>{
+        const sec=renderTierSection(t, tierGroups[t]); if (sec) table += sec;
+      });
+
+      table += '</table>';
+      leaderboardEl.innerHTML = table;
+      hasRenderedLeaderboard = true;
+    }
+
+    function updateStats(players){
+      const totalPlayersEl=document.getElementById('total-players');
+      const totalMatchesEl=document.getElementById('total-matches');
+      const activeTiersEl=document.getElementById('active-tiers');
+      const updateTimeEl=document.getElementById('update-time');
+
+      const totalPlayers=players.length;
+      const totalMatches=Math.floor(players.reduce((s,p)=>s+(+p.wins||0)+(+p.losses||0),0)/2);
+      const activeTiers=new Set(players.map(p=>p.tier||'Bronze')).size;
+
+      if(totalPlayersEl) totalPlayersEl.textContent=totalPlayers.toLocaleString();
+      if(totalMatchesEl) totalMatchesEl.textContent=totalMatches.toLocaleString();
+      if(activeTiersEl) activeTiersEl.textContent=String(activeTiers);
+      if(updateTimeEl) updateTimeEl.textContent=new Date().toLocaleString();
+    }
+
+    loadLeaderboard();
+    setInterval(loadLeaderboard, REFRESH_INTERVAL_MS);
+  </script>
+</body>
+</html>

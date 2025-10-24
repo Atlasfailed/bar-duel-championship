@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAR League Status</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .status {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 5px solid;
+        }
+        
+        .status.online {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        
+        .status.loading {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        
+        .link {
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        .link:hover {
+            background: #0056b3;
+        }
+        
+        .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 BAR League Status</h1>
+            <p>Real-time status of tournament systems</p>
+        </div>
+        
+        <div id="data-status" class="status loading">
+            <span class="icon">📊</span>
+            <div>
+                <strong>Leaderboard Data</strong><br>
+                <span id="data-info">Checking connection...</span>
+            </div>
+        </div>
+        
+        <div id="pages-status" class="status loading">
+            <span class="icon">🌐</span>
+            <div>
+                <strong>GitHub Pages</strong><br>
+                <span id="pages-info">Verifying deployment...</span>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="index.html" class="link">📊 Full Leaderboard</a>
+            <a href="mobile.html" class="link">📱 Mobile View</a>
+            <a href="https://github.com/Atlasfailed/bar-duel-championship" class="link">📂 Source Code</a>
+        </div>
+        
+        <div style="margin-top: 20px; text-align: center; color: #666; font-size: 0.9em;">
+            <div id="last-check">Last checked: <span id="check-time">-</span></div>
+        </div>
+    </div>
+
+    <script>
+        async function checkStatus() {
+            const dataUrl = 'https://raw.githubusercontent.com/gehuybre/bar-league/main/public/data/leaderboard.json';
+            
+            // Check data availability
+            try {
+                const response = await fetch(dataUrl + '?t=' + Date.now());
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('data-status').className = 'status online';
+                    document.getElementById('data-info').textContent = `${data.length} players, last updated ${new Date().toLocaleTimeString()}`;
+                } else {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+            } catch (error) {
+                document.getElementById('data-status').className = 'status error';
+                document.getElementById('data-info').textContent = `Connection failed: ${error.message}`;
+            }
+            
+            // Check GitHub Pages
+            try {
+                const response = await fetch('index.html', { method: 'HEAD' });
+                if (response.ok) {
+                    document.getElementById('pages-status').className = 'status online';
+                    document.getElementById('pages-info').textContent = 'GitHub Pages deployed and accessible';
+                } else {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+            } catch (error) {
+                document.getElementById('pages-status').className = 'status error';
+                document.getElementById('pages-info').textContent = `Deployment issue: ${error.message}`;
+            }
+            
+            document.getElementById('check-time').textContent = new Date().toLocaleString();
+        }
+        
+        // Initial check
+        checkStatus();
+        
+        // Recheck every 30 seconds
+        setInterval(checkStatus, 30000);
+    </script>
+</body>
+</html>

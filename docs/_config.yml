@@ -1,0 +1,17 @@
+# GitHub Pages configuration
+title: "BAR League Leaderboard"
+description: "Live tournament rankings for Beyond All Reason League"
+
+# Disable Jekyll processing for faster deployment
+plugins: []
+markdown: kramdown
+
+# Include HTML files
+include:
+  - "*.html"
+  - "_*"
+
+# Exclude unnecessary files  
+exclude:
+  - "*.md"
+  - "README.md"

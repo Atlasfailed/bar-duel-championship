@@ -1,0 +1,7 @@
+# Bot - Ignore environment and data
+.env
+.env-*
+data/
+__pycache__/
+*.pyc
+.DS_Store

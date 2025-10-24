@@ -76,14 +76,42 @@ def validate_replay(replay: Dict[str, Any]) -> Dict[str, Any]:
     host_settings = replay.get("hostSettings", {})
     map_name = host_settings.get("mapname", "Unknown")
     
-    players_data = replay.get("AllyTeams", [{}])[0].get("Players", [])
+    # Get all players from ALL AllyTeams (not just the first one)
+    players_data = []
+    ally_teams = replay.get("AllyTeams", [])
+    
+    for ally_team in ally_teams:
+        team_players = ally_team.get("Players", [])
+        for player in team_players:
+            # Only include actual players (with valid team IDs), exclude spectators/bots
+            team_id = player.get("teamId")
+            if team_id is not None and team_id >= 0:
+                players_data.append(player)
+    
     if len(players_data) != 2:
-        raise ValueError("Replay must have exactly 2 players")
+        raise ValueError(f"Replay must have exactly 2 players, found {len(players_data)} (excluding spectators)")
+    
+    def parse_skill(skill_value):
+        """Parse skill value, handling formats like '[16.67]' or '16.67' or numbers"""
+        if not skill_value:
+            return 0.0
+        
+        # Convert to string and strip whitespace
+        skill_str = str(skill_value).strip()
+        
+        # Remove square brackets if present
+        if skill_str.startswith('[') and skill_str.endswith(']'):
+            skill_str = skill_str[1:-1]
+        
+        try:
+            return float(skill_str)
+        except (ValueError, TypeError):
+            return 0.0
     
     players = []
     for p in players_data:
         name = p.get("name") or p.get("Name") or "Unknown"
-        skill = float(p.get("skill", 0) or p.get("Skill", 0) or 0)
+        skill = parse_skill(p.get("skill") or p.get("Skill"))
         players.append({"name": name, "skill": skill})
     
     winner_id = replay.get("gamestats", {}).get("winningTeamId")
@@ -201,7 +229,7 @@ async def create_github_pr(session: aiohttp.ClientSession, payload: Dict, replay
 # ====== DISCORD BOT SETUP ======
 
 intents = discord.Intents.default()
-intents.message_content = True
+# Note: message_content intent not needed since we only use slash commands
 client = discord.Client(intents=intents)
 tree = app_commands.CommandTree(client)
 

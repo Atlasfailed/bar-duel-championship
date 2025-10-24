@@ -1,0 +1,34 @@
+{
+  "players": [
+    "KiiiTZZZ",
+    "PuTZiii"
+  ],
+  "series_winner": "PuTZiii",
+  "wins": {
+    "KiiiTZZZ": 0,
+    "PuTZiii": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "664028683d979d49ade59ba642c102df",
+      "map": "Comet Catcher Remake 1.8",
+      "winner": "PuTZiii",
+      "duration_ms": 15933100
+    },
+    {
+      "id": "2e832868f84e4612e43fcf88e87b96ad",
+      "map": "Comet Catcher Remake 1.8",
+      "winner": "PuTZiii",
+      "duration_ms": 3742767
+    },
+    {
+      "id": "eb962868144050737377ad994697975d",
+      "map": "Crescent_Bay_V2",
+      "winner": "PuTZiii",
+      "duration_ms": 310467
+    }
+  ],
+  "submitted_at": "2025-10-24T14:17:47.526719+00:00",
+  "submitted_by": "atlasfailed"
+}

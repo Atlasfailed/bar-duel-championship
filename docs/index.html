@@ -111,75 +111,47 @@
         hasRenderedLeaderboard=true; return;
       }
 
-      const tierGroups={};
-      players.forEach((player, idx)=>{
-        const tier=player.tier || 'Bronze';
-        (tierGroups[tier] ||= []).push({ ...player, globalRank: idx+1 });
-      });
-
-      const renderTierSection=(tier, group)=>{
-        if(!group || group.length===0) return '';
-        const safeTier=tier || 'Bronze';
-        const tierClass=`tier-${safeTier.toLowerCase()}`;
-        const tierHeading=`<span class="tier-heading-wrap">${getTierBadgeHTML(safeTier)}<span>${escapeHtml(safeTier)} Tier</span></span>`;
-
-        let html = `<tbody data-tier="${escapeHtml(safeTier)}">
-          <tr class="tier-heading ${tierClass}">
-            <td colspan="7">${tierHeading}</td>
-          </tr>`;
-
-        group.forEach(p=>{
-          const wins = Number(p.wins)||0, losses=Number(p.losses)||0;
-          const total = wins+losses, winRate = total>0 ? ((wins/total)*100).toFixed(1) : '0.0';
-          const pointsDisplay = Number.isFinite(+p.points) ? (+p.points).toLocaleString() : (p.points ?? 0);
-          const sosDisplay = Number.isFinite(+p.sos) ? (+p.sos).toFixed(1) : (p.sos ?? 0);
-          const name = escapeHtml(p.player || 'Unknown');
-          const meta = [p.team, p.country].filter(Boolean).map(escapeHtml).join(' &bull; ');
-          const metaHtml = meta ? `<span class="player-meta" style="display:block;margin-top:.2rem;color:#8b949e;font-size:.85rem;">${meta}</span>` : '';
-
-          html += `<tr class="player-row ${tierClass}">
-            <td class="rank">#${p.globalRank}</td>
-            <td><span class="player-name" style="font-weight:600;color:#c9d1d9">${name}</span>${metaHtml}</td>
-            <td class="tier-cell">
-              <span class="tier-chip" aria-label="${escapeHtml(safeTier)} tier">
-                ${getTierBadgeHTML(safeTier)}<span>${escapeHtml(safeTier)}</span>
-              </span>
-            </td>
-            <td class="points" style="font-family:'Courier New',monospace;color:#58a6ff;font-weight:600">${pointsDisplay}</td>
-            <td class="record">${wins}W-${losses}L</td>
-            <td class="win-rate">${winRate}%</td>
-            <td class="sos">${sosDisplay}</td>
-          </tr>`;
-        });
-
-        html += '</tbody>';
-        return html;
-      };
-
       let table = `<table aria-describedby="leaderboardTitle">
         <thead>
           <tr>
             <th scope="col" class="rank">Rank</th>
             <th scope="col">Player</th>
             <th scope="col">Tier</th>
-            <th scope="col">Points</th>
+            <th scope="col">MMR</th>
             <th scope="col">Record</th>
             <th scope="col">Win Rate</th>
             <th scope="col">SoS</th>
           </tr>
-        </thead>`;
+        </thead>
+        <tbody>`;
 
-      const rendered = new Set();
-      ['Master','Diamond','Platinum','Gold','Silver','Bronze'].forEach(t=>{
-        const sec=renderTierSection(t, tierGroups[t]);
-        if (sec){ table += sec; rendered.add(t); }
+      players.forEach((p, idx)=>{
+        const wins = Number(p.wins)||0, losses=Number(p.losses)||0;
+        const total = wins+losses, winRate = total>0 ? ((wins/total)*100).toFixed(1) : '0.0';
+        const mmrDisplay = Number.isFinite(+p.mmr) ? (+p.mmr).toLocaleString() : (p.mmr ?? 0);
+        const sosDisplay = Number.isFinite(+p.sos) ? (+p.sos).toFixed(1) : (p.sos ?? 0);
+        const name = escapeHtml(p.player || 'Unknown');
+        const tier = p.tier || 'Bronze';
+        const tierClass = `tier-${tier.toLowerCase()}`;
+        const meta = [p.team, p.country].filter(Boolean).map(escapeHtml).join(' &bull; ');
+        const metaHtml = meta ? `<span class="player-meta" style="display:block;margin-top:.2rem;color:#8b949e;font-size:.85rem;">${meta}</span>` : '';
+
+        table += `<tr class="player-row ${tierClass}">
+          <td class="rank">#${idx+1}</td>
+          <td><span class="player-name" style="font-weight:600;color:#c9d1d9">${name}</span>${metaHtml}</td>
+          <td class="tier-cell">
+            <span class="tier-chip" aria-label="${escapeHtml(tier)} tier">
+              ${getTierBadgeHTML(tier)}<span>${escapeHtml(tier)}</span>
+            </span>
+          </td>
+          <td class="mmr" style="font-family:'Courier New',monospace;color:#58a6ff;font-weight:600">${mmrDisplay}</td>
+          <td class="record">${wins}W-${losses}L</td>
+          <td class="win-rate">${winRate}%</td>
+          <td class="sos">${sosDisplay}</td>
+        </tr>`;
       });
 
-      Object.keys(tierGroups).filter(t=>!rendered.has(t)).sort().forEach(t=>{
-        const sec=renderTierSection(t, tierGroups[t]); if (sec) table += sec;
-      });
-
-      table += '</table>';
+      table += '</tbody></table>';
       leaderboardEl.innerHTML = table;
       hasRenderedLeaderboard = true;
     }

@@ -1,0 +1,34 @@
+{
+  "players": [
+    "Kob",
+    "xMAYHEMx"
+  ],
+  "series_winner": "xMAYHEMx",
+  "wins": {
+    "Kob": 0,
+    "xMAYHEMx": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "6fb64b683ed32e9cda1af01b06a39ab4",
+      "map": "Full Metal Plate 1.7",
+      "winner": "xMAYHEMx",
+      "duration_ms": 2698000
+    },
+    {
+      "id": "c8dc4b68a518c625300c2ef8f9924df6",
+      "map": "Full Metal Plate 1.7",
+      "winner": "xMAYHEMx",
+      "duration_ms": 5821034
+    },
+    {
+      "id": "c05c4f687ad8269fc96004a7ce962276",
+      "map": "Full Metal Plate 1.7",
+      "winner": "xMAYHEMx",
+      "duration_ms": 11939568
+    }
+  ],
+  "submitted_at": "2025-10-24T14:15:57.890945+00:00",
+  "submitted_by": "atlasfailed"
+}

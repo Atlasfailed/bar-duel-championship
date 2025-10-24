@@ -1,0 +1,34 @@
+{
+  "players": [
+    "Kommandant",
+    "MIrzaa"
+  ],
+  "series_winner": "MIrzaa",
+  "wins": {
+    "Kommandant": 0,
+    "MIrzaa": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "d2ba6468d4f433e7edb7afa91bc3c149",
+      "map": "To Kill The Middle v1.1",
+      "winner": "MIrzaa",
+      "duration_ms": 6749500
+    },
+    {
+      "id": "b2096568925ff8449f63ae7bac9e8e75",
+      "map": "Ancient Vault v1.4",
+      "winner": "MIrzaa",
+      "duration_ms": 8730233
+    },
+    {
+      "id": "1a5c66680ab2f55209885e1a63d97c4f",
+      "map": "Special Creek 1.0",
+      "winner": "MIrzaa",
+      "duration_ms": 5697167
+    }
+  ],
+  "submitted_at": "2025-10-24T14:12:50.035501+00:00",
+  "submitted_by": "atlasfailed"
+}

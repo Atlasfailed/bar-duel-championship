@@ -68,6 +68,17 @@ TIER_BANDS = [
     ("Grandmaster",98,  101),  # ≥ P98
 ]
 
+# Tier weights for SoS calculation (higher tier = tougher opponent)
+TIER_WEIGHTS = {
+    "Bronze": 1.0,
+    "Silver": 2.0,
+    "Gold": 3.0,
+    "Platinum": 4.0,
+    "Diamond": 5.0,
+    "Master": 6.0,
+    "Grandmaster": 7.0,
+}
+
 # Optional: scale ordinal to a visible MMR (0–3000 range for UI niceness)
 SCALE_OS_TO_MMR = True
 
@@ -175,9 +186,10 @@ def _write_back(updated_teams, team_names: List[List[str]], ranks: Optional[List
 def calculate_rankings(submissions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
     1) Recompute OpenSkill ratings (ordinal = μ − 3σ) across all submissions.
-    2) Compute SoS per player as the average of opponents' ORDINAL.
-    3) Rank by SoS (desc), using ordinal as a tiebreaker.
-    4) Assign tiers based on SoS percentiles.
+    2) Assign initial tiers based on skill percentiles.
+    3) Compute SoS per player as the average of opponents' TIER WEIGHTS.
+    4) Rank by SoS (desc), using ordinal as a tiebreaker.
+    5) Reassign tiers based on SoS percentiles.
     """
     store: Dict[str, Dict[str, Any]] = _load_previous_ratings()
 
@@ -234,20 +246,23 @@ def calculate_rankings(submissions: List[Dict[str, Any]]) -> List[Dict[str, Any]
             "last_played": data.get("last_played"),
         })
 
-    # Compute SoS = avg opponent ordinal
-    ordinal_by_player = {r["player"]: r["ordinal"] for r in rows}
+    # First pass: assign skill-based tiers (for SoS calculation)
+    rows_temp = _apply_skill_based_tiers(rows)
+    tier_by_player = {r["player"]: r.get("skill_tier", "Bronze") for r in rows_temp}
+
+    # Compute SoS = avg opponent tier weight
     for r in rows:
         opps = opponents.get(r["player"], [])
         if opps:
-            vals = [ordinal_by_player.get(o) for o in opps if o in ordinal_by_player]
-            if vals:
-                r["sos"] = round(sum(vals) / len(vals), 6)
+            weights = [TIER_WEIGHTS.get(tier_by_player.get(o), 1.0) for o in opps if o in tier_by_player]
+            if weights:
+                r["sos"] = round(sum(weights) / len(weights), 6)
             else:
-                r["sos"] = 0.0
+                r["sos"] = 1.0  # default to Bronze weight if no opponents
         else:
-            r["sos"] = 0.0
+            r["sos"] = 1.0  # default to Bronze weight if no matches
 
-    # Assign SoS percentile & Tier
+    # Assign SoS percentile & final Tier based on SoS
     rows = _apply_sos_percentiles_and_tiers(rows)
 
     # Optional: scale OS to MMR for UI
@@ -266,6 +281,19 @@ def calculate_rankings(submissions: List[Dict[str, Any]]) -> List[Dict[str, Any]
 # ==============================
 # SoS percentile / tiers
 # ==============================
+
+def _apply_skill_based_tiers(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Assign temporary skill-based tiers for SoS calculation based on ordinal percentiles."""
+    if not rows:
+        return rows
+    
+    ordinals = sorted([r["ordinal"] for r in rows])
+    
+    for r in rows:
+        p = _percentile_rank(r["ordinal"], ordinals)
+        r["skill_tier"] = _tier_from_percentile(p)
+    
+    return rows
 
 def _percentile_rank(value: float, sorted_values: List[float]) -> float:
     """Return percentile (0-100) of value within sorted_values using rank-based method."""

@@ -1,0 +1,34 @@
+{
+  "players": [
+    "Firezar",
+    "kosmiss"
+  ],
+  "series_winner": "kosmiss",
+  "wins": {
+    "Firezar": 0,
+    "kosmiss": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "b2fa3c68447970c3ba1f82e46a2b308f",
+      "map": "SpeedMetal BAR V2",
+      "winner": "kosmiss",
+      "duration_ms": 1495167
+    },
+    {
+      "id": "4a013d685104bd14fd0d9492ee54bb19",
+      "map": "SpeedMetal BAR V2",
+      "winner": "kosmiss",
+      "duration_ms": 10307568
+    },
+    {
+      "id": "6b3c3e680c17f9093612b638147650d4",
+      "map": "Cloud9_V2",
+      "winner": "kosmiss",
+      "duration_ms": 11052767
+    }
+  ],
+  "submitted_at": "2025-10-24T12:56:48.531267+00:00",
+  "submitted_by": "atlasfailed"
+}

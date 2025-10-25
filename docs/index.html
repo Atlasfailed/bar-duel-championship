@@ -324,10 +324,10 @@
       });
     }
 
-    function displayLeaderboard(players){
+    function displayLeaderboard(entries){
       const leaderboardEl=document.getElementById('leaderboard');
       if(!leaderboardEl) return;
-      if(!Array.isArray(players) || players.length===0){
+      if(!Array.isArray(entries) || entries.length===0){
         leaderboardEl.innerHTML='<div class="message" style="text-align:center;padding:2rem;color:#8b949e;">No players found</div>';
         hasRenderedLeaderboard=true; return;
       }
@@ -341,37 +341,45 @@
             <th scope="col">Champion Rating</th>
             <th scope="col">Record</th>
             <th scope="col">Win Rate</th>
-            <th scope="col">CR Change</th>
           </tr>
         </thead>
         <tbody>`;
 
-      players.forEach((p, idx)=>{
-        const wins = Number(p.wins)||0, losses=Number(p.losses)||0;
-        const total = wins+losses, winRate = total>0 ? ((wins/total)*100).toFixed(1) : '0.0';
-        const crDisplay = Number.isFinite(+p.current_cr) ? (+p.current_cr).toLocaleString() : (p.current_cr ?? 0);
-        const crChange = Number(p.cr_change)||0;
-        const crChangeDisplay = crChange >= 0 ? `+${crChange}` : String(crChange);
-        const crChangeClass = crChange >= 0 ? 'color:#3fb950' : 'color:#f85149';
-        const name = escapeHtml(p.player || 'Unknown');
-        const tier = p.tier || 'Bronze';
-        const tierClass = `tier-${tier.toLowerCase()}`;
-        const meta = [p.team, p.country].filter(Boolean).map(escapeHtml).join(' &bull; ');
-        const metaHtml = meta ? `<span class="player-meta" style="display:block;margin-top:.2rem;color:#8b949e;font-size:.85rem;">${meta}</span>` : '';
+      entries.forEach((entry)=>{
+        if (entry.type === 'tier_header') {
+          table += `<tr class="tier-header-row" style="background:#21262d;border-top:2px solid #30363d;">
+            <td colspan="6" style="padding:1rem;text-align:center;font-weight:700;font-size:1.1em;color:#58a6ff;">
+              ${entry.tier_logo} ${escapeHtml(entry.tier)} TIER (${escapeHtml(entry.tier_info)}) ${entry.tier_logo}
+            </td>
+          </tr>`;
+        } else if (entry.type === 'tier_separator') {
+          table += `<tr class="tier-separator-row" style="height:10px;background:transparent;">
+            <td colspan="6" style="padding:0;border:none;"></td>
+          </tr>`;
+        } else if (entry.type === 'player') {
+          const wins = Number(entry.wins)||0, losses=Number(entry.losses)||0;
+          const total = wins+losses, winRate = total>0 ? ((wins/total)*100).toFixed(1) : '0.0';
+          const crDisplay = Number.isFinite(+entry.current_cr) ? (+entry.current_cr).toLocaleString() : (entry.current_cr ?? 0);
+          const name = escapeHtml(entry.player || 'Unknown');
+          const tier = entry.tier || 'Bronze';
+          const tierClass = `tier-${tier.toLowerCase()}`;
+          const tierRank = entry.tier_rank || '?';
+          const meta = [entry.team, entry.country].filter(Boolean).map(escapeHtml).join(' &bull; ');
+          const metaHtml = meta ? `<span class="player-meta" style="display:block;margin-top:.2rem;color:#8b949e;font-size:.85rem;">${meta}</span>` : '';
 
-        table += `<tr class="player-row ${tierClass}">
-          <td class="rank">#${idx+1}</td>
-          <td><span class="player-name" style="font-weight:600;color:#c9d1d9">${name}</span>${metaHtml}</td>
-          <td class="tier-cell">
-            <span class="tier-chip" aria-label="${escapeHtml(tier)} tier">
-              ${getTierBadgeHTML(tier)}<span>${escapeHtml(tier)}</span>
-            </span>
-          </td>
-          <td class="mmr" style="font-family:'Courier New',monospace;color:#58a6ff;font-weight:600">${crDisplay}</td>
-          <td class="record">${wins}W-${losses}L</td>
-          <td class="win-rate">${winRate}%</td>
-          <td class="cr-change" style="${crChangeClass};font-weight:600">${crChangeDisplay}</td>
-        </tr>`;
+          table += `<tr class="player-row ${tierClass}">
+            <td class="rank">#${tierRank}</td>
+            <td><span class="player-name" style="font-weight:600;color:#c9d1d9">${name}</span>${metaHtml}</td>
+            <td class="tier-cell">
+              <span class="tier-chip" aria-label="${escapeHtml(tier)} tier">
+                ${getTierBadgeHTML(tier)}<span>${escapeHtml(tier)}</span>
+              </span>
+            </td>
+            <td class="mmr" style="font-family:'Courier New',monospace;color:#58a6ff;font-weight:600">${crDisplay}</td>
+            <td class="record">${wins}W-${losses}L</td>
+            <td class="win-rate">${winRate}%</td>
+          </tr>`;
+        }
       });
 
       table += '</tbody></table>';
@@ -379,12 +387,15 @@
       hasRenderedLeaderboard = true;
     }
 
-    function updateStats(players){
+    function updateStats(entries){
       const totalPlayersEl=document.getElementById('total-players');
       const totalMatchesEl=document.getElementById('total-matches');
       const activeTiersEl=document.getElementById('active-tiers');
       const updateTimeEl=document.getElementById('update-time');
 
+      // Filter only player entries
+      const players = entries.filter(entry => entry.type === 'player');
+      
       const totalPlayers=players.length;
       const totalMatches=Math.floor(players.reduce((s,p)=>s+(+p.wins||0)+(+p.losses||0),0)/2);
       const activeTiers=new Set(players.map(p=>p.tier||'Bronze')).size;

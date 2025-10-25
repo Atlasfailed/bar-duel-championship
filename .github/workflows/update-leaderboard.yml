@@ -52,6 +52,13 @@ jobs:
           python actions/extract_replay_data.py
           echo "✅ Replay data extraction complete"
       
+      - name: Copy data files for GitHub Pages
+        run: |
+          echo "📁 Copying data files to docs/ for GitHub Pages..."
+          mkdir -p docs/data
+          cp public/data/*.json docs/data/
+          echo "✅ Data files copied to GitHub Pages directory"
+      
       - name: Check for changes
         id: changes
         run: |
@@ -68,6 +75,18 @@ jobs:
           if ! git diff --quiet public/data/player_match_history.json; then
             CHANGED_FILES="$CHANGED_FILES public/data/player_match_history.json"
             echo "📈 Player match history changes detected"
+          fi
+          if ! git diff --quiet docs/data/leaderboard.json 2>/dev/null; then
+            CHANGED_FILES="$CHANGED_FILES docs/data/leaderboard.json"
+            echo "📊 GitHub Pages leaderboard changes detected"
+          fi
+          if ! git diff --quiet docs/data/replay_database.json 2>/dev/null; then
+            CHANGED_FILES="$CHANGED_FILES docs/data/replay_database.json"
+            echo "🎮 GitHub Pages replay database changes detected"
+          fi
+          if ! git diff --quiet docs/data/player_match_history.json 2>/dev/null; then
+            CHANGED_FILES="$CHANGED_FILES docs/data/player_match_history.json"
+            echo "📈 GitHub Pages match history changes detected"
           fi
           
           if [ -n "$CHANGED_FILES" ]; then

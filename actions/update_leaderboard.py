@@ -272,9 +272,9 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
             "percentile": round(data["percentile"], 2)
         })
     
-    # Sort by tier first, then by current Champion Rating within tier
+    # Sort by tier first (highest tier first), then by current Champion Rating within tier
     tier_order = {name: i for i, (name, _, _, _, _) in enumerate(TIER_DEFINITIONS)}
-    results.sort(key=lambda x: (tier_order.get(x["tier"], 999), -x["current_cr"]))
+    results.sort(key=lambda x: (-tier_order.get(x["tier"], -1), -x["current_cr"]))
     
     # Assign ranks
     for i, r in enumerate(results, 1):
@@ -480,20 +480,35 @@ def update_leaderboard():
     print(f"Leaderboard saved to {LEADERBOARD_FILE}")
     print(f"Updated at {datetime.now(timezone.utc).isoformat()}Z")
 
-    # Print top 3 and summary by tier
+    # Print full leaderboard with tier separations
     if leaderboard:
-        print("\nTop 3 Overall:")
-        for player in leaderboard[:3]:
-            print(f"  {player['rank']}. {player['player']} - {player['current_cr']} CR [{player['tier']}]")
+        print("\n" + "="*60)
+        print("TOURNAMENT LEADERBOARD (Highest Tier First)")
+        print("="*60)
         
-        # Print tier distribution
-        print("\nPlayers by Tier:")
+        current_tier = None
+        for player in leaderboard:
+            # Add tier separator when tier changes
+            if current_tier != player['tier']:
+                if current_tier is not None:
+                    print()  # Extra space between tiers
+                
+                current_tier = player['tier']
+                tier_info = next((f"CR {min_cr}-{max_cr}" for name, _, _, min_cr, max_cr in TIER_DEFINITIONS if name == current_tier), "")
+                print(f"\n--- {current_tier.upper()} TIER ({tier_info}) ---")
+            
+            print(f"  {player['rank']:2d}. {player['player']:15s} {player['current_cr']:4d} CR ({player['wins']:2d}-{player['losses']:2d}) {player['winrate']:5.1f}%")
+        
+        # Print tier distribution summary
+        print(f"\n{'-'*60}")
+        print("TIER DISTRIBUTION:")
         tier_counts = {}
         for player in leaderboard:
             tier = player['tier']
             tier_counts[tier] = tier_counts.get(tier, 0) + 1
         
-        for tier_name, _, _, min_cr, max_cr in TIER_DEFINITIONS:
+        # Print tiers in reverse order (highest first)
+        for tier_name, _, _, min_cr, max_cr in reversed(TIER_DEFINITIONS):
             count = tier_counts.get(tier_name, 0)
             if count > 0:
                 print(f"  {tier_name}: {count} players (CR {min_cr}-{max_cr})")

@@ -123,7 +123,7 @@ def process_submissions() -> List[Dict[str, Any]]:
     submissions_path = Path(SUBMISSIONS_DIR)
 
     if not submissions_path.exists():
-        print("⚠️ No submissions directory found")
+        print("No submissions directory found")
         return []
 
     # Sort by filename for deterministic processing
@@ -132,9 +132,9 @@ def process_submissions() -> List[Dict[str, Any]]:
             with open(file, 'r') as f:
                 data = json.load(f)
                 submissions.append(data)
-                print(f"✅ Loaded submission: {file.name}")
+                print(f"Loaded submission: {file.name}")
         except Exception as e:
-            print(f"⚠️ Failed to load {file.name}: {e}")
+            print(f"Failed to load {file.name}: {e}")
 
     return submissions
 
@@ -179,7 +179,7 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
     2. Assign initial Champion Rating as middle of tier
     3. Calculate Champion Rating changes from OpenSkill changes in matches
     """
-    print("📊 Building player profiles...")
+    print("Building player profiles...")
     
     # Get all players from submissions
     all_players = set()
@@ -214,7 +214,7 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
         
         print(f"  {player}: OS={initial_os:.2f}, P{percentile:.1f}, {tier_name}, CR={initial_cr}")
     
-    print("📊 Processing match results...")
+    print("Processing match results...")
     
     # Process all matches to calculate Champion Rating changes
     for sub in submissions:
@@ -444,15 +444,15 @@ def calculate_rankings(submissions: List[Dict[str, Any]]) -> List[Dict[str, Any]
 
 def update_leaderboard():
     """Main function to update leaderboard"""
-    print("🔄 Processing submissions...")
+    print("Processing submissions...")
 
     # Process submissions
     submissions = process_submissions()
-    print(f"📊 Found {len(submissions)} submissions")
+    print(f"Found {len(submissions)} submissions")
 
     # Calculate rankings using new tier-based Champion Rating system
     leaderboard = calculate_rankings(submissions)
-    print(f"🏆 Ranked {len(leaderboard)} players")
+    print(f"Ranked {len(leaderboard)} players")
 
     # Ensure output directory exists
     os.makedirs(os.path.dirname(LEADERBOARD_FILE), exist_ok=True)
@@ -461,18 +461,18 @@ def update_leaderboard():
     with open(LEADERBOARD_FILE, 'w') as f:
         json.dump(leaderboard, f, indent=2)
 
-    print(f"✅ Leaderboard saved to {LEADERBOARD_FILE}")
-    print(f"📅 Updated at {datetime.now(timezone.utc).isoformat()}Z")
+    print(f"Leaderboard saved to {LEADERBOARD_FILE}")
+    print(f"Updated at {datetime.now(timezone.utc).isoformat()}Z")
 
     # Print top 3 and summary by tier
     if leaderboard:
-        print("\n🏆 Top 3 Overall:")
+        print("\nTop 3 Overall:")
         for player in leaderboard[:3]:
             cr_change_str = f" ({player['cr_change']:+d} CR)" if player['cr_change'] != 0 else ""
             print(f"  {player['rank']}. {player['player']} - {player['current_cr']} CR [{player['tier']}]{cr_change_str}")
         
         # Print tier distribution
-        print("\n📊 Players by Tier:")
+        print("\nPlayers by Tier:")
         tier_counts = {}
         for player in leaderboard:
             tier = player['tier']
@@ -487,10 +487,10 @@ def update_leaderboard():
 if __name__ == "__main__":
     try:
         update_leaderboard()
-        print("\n✅ Leaderboard update complete!")
+        print("\nLeaderboard update complete!")
         sys.exit(0)
     except Exception as e:
-        print(f"\n❌ Update failed: {e}")
+        print(f"\nUpdate failed: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

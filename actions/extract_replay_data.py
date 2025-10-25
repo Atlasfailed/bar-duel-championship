@@ -50,11 +50,11 @@ def fetch_replay_details(replay_id: str) -> Optional[Dict[str, Any]]:
         if response.status_code == 200:
             return response.json()
         else:
-            print(f"⚠️ Failed to fetch replay {replay_id}: HTTP {response.status_code}")
+            print(f"Failed to fetch replay {replay_id}: HTTP {response.status_code}")
             return None
-            
+        
     except Exception as e:
-        print(f"⚠️ Error fetching replay {replay_id}: {e}")
+        print(f"Error fetching replay {replay_id}: {e}")
         return None
 
 
@@ -94,25 +94,25 @@ def process_submissions_for_replay_data() -> List[Dict[str, Any]]:
     submissions_path = Path(SUBMISSIONS_DIR)
 
     if not submissions_path.exists():
-        print("⚠️ No submissions directory found")
+        print("No submissions directory found")
         return []
 
-    print("📊 Loading submissions...")
+    print("Loading submissions...")
     for file in sorted(submissions_path.glob("*.json")):
         try:
             with open(file, 'r') as f:
                 data = json.load(f)
                 submissions.append(data)
-                print(f"✅ Loaded submission: {file.name}")
+                print(f"Loaded submission: {file.name}")
         except Exception as e:
-            print(f"⚠️ Failed to load {file.name}: {e}")
+            print(f"Failed to load {file.name}: {e}")
 
     return submissions
 
 
 def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Extract comprehensive replay database from submissions."""
-    print("📊 Extracting replay data...")
+    print("Extracting replay data...")
     
     replay_database = []
     processed_replays = set()  # Track already processed replay IDs
@@ -177,7 +177,7 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
             # Create replay entry
             replay_entry = {
                 "id": replay_id,
-                "url": f"https://api.bar-rts.com/replays/{replay_id}",
+                "url": f"https://www.beyondallreason.info/replays?gameId={replay_id}",
                 "date": start_time or submission_date,
                 "submitted_at": submission_date,
                 "submitted_by": submitted_by,
@@ -245,7 +245,7 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
             # Create replay entry
             replay_entry = {
                 "id": replay_id,
-                "url": f"https://api.bar-rts.com/replays/{replay_id}",
+                "url": f"https://www.beyondallreason.info/replays?gameId={replay_id}",
                 "date": start_time or submission_date,
                 "submitted_at": submission_date,
                 "submitted_by": submitted_by,
@@ -267,7 +267,7 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
     # Sort by date (newest first)
     replay_database.sort(key=lambda x: x.get("date", ""), reverse=True)
     
-    print(f"📊 Extracted {len(replay_database)} replay entries")
+    print(f"Extracted {len(replay_database)} replay entries")
     return replay_database
 
 
@@ -317,7 +317,7 @@ def generate_replay_tags(player_info: List[Dict[str, Any]], duration_ms: int, ma
 
 def generate_player_match_history(replay_database: List[Dict[str, Any]]) -> Dict[str, Any]:
     """Generate player-specific match history."""
-    print("📊 Generating player match histories...")
+    print("Generating player match histories...")
     
     player_histories = {}
     
@@ -431,11 +431,11 @@ def format_duration(duration_ms: int) -> str:
 
 def extract_replay_data():
     """Main function to extract replay data."""
-    print("🔄 Extracting replay data...")
+    print("Extracting replay data...")
     
     # Load submissions
     submissions = process_submissions_for_replay_data()
-    print(f"📊 Found {len(submissions)} submissions")
+    print(f"Found {len(submissions)} submissions")
     
     # Extract replay database
     replay_database = extract_replay_database(submissions)
@@ -455,13 +455,13 @@ def extract_replay_data():
     with open(PLAYER_MATCH_HISTORY_FILE, 'w') as f:
         json.dump(player_histories, f, indent=2)
     
-    print(f"✅ Replay database saved to {REPLAY_DATABASE_FILE}")
-    print(f"✅ Player match histories saved to {PLAYER_MATCH_HISTORY_FILE}")
-    print(f"📅 Updated at {datetime.now(timezone.utc).isoformat()}Z")
+    print(f"Replay database saved to {REPLAY_DATABASE_FILE}")
+    print(f"Player match histories saved to {PLAYER_MATCH_HISTORY_FILE}")
+    print(f"Updated at {datetime.now(timezone.utc).isoformat()}Z")
     
     # Print summary
     if replay_database:
-        print(f"\n📊 Summary:")
+        print(f"\nSummary:")
         print(f"  Total replays: {len(replay_database)}")
         print(f"  Players tracked: {len(player_histories)}")
         
@@ -484,10 +484,10 @@ def extract_replay_data():
 if __name__ == "__main__":
     try:
         extract_replay_data()
-        print("\n✅ Replay data extraction complete!")
+        print("\nReplay data extraction complete!")
         sys.exit(0)
     except Exception as e:
-        print(f"\n❌ Extraction failed: {e}")
+        print(f"\nExtraction failed: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

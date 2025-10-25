@@ -1,3 +1,6 @@
+#!IMPORTANT
+# bot is running at https://www.pella.app/server/d6b8888df5f04ad18463ce985baabe21/overview
+
 """
 Standalone Discord Bot for BAR League
 Single-file implementation - only handles /submit command
@@ -109,10 +112,18 @@ def validate_replay(replay: Dict[str, Any]) -> Dict[str, Any]:
             return 0.0
     
     players = []
+    seed_ratings = {}
     for p in players_data:
         name = p.get("name") or p.get("Name") or "Unknown"
-        skill = parse_skill(p.get("skill") or p.get("Skill"))
-        players.append({"name": name, "skill": skill})
+        mu = parse_skill(p.get("skill") or p.get("Skill"))
+        sigma = parse_skill(p.get("skillUncertainty") or p.get("SkillUncertainty"))
+        
+        # If sigma is 0, use default OpenSkill initial uncertainty
+        if sigma == 0.0:
+            sigma = 8.333  # OpenSkill default
+        
+        players.append({"name": name, "skill": mu})
+        seed_ratings[name] = {"mu": mu, "sigma": sigma}
     
     winner_id = replay.get("gamestats", {}).get("winningTeamId")
     winner = None
@@ -127,6 +138,7 @@ def validate_replay(replay: Dict[str, Any]) -> Dict[str, Any]:
         "id": replay.get("id", ""),
         "mapname": map_name,
         "players": players,
+        "seed_ratings": seed_ratings,
         "winner": winner,
         "startTime": start_time,
         "duration_ms": duration_ms,
@@ -309,7 +321,8 @@ async def submit(interaction: discord.Interaction, replays: str):
                 "id": r["id"],
                 "map": r["mapname"],
                 "winner": r["winner"],
-                "duration_ms": r["duration_ms"]
+                "duration_ms": r["duration_ms"],
+                "seed_ratings": r["seed_ratings"]
             }
             for r in validated
         ],

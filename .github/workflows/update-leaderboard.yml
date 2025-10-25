@@ -42,22 +42,22 @@ jobs:
       
       - name: Update leaderboard
         run: |
-          echo "🔄 Processing submissions and updating leaderboard..."
+          echo "Processing submissions and updating leaderboard..."
           python actions/update_leaderboard.py
-          echo "✅ Leaderboard update complete"
+          echo "Leaderboard update complete"
       
       - name: Extract replay data
         run: |
-          echo "🔄 Extracting detailed replay data..."
+          echo "Extracting detailed replay data..."
           python actions/extract_replay_data.py
-          echo "✅ Replay data extraction complete"
+          echo "Replay data extraction complete"
       
       - name: Copy data files for GitHub Pages
         run: |
-          echo "📁 Copying data files to docs/ for GitHub Pages..."
+          echo "Copying data files to docs/ for GitHub Pages..."
           mkdir -p docs/data
           cp public/data/*.json docs/data/
-          echo "✅ Data files copied to GitHub Pages directory"
+          echo "Data files copied to GitHub Pages directory"
       
       - name: Check for changes
         id: changes
@@ -66,27 +66,27 @@ jobs:
           CHANGED_FILES=""
           if ! git diff --quiet public/data/leaderboard.json; then
             CHANGED_FILES="$CHANGED_FILES public/data/leaderboard.json"
-            echo "📊 Leaderboard changes detected"
+            echo "Leaderboard changes detected"
           fi
           if ! git diff --quiet public/data/replay_database.json; then
             CHANGED_FILES="$CHANGED_FILES public/data/replay_database.json"
-            echo "🎮 Replay database changes detected"
+            echo "Replay database changes detected"
           fi
           if ! git diff --quiet public/data/player_match_history.json; then
             CHANGED_FILES="$CHANGED_FILES public/data/player_match_history.json"
-            echo "📈 Player match history changes detected"
+            echo "Player match history changes detected"
           fi
           if ! git diff --quiet docs/data/leaderboard.json 2>/dev/null; then
             CHANGED_FILES="$CHANGED_FILES docs/data/leaderboard.json"
-            echo "📊 GitHub Pages leaderboard changes detected"
+            echo "GitHub Pages leaderboard changes detected"
           fi
           if ! git diff --quiet docs/data/replay_database.json 2>/dev/null; then
             CHANGED_FILES="$CHANGED_FILES docs/data/replay_database.json"
-            echo "🎮 GitHub Pages replay database changes detected"
+            echo "GitHub Pages replay database changes detected"
           fi
           if ! git diff --quiet docs/data/player_match_history.json 2>/dev/null; then
             CHANGED_FILES="$CHANGED_FILES docs/data/player_match_history.json"
-            echo "📈 GitHub Pages match history changes detected"
+            echo "GitHub Pages match history changes detected"
           fi
           
           if [ -n "$CHANGED_FILES" ]; then
@@ -94,7 +94,7 @@ jobs:
             echo "files=$CHANGED_FILES" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ No data changes detected"
+            echo "No data changes detected"
           fi
       
       - name: Commit and push changes
@@ -103,7 +103,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add ${{ steps.changes.outputs.files }}
-          git commit -m "🏆 Update leaderboard and replay data [skip ci]
+          git commit -m "Update leaderboard and replay data [skip ci]
 
           Automated data update from GitHub Actions
           - Updated player rankings and statistics
@@ -115,22 +115,22 @@ jobs:
       
       - name: Summary
         run: |
-          echo "## 🏆 Data Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Data Update Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.changes.outputs.changed }}" == "true" ]; then
-            echo "✅ **Data updated successfully**" >> $GITHUB_STEP_SUMMARY
-            echo "📊 Changes committed and pushed to repository" >> $GITHUB_STEP_SUMMARY
+            echo "**Data updated successfully**" >> $GITHUB_STEP_SUMMARY
+            echo "Changes committed and pushed to repository" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "**Updated files:**" >> $GITHUB_STEP_SUMMARY
             for file in ${{ steps.changes.outputs.files }}; do
               echo "- $file" >> $GITHUB_STEP_SUMMARY
             done
           else
-            echo "ℹ️ **No changes needed**" >> $GITHUB_STEP_SUMMARY
-            echo "📊 All data is already up to date" >> $GITHUB_STEP_SUMMARY
+            echo "**No changes needed**" >> $GITHUB_STEP_SUMMARY
+            echo "All data is already up to date" >> $GITHUB_STEP_SUMMARY
           fi
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "🌐 **Live site**: https://atlasfailed.github.io/bar-duel-championship/" >> $GITHUB_STEP_SUMMARY
-          echo "📊 **Leaderboard**: https://atlasfailed.github.io/bar-duel-championship/public/data/leaderboard.json" >> $GITHUB_STEP_SUMMARY
-          echo "🎮 **Replay Database**: https://atlasfailed.github.io/bar-duel-championship/public/data/replay_database.json" >> $GITHUB_STEP_SUMMARY
-          echo "📈 **Match Histories**: https://atlasfailed.github.io/bar-duel-championship/public/data/player_match_history.json" >> $GITHUB_STEP_SUMMARY
+          echo "**Live site**: https://atlasfailed.github.io/bar-duel-championship/" >> $GITHUB_STEP_SUMMARY
+          echo "**Leaderboard**: https://atlasfailed.github.io/bar-duel-championship/data/leaderboard.json" >> $GITHUB_STEP_SUMMARY
+          echo "**Replay Database**: https://atlasfailed.github.io/bar-duel-championship/data/replay_database.json" >> $GITHUB_STEP_SUMMARY
+          echo "**Match Histories**: https://atlasfailed.github.io/bar-duel-championship/data/player_match_history.json" >> $GITHUB_STEP_SUMMARY

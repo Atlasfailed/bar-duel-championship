@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Kob",
+    "xMAYHEMx"
+  ],
+  "series_winner": "xMAYHEMx",
+  "wins": {
+    "Kob": 0,
+    "xMAYHEMx": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "d2ab3f68ba2db4a5b17592fc8aabf8c7",
+      "map": "Cloud9_V2",
+      "winner": "xMAYHEMx",
+      "duration_ms": 4776567,
+      "seed_ratings": {
+        "Kob": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "xMAYHEMx": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "08c63f68309df75960d2e5772a8e7869",
+      "map": "Oort_Cloud_V2",
+      "winner": "xMAYHEMx",
+      "duration_ms": 7526834,
+      "seed_ratings": {
+        "Kob": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "xMAYHEMx": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "9ef94068b89452e447c522918f150bca",
+      "map": "Sinkhole Network v1.1",
+      "winner": "xMAYHEMx",
+      "duration_ms": 5241500,
+      "seed_ratings": {
+        "Kob": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "xMAYHEMx": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-10-24T15:22:11.413310+00:00",
+  "submitted_by": "atlasfailed"
+}

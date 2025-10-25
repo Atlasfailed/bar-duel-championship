@@ -4,10 +4,10 @@ on:
   pull_request:
     types: [closed]
     branches: [main]
-    paths: ['submissions/bo3/**']
+    paths: ['submissions/bo3/**', 'actions/**']
   push:
     branches: [main]
-    paths: ['submissions/bo3/**']
+    paths: ['submissions/bo3/**', 'actions/**']
   workflow_dispatch:
   schedule:
     # Run every hour to catch any missed updates

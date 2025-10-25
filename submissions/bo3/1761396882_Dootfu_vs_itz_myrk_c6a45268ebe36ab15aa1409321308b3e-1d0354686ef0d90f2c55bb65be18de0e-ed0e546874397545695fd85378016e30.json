@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Dootfu",
+    "itz_myrk"
+  ],
+  "series_winner": "Dootfu",
+  "wins": {
+    "Dootfu": 2,
+    "itz_myrk": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "c6a45268ebe36ab15aa1409321308b3e",
+      "map": "Comet Catcher Remake 1.8",
+      "winner": "itz_myrk",
+      "duration_ms": 8652434,
+      "seed_ratings": {
+        "Dootfu": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "itz_myrk": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "1d0354686ef0d90f2c55bb65be18de0e",
+      "map": "Shallow Straits v1.0.1",
+      "winner": "Dootfu",
+      "duration_ms": 2972000,
+      "seed_ratings": {
+        "itz_myrk": {
+          "mu": 18.79,
+          "sigma": 8.25
+        },
+        "Dootfu": {
+          "mu": 14.74,
+          "sigma": 8.23
+        }
+      }
+    },
+    {
+      "id": "ed0e546874397545695fd85378016e30",
+      "map": "Shallow Straits v1.0.1",
+      "winner": "Dootfu",
+      "duration_ms": 5680900,
+      "seed_ratings": {
+        "itz_myrk": {
+          "mu": 18.79,
+          "sigma": 8.25
+        },
+        "Dootfu": {
+          "mu": 14.74,
+          "sigma": 8.23
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-10-25T12:54:42.488202+00:00",
+  "submitted_by": "atlasfailed"
+}

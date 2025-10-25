@@ -146,7 +146,15 @@
     }
 
     function getTierBadgeHTML(tier){
-      const map={ Master:'master', Diamond:'diamond', Platinum:'platinum', Gold:'gold', Silver:'silver', Bronze:'bronze' };
+      const map={ 
+        Master:'master', 
+        Grandmaster:'master', // Use master.svg for grandmaster as well
+        Diamond:'diamond', 
+        Platinum:'platinum', 
+        Gold:'gold', 
+        Silver:'silver', 
+        Bronze:'bronze' 
+      };
       const key=map[tier] || 'bronze';
       const src=`static/images/tiers/${key}.svg`;
       const alt=`${tier} badge`;
@@ -347,9 +355,10 @@
 
       entries.forEach((entry)=>{
         if (entry.type === 'tier_header') {
+          const tierBadge = getTierBadgeHTML(entry.tier);
           table += `<tr class="tier-header-row" style="background:#21262d;border-top:2px solid #30363d;">
             <td colspan="6" style="padding:1rem;text-align:center;font-weight:700;font-size:1.1em;color:#58a6ff;">
-              ${entry.tier_logo} ${escapeHtml(entry.tier)} TIER (${escapeHtml(entry.tier_info)}) ${entry.tier_logo}
+              <div class="tier-heading">${tierBadge} ${escapeHtml(entry.tier)} TIER (${escapeHtml(entry.tier_info)}) ${tierBadge}</div>
             </td>
           </tr>`;
         } else if (entry.type === 'tier_separator') {

@@ -5,6 +5,9 @@ on:
     types: [closed]
     branches: [main]
     paths: ['submissions/bo3/**']
+  push:
+    branches: [main]
+    paths: ['submissions/bo3/**']
   workflow_dispatch:
   schedule:
     # Run every hour to catch any missed updates
@@ -12,8 +15,8 @@ on:
 
 jobs:
   update-data:
-    # Only run when PR is merged or manually triggered
-    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    # Only run when PR is merged, push to submissions, manually triggered, or scheduled
+    if: (github.event.pull_request.merged == true) || (github.event_name == 'push') || (github.event_name == 'workflow_dispatch') || (github.event_name == 'schedule')
     runs-on: ubuntu-latest
     
     permissions:

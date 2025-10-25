@@ -1,0 +1,62 @@
+{
+  "players": [
+    "jhonboy",
+    "jimmyneutron"
+  ],
+  "series_winner": "jimmyneutron",
+  "wins": {
+    "jimmyneutron": 2,
+    "jhonboy": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "e2ad4c682faa23aa0125bb01fb66f9a1",
+      "map": "Map_1",
+      "winner": "jhonboy",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "jhonboy": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "jimmyneutron": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "46e54e68487fb1f032eeb078f8c776c2",
+      "map": "Map_2",
+      "winner": "jimmyneutron",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "jhonboy": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "jimmyneutron": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "0f0a4f685adce2d007dce4656856dc8f",
+      "map": "Map_3",
+      "winner": "jimmyneutron",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "jhonboy": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "jimmyneutron": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "players": [
+    "Alfranix951",
+    "Veld4"
+  ],
+  "series_winner": "Veld4",
+  "wins": {
+    "Veld4": 2,
+    "Alfranix951": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "9d8c64681d321b77824f6c71838a84a0",
+      "map": "Map_1",
+      "winner": "Alfranix951",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "Alfranix951": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "Veld4": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "1a8a65685a00c941b74d6b27d2a5c751",
+      "map": "Map_2",
+      "winner": "Veld4",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "Alfranix951": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "Veld4": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "c7e26568e07b8b0146d06fc8f0efa461",
+      "map": "Map_3",
+      "winner": "Veld4",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "Alfranix951": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "Veld4": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

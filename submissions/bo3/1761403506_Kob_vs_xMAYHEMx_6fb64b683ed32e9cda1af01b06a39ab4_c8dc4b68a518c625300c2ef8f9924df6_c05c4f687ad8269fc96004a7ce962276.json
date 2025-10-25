@@ -1,0 +1,62 @@
+{
+  "players": [
+    "Kob",
+    "xMAYHEMx"
+  ],
+  "series_winner": "xMAYHEMx",
+  "wins": {
+    "xMAYHEMx": 2,
+    "Kob": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "6fb64b683ed32e9cda1af01b06a39ab4",
+      "map": "Map_1",
+      "winner": "Kob",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "Kob": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "xMAYHEMx": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "c8dc4b68a518c625300c2ef8f9924df6",
+      "map": "Map_2",
+      "winner": "xMAYHEMx",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "Kob": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "xMAYHEMx": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "c05c4f687ad8269fc96004a7ce962276",
+      "map": "Map_3",
+      "winner": "xMAYHEMx",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "Kob": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "xMAYHEMx": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

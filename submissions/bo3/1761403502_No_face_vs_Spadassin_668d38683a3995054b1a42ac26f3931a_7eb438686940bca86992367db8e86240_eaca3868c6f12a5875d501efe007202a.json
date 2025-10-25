@@ -1,0 +1,62 @@
+{
+  "players": [
+    "No_face",
+    "Spadassin"
+  ],
+  "series_winner": "Spadassin",
+  "wins": {
+    "Spadassin": 3,
+    "No_face": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "668d38683a3995054b1a42ac26f3931a",
+      "map": "Map_1",
+      "winner": "No_face",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "No_face": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "Spadassin": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "7eb438686940bca86992367db8e86240",
+      "map": "Map_2",
+      "winner": "Spadassin",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "No_face": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "Spadassin": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "eaca3868c6f12a5875d501efe007202a",
+      "map": "Map_3",
+      "winner": "Spadassin",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "No_face": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "Spadassin": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

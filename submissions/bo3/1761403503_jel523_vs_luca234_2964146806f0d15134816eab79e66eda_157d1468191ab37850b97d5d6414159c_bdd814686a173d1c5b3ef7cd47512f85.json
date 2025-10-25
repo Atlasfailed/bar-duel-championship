@@ -1,0 +1,62 @@
+{
+  "players": [
+    "jel523",
+    "luca234"
+  ],
+  "series_winner": "luca234",
+  "wins": {
+    "luca234": 2,
+    "jel523": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "2964146806f0d15134816eab79e66eda",
+      "map": "Map_1",
+      "winner": "jel523",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "jel523": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "luca234": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "157d1468191ab37850b97d5d6414159c",
+      "map": "Map_2",
+      "winner": "luca234",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "jel523": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "luca234": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "bdd814686a173d1c5b3ef7cd47512f85",
+      "map": "Map_3",
+      "winner": "luca234",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "jel523": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "luca234": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

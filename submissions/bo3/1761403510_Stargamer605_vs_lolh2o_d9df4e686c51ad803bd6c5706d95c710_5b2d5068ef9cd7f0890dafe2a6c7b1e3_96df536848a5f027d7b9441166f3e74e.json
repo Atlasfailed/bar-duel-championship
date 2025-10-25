@@ -1,0 +1,62 @@
+{
+  "players": [
+    "Stargamer605",
+    "lolh2o"
+  ],
+  "series_winner": "lolh2o",
+  "wins": {
+    "lolh2o": 3,
+    "Stargamer605": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "d9df4e686c51ad803bd6c5706d95c710",
+      "map": "Map_1",
+      "winner": "Stargamer605",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "Stargamer605": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "lolh2o": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "5b2d5068ef9cd7f0890dafe2a6c7b1e3",
+      "map": "Map_2",
+      "winner": "lolh2o",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "Stargamer605": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "lolh2o": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "96df536848a5f027d7b9441166f3e74e",
+      "map": "Map_3",
+      "winner": "lolh2o",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "Stargamer605": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "lolh2o": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

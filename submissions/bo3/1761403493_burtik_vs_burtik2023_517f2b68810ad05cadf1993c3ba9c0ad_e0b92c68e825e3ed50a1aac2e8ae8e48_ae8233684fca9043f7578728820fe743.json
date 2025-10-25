@@ -1,0 +1,62 @@
+{
+  "players": [
+    "burtik",
+    "burtik2023"
+  ],
+  "series_winner": "burtik",
+  "wins": {
+    "burtik": 3,
+    "burtik2023": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "517f2b68810ad05cadf1993c3ba9c0ad",
+      "map": "Map_1",
+      "winner": "burtik",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "burtik": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "burtik2023": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "e0b92c68e825e3ed50a1aac2e8ae8e48",
+      "map": "Map_2",
+      "winner": "burtik2023",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "burtik": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "burtik2023": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "ae8233684fca9043f7578728820fe743",
+      "map": "Map_3",
+      "winner": "burtik",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "burtik": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "burtik2023": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

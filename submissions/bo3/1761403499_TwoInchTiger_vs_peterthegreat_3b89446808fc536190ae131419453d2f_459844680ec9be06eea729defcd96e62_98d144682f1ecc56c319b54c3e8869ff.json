@@ -1,0 +1,62 @@
+{
+  "players": [
+    "TwoInchTiger",
+    "peterthegreat"
+  ],
+  "series_winner": "peterthegreat",
+  "wins": {
+    "peterthegreat": 3,
+    "TwoInchTiger": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "3b89446808fc536190ae131419453d2f",
+      "map": "Map_1",
+      "winner": "TwoInchTiger",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "TwoInchTiger": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "peterthegreat": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "459844680ec9be06eea729defcd96e62",
+      "map": "Map_2",
+      "winner": "peterthegreat",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "TwoInchTiger": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "peterthegreat": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "98d144682f1ecc56c319b54c3e8869ff",
+      "map": "Map_3",
+      "winner": "peterthegreat",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "TwoInchTiger": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "peterthegreat": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

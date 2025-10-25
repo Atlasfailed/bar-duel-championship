@@ -1,0 +1,62 @@
+{
+  "players": [
+    "DocStudios",
+    "FailedLight"
+  ],
+  "series_winner": "FailedLight",
+  "wins": {
+    "FailedLight": 2,
+    "DocStudios": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "82801568348b5d14fa9189b15158e497",
+      "map": "Map_1",
+      "winner": "DocStudios",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "DocStudios": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "FailedLight": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "9b001768e1e004286a06b7de3bea6fce",
+      "map": "Map_2",
+      "winner": "FailedLight",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "DocStudios": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "FailedLight": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "a62f1d681b55ac6c3e5884af42ae1a40",
+      "map": "Map_3",
+      "winner": "FailedLight",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "DocStudios": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "FailedLight": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

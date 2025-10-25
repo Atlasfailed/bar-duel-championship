@@ -1,0 +1,62 @@
+{
+  "players": [
+    "GamingHFC",
+    "soldierofwessex"
+  ],
+  "series_winner": "soldierofwessex",
+  "wins": {
+    "soldierofwessex": 2,
+    "GamingHFC": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "c5f75f68ae161fd879fc361d4c1b0126",
+      "map": "Map_1",
+      "winner": "GamingHFC",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "GamingHFC": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "soldierofwessex": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "e631606854ad3740c07b3cc874d61c9f",
+      "map": "Map_2",
+      "winner": "soldierofwessex",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "GamingHFC": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "soldierofwessex": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "fd2a686878fbe4edfc3e60c0d605994b",
+      "map": "Map_3",
+      "winner": "soldierofwessex",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "GamingHFC": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "soldierofwessex": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

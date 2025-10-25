@@ -1,0 +1,62 @@
+{
+  "players": [
+    "KiiiTZZZ",
+    "PuTZiii"
+  ],
+  "series_winner": "PuTZiii",
+  "wins": {
+    "PuTZiii": 2,
+    "KiiiTZZZ": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "664028683d979d49ade59ba642c102df",
+      "map": "Map_1",
+      "winner": "KiiiTZZZ",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "KiiiTZZZ": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "PuTZiii": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "2e832868f84e4612e43fcf88e87b96ad",
+      "map": "Map_2",
+      "winner": "PuTZiii",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "KiiiTZZZ": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "PuTZiii": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "eb962868144050737377ad994697975d",
+      "map": "Map_3",
+      "winner": "PuTZiii",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "KiiiTZZZ": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "PuTZiii": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

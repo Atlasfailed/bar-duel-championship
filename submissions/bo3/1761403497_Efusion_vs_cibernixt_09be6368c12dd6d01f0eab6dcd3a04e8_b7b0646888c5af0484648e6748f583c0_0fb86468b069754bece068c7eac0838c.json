@@ -1,0 +1,62 @@
+{
+  "players": [
+    "Efusion",
+    "cibernixt"
+  ],
+  "series_winner": "cibernixt",
+  "wins": {
+    "cibernixt": 3,
+    "Efusion": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "09be6368c12dd6d01f0eab6dcd3a04e8",
+      "map": "Map_1",
+      "winner": "Efusion",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "Efusion": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "cibernixt": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "b7b0646888c5af0484648e6748f583c0",
+      "map": "Map_2",
+      "winner": "cibernixt",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "Efusion": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "cibernixt": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "0fb86468b069754bece068c7eac0838c",
+      "map": "Map_3",
+      "winner": "cibernixt",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "Efusion": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "cibernixt": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "players": [
+    "Kommandant",
+    "MIrzaa"
+  ],
+  "series_winner": "Kommandant",
+  "wins": {
+    "Kommandant": 3,
+    "MIrzaa": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "d2ba6468d4f433e7edb7afa91bc3c149",
+      "map": "Map_1",
+      "winner": "Kommandant",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "Kommandant": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "MIrzaa": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "b2096568925ff8449f63ae7bac9e8e75",
+      "map": "Map_2",
+      "winner": "MIrzaa",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "Kommandant": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "MIrzaa": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "1a5c66680ab2f55209885e1a63d97c4f",
+      "map": "Map_3",
+      "winner": "Kommandant",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "Kommandant": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "MIrzaa": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

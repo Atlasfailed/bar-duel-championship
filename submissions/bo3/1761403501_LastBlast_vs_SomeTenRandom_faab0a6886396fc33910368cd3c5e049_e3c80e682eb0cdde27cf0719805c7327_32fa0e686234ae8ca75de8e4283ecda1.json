@@ -1,0 +1,62 @@
+{
+  "players": [
+    "LastBlast",
+    "SomeTenRandom"
+  ],
+  "series_winner": "SomeTenRandom",
+  "wins": {
+    "SomeTenRandom": 2,
+    "LastBlast": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "faab0a6886396fc33910368cd3c5e049",
+      "map": "Map_1",
+      "winner": "LastBlast",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "LastBlast": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "SomeTenRandom": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "e3c80e682eb0cdde27cf0719805c7327",
+      "map": "Map_2",
+      "winner": "SomeTenRandom",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "LastBlast": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "SomeTenRandom": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "32fa0e686234ae8ca75de8e4283ecda1",
+      "map": "Map_3",
+      "winner": "SomeTenRandom",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "LastBlast": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "SomeTenRandom": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

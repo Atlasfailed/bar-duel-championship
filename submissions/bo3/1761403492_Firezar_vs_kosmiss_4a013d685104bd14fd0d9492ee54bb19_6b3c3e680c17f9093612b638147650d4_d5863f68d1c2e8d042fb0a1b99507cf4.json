@@ -1,0 +1,62 @@
+{
+  "players": [
+    "Firezar",
+    "kosmiss"
+  ],
+  "series_winner": "kosmiss",
+  "wins": {
+    "kosmiss": 2,
+    "Firezar": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "4a013d685104bd14fd0d9492ee54bb19",
+      "map": "Map_1",
+      "winner": "Firezar",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "Firezar": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "kosmiss": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "6b3c3e680c17f9093612b638147650d4",
+      "map": "Map_2",
+      "winner": "kosmiss",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "Firezar": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "kosmiss": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "d5863f68d1c2e8d042fb0a1b99507cf4",
+      "map": "Map_3",
+      "winner": "kosmiss",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "Firezar": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "kosmiss": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

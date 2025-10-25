@@ -1,0 +1,62 @@
+{
+  "players": [
+    "Iris_",
+    "SuperSailer"
+  ],
+  "series_winner": "Iris_",
+  "wins": {
+    "Iris_": 2,
+    "SuperSailer": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "4bec406887cec1baa0a2172175bf1fb8",
+      "map": "Map_1",
+      "winner": "Iris_",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "Iris_": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "SuperSailer": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "31e44168d70f0d98512b4fd8eba4f56f",
+      "map": "Map_2",
+      "winner": "SuperSailer",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "Iris_": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "SuperSailer": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "a2804768bc284eda606ff70b67b01b22",
+      "map": "Map_3",
+      "winner": "Iris_",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "Iris_": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "SuperSailer": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

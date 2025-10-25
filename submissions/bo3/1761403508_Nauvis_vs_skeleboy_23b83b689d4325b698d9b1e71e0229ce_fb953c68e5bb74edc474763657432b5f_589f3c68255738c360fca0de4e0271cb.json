@@ -1,0 +1,62 @@
+{
+  "players": [
+    "Nauvis",
+    "skeleboy"
+  ],
+  "series_winner": "Nauvis",
+  "wins": {
+    "Nauvis": 2,
+    "skeleboy": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "23b83b689d4325b698d9b1e71e0229ce",
+      "map": "Map_1",
+      "winner": "Nauvis",
+      "duration_ms": 600000,
+      "seed_ratings": {
+        "Nauvis": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "skeleboy": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "fb953c68e5bb74edc474763657432b5f",
+      "map": "Map_2",
+      "winner": "skeleboy",
+      "duration_ms": 720000,
+      "seed_ratings": {
+        "Nauvis": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "skeleboy": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    },
+    {
+      "id": "589f3c68255738c360fca0de4e0271cb",
+      "map": "Map_3",
+      "winner": "Nauvis",
+      "duration_ms": 840000,
+      "seed_ratings": {
+        "Nauvis": {
+          "mu": 16.67,
+          "sigma": 5.56
+        },
+        "skeleboy": {
+          "mu": 16.67,
+          "sigma": 5.56
+        }
+      }
+    }
+  ]
+}

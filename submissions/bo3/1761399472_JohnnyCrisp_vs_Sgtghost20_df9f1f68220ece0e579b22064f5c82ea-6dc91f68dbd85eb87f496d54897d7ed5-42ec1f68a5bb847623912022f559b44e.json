@@ -1,0 +1,64 @@
+{
+  "players": [
+    "JohnnyCrisp",
+    "Sgtghost20"
+  ],
+  "series_winner": "JohnnyCrisp",
+  "wins": {
+    "JohnnyCrisp": 3,
+    "Sgtghost20": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "df9f1f68220ece0e579b22064f5c82ea",
+      "map": "Ancient Bastion Remake 0.5",
+      "winner": "JohnnyCrisp",
+      "duration_ms": 4431700,
+      "seed_ratings": {
+        "Sgtghost20": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "JohnnyCrisp": {
+          "mu": 14.23,
+          "sigma": 8.21
+        }
+      }
+    },
+    {
+      "id": "6dc91f68dbd85eb87f496d54897d7ed5",
+      "map": "Esker Creek 1.3",
+      "winner": "JohnnyCrisp",
+      "duration_ms": 3807300,
+      "seed_ratings": {
+        "Sgtghost20": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "JohnnyCrisp": {
+          "mu": 14.23,
+          "sigma": 8.21
+        }
+      }
+    },
+    {
+      "id": "42ec1f68a5bb847623912022f559b44e",
+      "map": "Sand Crowns 1.0",
+      "winner": "JohnnyCrisp",
+      "duration_ms": 8620967,
+      "seed_ratings": {
+        "Sgtghost20": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "JohnnyCrisp": {
+          "mu": 14.23,
+          "sigma": 8.21
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-10-25T13:37:52.104631+00:00",
+  "submitted_by": "atlasfailed"
+}

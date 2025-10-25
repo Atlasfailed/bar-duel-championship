@@ -132,6 +132,42 @@ def get_tier_from_cr(champion_rating: int) -> str:
     return TIER_DEFINITIONS[-1][0]
 
 
+def get_tier_with_match_requirements(champion_rating: int, matches_played: int) -> str:
+    """Get tier name considering both CR and minimum match requirements."""
+    # Get the tier based purely on Champion Rating
+    cr_tier = get_tier_from_cr(champion_rating)
+    
+    # Define minimum match requirements for each tier
+    TIER_MATCH_REQUIREMENTS = {
+        "Bronze": 0,      # No minimum - starting tier
+        "Silver": 5,      # Must play 5+ matches to advance from Bronze
+        "Gold": 10,       # Must play 10+ matches to reach Gold
+        "Platinum": 15,   # Must play 15+ matches to reach Platinum
+        "Diamond": 20,    # Must play 20+ matches to reach Diamond
+        "Master": 25,     # Must play 25+ matches to reach Master
+        "Grandmaster": 30 # Must play 30+ matches to reach Grandmaster
+    }
+    
+    # Find the highest tier the player can access based on matches played
+    max_tier_by_matches = "Bronze"
+    for tier_name, _, _, _, _ in TIER_DEFINITIONS:
+        required_matches = TIER_MATCH_REQUIREMENTS.get(tier_name, 0)
+        if matches_played >= required_matches:
+            max_tier_by_matches = tier_name
+        else:
+            break  # Tiers are in ascending order
+    
+    # Return the lower of the two constraints (CR tier vs match requirement tier)
+    tier_order = [tier[0] for tier in TIER_DEFINITIONS]
+    
+    cr_tier_index = tier_order.index(cr_tier) if cr_tier in tier_order else 0
+    match_tier_index = tier_order.index(max_tier_by_matches) if max_tier_by_matches in tier_order else 0
+    
+    # Use the lower tier (more restrictive)
+    final_tier_index = min(cr_tier_index, match_tier_index)
+    return tier_order[final_tier_index]
+
+
 def convert_os_delta_to_cr_delta(os_delta: float) -> int:
     """Convert OpenSkill delta to Champion Rating delta."""
     return int(round(os_delta * CR_CONVERSION_FACTOR))
@@ -267,8 +303,8 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
         
         winrate = round((data["wins"] / total_matches) * 100.0, 1) if total_matches > 0 else 0.0
         
-        # Update tier based on current CR
-        current_tier = get_tier_from_cr(data["current_cr"])
+        # Update tier based on current CR AND minimum match requirements
+        current_tier = get_tier_with_match_requirements(data["current_cr"], total_matches)
         
         results.append({
             "player": player,

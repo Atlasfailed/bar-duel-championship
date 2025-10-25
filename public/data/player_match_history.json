@@ -1,0 +1,812 @@
+{
+  "Kommandant": {
+    "player": "Kommandant",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-07-03T10:31:54.000Z",
+        "replay_id": "1a5c66680ab2f55209885e1a63d97c4f",
+        "map": "Special Creek 1.0",
+        "duration_formatted": "1h 34m 57s",
+        "won": false,
+        "opponent": "MIrzaa",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-07-02T10:28:02.000Z",
+        "replay_id": "b2096568925ff8449f63ae7bac9e8e75",
+        "map": "Ancient Vault v1.4",
+        "duration_formatted": "2h 25m 30s",
+        "won": false,
+        "opponent": "MIrzaa",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-07-02T04:51:30.000Z",
+        "replay_id": "d2ba6468d4f433e7edb7afa91bc3c149",
+        "map": "To Kill The Middle v1.1",
+        "duration_formatted": "1h 52m 29s",
+        "won": false,
+        "opponent": "MIrzaa",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Special Creek 1.0": 1,
+      "Ancient Vault v1.4": 1,
+      "To Kill The Middle v1.1": 1
+    },
+    "opponents_faced": {
+      "MIrzaa": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "MIrzaa": {
+    "player": "MIrzaa",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-07-03T10:31:54.000Z",
+        "replay_id": "1a5c66680ab2f55209885e1a63d97c4f",
+        "map": "Special Creek 1.0",
+        "duration_formatted": "1h 34m 57s",
+        "won": true,
+        "opponent": "Kommandant",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-07-02T10:28:02.000Z",
+        "replay_id": "b2096568925ff8449f63ae7bac9e8e75",
+        "map": "Ancient Vault v1.4",
+        "duration_formatted": "2h 25m 30s",
+        "won": true,
+        "opponent": "Kommandant",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-07-02T04:51:30.000Z",
+        "replay_id": "d2ba6468d4f433e7edb7afa91bc3c149",
+        "map": "To Kill The Middle v1.1",
+        "duration_formatted": "1h 52m 29s",
+        "won": true,
+        "opponent": "Kommandant",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Special Creek 1.0": 1,
+      "Ancient Vault v1.4": 1,
+      "To Kill The Middle v1.1": 1
+    },
+    "opponents_faced": {
+      "Kommandant": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "Kob": {
+    "player": "Kob",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-06-15T23:52:32.000Z",
+        "replay_id": "c05c4f687ad8269fc96004a7ce962276",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "3h 18m 59s",
+        "won": false,
+        "opponent": "xMAYHEMx",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-13T08:09:44.000Z",
+        "replay_id": "c8dc4b68a518c625300c2ef8f9924df6",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "1h 37m 1s",
+        "won": false,
+        "opponent": "xMAYHEMx",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-13T05:26:07.000Z",
+        "replay_id": "6fb64b683ed32e9cda1af01b06a39ab4",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "44m 58s",
+        "won": false,
+        "opponent": "xMAYHEMx",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Full Metal Plate 1.7": 3
+    },
+    "opponents_faced": {
+      "xMAYHEMx": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "xMAYHEMx": {
+    "player": "xMAYHEMx",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-06-15T23:52:32.000Z",
+        "replay_id": "c05c4f687ad8269fc96004a7ce962276",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "3h 18m 59s",
+        "won": true,
+        "opponent": "Kob",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-13T08:09:44.000Z",
+        "replay_id": "c8dc4b68a518c625300c2ef8f9924df6",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "1h 37m 1s",
+        "won": true,
+        "opponent": "Kob",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-13T05:26:07.000Z",
+        "replay_id": "6fb64b683ed32e9cda1af01b06a39ab4",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "44m 58s",
+        "won": true,
+        "opponent": "Kob",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Full Metal Plate 1.7": 3
+    },
+    "opponents_faced": {
+      "Kob": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "TwoInchTiger": {
+    "player": "TwoInchTiger",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-06-07T23:56:08.000Z",
+        "replay_id": "98d144682f1ecc56c319b54c3e8869ff",
+        "map": "World In Flames v1.8",
+        "duration_formatted": "1h 30m 32s",
+        "won": true,
+        "opponent": "peterthegreat",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-07T19:51:33.000Z",
+        "replay_id": "459844680ec9be06eea729defcd96e62",
+        "map": "World In Flames v1.8",
+        "duration_formatted": "3h 59m 12s",
+        "won": true,
+        "opponent": "peterthegreat",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-07T18:47:23.000Z",
+        "replay_id": "3b89446808fc536190ae131419453d2f",
+        "map": "World In Flames v1.8",
+        "duration_formatted": "1h 1m 40s",
+        "won": true,
+        "opponent": "peterthegreat",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "World In Flames v1.8": 3
+    },
+    "opponents_faced": {
+      "peterthegreat": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "peterthegreat": {
+    "player": "peterthegreat",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-06-07T23:56:08.000Z",
+        "replay_id": "98d144682f1ecc56c319b54c3e8869ff",
+        "map": "World In Flames v1.8",
+        "duration_formatted": "1h 30m 32s",
+        "won": false,
+        "opponent": "TwoInchTiger",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-07T19:51:33.000Z",
+        "replay_id": "459844680ec9be06eea729defcd96e62",
+        "map": "World In Flames v1.8",
+        "duration_formatted": "3h 59m 12s",
+        "won": false,
+        "opponent": "TwoInchTiger",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-07T18:47:23.000Z",
+        "replay_id": "3b89446808fc536190ae131419453d2f",
+        "map": "World In Flames v1.8",
+        "duration_formatted": "1h 1m 40s",
+        "won": false,
+        "opponent": "TwoInchTiger",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "World In Flames v1.8": 3
+    },
+    "opponents_faced": {
+      "TwoInchTiger": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "Firezar": {
+    "player": "Firezar",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-06-03T00:06:03.000Z",
+        "replay_id": "6b3c3e680c17f9093612b638147650d4",
+        "map": "Cloud9_V2",
+        "duration_formatted": "3h 4m 12s",
+        "won": false,
+        "opponent": "kosmiss",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-02T01:41:30.000Z",
+        "replay_id": "4a013d685104bd14fd0d9492ee54bb19",
+        "map": "SpeedMetal BAR V2",
+        "duration_formatted": "2h 51m 47s",
+        "won": false,
+        "opponent": "kosmiss",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-02T01:13:22.000Z",
+        "replay_id": "b2fa3c68447970c3ba1f82e46a2b308f",
+        "map": "SpeedMetal BAR V2",
+        "duration_formatted": "24m 55s",
+        "won": false,
+        "opponent": "kosmiss",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Cloud9_V2": 1,
+      "SpeedMetal BAR V2": 2
+    },
+    "opponents_faced": {
+      "kosmiss": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "kosmiss": {
+    "player": "kosmiss",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-06-03T00:06:03.000Z",
+        "replay_id": "6b3c3e680c17f9093612b638147650d4",
+        "map": "Cloud9_V2",
+        "duration_formatted": "3h 4m 12s",
+        "won": true,
+        "opponent": "Firezar",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-02T01:41:30.000Z",
+        "replay_id": "4a013d685104bd14fd0d9492ee54bb19",
+        "map": "SpeedMetal BAR V2",
+        "duration_formatted": "2h 51m 47s",
+        "won": true,
+        "opponent": "Firezar",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-02T01:13:22.000Z",
+        "replay_id": "b2fa3c68447970c3ba1f82e46a2b308f",
+        "map": "SpeedMetal BAR V2",
+        "duration_formatted": "24m 55s",
+        "won": true,
+        "opponent": "Firezar",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Cloud9_V2": 1,
+      "SpeedMetal BAR V2": 2
+    },
+    "opponents_faced": {
+      "Firezar": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "KiiiTZZZ": {
+    "player": "KiiiTZZZ",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-05-17T14:02:19.000Z",
+        "replay_id": "eb962868144050737377ad994697975d",
+        "map": "Crescent_Bay_V2",
+        "duration_formatted": "5m 10s",
+        "won": false,
+        "opponent": "PuTZiii",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-17T12:38:06.000Z",
+        "replay_id": "2e832868f84e4612e43fcf88e87b96ad",
+        "map": "Comet Catcher Remake 1.8",
+        "duration_formatted": "1h 2m 22s",
+        "won": false,
+        "opponent": "PuTZiii",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-17T07:53:10.000Z",
+        "replay_id": "664028683d979d49ade59ba642c102df",
+        "map": "Comet Catcher Remake 1.8",
+        "duration_formatted": "4h 25m 33s",
+        "won": false,
+        "opponent": "PuTZiii",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Crescent_Bay_V2": 1,
+      "Comet Catcher Remake 1.8": 2
+    },
+    "opponents_faced": {
+      "PuTZiii": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "PuTZiii": {
+    "player": "PuTZiii",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-05-17T14:02:19.000Z",
+        "replay_id": "eb962868144050737377ad994697975d",
+        "map": "Crescent_Bay_V2",
+        "duration_formatted": "5m 10s",
+        "won": true,
+        "opponent": "KiiiTZZZ",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-17T12:38:06.000Z",
+        "replay_id": "2e832868f84e4612e43fcf88e87b96ad",
+        "map": "Comet Catcher Remake 1.8",
+        "duration_formatted": "1h 2m 22s",
+        "won": true,
+        "opponent": "KiiiTZZZ",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-17T07:53:10.000Z",
+        "replay_id": "664028683d979d49ade59ba642c102df",
+        "map": "Comet Catcher Remake 1.8",
+        "duration_formatted": "4h 25m 33s",
+        "won": true,
+        "opponent": "KiiiTZZZ",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Crescent_Bay_V2": 1,
+      "Comet Catcher Remake 1.8": 2
+    },
+    "opponents_faced": {
+      "KiiiTZZZ": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "DocStudios": {
+    "player": "DocStudios",
+    "total_matches": 6,
+    "wins": 3,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-05-04T16:00:00.000Z",
+        "replay_id": "test3333333333333333333333333333333",
+        "map": "Test Map",
+        "duration_formatted": "2h 46m 40s",
+        "won": true,
+        "opponent": "luca234",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T15:30:00.000Z",
+        "replay_id": "test2222222222222222222222222222222",
+        "map": "Test Map",
+        "duration_formatted": "3h 3m 20s",
+        "won": false,
+        "opponent": "luca234",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T15:00:00.000Z",
+        "replay_id": "test1111111111111111111111111111111",
+        "map": "Test Map",
+        "duration_formatted": "3h 20m 0s",
+        "won": true,
+        "opponent": "luca234",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T06:45:00.000Z",
+        "replay_id": "95d51e68ef4c1ba09cc188f6891fb759",
+        "map": "Unknown",
+        "duration_formatted": "3h 3m 20s",
+        "won": false,
+        "opponent": "FailedLight",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T06:15:00.000Z",
+        "replay_id": "a62f1d681b55ac6c3e5884af42ae1a40",
+        "map": "Unknown",
+        "duration_formatted": "3h 20m 0s",
+        "won": true,
+        "opponent": "FailedLight",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T05:52:27.000Z",
+        "replay_id": "9b001768e1e004286a06b7de3bea6fce",
+        "map": "Omega Valley V1.01",
+        "duration_formatted": "3h 44m 37s",
+        "won": false,
+        "opponent": "FailedLight",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Test Map": 3,
+      "Unknown": 2,
+      "Omega Valley V1.01": 1
+    },
+    "opponents_faced": {
+      "luca234": 3,
+      "FailedLight": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-04T05:52:27.000Z",
+        "skill": 14.8,
+        "replay_id": "9b001768e1e004286a06b7de3bea6fce"
+      },
+      {
+        "date": "2025-05-04T06:15:00.000Z",
+        "skill": 14.8,
+        "replay_id": "a62f1d681b55ac6c3e5884af42ae1a40"
+      },
+      {
+        "date": "2025-05-04T06:45:00.000Z",
+        "skill": 14.8,
+        "replay_id": "95d51e68ef4c1ba09cc188f6891fb759"
+      },
+      {
+        "date": "2025-05-04T15:00:00.000Z",
+        "skill": 14.8,
+        "replay_id": "test1111111111111111111111111111111"
+      },
+      {
+        "date": "2025-05-04T15:30:00.000Z",
+        "skill": 14.8,
+        "replay_id": "test2222222222222222222222222222222"
+      },
+      {
+        "date": "2025-05-04T16:00:00.000Z",
+        "skill": 14.8,
+        "replay_id": "test3333333333333333333333333333333"
+      }
+    ],
+    "win_rate": 50.0,
+    "most_played_faction": "Unknown"
+  },
+  "luca234": {
+    "player": "luca234",
+    "total_matches": 7,
+    "wins": 5,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-05-04T16:00:00.000Z",
+        "replay_id": "test3333333333333333333333333333333",
+        "map": "Test Map",
+        "duration_formatted": "2h 46m 40s",
+        "won": false,
+        "opponent": "DocStudios",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T15:30:00.000Z",
+        "replay_id": "test2222222222222222222222222222222",
+        "map": "Test Map",
+        "duration_formatted": "3h 3m 20s",
+        "won": true,
+        "opponent": "DocStudios",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T15:00:00.000Z",
+        "replay_id": "test1111111111111111111111111111111",
+        "map": "Test Map",
+        "duration_formatted": "3h 20m 0s",
+        "won": false,
+        "opponent": "DocStudios",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T10:00:00.000Z",
+        "replay_id": "abc713686b5552dc09568b8d2b83e26e",
+        "map": "Unknown",
+        "duration_formatted": "2h 46m 40s",
+        "won": true,
+        "opponent": "jel523",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-02T14:37:49.000Z",
+        "replay_id": "bdd814686a173d1c5b3ef7cd47512f85",
+        "map": "Failed Negotiations 1.0",
+        "duration_formatted": "40m 35s",
+        "won": true,
+        "opponent": "jel523",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-02T08:06:45.000Z",
+        "replay_id": "157d1468191ab37850b97d5d6414159c",
+        "map": "Silent Sea v1.0.1",
+        "duration_formatted": "3h 35m 12s",
+        "won": true,
+        "opponent": "jel523",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-02T06:20:25.000Z",
+        "replay_id": "2964146806f0d15134816eab79e66eda",
+        "map": "Shore_to_Shore_V3",
+        "duration_formatted": "1h 38m 30s",
+        "won": true,
+        "opponent": "jel523",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Test Map": 3,
+      "Unknown": 1,
+      "Failed Negotiations 1.0": 1,
+      "Silent Sea v1.0.1": 1,
+      "Shore_to_Shore_V3": 1
+    },
+    "opponents_faced": {
+      "DocStudios": 3,
+      "jel523": 4
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-04T10:00:00.000Z",
+        "skill": 18.0,
+        "replay_id": "abc713686b5552dc09568b8d2b83e26e"
+      },
+      {
+        "date": "2025-05-04T15:00:00.000Z",
+        "skill": 18.0,
+        "replay_id": "test1111111111111111111111111111111"
+      },
+      {
+        "date": "2025-05-04T15:30:00.000Z",
+        "skill": 18.0,
+        "replay_id": "test2222222222222222222222222222222"
+      },
+      {
+        "date": "2025-05-04T16:00:00.000Z",
+        "skill": 18.0,
+        "replay_id": "test3333333333333333333333333333333"
+      }
+    ],
+    "win_rate": 71.4,
+    "most_played_faction": "Unknown"
+  },
+  "jel523": {
+    "player": "jel523",
+    "total_matches": 4,
+    "wins": 0,
+    "losses": 4,
+    "recent_matches": [
+      {
+        "date": "2025-05-04T10:00:00.000Z",
+        "replay_id": "abc713686b5552dc09568b8d2b83e26e",
+        "map": "Unknown",
+        "duration_formatted": "2h 46m 40s",
+        "won": false,
+        "opponent": "luca234",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-02T14:37:49.000Z",
+        "replay_id": "bdd814686a173d1c5b3ef7cd47512f85",
+        "map": "Failed Negotiations 1.0",
+        "duration_formatted": "40m 35s",
+        "won": false,
+        "opponent": "luca234",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-02T08:06:45.000Z",
+        "replay_id": "157d1468191ab37850b97d5d6414159c",
+        "map": "Silent Sea v1.0.1",
+        "duration_formatted": "3h 35m 12s",
+        "won": false,
+        "opponent": "luca234",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-02T06:20:25.000Z",
+        "replay_id": "2964146806f0d15134816eab79e66eda",
+        "map": "Shore_to_Shore_V3",
+        "duration_formatted": "1h 38m 30s",
+        "won": false,
+        "opponent": "luca234",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Unknown": 1,
+      "Failed Negotiations 1.0": 1,
+      "Silent Sea v1.0.1": 1,
+      "Shore_to_Shore_V3": 1
+    },
+    "opponents_faced": {
+      "luca234": 4
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-04T10:00:00.000Z",
+        "skill": 15.0,
+        "replay_id": "abc713686b5552dc09568b8d2b83e26e"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "FailedLight": {
+    "player": "FailedLight",
+    "total_matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "recent_matches": [
+      {
+        "date": "2025-05-04T06:45:00.000Z",
+        "replay_id": "95d51e68ef4c1ba09cc188f6891fb759",
+        "map": "Unknown",
+        "duration_formatted": "3h 3m 20s",
+        "won": true,
+        "opponent": "DocStudios",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T06:15:00.000Z",
+        "replay_id": "a62f1d681b55ac6c3e5884af42ae1a40",
+        "map": "Unknown",
+        "duration_formatted": "3h 20m 0s",
+        "won": false,
+        "opponent": "DocStudios",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-04T05:52:27.000Z",
+        "replay_id": "9b001768e1e004286a06b7de3bea6fce",
+        "map": "Omega Valley V1.01",
+        "duration_formatted": "3h 44m 37s",
+        "won": true,
+        "opponent": "DocStudios",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Unknown": 2,
+      "Omega Valley V1.01": 1
+    },
+    "opponents_faced": {
+      "DocStudios": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-04T05:52:27.000Z",
+        "skill": 17.12,
+        "replay_id": "9b001768e1e004286a06b7de3bea6fce"
+      },
+      {
+        "date": "2025-05-04T06:15:00.000Z",
+        "skill": 17.12,
+        "replay_id": "a62f1d681b55ac6c3e5884af42ae1a40"
+      },
+      {
+        "date": "2025-05-04T06:45:00.000Z",
+        "skill": 17.12,
+        "replay_id": "95d51e68ef4c1ba09cc188f6891fb759"
+      }
+    ],
+    "win_rate": 66.7,
+    "most_played_faction": "Unknown"
+  }
+}

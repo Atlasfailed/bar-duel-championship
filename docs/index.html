@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BAR Duel Circuit Leaderboard</title>
-  <meta name="description" content="Live standings for the Beyond All Reason Duel Circuit with automatic updates and tiered rankings.">
+  <title>BAR Duel Circuit - Leaderboard & Replays</title>
+  <meta name="description" content="Live standings for the Beyond All Reason Duel Circuit with automatic updates, tiered rankings, and comprehensive replay database.">
   <link rel="stylesheet" href="static/css/styles.css">
   <style>
     body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0}
@@ -25,35 +25,106 @@
     .tier-heading .tier-badge img{height:1.4em;width:1.4em}
     .tier-chip .tier-badge img{height:1em;width:1em;margin-right:0.25em}
     h1 .tier-badge img{height:1.5em;width:1.5em}
+    
+    /* Navigation styles */
+    .nav-tabs{display:flex;border-bottom:1px solid #30363d;margin-bottom:2rem}
+    .nav-tab{padding:1rem 1.5rem;background:none;border:none;color:#8b949e;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s ease}
+    .nav-tab:hover{color:#c9d1d9;background:rgba(255,255,255,0.05)}
+    .nav-tab.active{color:#58a6ff;border-bottom-color:#58a6ff}
+    
+    /* Content sections */
+    .content-section{display:none}
+    .content-section.active{display:block}
+    
+    /* Replay styles */
+    .replay-grid{display:grid;gap:1rem;margin-top:1rem}
+    .replay-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem;transition:all 0.2s ease}
+    .replay-card:hover{background:#1c2128;border-color:#58a6ff}
+    .replay-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem}
+    .replay-title{font-weight:600;color:#c9d1d9}
+    .replay-date{font-size:0.85rem;color:#8b949e}
+    .replay-players{display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem}
+    .player-vs{display:flex;align-items:center;gap:0.5rem}
+    .player-name{color:#c9d1d9}
+    .player-name.winner{color:#3fb950}
+    .vs-separator{color:#8b949e;font-weight:bold}
+    .replay-details{display:flex;gap:1rem;margin-bottom:0.5rem;font-size:0.9rem;color:#8b949e}
+    .replay-tags{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.5rem}
+    .replay-tag{background:rgba(88,166,255,0.1);color:#58a6ff;padding:0.2rem 0.5rem;border-radius:4px;font-size:0.75rem}
+    .replay-actions{display:flex;gap:0.5rem}
+    .btn{padding:0.5rem 1rem;border-radius:6px;border:none;cursor:pointer;text-decoration:none;display:inline-block;font-size:0.85rem;transition:all 0.2s ease}
+    .btn-primary{background:#238636;color:#fff}
+    .btn-primary:hover{background:#2ea043}
+    .btn-secondary{background:#21262d;border:1px solid #30363d;color:#c9d1d9}
+    .btn-secondary:hover{background:#30363d}
+    .view-all-btn{display:block;text-align:center;margin:1rem auto 0;padding:0.8rem 1.5rem;background:#21262d;border:1px solid #30363d;color:#58a6ff;text-decoration:none;border-radius:8px;transition:all 0.2s ease}
+    .view-all-btn:hover{background:#30363d;border-color:#58a6ff}
   </style>
 </head>
 <body>
   <main class="container">
     <h1 id="leaderboardTitle">
-           BAR Duel Circuit Leaderboard
+           BAR Duel Circuit
     </h1>
 
-    <section class="summary-stats" id="stats">
-      <article class="summary-card">
-        <span class="summary-number" id="total-players">-</span>
-        <span class="summary-label">Players</span>
-      </article>
-      <article class="summary-card">
-        <span class="summary-number" id="total-matches">-</span>
-        <span class="summary-label">Matches played</span>
-      </article>
-      <article class="summary-card">
-        <span class="summary-number" id="active-tiers">-</span>
-        <span class="summary-label">Active tiers</span>
-      </article>
-    </section>
+    <nav class="nav-tabs">
+      <button class="nav-tab active" onclick="showSection('leaderboard-section')" id="leaderboard-tab">Leaderboard</button>
+      <button class="nav-tab" onclick="showSection('replays-section')" id="replays-tab">Recent Replays</button>
+    </nav>
 
-    <div class="last-updated" style="text-align:center;color:#8b949e;margin-bottom:1.5rem;font-style:italic;">
-      Last updated: <span id="update-time">-</span>
+    <div id="leaderboard-section" class="content-section active">
+      <div style="text-align:center;margin-bottom:1.5rem;padding:1rem;background:rgba(88,166,255,0.1);border:1px solid rgba(88,166,255,0.3);border-radius:8px;">
+        <strong>New Champion Rating System!</strong><br>
+        <span style="color:#8b949e;font-size:0.9rem;">Players are now ranked using Champion Ratings within tier-based divisions. Your tier is determined by initial skill, and CR changes based on match performance.</span>
+      </div>
+      
+      <section class="summary-stats" id="stats">
+        <article class="summary-card">
+          <span class="summary-number" id="total-players">-</span>
+          <span class="summary-label">Players</span>
+        </article>
+        <article class="summary-card">
+          <span class="summary-number" id="total-matches">-</span>
+          <span class="summary-label">Matches played</span>
+        </article>
+        <article class="summary-card">
+          <span class="summary-number" id="active-tiers">-</span>
+          <span class="summary-label">Active tiers</span>
+        </article>
+      </section>
+
+      <div class="last-updated" style="text-align:center;color:#8b949e;margin-bottom:1.5rem;font-style:italic;">
+        Last updated: <span id="update-time">-</span>
+      </div>
+
+      <div id="leaderboard" class="table-container">
+        <div class="loading">Loading leaderboard…</div>
+      </div>
     </div>
 
-    <div id="leaderboard" class="table-container">
-      <div class="loading">Loading leaderboard…</div>
+    <div id="replays-section" class="content-section">
+      <section class="summary-stats" id="replay-stats">
+        <article class="summary-card">
+          <span class="summary-number" id="total-replays">-</span>
+          <span class="summary-label">Total Replays</span>
+        </article>
+        <article class="summary-card">
+          <span class="summary-number" id="total-playtime">-</span>
+          <span class="summary-label">Total Playtime</span>
+        </article>
+        <article class="summary-card">
+          <span class="summary-number" id="unique-maps">-</span>
+          <span class="summary-label">Unique Maps</span>
+        </article>
+      </section>
+
+      <div id="recent-replays" class="replay-grid">
+        <div class="loading">Loading recent replays…</div>
+      </div>
+
+      <a href="replays.html" class="view-all-btn">
+        🎮 View All Replays & Search Database
+      </a>
     </div>
   </main>
 
@@ -63,9 +134,12 @@
 
   <script>
     const LEADERBOARD_URL = 'https://raw.githubusercontent.com/Atlasfailed/bar-duel-championship/main/public/data/leaderboard.json';
+    const REPLAY_DATABASE_URL = 'https://raw.githubusercontent.com/Atlasfailed/bar-duel-championship/main/public/data/replay_database.json';
     const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
     const TIER_ORDER = ['Master','Diamond','Platinum','Gold','Silver','Bronze'];
     let hasRenderedLeaderboard = false;
+    let hasRenderedReplays = false;
+    let allReplays = [];
 
     function escapeHtml(value){
       const div=document.createElement('div'); div.textContent=value ?? ''; return div.innerHTML;
@@ -77,6 +151,31 @@
       const src=`static/images/tiers/${key}.svg`;
       const alt=`${tier} badge`;
       return `<span class="tier-badge" aria-hidden="true"><img src="${src}" alt="${alt}" loading="lazy"></span>`;
+    }
+
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      // Remove active from all tabs
+      document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      
+      // Show selected section
+      document.getElementById(sectionId).classList.add('active');
+      
+      // Activate corresponding tab
+      if (sectionId === 'leaderboard-section') {
+        document.getElementById('leaderboard-tab').classList.add('active');
+      } else if (sectionId === 'replays-section') {
+        document.getElementById('replays-tab').classList.add('active');
+        if (!hasRenderedReplays) {
+          loadReplays();
+        }
+      }
     }
 
     async function loadLeaderboard(){
@@ -103,6 +202,128 @@
       }
     }
 
+    async function loadReplays(){
+      const replaysEl=document.getElementById('recent-replays');
+      if (replaysEl && !hasRenderedReplays){
+        replaysEl.innerHTML='<div class="loading">Loading recent replays…</div>';
+      }
+      try{
+        const response=await fetch(`${REPLAY_DATABASE_URL}?t=${Date.now()}`);
+        if(!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        const data=await response.json();
+        allReplays = data;
+        displayRecentReplays(data.slice(0, 5)); // Show 5 most recent
+        updateReplayStats(data);
+      }catch(err){
+        if (!replaysEl) return;
+        replaysEl.innerHTML=`
+          <div class="error" style="text-align:center;padding:2rem;color:#dc3545;border:1px solid #dc3545;border-radius:8px;margin:20px 0;">
+            <h3 style="margin:0 0 .5rem 0;color:#dc3545">Failed to load replays</h3>
+            <p style="margin:0 0 1rem 0;color:#8b949e">${escapeHtml(err.message)}</p>
+            <button class="retry-button" type="button" style="padding:.6rem 1rem;background:#58a6ff;color:#0d1117;border:1px solid #58a6ff;border-radius:6px;cursor:pointer;">Retry</button>
+          </div>`;
+        const btn=replaysEl.querySelector('.retry-button');
+        if(btn){ btn.addEventListener('click', ()=>{ hasRenderedReplays=false; loadReplays(); }); }
+      }
+    }
+
+    function displayRecentReplays(replays) {
+      const replaysEl = document.getElementById('recent-replays');
+      if (!replaysEl) return;
+      
+      if (!Array.isArray(replays) || replays.length === 0) {
+        replaysEl.innerHTML = '<div class="message" style="text-align:center;padding:2rem;color:#8b949e;">No recent replays found</div>';
+        hasRenderedReplays = true;
+        return;
+      }
+
+      let html = '';
+      replays.forEach(replay => {
+        const player1 = replay.players[0] || {};
+        const player2 = replay.players[1] || {};
+        const date = formatDate(replay.date);
+        const tags = replay.tags.slice(0, 3); // Show first 3 tags
+        
+        html += `
+          <div class="replay-card">
+            <div class="replay-header">
+              <div class="replay-title">${escapeHtml(replay.map || 'Unknown Map')}</div>
+              <div class="replay-date">${date}</div>
+            </div>
+            <div class="replay-players">
+              <div class="player-vs">
+                <span class="player-name ${player1.is_winner ? 'winner' : ''}">${escapeHtml(player1.name || 'Unknown')}</span>
+                <span class="vs-separator">vs</span>
+                <span class="player-name ${player2.is_winner ? 'winner' : ''}">${escapeHtml(player2.name || 'Unknown')}</span>
+              </div>
+            </div>
+            <div class="replay-details">
+              <span>Duration: ${replay.duration_formatted || 'Unknown'}</span>
+              <span>Winner: ${escapeHtml(replay.winner || 'Unknown')}</span>
+            </div>
+            <div class="replay-tags">
+              ${tags.map(tag => `<span class="replay-tag">${escapeHtml(tag)}</span>`).join('')}
+            </div>
+            <div class="replay-actions">
+              <a href="${replay.url}" target="_blank" class="btn btn-primary">View Replay</a>
+              <button class="btn btn-secondary" onclick="copyToClipboard('${replay.url}')">Copy Link</button>
+            </div>
+          </div>
+        `;
+      });
+
+      replaysEl.innerHTML = html;
+      hasRenderedReplays = true;
+    }
+
+    function updateReplayStats(replays) {
+      const totalReplaysEl = document.getElementById('total-replays');
+      const totalPlaytimeEl = document.getElementById('total-playtime');
+      const uniqueMapsEl = document.getElementById('unique-maps');
+
+      const totalReplays = replays.length;
+      
+      // Calculate total playtime
+      const totalMs = replays.reduce((sum, replay) => sum + (replay.duration_ms || 0), 0);
+      const totalHours = Math.floor(totalMs / (1000 * 60 * 60));
+      const playtimeText = totalHours > 0 ? `${totalHours}h` : 'N/A';
+      
+      // Count unique maps
+      const maps = new Set();
+      replays.forEach(replay => {
+        if (replay.map && replay.map !== 'Unknown') {
+          maps.add(replay.map);
+        }
+      });
+      const uniqueMaps = maps.size;
+
+      if (totalReplaysEl) totalReplaysEl.textContent = totalReplays.toLocaleString();
+      if (totalPlaytimeEl) totalPlaytimeEl.textContent = playtimeText;
+      if (uniqueMapsEl) uniqueMapsEl.textContent = String(uniqueMaps);
+    }
+
+    function formatDate(dateString) {
+      if (!dateString) return 'Unknown Date';
+      try {
+        return new Date(dateString).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        });
+      } catch {
+        return 'Unknown Date';
+      }
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        // Could add a toast notification here
+        console.log('Link copied to clipboard');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+
     function displayLeaderboard(players){
       const leaderboardEl=document.getElementById('leaderboard');
       if(!leaderboardEl) return;
@@ -117,10 +338,10 @@
             <th scope="col" class="rank">Rank</th>
             <th scope="col">Player</th>
             <th scope="col">Tier</th>
-            <th scope="col">MMR</th>
+            <th scope="col">Champion Rating</th>
             <th scope="col">Record</th>
             <th scope="col">Win Rate</th>
-            <th scope="col">SoS</th>
+            <th scope="col">CR Change</th>
           </tr>
         </thead>
         <tbody>`;
@@ -128,8 +349,10 @@
       players.forEach((p, idx)=>{
         const wins = Number(p.wins)||0, losses=Number(p.losses)||0;
         const total = wins+losses, winRate = total>0 ? ((wins/total)*100).toFixed(1) : '0.0';
-        const mmrDisplay = Number.isFinite(+p.mmr) ? (+p.mmr).toLocaleString() : (p.mmr ?? 0);
-        const sosDisplay = Number.isFinite(+p.sos) ? (+p.sos).toFixed(1) : (p.sos ?? 0);
+        const crDisplay = Number.isFinite(+p.current_cr) ? (+p.current_cr).toLocaleString() : (p.current_cr ?? 0);
+        const crChange = Number(p.cr_change)||0;
+        const crChangeDisplay = crChange >= 0 ? `+${crChange}` : String(crChange);
+        const crChangeClass = crChange >= 0 ? 'color:#3fb950' : 'color:#f85149';
         const name = escapeHtml(p.player || 'Unknown');
         const tier = p.tier || 'Bronze';
         const tierClass = `tier-${tier.toLowerCase()}`;
@@ -144,10 +367,10 @@
               ${getTierBadgeHTML(tier)}<span>${escapeHtml(tier)}</span>
             </span>
           </td>
-          <td class="mmr" style="font-family:'Courier New',monospace;color:#58a6ff;font-weight:600">${mmrDisplay}</td>
+          <td class="mmr" style="font-family:'Courier New',monospace;color:#58a6ff;font-weight:600">${crDisplay}</td>
           <td class="record">${wins}W-${losses}L</td>
           <td class="win-rate">${winRate}%</td>
-          <td class="sos">${sosDisplay}</td>
+          <td class="cr-change" style="${crChangeClass};font-weight:600">${crChangeDisplay}</td>
         </tr>`;
       });
 

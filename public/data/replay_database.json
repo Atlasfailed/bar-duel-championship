@@ -1,0 +1,895 @@
+[
+  {
+    "id": "1a5c66680ab2f55209885e1a63d97c4f",
+    "url": "https://api.bar-rts.com/replays/1a5c66680ab2f55209885e1a63d97c4f",
+    "date": "2025-07-03T10:31:54.000Z",
+    "submitted_at": "2025-10-24T14:12:50.035501+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Special Creek 1.0",
+    "duration_ms": 5697167,
+    "duration_formatted": "1h 34m 57s",
+    "winner": "MIrzaa",
+    "players": [
+      {
+        "name": "Kommandant",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "MIrzaa",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kommandant",
+      "MIrzaa"
+    ],
+    "series_winner": "MIrzaa",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28342-3044099",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-special-creek-10"
+    ]
+  },
+  {
+    "id": "b2096568925ff8449f63ae7bac9e8e75",
+    "url": "https://api.bar-rts.com/replays/b2096568925ff8449f63ae7bac9e8e75",
+    "date": "2025-07-02T10:28:02.000Z",
+    "submitted_at": "2025-10-24T14:12:50.035501+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Ancient Vault v1.4",
+    "duration_ms": 8730233,
+    "duration_formatted": "2h 25m 30s",
+    "winner": "MIrzaa",
+    "players": [
+      {
+        "name": "Kommandant",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "MIrzaa",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kommandant",
+      "MIrzaa"
+    ],
+    "series_winner": "MIrzaa",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-ancient-vault-v14"
+    ]
+  },
+  {
+    "id": "d2ba6468d4f433e7edb7afa91bc3c149",
+    "url": "https://api.bar-rts.com/replays/d2ba6468d4f433e7edb7afa91bc3c149",
+    "date": "2025-07-02T04:51:30.000Z",
+    "submitted_at": "2025-10-24T14:12:50.035501+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "To Kill The Middle v1.1",
+    "duration_ms": 6749500,
+    "duration_formatted": "1h 52m 29s",
+    "winner": "MIrzaa",
+    "players": [
+      {
+        "name": "Kommandant",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "MIrzaa",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kommandant",
+      "MIrzaa"
+    ],
+    "series_winner": "MIrzaa",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-to-kill-the-middle-v11"
+    ]
+  },
+  {
+    "id": "c05c4f687ad8269fc96004a7ce962276",
+    "url": "https://api.bar-rts.com/replays/c05c4f687ad8269fc96004a7ce962276",
+    "date": "2025-06-15T23:52:32.000Z",
+    "submitted_at": "2025-10-24T14:15:57.890945+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Full Metal Plate 1.7",
+    "duration_ms": 11939568,
+    "duration_formatted": "3h 18m 59s",
+    "winner": "xMAYHEMx",
+    "players": [
+      {
+        "name": "Kob",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "xMAYHEMx",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kob",
+      "xMAYHEMx"
+    ],
+    "series_winner": "xMAYHEMx",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28232-e362508",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-full-metal-plate-17"
+    ]
+  },
+  {
+    "id": "c8dc4b68a518c625300c2ef8f9924df6",
+    "url": "https://api.bar-rts.com/replays/c8dc4b68a518c625300c2ef8f9924df6",
+    "date": "2025-06-13T08:09:44.000Z",
+    "submitted_at": "2025-10-24T14:15:57.890945+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Full Metal Plate 1.7",
+    "duration_ms": 5821034,
+    "duration_formatted": "1h 37m 1s",
+    "winner": "xMAYHEMx",
+    "players": [
+      {
+        "name": "Kob",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "xMAYHEMx",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kob",
+      "xMAYHEMx"
+    ],
+    "series_winner": "xMAYHEMx",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28225-e6d92b1",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-full-metal-plate-17"
+    ]
+  },
+  {
+    "id": "6fb64b683ed32e9cda1af01b06a39ab4",
+    "url": "https://api.bar-rts.com/replays/6fb64b683ed32e9cda1af01b06a39ab4",
+    "date": "2025-06-13T05:26:07.000Z",
+    "submitted_at": "2025-10-24T14:15:57.890945+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Full Metal Plate 1.7",
+    "duration_ms": 2698000,
+    "duration_formatted": "44m 58s",
+    "winner": "xMAYHEMx",
+    "players": [
+      {
+        "name": "Kob",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "xMAYHEMx",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kob",
+      "xMAYHEMx"
+    ],
+    "series_winner": "xMAYHEMx",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28225-e6d92b1",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "map-full-metal-plate-17"
+    ]
+  },
+  {
+    "id": "98d144682f1ecc56c319b54c3e8869ff",
+    "url": "https://api.bar-rts.com/replays/98d144682f1ecc56c319b54c3e8869ff",
+    "date": "2025-06-07T23:56:08.000Z",
+    "submitted_at": "2025-10-24T12:55:38.739127+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "World In Flames v1.8",
+    "duration_ms": 5432801,
+    "duration_formatted": "1h 30m 32s",
+    "winner": "TwoInchTiger",
+    "players": [
+      {
+        "name": "TwoInchTiger",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "peterthegreat",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "TwoInchTiger",
+      "peterthegreat"
+    ],
+    "series_winner": "TwoInchTiger",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28176-e89104f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-world-in-flames-v18"
+    ]
+  },
+  {
+    "id": "459844680ec9be06eea729defcd96e62",
+    "url": "https://api.bar-rts.com/replays/459844680ec9be06eea729defcd96e62",
+    "date": "2025-06-07T19:51:33.000Z",
+    "submitted_at": "2025-10-24T12:55:38.739127+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "World In Flames v1.8",
+    "duration_ms": 14352801,
+    "duration_formatted": "3h 59m 12s",
+    "winner": "TwoInchTiger",
+    "players": [
+      {
+        "name": "TwoInchTiger",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "peterthegreat",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "TwoInchTiger",
+      "peterthegreat"
+    ],
+    "series_winner": "TwoInchTiger",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28176-e89104f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-world-in-flames-v18"
+    ]
+  },
+  {
+    "id": "3b89446808fc536190ae131419453d2f",
+    "url": "https://api.bar-rts.com/replays/3b89446808fc536190ae131419453d2f",
+    "date": "2025-06-07T18:47:23.000Z",
+    "submitted_at": "2025-10-24T12:55:38.739127+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "World In Flames v1.8",
+    "duration_ms": 3700767,
+    "duration_formatted": "1h 1m 40s",
+    "winner": "TwoInchTiger",
+    "players": [
+      {
+        "name": "TwoInchTiger",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "peterthegreat",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "TwoInchTiger",
+      "peterthegreat"
+    ],
+    "series_winner": "TwoInchTiger",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28176-e89104f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-world-in-flames-v18"
+    ]
+  },
+  {
+    "id": "6b3c3e680c17f9093612b638147650d4",
+    "url": "https://api.bar-rts.com/replays/6b3c3e680c17f9093612b638147650d4",
+    "date": "2025-06-03T00:06:03.000Z",
+    "submitted_at": "2025-10-24T12:56:48.531267+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Cloud9_V2",
+    "duration_ms": 11052767,
+    "duration_formatted": "3h 4m 12s",
+    "winner": "kosmiss",
+    "players": [
+      {
+        "name": "Firezar",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "kosmiss",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Firezar",
+      "kosmiss"
+    ],
+    "series_winner": "kosmiss",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28153-7b1f31c",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-cloud9_v2"
+    ]
+  },
+  {
+    "id": "4a013d685104bd14fd0d9492ee54bb19",
+    "url": "https://api.bar-rts.com/replays/4a013d685104bd14fd0d9492ee54bb19",
+    "date": "2025-06-02T01:41:30.000Z",
+    "submitted_at": "2025-10-24T12:56:48.531267+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "SpeedMetal BAR V2",
+    "duration_ms": 10307568,
+    "duration_formatted": "2h 51m 47s",
+    "winner": "kosmiss",
+    "players": [
+      {
+        "name": "Firezar",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "kosmiss",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Firezar",
+      "kosmiss"
+    ],
+    "series_winner": "kosmiss",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28148-6eee3ff",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-speedmetal-bar-v2"
+    ]
+  },
+  {
+    "id": "b2fa3c68447970c3ba1f82e46a2b308f",
+    "url": "https://api.bar-rts.com/replays/b2fa3c68447970c3ba1f82e46a2b308f",
+    "date": "2025-06-02T01:13:22.000Z",
+    "submitted_at": "2025-10-24T12:56:48.531267+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "SpeedMetal BAR V2",
+    "duration_ms": 1495167,
+    "duration_formatted": "24m 55s",
+    "winner": "kosmiss",
+    "players": [
+      {
+        "name": "Firezar",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "kosmiss",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Firezar",
+      "kosmiss"
+    ],
+    "series_winner": "kosmiss",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28148-6eee3ff",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "map-speedmetal-bar-v2"
+    ]
+  },
+  {
+    "id": "eb962868144050737377ad994697975d",
+    "url": "https://api.bar-rts.com/replays/eb962868144050737377ad994697975d",
+    "date": "2025-05-17T14:02:19.000Z",
+    "submitted_at": "2025-10-24T14:17:47.526719+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Crescent_Bay_V2",
+    "duration_ms": 310467,
+    "duration_formatted": "5m 10s",
+    "winner": "PuTZiii",
+    "players": [
+      {
+        "name": "KiiiTZZZ",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "PuTZiii",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "KiiiTZZZ",
+      "PuTZiii"
+    ],
+    "series_winner": "PuTZiii",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28023-888365f",
+    "is_tournament": true,
+    "tags": [
+      "short",
+      "map-crescent_bay_v2"
+    ]
+  },
+  {
+    "id": "2e832868f84e4612e43fcf88e87b96ad",
+    "url": "https://api.bar-rts.com/replays/2e832868f84e4612e43fcf88e87b96ad",
+    "date": "2025-05-17T12:38:06.000Z",
+    "submitted_at": "2025-10-24T14:17:47.526719+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Comet Catcher Remake 1.8",
+    "duration_ms": 3742767,
+    "duration_formatted": "1h 2m 22s",
+    "winner": "PuTZiii",
+    "players": [
+      {
+        "name": "KiiiTZZZ",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "PuTZiii",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "KiiiTZZZ",
+      "PuTZiii"
+    ],
+    "series_winner": "PuTZiii",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28023-888365f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-comet-catcher-remake-18"
+    ]
+  },
+  {
+    "id": "664028683d979d49ade59ba642c102df",
+    "url": "https://api.bar-rts.com/replays/664028683d979d49ade59ba642c102df",
+    "date": "2025-05-17T07:53:10.000Z",
+    "submitted_at": "2025-10-24T14:17:47.526719+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Comet Catcher Remake 1.8",
+    "duration_ms": 15933100,
+    "duration_formatted": "4h 25m 33s",
+    "winner": "PuTZiii",
+    "players": [
+      {
+        "name": "KiiiTZZZ",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "PuTZiii",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "KiiiTZZZ",
+      "PuTZiii"
+    ],
+    "series_winner": "PuTZiii",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28023-888365f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-comet-catcher-remake-18"
+    ]
+  },
+  {
+    "id": "test3333333333333333333333333333333",
+    "url": "https://api.bar-rts.com/replays/test3333333333333333333333333333333",
+    "date": "2025-05-04T16:00:00.000Z",
+    "submitted_at": "2025-10-24T15:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Test Map",
+    "duration_ms": 10000000,
+    "duration_formatted": "2h 46m 40s",
+    "winner": "DocStudios",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 14.8
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 18.0
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "luca234"
+    ],
+    "series_winner": "DocStudios",
+    "engine_version": "",
+    "game_version": "",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill",
+      "map-test-map"
+    ]
+  },
+  {
+    "id": "test2222222222222222222222222222222",
+    "url": "https://api.bar-rts.com/replays/test2222222222222222222222222222222",
+    "date": "2025-05-04T15:30:00.000Z",
+    "submitted_at": "2025-10-24T15:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Test Map",
+    "duration_ms": 11000000,
+    "duration_formatted": "3h 3m 20s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 14.8
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 18.0
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "luca234"
+    ],
+    "series_winner": "DocStudios",
+    "engine_version": "",
+    "game_version": "",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill",
+      "map-test-map"
+    ]
+  },
+  {
+    "id": "test1111111111111111111111111111111",
+    "url": "https://api.bar-rts.com/replays/test1111111111111111111111111111111",
+    "date": "2025-05-04T15:00:00.000Z",
+    "submitted_at": "2025-10-24T15:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Test Map",
+    "duration_ms": 12000000,
+    "duration_formatted": "3h 20m 0s",
+    "winner": "DocStudios",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 14.8
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 18.0
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "luca234"
+    ],
+    "series_winner": "DocStudios",
+    "engine_version": "",
+    "game_version": "",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill",
+      "map-test-map"
+    ]
+  },
+  {
+    "id": "abc713686b5552dc09568b8d2b83e26e",
+    "url": "https://api.bar-rts.com/replays/abc713686b5552dc09568b8d2b83e26e",
+    "date": "2025-05-04T10:00:00.000Z",
+    "submitted_at": "2025-10-24T14:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Unknown",
+    "duration_ms": 10000000,
+    "duration_formatted": "2h 46m 40s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 15.0
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 18.0
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27932-4e75bcf",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill"
+    ]
+  },
+  {
+    "id": "95d51e68ef4c1ba09cc188f6891fb759",
+    "url": "https://api.bar-rts.com/replays/95d51e68ef4c1ba09cc188f6891fb759",
+    "date": "2025-05-04T06:45:00.000Z",
+    "submitted_at": "2025-10-24T13:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Unknown",
+    "duration_ms": 11000000,
+    "duration_formatted": "3h 3m 20s",
+    "winner": "FailedLight",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 14.8
+      },
+      {
+        "name": "FailedLight",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 17.12
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "FailedLight"
+    ],
+    "series_winner": "FailedLight",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28000-0dbaf00",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill"
+    ]
+  },
+  {
+    "id": "a62f1d681b55ac6c3e5884af42ae1a40",
+    "url": "https://api.bar-rts.com/replays/a62f1d681b55ac6c3e5884af42ae1a40",
+    "date": "2025-05-04T06:15:00.000Z",
+    "submitted_at": "2025-10-24T13:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Unknown",
+    "duration_ms": 12000000,
+    "duration_formatted": "3h 20m 0s",
+    "winner": "DocStudios",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 14.8
+      },
+      {
+        "name": "FailedLight",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 17.12
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "FailedLight"
+    ],
+    "series_winner": "FailedLight",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-27994-2b3c6a9",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill"
+    ]
+  },
+  {
+    "id": "9b001768e1e004286a06b7de3bea6fce",
+    "url": "https://api.bar-rts.com/replays/9b001768e1e004286a06b7de3bea6fce",
+    "date": "2025-05-04T05:52:27.000Z",
+    "submitted_at": "2025-10-24T13:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Omega Valley V1.01",
+    "duration_ms": 13477101,
+    "duration_formatted": "3h 44m 37s",
+    "winner": "FailedLight",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 14.8
+      },
+      {
+        "name": "FailedLight",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 17.12
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "FailedLight"
+    ],
+    "series_winner": "FailedLight",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27951-49e7bee",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill",
+      "map-omega-valley-v101"
+    ]
+  },
+  {
+    "id": "bdd814686a173d1c5b3ef7cd47512f85",
+    "url": "https://api.bar-rts.com/replays/bdd814686a173d1c5b3ef7cd47512f85",
+    "date": "2025-05-02T14:37:49.000Z",
+    "submitted_at": "2025-10-24T12:57:42.258117+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Failed Negotiations 1.0",
+    "duration_ms": 2435000,
+    "duration_formatted": "40m 35s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27940-e122095",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "map-failed-negotiations-10"
+    ]
+  },
+  {
+    "id": "157d1468191ab37850b97d5d6414159c",
+    "url": "https://api.bar-rts.com/replays/157d1468191ab37850b97d5d6414159c",
+    "date": "2025-05-02T08:06:45.000Z",
+    "submitted_at": "2025-10-24T12:57:42.258117+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Silent Sea v1.0.1",
+    "duration_ms": 12912234,
+    "duration_formatted": "3h 35m 12s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27936-6065d61",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-silent-sea-v101"
+    ]
+  },
+  {
+    "id": "2964146806f0d15134816eab79e66eda",
+    "url": "https://api.bar-rts.com/replays/2964146806f0d15134816eab79e66eda",
+    "date": "2025-05-02T06:20:25.000Z",
+    "submitted_at": "2025-10-24T12:57:42.258117+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Shore_to_Shore_V3",
+    "duration_ms": 5910800,
+    "duration_formatted": "1h 38m 30s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27936-6065d61",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-shore_to_shore_v3"
+    ]
+  }
+]

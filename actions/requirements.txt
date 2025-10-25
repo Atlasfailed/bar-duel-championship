@@ -1,6 +1,9 @@
 # OpenSkill rating system for skill-based matchmaking
 openskill>=5.0.0
 
+# HTTP requests for BAR API
+requests>=2.28.0
+
 # If you need advanced features, add them below:
 # pandas  # For data analysis
 # numpy   # For numerical computations

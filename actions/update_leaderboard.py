@@ -55,13 +55,13 @@ PERCENTILE_OS_POINTS = [
 
 # Tier definitions with Champion Rating ranges
 TIER_DEFINITIONS = [
-    ("Bronze",      1,   20, 500,  1500),  # P1-P20: 500-1500 CR
-    ("Silver",     20,   40, 1500, 2500),  # P20-P40: 1500-2500 CR
-    ("Gold",       40,   60, 2500, 3500),  # P40-P60: 2500-3500 CR
-    ("Platinum",   60,   80, 3500, 4000),  # P60-P80: 3500-4000 CR
-    ("Diamond",    80,   95, 4000, 4500),  # P80-P95: 4000-4500 CR
-    ("Master",     95,   98, 4500, 5500),  # P95-P98: 4500-5500 CR
-    ("Grandmaster",98,  100, 5500, 6000),  # P98+: 5500+ CR
+    ("Bronze",      1,   20,  900, 1400),  # Bottom 20%: 900-1400 CR  
+    ("Silver",     20,   40, 1400, 1700),  # 20-40%: 1400-1700 CR
+    ("Gold",       40,   60, 1700, 2000),  # 40-60%: 1700-2000 CR
+    ("Platinum",   60,   80, 2000, 2300),  # 60-80%: 2000-2300 CR
+    ("Diamond",    80,   95, 2300, 2700),  # 80-95%: 2300-2700 CR
+    ("Master",     95,   99, 2700, 3200),  # 95-99%: 2700-3200 CR
+    ("Grandmaster", 99, 100, 3200, 5000),  # Top 1%: 3200+ CR
 ]
 
 # Champion Rating conversion factor (how much CR change per OS change)
@@ -105,6 +105,20 @@ def get_tier_from_percentile(percentile: float) -> Tuple[str, int, int]:
 def get_initial_champion_rating(tier_name: str, min_cr: int, max_cr: int) -> int:
     """Get the middle Champion Rating for a tier (assigned to new players)."""
     return (min_cr + max_cr) // 2
+
+
+def get_tier_from_cr(champion_rating: int) -> str:
+    """Get tier name from Champion Rating."""
+    for tier_name, _, _, min_cr, max_cr in TIER_DEFINITIONS:
+        if min_cr <= champion_rating < max_cr:
+            return tier_name
+    
+    # If CR is below lowest tier, return lowest tier
+    if champion_rating < TIER_DEFINITIONS[0][3]:  # Below Bronze minimum
+        return TIER_DEFINITIONS[0][0]  # Return Bronze
+    
+    # If CR is above highest tier, return highest tier
+    return TIER_DEFINITIONS[-1][0]
 
 
 def convert_os_delta_to_cr_delta(os_delta: float) -> int:
@@ -242,12 +256,14 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
         
         winrate = round((data["wins"] / total_matches) * 100.0, 1) if total_matches > 0 else 0.0
         
+        # Update tier based on current CR
+        current_tier = get_tier_from_cr(data["current_cr"])
+        
         results.append({
             "player": player,
-            "tier": data["tier"],
+            "tier": current_tier,
             "initial_cr": data["initial_cr"],
             "current_cr": data["current_cr"],
-            "cr_change": data["current_cr"] - data["initial_cr"],
             "matches": total_matches,
             "wins": data["wins"],
             "losses": data["losses"],
@@ -468,8 +484,7 @@ def update_leaderboard():
     if leaderboard:
         print("\nTop 3 Overall:")
         for player in leaderboard[:3]:
-            cr_change_str = f" ({player['cr_change']:+d} CR)" if player['cr_change'] != 0 else ""
-            print(f"  {player['rank']}. {player['player']} - {player['current_cr']} CR [{player['tier']}]{cr_change_str}")
+            print(f"  {player['rank']}. {player['player']} - {player['current_cr']} CR [{player['tier']}]")
         
         # Print tier distribution
         print("\nPlayers by Tier:")

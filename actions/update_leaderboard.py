@@ -25,13 +25,13 @@ from typing import Dict, List, Any, Tuple
 LEADERBOARD_FILE = "public/data/leaderboard.json"
 SUBMISSIONS_DIR = "submissions/bo3"
 
-# Rating model config (OpenSkill PlackettLuce)
+# Rating model config (OpenSkill PlackettLuce with reduced volatility)
 from openskill.models import PlackettLuce
-MODEL = PlackettLuce()
+MODEL = PlackettLuce(mu=25.0, sigma=25.0/6.0, beta=25.0/6.0, tau=25.0/300.0)
 
-# Default seed values if replay data missing
+# Default seed values if replay data missing (more conservative)
 DEFAULT_MU = 25.0
-DEFAULT_SIGMA = 25.0 / 3.0
+DEFAULT_SIGMA = 25.0 / 6.0  # Reduced from /3.0 to /6.0 for less volatility
 
 # OpenSkill percentile distribution (from your data)
 PERCENTILE_OS_POINTS = [
@@ -53,15 +53,15 @@ PERCENTILE_OS_POINTS = [
     (99, 39.68),
 ]
 
-# Tier definitions with Champion Rating ranges
+# Tier definitions with more gradual Champion Rating ranges
 TIER_DEFINITIONS = [
-    ("Bronze",      1,   20,  900, 1400),  # Bottom 20%: 900-1400 CR  
-    ("Silver",     20,   40, 1400, 1700),  # 20-40%: 1400-1700 CR
-    ("Gold",       40,   60, 1700, 2000),  # 40-60%: 1700-2000 CR
-    ("Platinum",   60,   80, 2000, 2300),  # 60-80%: 2000-2300 CR
-    ("Diamond",    80,   95, 2300, 2700),  # 80-95%: 2300-2700 CR
-    ("Master",     95,   99, 2700, 3200),  # 95-99%: 2700-3200 CR
-    ("Grandmaster", 99, 100, 3200, 5000),  # Top 1%: 3200+ CR
+    ("Bronze",      1,   20,  900, 1200),  # Bottom 20%: 900-1200 CR (300 CR range)
+    ("Silver",     20,   40, 1200, 1500),  # 20-40%: 1200-1500 CR (300 CR range)
+    ("Gold",       40,   60, 1500, 1800),  # 40-60%: 1500-1800 CR (300 CR range)
+    ("Platinum",   60,   80, 1800, 2100),  # 60-80%: 1800-2100 CR (300 CR range)
+    ("Diamond",    80,   95, 2100, 2500),  # 80-95%: 2100-2500 CR (400 CR range)
+    ("Master",     95,   99, 2500, 3000),  # 95-99%: 2500-3000 CR (500 CR range)
+    ("Grandmaster", 99, 100, 3000, 5000),  # Top 1%: 3000+ CR (unlimited)
 ]
 
 # Tier logos/icons for visual display
@@ -75,8 +75,8 @@ TIER_LOGOS = {
     "Grandmaster": "👑"
 }
 
-# Champion Rating conversion factor (how much CR change per OS change)
-CR_CONVERSION_FACTOR = 100.0
+# Champion Rating conversion factor (reduced for more stable progression)
+CR_CONVERSION_FACTOR = 50.0  # Reduced from 100.0 to 50.0
 
 
 # ==============================

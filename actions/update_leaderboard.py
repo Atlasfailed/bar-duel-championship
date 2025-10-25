@@ -64,6 +64,17 @@ TIER_DEFINITIONS = [
     ("Grandmaster", 99, 100, 3200, 5000),  # Top 1%: 3200+ CR
 ]
 
+# Tier logos/icons for visual display
+TIER_LOGOS = {
+    "Bronze": "🥉",
+    "Silver": "🥈", 
+    "Gold": "🥇",
+    "Platinum": "💎",
+    "Diamond": "💠",
+    "Master": "⭐",
+    "Grandmaster": "👑"
+}
+
 # Champion Rating conversion factor (how much CR change per OS change)
 CR_CONVERSION_FACTOR = 100.0
 
@@ -276,11 +287,42 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
     tier_order = {name: i for i, (name, _, _, _, _) in enumerate(TIER_DEFINITIONS)}
     results.sort(key=lambda x: (-tier_order.get(x["tier"], -1), -x["current_cr"]))
     
-    # Assign ranks
-    for i, r in enumerate(results, 1):
-        r["rank"] = i
+    # Create final leaderboard structure with tier separators and per-tier ranking
+    final_leaderboard = []
+    current_tier = None
+    tier_rank = 0
     
-    return results
+    for player in results:
+        if current_tier != player["tier"]:
+            # Add tier separator
+            if current_tier is not None:  # Don't add separator before first tier
+                final_leaderboard.append({
+                    "type": "tier_separator",
+                    "tier": "",
+                    "tier_logo": "",
+                    "separator": True
+                })
+            
+            current_tier = player["tier"]
+            tier_rank = 0
+            
+            # Add tier header
+            tier_info = next((f"CR {min_cr}-{max_cr}" for name, _, _, min_cr, max_cr in TIER_DEFINITIONS if name == current_tier), "")
+            final_leaderboard.append({
+                "type": "tier_header",
+                "tier": current_tier,
+                "tier_logo": TIER_LOGOS.get(current_tier, ""),
+                "tier_info": tier_info,
+                "tier_header": True
+            })
+        
+        # Increment tier rank and add player
+        tier_rank += 1
+        player["tier_rank"] = tier_rank
+        player["type"] = "player"
+        final_leaderboard.append(player)
+    
+    return final_leaderboard
 
 
 def _process_match_for_cr_changes(match: Dict[str, Any], players: List[str], player_data: Dict[str, Any]):
@@ -468,7 +510,10 @@ def update_leaderboard():
 
     # Calculate rankings using new tier-based Champion Rating system
     leaderboard = calculate_rankings(submissions)
-    print(f"Ranked {len(leaderboard)} players")
+    
+    # Count only player entries for display
+    player_count = sum(1 for entry in leaderboard if entry.get("type") == "player")
+    print(f"Ranked {player_count} players")
 
     # Ensure output directory exists
     os.makedirs(os.path.dirname(LEADERBOARD_FILE), exist_ok=True)
@@ -486,32 +531,37 @@ def update_leaderboard():
         print("TOURNAMENT LEADERBOARD (Highest Tier First)")
         print("="*60)
         
-        current_tier = None
-        for player in leaderboard:
-            # Add tier separator when tier changes
-            if current_tier != player['tier']:
-                if current_tier is not None:
-                    print()  # Extra space between tiers
+        for entry in leaderboard:
+            if entry.get("type") == "tier_separator":
+                print()  # Empty line between tiers
                 
-                current_tier = player['tier']
-                tier_info = next((f"CR {min_cr}-{max_cr}" for name, _, _, min_cr, max_cr in TIER_DEFINITIONS if name == current_tier), "")
-                print(f"\n--- {current_tier.upper()} TIER ({tier_info}) ---")
-            
-            print(f"  {player['rank']:2d}. {player['player']:15s} {player['current_cr']:4d} CR ({player['wins']:2d}-{player['losses']:2d}) {player['winrate']:5.1f}%")
+            elif entry.get("type") == "tier_header":
+                tier_logo = entry.get("tier_logo", "")
+                tier_name = entry.get("tier")
+                tier_info = entry.get("tier_info", "")
+                print(f"\n{tier_logo} {tier_name.upper()} TIER ({tier_info}) {tier_logo}")
+                
+            elif entry.get("type") == "player":
+                tier_rank = entry.get("tier_rank", 1)
+                print(f"  {tier_rank:2d}. {entry['player']:15s} {entry['current_cr']:4d} CR ({entry['wins']:2d}-{entry['losses']:2d}) {entry['winrate']:5.1f}%")
         
         # Print tier distribution summary
         print(f"\n{'-'*60}")
         print("TIER DISTRIBUTION:")
         tier_counts = {}
-        for player in leaderboard:
-            tier = player['tier']
-            tier_counts[tier] = tier_counts.get(tier, 0) + 1
+        
+        # Count only player entries
+        for entry in leaderboard:
+            if entry.get("type") == "player":
+                tier = entry['tier']
+                tier_counts[tier] = tier_counts.get(tier, 0) + 1
         
         # Print tiers in reverse order (highest first)
         for tier_name, _, _, min_cr, max_cr in reversed(TIER_DEFINITIONS):
             count = tier_counts.get(tier_name, 0)
             if count > 0:
-                print(f"  {tier_name}: {count} players (CR {min_cr}-{max_cr})")
+                tier_logo = TIER_LOGOS.get(tier_name, "")
+                print(f"  {tier_logo} {tier_name}: {count} players (CR {min_cr}-{max_cr})")
 
 
 if __name__ == "__main__":

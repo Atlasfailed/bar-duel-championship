@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Tilfidius_Lamarre",
+    "precisehawk4068"
+  ],
+  "series_winner": "precisehawk4068",
+  "wins": {
+    "Tilfidius_Lamarre": 0,
+    "precisehawk4068": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "a1743268b52e49c67c4d65e7b05ba8c3",
+      "map": "Angel Crossing 1.5.1",
+      "winner": "precisehawk4068",
+      "duration_ms": 3053467,
+      "seed_ratings": {
+        "Tilfidius_Lamarre": {
+          "mu": 14.4,
+          "sigma": 7.0
+        },
+        "precisehawk4068": {
+          "mu": 14.51,
+          "sigma": 7.97
+        }
+      }
+    },
+    {
+      "id": "798e3368eed958bde3aba328001bbbca",
+      "map": "Eclipsed 0.9.8",
+      "winner": "precisehawk4068",
+      "duration_ms": 1574800,
+      "seed_ratings": {
+        "Tilfidius_Lamarre": {
+          "mu": 14.4,
+          "sigma": 7.0
+        },
+        "precisehawk4068": {
+          "mu": 14.51,
+          "sigma": 7.97
+        }
+      }
+    },
+    {
+      "id": "4e95336861bfa9677f0ce7da28e9297c",
+      "map": "Jade Empress 1.41",
+      "winner": "precisehawk4068",
+      "duration_ms": 1098800,
+      "seed_ratings": {
+        "Tilfidius_Lamarre": {
+          "mu": 14.4,
+          "sigma": 7.0
+        },
+        "precisehawk4068": {
+          "mu": 14.51,
+          "sigma": 7.97
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-14T23:35:25.278150+00:00",
+  "submitted_by": "atlasfailed"
+}

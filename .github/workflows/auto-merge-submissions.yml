@@ -74,6 +74,15 @@ jobs:
             --subject "✅ ${{ github.event.pull_request.title }}" \
             --body "🤖 Automated merge of validated submission"
       
+      - name: Trigger Leaderboard Update
+        if: steps.validate.outputs.valid == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "🚀 Triggering leaderboard update workflow..."
+          gh workflow run update-leaderboard.yml --ref main
+          echo "✅ Leaderboard update triggered"
+      
       - name: Summary
         if: always()
         run: |

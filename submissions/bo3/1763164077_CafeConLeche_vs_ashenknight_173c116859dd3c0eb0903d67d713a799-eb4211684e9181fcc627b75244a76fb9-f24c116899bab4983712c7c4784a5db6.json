@@ -1,0 +1,64 @@
+{
+  "players": [
+    "CafeConLeche",
+    "ashenknight"
+  ],
+  "series_winner": "ashenknight",
+  "wins": {
+    "CafeConLeche": 0,
+    "ashenknight": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "173c116859dd3c0eb0903d67d713a799",
+      "map": "Center Command BAR v1.0",
+      "winner": "ashenknight",
+      "duration_ms": 1476033,
+      "seed_ratings": {
+        "CafeConLeche": {
+          "mu": 16.94,
+          "sigma": 6.61
+        },
+        "ashenknight": {
+          "mu": 13.73,
+          "sigma": 6.99
+        }
+      }
+    },
+    {
+      "id": "eb4211684e9181fcc627b75244a76fb9",
+      "map": "Hooked 1.1.1",
+      "winner": "ashenknight",
+      "duration_ms": 2097800,
+      "seed_ratings": {
+        "CafeConLeche": {
+          "mu": 16.94,
+          "sigma": 6.61
+        },
+        "ashenknight": {
+          "mu": 13.73,
+          "sigma": 6.99
+        }
+      }
+    },
+    {
+      "id": "f24c116899bab4983712c7c4784a5db6",
+      "map": "High Noon Remake 1.0",
+      "winner": "ashenknight",
+      "duration_ms": 2151267,
+      "seed_ratings": {
+        "CafeConLeche": {
+          "mu": 16.94,
+          "sigma": 6.61
+        },
+        "ashenknight": {
+          "mu": 13.73,
+          "sigma": 6.99
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-14T23:47:57.377335+00:00",
+  "submitted_by": "atlasfailed"
+}

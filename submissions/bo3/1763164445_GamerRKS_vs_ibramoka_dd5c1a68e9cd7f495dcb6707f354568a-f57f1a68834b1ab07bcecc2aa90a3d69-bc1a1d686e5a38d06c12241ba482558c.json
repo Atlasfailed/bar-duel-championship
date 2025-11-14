@@ -1,0 +1,64 @@
+{
+  "players": [
+    "GamerRKS",
+    "ibramoka"
+  ],
+  "series_winner": "ibramoka",
+  "wins": {
+    "GamerRKS": 0,
+    "ibramoka": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "dd5c1a68e9cd7f495dcb6707f354568a",
+      "map": "SpeedMetal BAR V2",
+      "winner": "ibramoka",
+      "duration_ms": 1897934,
+      "seed_ratings": {
+        "GamerRKS": {
+          "mu": 5.52,
+          "sigma": 4.91
+        },
+        "ibramoka": {
+          "mu": 6.72,
+          "sigma": 6.85
+        }
+      }
+    },
+    {
+      "id": "f57f1a68834b1ab07bcecc2aa90a3d69",
+      "map": "SpeedMetal BAR V2",
+      "winner": "ibramoka",
+      "duration_ms": 1258600,
+      "seed_ratings": {
+        "GamerRKS": {
+          "mu": 28.66,
+          "sigma": 3.87
+        },
+        "ibramoka": {
+          "mu": 10.97,
+          "sigma": 3.85
+        }
+      }
+    },
+    {
+      "id": "bc1a1d686e5a38d06c12241ba482558c",
+      "map": "Incandescence Remake 3.3.1",
+      "winner": "ibramoka",
+      "duration_ms": 2569667,
+      "seed_ratings": {
+        "GamerRKS": {
+          "mu": 14.07,
+          "sigma": 8.1
+        },
+        "ibramoka": {
+          "mu": 17.21,
+          "sigma": 7.79
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-14T23:54:05.519298+00:00",
+  "submitted_by": "atlasfailed"
+}

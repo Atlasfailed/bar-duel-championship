@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Berseker000",
+    "galgtonold"
+  ],
+  "series_winner": "galgtonold",
+  "wins": {
+    "Berseker000": 1,
+    "galgtonold": 2
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "7a9730686d111dc1e3bd2cf6a7827aff",
+      "map": "Prismatic Anomaly v1.02",
+      "winner": "galgtonold",
+      "duration_ms": 1252800,
+      "seed_ratings": {
+        "galgtonold": {
+          "mu": 35.01,
+          "sigma": 2.59
+        },
+        "Berseker000": {
+          "mu": 13.84,
+          "sigma": 6.8
+        }
+      }
+    },
+    {
+      "id": "019d306830ab4041be0528c650292c3c",
+      "map": "Prismatic Anomaly v1.02",
+      "winner": "galgtonold",
+      "duration_ms": 330533,
+      "seed_ratings": {
+        "galgtonold": {
+          "mu": 35.36,
+          "sigma": 2.59
+        },
+        "Berseker000": {
+          "mu": 13.84,
+          "sigma": 6.8
+        }
+      }
+    },
+    {
+      "id": "ba9e3068616c7e6ba26ed275338d0572",
+      "map": "Prismatic Anomaly v1.02",
+      "winner": "Berseker000",
+      "duration_ms": 5626934,
+      "seed_ratings": {
+        "galgtonold": {
+          "mu": 35.36,
+          "sigma": 2.59
+        },
+        "Berseker000": {
+          "mu": 13.84,
+          "sigma": 6.8
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-15T13:28:20.950107+00:00",
+  "submitted_by": "atlasfailed"
+}

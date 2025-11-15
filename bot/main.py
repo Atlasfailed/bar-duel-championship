@@ -380,17 +380,26 @@ async def submit(interaction: discord.Interaction, replays: str):
     # Check replay age
     now = datetime.now(timezone.utc)
     for replay in validated:
-        if replay["startTime"]:
+        start_time = replay.get("startTime")
+        if start_time:
             try:
-                start = datetime.fromisoformat(replay["startTime"].replace("Z", "+00:00"))
+                # Handle ISO format with or without Z
+                start_str = start_time.replace("Z", "+00:00") if start_time.endswith("Z") else start_time
+                start = datetime.fromisoformat(start_str)
                 age = (now - start).days
                 if age > MAX_REPLAY_AGE_DAYS:
                     return await interaction.followup.send(
-                        f"❌ Replay `{replay['id']}` is {age} days old (max: {MAX_REPLAY_AGE_DAYS})",
+                        f"❌ Replay `{replay['id']}` is {age} days old (max: {MAX_REPLAY_AGE_DAYS} days)",
                         ephemeral=True
                     )
-            except:
+            except Exception as e:
+                # If we can't parse the date, log but don't fail (some replays might have invalid dates)
+                print(f"Warning: Could not parse startTime for replay {replay.get('id')}: {e}")
+                # Still check if we can determine age from other means
                 pass
+        else:
+            # No startTime - warn but allow (some old replays might not have this)
+            print(f"Warning: Replay {replay.get('id')} has no startTime field")
     
     # Create submission payload
     payload = {

@@ -35,10 +35,10 @@ jobs:
       
       - name: Full leaderboard recalculation
         run: |
-          echo "Starting full leaderboard recalculation..."
+          echo "Starting full leaderboard recalculation from scratch..."
           echo "Reason: ${{ github.event.inputs.reason }}"
-          python actions/update_leaderboard.py
-          echo "Leaderboard recalculation complete"
+          python actions/recalculate_leaderboard.py
+          echo "Full recalculation complete"
       
       - name: Extract replay data
         run: |
@@ -96,7 +96,12 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          
+          # Also remove processed submissions cache for fresh start
+          rm -f public/data/.processed_submissions.json
+          
           git add ${{ steps.changes.outputs.files }}
+          git add public/data/.processed_submissions.json || true
           git commit -m "Full leaderboard recalculation [skip ci]
 
           Reason: ${{ github.event.inputs.reason }}

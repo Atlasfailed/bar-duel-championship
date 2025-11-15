@@ -6,18 +6,18 @@ Adjust these values to tune the rating and tier system.
 # ==============================
 # Tier Definitions
 # ==============================
-# Format: (tier_name, min_percentile, max_percentile, min_cr, max_cr)
-# Percentile thresholds define tier boundaries (e.g., Bronze = lower than 20th percentile)
+# Format: (tier_name, min_os_value, max_os_value, min_cr, max_cr)
+# Tiers now use OpenSkill (mu - sigma) thresholds directly (e.g., Bronze = OS lower than 10)
 # CR ranges define the Champion Rating boundaries for each tier
 TIER_DEFINITIONS = [
-    # Tier Name       Min %  Max %  Min CR  Max CR
-    ("Bronze",        1,     20,    900,    1200),  # Lower than 20th percentile
-    ("Silver",        20,    40,    1200,   1500),  # 20th-40th percentile
-    ("Gold",          40,    60,    1500,   1800),  # 40th-60th percentile
-    ("Platinum",      60,    80,    1800,   2100),  # 60th-80th percentile
-    ("Diamond",       80,    95,    2100,   2500),  # 80th-95th percentile
-    ("Master",        95,    99,    2500,   3000),  # 95th-99th percentile
-    ("Grandmaster",   99,    100,   3000,   5000),  # Top 1% (above 99th percentile)
+    # Tier Name       Min OS        Max OS        Min CR  Max CR
+    ("Bronze",        float("-inf"), 10.0,         900,    1200),  # OS below 10
+    ("Silver",        10.0,          20.0,         1200,   1500),  # 10 ≤ OS < 20
+    ("Gold",          20.0,          30.0,         1500,   1800),  # 20 ≤ OS < 30
+    ("Platinum",      30.0,          40.0,         1800,   2100),  # 30 ≤ OS < 40
+    ("Diamond",       40.0,          50.0,         2100,   2500),  # 40 ≤ OS < 50
+    ("Master",        50.0,          60.0,         2500,   3000),  # 50 ≤ OS < 60
+    ("Grandmaster",   60.0,          float("inf"), 3000,   5000),  # OS ≥ 60
 ]
 
 # Tier logos/icons for visual display (SVG file references)
@@ -40,15 +40,5 @@ CR_MIN_CHANGE = 2          # Minimum CR change (beating much weaker opponent)
 CR_MAX_CHANGE = 30         # Maximum CR change (beating much stronger opponent)
 SKILL_DIFF_THRESHOLD = 15.0  # Skill difference threshold for CR scaling
 
-# ==============================
-# OpenSkill Rating Model
-# ==============================
-# PlackettLuce model parameters for skill rating calculations
-OS_MU = 25.0               # Default mean skill rating
-OS_SIGMA = 25.0 / 6.0      # Default uncertainty (volatility)
-OS_BETA = 25.0 / 6.0       # Skill difference scaling factor
-OS_TAU = 25.0 / 300.0      # Dynamics factor (rating volatility over time)
-
-# Default seed values if replay data is missing
-DEFAULT_MU = OS_MU
-DEFAULT_SIGMA = OS_SIGMA
+# Note: OpenSkill model parameters are configured in tier_utils.py
+# Default OpenSkill values (DEFAULT_MU, DEFAULT_SIGMA) are also defined in tier_utils.py

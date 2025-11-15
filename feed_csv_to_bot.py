@@ -206,7 +206,7 @@ async def process_csv_submissions(csv_file: str, limit: int = 30):
     
     print(f"\n🎉 Processed {submissions_processed} submissions successfully!")
     print(f"📁 Files created in submissions/bo3/")
-    print(f"🔄 Run 'python actions/update_leaderboard.py' to update rankings")
+    print(f"🔄 Run 'python actions/recalculate_leaderboard.py' to update rankings")
 
 async def main():
     """Main function"""

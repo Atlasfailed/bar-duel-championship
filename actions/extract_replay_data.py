@@ -20,21 +20,28 @@ from typing import Dict, List, Any, Optional
 import requests
 import time
 
-# ==============================
-# Configuration
-# ==============================
-
-SUBMISSIONS_DIR = "submissions/bo3"
-REPLAY_DATABASE_FILE = "public/data/replay_database.json"
-PLAYER_MATCH_HISTORY_FILE = "public/data/player_match_history.json"
-
-# BAR API configuration
-BAR_API_BASE = "https://api.bar-rts.com"
-REQUEST_DELAY = 0.5  # Delay between API requests to be respectful
-
-# Default values
-DEFAULT_MU = 25.0
-DEFAULT_SIGMA = 25.0 / 3.0
+# Import extraction configuration
+from extraction_config import (
+    SUBMISSIONS_DIR,
+    REPLAY_DATABASE_FILE,
+    PLAYER_MATCH_HISTORY_FILE,
+    BAR_API_BASE,
+    REQUEST_DELAY,
+    API_TIMEOUT_SECONDS,
+    DEFAULT_MU,
+    DEFAULT_SIGMA,
+    SUBMISSION_FIELDS,
+    MATCH_FIELDS,
+    REPLAY_FIELDS,
+    API_FIELDS,
+    PLAYER_API_FIELDS,
+    SEED_RATING_FIELDS,
+    REPLAY_VIEW_BASE_URL,
+    DURATION_TAG_THRESHOLDS,
+    SKILL_TAG_THRESHOLDS,
+    MAX_RECENT_MATCHES,
+    DEFAULT_VALUES,
+)
 
 
 # ==============================
@@ -45,7 +52,7 @@ def fetch_replay_details(replay_id: str) -> Optional[Dict[str, Any]]:
     """Fetch detailed replay information from BAR API."""
     try:
         url = f"{BAR_API_BASE}/replays/{replay_id}"
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=API_TIMEOUT_SECONDS)
         
         if response.status_code == 200:
             return response.json()
@@ -58,26 +65,36 @@ def fetch_replay_details(replay_id: str) -> Optional[Dict[str, Any]]:
         return None
 
 
+def get_field_value(obj: Dict[str, Any], field_list: List[str], default: Any = None) -> Any:
+    """Get value from object using field list (in order of preference)."""
+    for field in field_list:
+        value = obj.get(field)
+        if value is not None:
+            return value
+    return default
+
 def extract_faction_info(replay_data: Dict[str, Any]) -> Dict[str, str]:
     """Extract faction information for each player from replay data."""
     factions = {}
     
     # Try to get faction info from different possible locations in the API response
-    teams = replay_data.get("AllyTeams", [])
+    ally_teams_field = API_FIELDS["AllyTeams"][0]
+    teams = replay_data.get(ally_teams_field, [])
     if teams:
         for team in teams:
             players = team.get("Players", [])
             for player in players:
-                name = player.get("Name", "")
-                side = player.get("Side", "")
+                name = get_field_value(player, PLAYER_API_FIELDS["name"], "")
+                side = get_field_value(player, PLAYER_API_FIELDS["side"], "")
                 if name and side:
                     factions[name] = side
     
     # Fallback: check other possible locations
-    if not factions and "Players" in replay_data:
-        for player in replay_data["Players"]:
-            name = player.get("Name", "")
-            side = player.get("Side", "")
+    players_field = API_FIELDS["Players"][0]
+    if not factions and players_field in replay_data:
+        for player in replay_data[players_field]:
+            name = get_field_value(player, PLAYER_API_FIELDS["name"], "")
+            side = get_field_value(player, PLAYER_API_FIELDS["side"], "")
             if name and side:
                 factions[name] = side
     
@@ -118,25 +135,25 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
     processed_replays = set()  # Track already processed replay IDs
     
     for submission in submissions:
-        submission_date = submission.get("submitted_at", submission.get("timestamp", ""))
-        submitted_by = submission.get("submitted_by", "unknown")
-        players = submission.get("players", [])
-        series_winner = submission.get("series_winner", "")
+        submission_date = get_field_value(submission, SUBMISSION_FIELDS["submitted_at"], "")
+        submitted_by = get_field_value(submission, SUBMISSION_FIELDS["submitted_by"], DEFAULT_VALUES["submitted_by"])
+        players = get_field_value(submission, SUBMISSION_FIELDS["players"], [])
+        series_winner = get_field_value(submission, SUBMISSION_FIELDS["series_winner"], DEFAULT_VALUES["series_winner"])
         
         # Process matches (newer format)
-        matches = submission.get("matches", [])
+        matches = get_field_value(submission, SUBMISSION_FIELDS["matches"], [])
         for match in matches:
-            replay_id = match.get("id", "")
+            replay_id = get_field_value(match, MATCH_FIELDS["id"], "")
             if not replay_id or replay_id in processed_replays:
                 continue
                 
             processed_replays.add(replay_id)
             
             # Extract basic info from submission
-            winner = match.get("winner", "")
-            map_name = match.get("map", "Unknown")
-            duration_ms = match.get("duration_ms", 0)
-            seed_ratings = match.get("seed_ratings", {})
+            winner = get_field_value(match, MATCH_FIELDS["winner"], "")
+            map_name = get_field_value(match, MATCH_FIELDS["map"], DEFAULT_VALUES["map"])
+            duration_ms = get_field_value(match, MATCH_FIELDS["duration_ms"], 0)
+            seed_ratings = get_field_value(match, MATCH_FIELDS["seed_ratings"], {})
             
             # Fetch additional details from BAR API
             print(f"  Fetching details for replay {replay_id}...")
@@ -146,28 +163,28 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
             # Extract faction information
             factions = {}
             start_time = None
-            engine_version = ""
-            game_version = ""
+            engine_version = DEFAULT_VALUES["engine_version"]
+            game_version = DEFAULT_VALUES["game_version"]
             
             if api_data:
                 factions = extract_faction_info(api_data)
-                start_time = api_data.get("startTime", "")
-                engine_version = api_data.get("engineVersion", "")
-                game_version = api_data.get("gameVersion", "")
+                start_time = get_field_value(api_data, API_FIELDS["startTime"], None)
+                engine_version = get_field_value(api_data, API_FIELDS["engineVersion"], DEFAULT_VALUES["engine_version"])
+                game_version = get_field_value(api_data, API_FIELDS["gameVersion"], DEFAULT_VALUES["game_version"])
             
             # Build player info
             player_info = []
             for player in players:
                 player_data = {
                     "name": player,
-                    "faction": factions.get(player, "Unknown"),
+                    "faction": factions.get(player, DEFAULT_VALUES["faction"]),
                     "is_winner": player == winner
                 }
                 
                 # Add OpenSkill info if available
                 if player in seed_ratings:
-                    mu = seed_ratings[player].get("mu", DEFAULT_MU)
-                    sigma = seed_ratings[player].get("sigma", DEFAULT_SIGMA)
+                    mu = get_field_value(seed_ratings[player], SEED_RATING_FIELDS["mu"], DEFAULT_MU)
+                    sigma = get_field_value(seed_ratings[player], SEED_RATING_FIELDS["sigma"], DEFAULT_SIGMA)
                     player_data["mu"] = mu
                     player_data["sigma"] = sigma
                     player_data["skill_estimate"] = mu - sigma
@@ -177,7 +194,7 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
             # Create replay entry
             replay_entry = {
                 "id": replay_id,
-                "url": f"https://www.beyondallreason.info/replays?gameId={replay_id}",
+                "url": f"{REPLAY_VIEW_BASE_URL}{replay_id}",
                 "date": start_time or submission_date,
                 "submitted_at": submission_date,
                 "submitted_by": submitted_by,
@@ -197,20 +214,20 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
             replay_database.append(replay_entry)
         
         # Process replays (older format)
-        replays = submission.get("replays", [])
+        replays = get_field_value(submission, SUBMISSION_FIELDS["replays"], [])
         for replay in replays:
-            replay_id = replay.get("id", "")
+            replay_id = get_field_value(replay, REPLAY_FIELDS["id"], "")
             if not replay_id or replay_id in processed_replays:
                 continue
                 
             processed_replays.add(replay_id)
             
             # Extract basic info
-            winner = replay.get("winner", "")
-            map_name = replay.get("mapname", "Unknown")
-            duration_ms = replay.get("duration_ms", 0)
-            start_time = replay.get("startTime", "")
-            replay_players = replay.get("players", [])
+            winner = get_field_value(replay, REPLAY_FIELDS["winner"], "")
+            map_name = get_field_value(replay, REPLAY_FIELDS["mapname"], DEFAULT_VALUES["map"])
+            duration_ms = get_field_value(replay, REPLAY_FIELDS["duration_ms"], 0)
+            start_time = get_field_value(replay, REPLAY_FIELDS["startTime"], "")
+            replay_players = get_field_value(replay, REPLAY_FIELDS["players"], [])
             
             # Fetch additional details from BAR API
             print(f"  Fetching details for replay {replay_id}...")
@@ -219,23 +236,23 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
             
             # Extract faction information
             factions = {}
-            engine_version = ""
-            game_version = ""
+            engine_version = DEFAULT_VALUES["engine_version"]
+            game_version = DEFAULT_VALUES["game_version"]
             
             if api_data:
                 factions = extract_faction_info(api_data)
-                engine_version = api_data.get("engineVersion", "")
-                game_version = api_data.get("gameVersion", "")
+                engine_version = get_field_value(api_data, API_FIELDS["engineVersion"], DEFAULT_VALUES["engine_version"])
+                game_version = get_field_value(api_data, API_FIELDS["gameVersion"], DEFAULT_VALUES["game_version"])
             
             # Build player info
             player_info = []
             for player_data in replay_players:
-                name = player_data.get("name", "")
-                skill = player_data.get("skill", DEFAULT_MU)
+                name = get_field_value(player_data, ["name"], "")
+                skill = get_field_value(player_data, ["skill"], DEFAULT_MU)
                 
                 player_entry = {
                     "name": name,
-                    "faction": factions.get(name, "Unknown"),
+                    "faction": factions.get(name, DEFAULT_VALUES["faction"]),
                     "is_winner": name == winner,
                     "skill_estimate": skill
                 }
@@ -245,7 +262,7 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
             # Create replay entry
             replay_entry = {
                 "id": replay_id,
-                "url": f"https://www.beyondallreason.info/replays?gameId={replay_id}",
+                "url": f"{REPLAY_VIEW_BASE_URL}{replay_id}",
                 "date": start_time or submission_date,
                 "submitted_at": submission_date,
                 "submitted_by": submitted_by,
@@ -272,34 +289,28 @@ def extract_replay_database(submissions: List[Dict[str, Any]]) -> List[Dict[str,
 
 
 def generate_replay_tags(player_info: List[Dict[str, Any]], duration_ms: int, map_name: str) -> List[str]:
-    """Generate searchable tags for the replay."""
+    """Generate searchable tags for the replay using configuration."""
     tags = []
     
     # Duration-based tags
     duration_minutes = duration_ms / (1000 * 60)
-    if duration_minutes < 10:
-        tags.append("short")
-    elif duration_minutes < 30:
-        tags.append("medium")
-    elif duration_minutes < 60:
-        tags.append("long")
-    else:
-        tags.append("epic")
+    for tag_name, threshold in sorted(DURATION_TAG_THRESHOLDS.items(), key=lambda x: x[1]):
+        if duration_minutes < threshold:
+            tags.append(tag_name)
+            break
     
     # Skill-based tags
     skills = [p.get("skill_estimate", 0) for p in player_info if "skill_estimate" in p]
     if skills:
         avg_skill = sum(skills) / len(skills)
-        if avg_skill > 25:
-            tags.append("high-skill")
-        elif avg_skill > 15:
-            tags.append("mid-skill")
-        else:
-            tags.append("beginner-friendly")
+        for tag_name, threshold in sorted(SKILL_TAG_THRESHOLDS.items(), key=lambda x: x[1], reverse=True):
+            if avg_skill > threshold:
+                tags.append(tag_name)
+                break
     
     # Faction tags
     factions = [p.get("faction", "") for p in player_info]
-    unique_factions = set(f for f in factions if f and f != "Unknown")
+    unique_factions = set(f for f in factions if f and f != DEFAULT_VALUES["faction"])
     if len(unique_factions) > 1:
         tags.append("mixed-factions")
     elif len(unique_factions) == 1:
@@ -307,7 +318,7 @@ def generate_replay_tags(player_info: List[Dict[str, Any]], duration_ms: int, ma
         tags.append(f"all-{faction}")
     
     # Map tags
-    if map_name and map_name != "Unknown":
+    if map_name and map_name != DEFAULT_VALUES["map"]:
         # Clean map name for tag
         clean_map = map_name.lower().replace(" ", "-").replace(".", "")
         tags.append(f"map-{clean_map}")
@@ -364,7 +375,7 @@ def generate_player_match_history(replay_database: List[Dict[str, Any]]) -> Dict
                     opp_name = other_player["name"]
                     history["opponents_faced"][opp_name] = history["opponents_faced"].get(opp_name, 0) + 1
             
-            # Add to recent matches (keep last 10)
+            # Add to recent matches (keep last N)
             match_summary = {
                 "date": replay["date"],
                 "replay_id": replay["id"],
@@ -376,8 +387,8 @@ def generate_player_match_history(replay_database: List[Dict[str, Any]]) -> Dict
             }
             
             history["recent_matches"].append(match_summary)
-            if len(history["recent_matches"]) > 10:
-                history["recent_matches"] = history["recent_matches"][-10:]
+            if len(history["recent_matches"]) > MAX_RECENT_MATCHES:
+                history["recent_matches"] = history["recent_matches"][-MAX_RECENT_MATCHES:]
             
             # Track skill progression
             if "skill_estimate" in player_data:

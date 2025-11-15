@@ -19,24 +19,50 @@ import discord
 from discord import app_commands
 from dotenv import load_dotenv
 
+# Import bot verification configuration
+from config import (
+    REPLAY_URL_PATTERN,
+    REQUIRED_PLAYER_COUNT,
+    MIN_TEAM_ID,
+    DEFAULT_SIGMA,
+    MIN_REPLAYS,
+    MAX_REPLAYS,
+    REQUIRED_WINS_FOR_SERIES,
+    MAX_REPLAY_AGE_DAYS as CONFIG_MAX_REPLAY_AGE_DAYS,
+    MAX_TIME_BETWEEN_REPLAYS_SEC as CONFIG_MAX_TIME_BETWEEN_REPLAYS_SEC,
+    API_TIMEOUT_SECONDS,
+    PLAYER_NAME_FIELDS,
+    SKILL_FIELDS,
+    SIGMA_FIELDS,
+    TEAM_ID_FIELDS,
+    WINNER_ID_FIELDS,
+    START_TIME_FIELDS,
+    DURATION_FIELDS,
+    MAP_NAME_FIELDS,
+    ALLY_TEAMS_PATH,
+    PLAYERS_PATH,
+    HOST_SETTINGS_PATH,
+    GAMESTATS_PATH,
+)
+
 # Load environment
 load_dotenv()
 
-# Configuration
+# Configuration (environment variables)
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN", "").strip()
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GITHUB_REPO = os.getenv("GITHUB_REPO", "Atlasfailed/bar-duel-championship").strip()
 GITHUB_BASE_BRANCH = os.getenv("GITHUB_BASE_BRANCH", "main").strip()
-TEAM_SIZE = int(os.getenv("TEAM_SIZE", "1"))
-MAX_REPLAY_AGE_DAYS = int(os.getenv("MAX_REPLAY_AGE_DAYS", "30"))
-MAX_TIME_BETWEEN_REPLAYS_SEC = int(os.getenv("MAX_TIME_BETWEEN_REPLAYS_SEC", "86400"))
+
+# Allow environment override for replay age (defaults to config value)
+MAX_REPLAY_AGE_DAYS = int(os.getenv("MAX_REPLAY_AGE_DAYS", str(CONFIG_MAX_REPLAY_AGE_DAYS)))
+MAX_TIME_BETWEEN_REPLAYS_SEC = int(os.getenv("MAX_TIME_BETWEEN_REPLAYS_SEC", str(CONFIG_MAX_TIME_BETWEEN_REPLAYS_SEC)))
 
 if not DISCORD_TOKEN:
     raise RuntimeError("❌ DISCORD_TOKEN required in .env file")
 
 # Submission tracking
 SUBMISSIONS_FILE = "data/submissions_index.json"
-REPLAY_URL_PATTERN = re.compile(r"https?://api\.bar-rts\.com/replays/([A-Za-z0-9]+)$")
 
 # ====== HELPER FUNCTIONS ======
 
@@ -69,30 +95,35 @@ def extract_replay_ids(urls: List[str]) -> List[str]:
 
 async def fetch_replay(session: aiohttp.ClientSession, url: str) -> Dict[str, Any]:
     """Fetch replay JSON from API"""
-    async with session.get(url, timeout=12) as response:
+    async with session.get(url, timeout=API_TIMEOUT_SECONDS) as response:
         if response.status != 200:
             raise ValueError(f"Failed to fetch replay: HTTP {response.status}")
         return await response.json()
 
 def validate_replay(replay: Dict[str, Any]) -> Dict[str, Any]:
-    """Validate and extract replay data"""
-    host_settings = replay.get("hostSettings", {})
-    map_name = host_settings.get("mapname", "Unknown")
+    """Validate and extract replay data using configuration"""
+    host_settings = replay.get(HOST_SETTINGS_PATH, {})
+    map_name = host_settings.get(MAP_NAME_FIELDS[0], "Unknown")
     
     # Get all players from ALL AllyTeams (not just the first one)
     players_data = []
-    ally_teams = replay.get("AllyTeams", [])
+    ally_teams = replay.get(ALLY_TEAMS_PATH, [])
     
     for ally_team in ally_teams:
-        team_players = ally_team.get("Players", [])
+        team_players = ally_team.get(PLAYERS_PATH, [])
         for player in team_players:
             # Only include actual players (with valid team IDs), exclude spectators/bots
-            team_id = player.get("teamId")
-            if team_id is not None and team_id >= 0:
+            team_id = None
+            for field in TEAM_ID_FIELDS:
+                team_id = player.get(field)
+                if team_id is not None:
+                    break
+            
+            if team_id is not None and team_id >= MIN_TEAM_ID:
                 players_data.append(player)
     
-    if len(players_data) != 2:
-        raise ValueError(f"Replay must have exactly 2 players, found {len(players_data)} (excluding spectators)")
+    if len(players_data) != REQUIRED_PLAYER_COUNT:
+        raise ValueError(f"Replay must have exactly {REQUIRED_PLAYER_COUNT} players, found {len(players_data)} (excluding spectators)")
     
     def parse_skill(skill_value):
         """Parse skill value, handling formats like '[16.67]' or '16.67' or numbers"""
@@ -111,28 +142,39 @@ def validate_replay(replay: Dict[str, Any]) -> Dict[str, Any]:
         except (ValueError, TypeError):
             return 0.0
     
+    def get_field_value(obj: Dict, field_list: List[str], default: Any = None):
+        """Get value from object using field list (in order of preference)"""
+        for field in field_list:
+            value = obj.get(field)
+            if value is not None:
+                return value
+        return default
+    
     players = []
     seed_ratings = {}
     for p in players_data:
-        name = p.get("name") or p.get("Name") or "Unknown"
-        mu = parse_skill(p.get("skill") or p.get("Skill"))
-        sigma = parse_skill(p.get("skillUncertainty") or p.get("SkillUncertainty"))
+        name = get_field_value(p, PLAYER_NAME_FIELDS, "Unknown")
+        mu = parse_skill(get_field_value(p, SKILL_FIELDS))
+        sigma = parse_skill(get_field_value(p, SIGMA_FIELDS))
         
         # If sigma is 0, use default OpenSkill initial uncertainty
         if sigma == 0.0:
-            sigma = 8.333  # OpenSkill default
+            sigma = DEFAULT_SIGMA
         
         players.append({"name": name, "skill": mu})
         seed_ratings[name] = {"mu": mu, "sigma": sigma}
     
-    winner_id = replay.get("gamestats", {}).get("winningTeamId")
+    gamestats = replay.get(GAMESTATS_PATH, {})
+    winner_id = get_field_value(gamestats, WINNER_ID_FIELDS)
     winner = None
     for p in players_data:
-        if p.get("teamId") == winner_id or p.get("TeamId") == winner_id:
-            winner = p.get("name") or p.get("Name")
+        p_team_id = get_field_value(p, TEAM_ID_FIELDS)
+        if p_team_id == winner_id:
+            winner = get_field_value(p, PLAYER_NAME_FIELDS)
+            break
     
-    start_time = replay.get("startTime") or replay.get("Start Time", "")
-    duration_ms = replay.get("durationMs", 0)
+    start_time = get_field_value(replay, START_TIME_FIELDS, "")
+    duration_ms = get_field_value(replay, DURATION_FIELDS, 0)
     
     return {
         "id": replay.get("id", ""),
@@ -145,7 +187,7 @@ def validate_replay(replay: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 def check_bo3_validity(replays: List[Dict[str, Any]]) -> Tuple[bool, str, str, Dict[str, int], str]:
-    """Check if replays form a valid Bo3"""
+    """Check if replays form a valid Bo3 using configuration"""
     all_player_sets = []
     for r in replays:
         player_names = {p["name"] for p in r["players"]}
@@ -155,8 +197,8 @@ def check_bo3_validity(replays: List[Dict[str, Any]]) -> Tuple[bool, str, str, D
         raise ValueError("All replays must have the same 2 players")
     
     player_names = sorted(list(all_player_sets[0]))
-    if len(player_names) != 2:
-        raise ValueError("Must have exactly 2 players")
+    if len(player_names) != REQUIRED_PLAYER_COUNT:
+        raise ValueError(f"Must have exactly {REQUIRED_PLAYER_COUNT} players")
     
     wins = {name: 0 for name in player_names}
     for r in replays:
@@ -165,7 +207,7 @@ def check_bo3_validity(replays: List[Dict[str, Any]]) -> Tuple[bool, str, str, D
     
     series_winner = None
     for name, count in wins.items():
-        if count >= 2:
+        if count >= REQUIRED_WINS_FOR_SERIES:
             series_winner = name
             break
     
@@ -188,7 +230,7 @@ async def create_github_pr(session: aiohttp.ClientSession, payload: Dict, replay
     
     # Get base ref
     async with session.get(f"{api}/repos/{owner}/{repo}/git/ref/heads/{GITHUB_BASE_BRANCH}", 
-                          headers=headers, timeout=12) as r:
+                          headers=headers, timeout=API_TIMEOUT_SECONDS) as r:
         if r.status != 200:
             raise RuntimeError(f"Failed to get base branch: HTTP {r.status}")
         ref_data = await r.json()
@@ -203,7 +245,7 @@ async def create_github_pr(session: aiohttp.ClientSession, payload: Dict, replay
     async with session.post(f"{api}/repos/{owner}/{repo}/git/refs",
                            headers=headers,
                            json={"ref": f"refs/heads/{branch_name}", "sha": base_sha},
-                           timeout=12) as r:
+                           timeout=API_TIMEOUT_SECONDS) as r:
         if r.status not in (200, 201):
             raise RuntimeError(f"Failed to create branch: HTTP {r.status}")
     
@@ -218,7 +260,7 @@ async def create_github_pr(session: aiohttp.ClientSession, payload: Dict, replay
                               "content": content_b64,
                               "branch": branch_name
                           },
-                          timeout=12) as r:
+                          timeout=API_TIMEOUT_SECONDS) as r:
         if r.status not in (200, 201):
             raise RuntimeError(f"Failed to create file: HTTP {r.status}")
     
@@ -231,7 +273,7 @@ async def create_github_pr(session: aiohttp.ClientSession, payload: Dict, replay
                                "base": GITHUB_BASE_BRANCH,
                                "body": f"Automated Bo3 submission\n\nReplays: {', '.join(replay_ids)}"
                            },
-                           timeout=12) as r:
+                           timeout=API_TIMEOUT_SECONDS) as r:
         if r.status not in (200, 201):
             raise RuntimeError(f"Failed to create PR: HTTP {r.status}")
         pr_data = await r.json()
@@ -253,10 +295,10 @@ async def submit(interaction: discord.Interaction, replays: str):
     
     # Parse URLs
     urls = [u.strip() for u in replays.split(",") if u.strip()]
-    if len(urls) < 2:
-        return await interaction.followup.send("❌ Need at least 2 replay URLs", ephemeral=True)
-    if len(urls) > 3:
-        return await interaction.followup.send("❌ Maximum 3 replay URLs", ephemeral=True)
+    if len(urls) < MIN_REPLAYS:
+        return await interaction.followup.send(f"❌ Need at least {MIN_REPLAYS} replay URLs", ephemeral=True)
+    if len(urls) > MAX_REPLAYS:
+        return await interaction.followup.send(f"❌ Maximum {MAX_REPLAYS} replay URLs", ephemeral=True)
     
     # Extract IDs
     try:
@@ -293,7 +335,7 @@ async def submit(interaction: discord.Interaction, replays: str):
         return await interaction.followup.send(f"❌ {e}", ephemeral=True)
     
     if not series_winner:
-        return await interaction.followup.send("❌ No clear winner (need 2+ wins)", ephemeral=True)
+        return await interaction.followup.send(f"❌ No clear winner (need {REQUIRED_WINS_FOR_SERIES}+ wins)", ephemeral=True)
     
     # Check replay age
     now = datetime.now(timezone.utc)

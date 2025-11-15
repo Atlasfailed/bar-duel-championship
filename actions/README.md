@@ -1,223 +1,213 @@
-# ⚙️ GitHub Actions Scripts
+# Actions Scripts
 
-**Automated leaderboard processing and maintenance.**
+This directory contains Python scripts for managing the BAR Duel Championship leaderboard system.
 
-## 📁 Structure
+## Overview
+
+The system uses two separate scripts for different update scenarios:
+
+1. **`process_submission.py`** - Incremental updates for bot submissions (fast)
+2. **`recalculate_leaderboard.py`** - Full recalculation from scratch (comprehensive)
+
+## Tier-Based Champion Rating System
+
+### How It Works
+
+1. **Initial Placement**: When a player first appears, their initial OpenSkill (mu - sigma) determines their tier
+2. **Starting CR**: Player receives the middle CR value of their tier range
+3. **CR Changes**: Each match win/loss changes CR by 2-30 points based on opponent strength
+4. **Tier Display**: Current tier is based on current CR, not initial OS
+
+### Example
 
 ```
-actions/
-├── update_leaderboard.py  # Main processing script
-└── requirements.txt       # Dependencies (none needed!)
+Player with OS 23.11:
+- Initial tier: Gold (OS 20-30 range)
+- Starting CR: 1650 (middle of 1500-1800 range)
+- After 3 losses: CR drops to ~1617
+- Still in Gold tier (CR 1500-1800)
 ```
 
-## 🎯 Purpose
+## Scripts
 
-These scripts run in GitHub Actions workflows to:
-1. **Process submissions** from merged PRs
-2. **Calculate rankings** using tier-based system
-3. **Update leaderboard** JSON file
-4. **Trigger website rebuild** (GitHub Pages)
+### process_submission.py (Incremental Updates)
 
-## 🔄 Workflow Integration
+**Purpose**: Fast incremental updates when the Discord bot creates new submissions.
 
-### Current Workflow
-`.github/workflows/update-leaderboard.yml`
+**When to use**:
+- Automatically triggered by bot PR merges
+- When you want to quickly add new submissions without recalculating everything
 
-**Triggers:**
-- ✅ Pull request merged to main
-- ✅ Manual dispatch
-- ⏰ Scheduled (if configured)
+**How it works**:
+1. Loads existing leaderboard from `public/data/leaderboard.json`
+2. Loads processed submissions list from `public/data/.processed_submissions.json`
+3. Processes only NEW submission files
+4. Updates affected players' CR and statistics
+5. Saves updated leaderboard and processed list
 
-**Steps:**
-1. Checkout repository
-2. Set up Python
-3. Run `update_leaderboard.py`
-4. Commit changes (if any)
+**Performance**: Very fast - only processes new data
 
-### Example Workflow File
-```yaml
-name: Update Leaderboard
-
-on:
-  pull_request:
-    types: [closed]
-    branches: [main]
-  workflow_dispatch:
-
-jobs:
-  update:
-    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-    
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-      
-      - name: Update leaderboard
-        run: python actions/update_leaderboard.py
-      
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add data/ public/
-          git diff --quiet && git diff --staged --quiet || \
-            git commit -m "Update leaderboard [skip ci]"
-          git push
+**Usage**:
+```bash
+python actions/process_submission.py
 ```
 
-## 📊 What It Does
+**Triggered by**:
+- `.github/workflows/update-leaderboard.yml` (on bot submission PR merge)
 
-### `update_leaderboard.py`
+---
 
-1. **Loads data files:**
-   - `data/players_new.json` - Player stats
-   - `data/submissions_index.json` - Match history
+### recalculate_leaderboard.py (Full Recalculation)
 
-2. **Processes each submission:**
-   - Fetches replay data from BAR API
-   - Updates player statistics
-   - Adjusts K-factors based on match count
+**Purpose**: Complete recalculation of entire leaderboard from scratch.
 
-3. **Calculates rankings:**
-   - Tier-based system (Bronze → Grandmaster)
-   - Intra-tier ratings (0-1000 within tier)
-   - Promotion/demotion logic
+**When to use**:
+- After changing tier definitions in `config.py`
+- After changing CR calculation parameters
+- Bug fixes that require recalculation
+- Development and testing
+- When leaderboard data is corrupted or inconsistent
 
-4. **Saves results:**
-   - Updates `data/players_new.json`
-   - Creates `public/data/leaderboard.json`
-   - Preserves backups in `data/backups/`
+**How it works**:
+1. Processes ALL submissions from `submissions/bo3/` directory
+2. Recalculates every player's initial placement based on their first OS
+3. Replays all matches to recalculate CR changes
+4. Generates fresh leaderboard with correct tier assignments
 
-## 🚀 Running Locally
+**Performance**: Slower - processes entire history
 
-For testing or manual updates:
+**Usage**:
+```bash
+python actions/recalculate_leaderboard.py
+```
+
+**Triggered by**:
+- `.github/workflows/recalculate-leaderboard.yml` (manual workflow_dispatch)
+- Run manually during development
+
+---
+
+## Configuration
+
+### config.py
+
+Contains tier definitions and CR calculation parameters:
+
+```python
+TIER_DEFINITIONS = [
+    # Tier Name    Min OS  Max OS  Min CR  Max CR
+    ("Bronze",     -inf,   10.0,   900,    1200),
+    ("Silver",     10.0,   20.0,   1200,   1500),
+    ("Gold",       20.0,   30.0,   1500,   1800),
+    ("Platinum",   30.0,   40.0,   1800,   2100),
+    ("Diamond",    40.0,   50.0,   2100,   2500),
+    ("Master",     50.0,   60.0,   2500,   3000),
+    ("Grandmaster",60.0,   +inf,   3000,   5000),
+]
+
+# CR change parameters (2-30 range per match)
+CR_BASE_CHANGE = 15
+CR_MIN_CHANGE = 2
+CR_MAX_CHANGE = 30
+SKILL_DIFF_THRESHOLD = 15.0
+```
+
+**Important**: After changing `TIER_DEFINITIONS` or CR parameters, you MUST run `recalculate_leaderboard.py` to update all player placements.
+
+---
+
+## Workflows
+
+### update-leaderboard.yml
+
+**Trigger**: Bot submission PR merged or push to `submissions/bo3/**`
+
+**Action**: Runs `process_submission.py` for fast incremental update
+
+**Commits**: Incremental data updates with `[skip ci]`
+
+### recalculate-leaderboard.yml
+
+**Trigger**: Manual via GitHub Actions UI (workflow_dispatch)
+
+**Action**: Runs `recalculate_leaderboard.py` for complete recalculation
+
+**Also**: Clears `.processed_submissions.json` cache for fresh state
+
+**Commits**: Full recalculation updates with `[skip ci]`
+
+---
+
+## Development Workflow
+
+### When to use which script:
+
+| Scenario | Use Script | Reason |
+|----------|-----------|---------|
+| Bot creates new submission | `process_submission.py` | Fast, only processes new data |
+| Changed tier boundaries | `recalculate_leaderboard.py` | Need to reprocess all players |
+| Changed CR parameters | `recalculate_leaderboard.py` | Need to replay all matches |
+| Bug fix in calculation | `recalculate_leaderboard.py` | Need accurate recalculation |
+| Data corruption | `recalculate_leaderboard.py` | Rebuild from source submissions |
+| Testing tier changes | `recalculate_leaderboard.py` | See impact on all players |
+
+### Testing locally:
 
 ```bash
-# Navigate to repo root
-cd /path/to/bar-duel-championship
+# Test incremental update
+python actions/process_submission.py
 
-# Run the script
-python actions/update_leaderboard.py
+# Test full recalculation
+python actions/recalculate_leaderboard.py
+
+# Compare outputs
+git diff public/data/leaderboard.json
 ```
 
-**Note:** This processes ALL submissions in `submissions_index.json`. For incremental updates, the workflow only processes new entries.
+---
 
-## 📋 Output Format
+## Output Files
 
-### `public/data/leaderboard.json`
-```json
-{
-  "last_updated": "2025-01-23T10:30:00Z",
-  "season": 1,
-  "rankings": [
-    {
-      "rank": 1,
-      "player_name": "PlayerName",
-      "rating": 850.5,
-      "tier": "Platinum",
-      "matches_played": 42,
-      "wins": 28,
-      "losses": 14,
-      "win_rate": 66.7,
-      "streak": 3
-    }
-  ]
-}
+### public/data/leaderboard.json
+Main leaderboard file with player rankings, tiers, and stats.
+
+### public/data/.processed_submissions.json
+Cache file tracking which submissions have been processed (used by `process_submission.py`).
+
+**Note**: This file is reset during full recalculation to ensure clean state.
+
+### docs/data/
+GitHub Pages deployment copies of data files.
+
+---
+
+## Troubleshooting
+
+### "No existing leaderboard found" error
+
+**Solution**: Run `recalculate_leaderboard.py` first to create initial leaderboard.
+
+### Players in wrong tiers after config change
+
+**Solution**: Run `recalculate_leaderboard.py` to recalculate with new tier definitions.
+
+### Incremental updates not working
+
+**Solution**: Check `.processed_submissions.json` - may need to delete and run full recalculation.
+
+### CR values seem incorrect
+
+**Solution**: Verify `config.py` parameters and run full recalculation to apply changes.
+
+---
+
+## Dependencies
+
+```txt
+openskill>=5.0.0
 ```
 
-This file is publicly accessible at:
-`https://atlasfailed.github.io/bar-duel-championship/data/leaderboard.json`
-
-## ⚡ Performance
-
-**Typical execution time:**
-- 100 players: ~2-3 seconds
-- 500 players: ~10-15 seconds
-- 1000 players: ~30-45 seconds
-
-**GitHub Actions limits:**
-- Free tier: 2,000 minutes/month
-- This script: <1 minute per run
-- **Cost: $0 (well within free tier)**
-
-## 🔧 Configuration
-
-The script uses these paths (relative to repo root):
-```python
-DATA_DIR = "data"
-PUBLIC_DIR = "public/data"
-PLAYERS_FILE = "data/players_new.json"
-SUBMISSIONS_FILE = "data/submissions_index.json"
-LEADERBOARD_FILE = "public/data/leaderboard.json"
-BACKUP_DIR = "data/backups"
+Install via:
+```bash
+pip install -r actions/requirements.txt
 ```
-
-All paths are hardcoded for consistency in GitHub Actions environment.
-
-## 🐛 Debugging
-
-### Enable verbose output:
-```python
-# In update_leaderboard.py, add:
-import logging
-logging.basicConfig(level=logging.DEBUG)
-```
-
-### Check workflow logs:
-1. Go to GitHub repository
-2. Click "Actions" tab
-3. Select workflow run
-4. View step outputs
-
-### Common issues:
-
-**File not found:**
-- Ensure paths are correct
-- Check repository structure matches expected layout
-
-**API errors:**
-- BAR API might be down
-- Replay IDs might be invalid
-- Add retry logic if needed
-
-**Git conflicts:**
-- Workflow runs concurrently
-- Add `concurrency` group to workflow
-
-## 🔄 Maintenance
-
-### Adding new features:
-1. Update `update_leaderboard.py`
-2. Test locally
-3. Push to repository
-4. Workflow uses updated script automatically
-
-### No deployment needed!
-- Script runs from repository
-- Changes take effect immediately
-- No build or compile step
-
-## 📈 Monitoring
-
-**Check execution:**
-- GitHub Actions tab shows all runs
-- Email notifications for failures (if enabled)
-- Commit history shows updates
-
-**Data validation:**
-- Compare player counts before/after
-- Verify leaderboard.json structure
-- Check website displays correctly
-
-## 🎯 Best Practices
-
-1. **Always commit with `[skip ci]`** to avoid loops
-2. **Backup before major changes** (script does this automatically)
-3. **Test locally first** before pushing changes
-4. **Monitor first few runs** after updates
-5. **Keep dependencies minimal** (currently zero!)

@@ -137,7 +137,8 @@ Interactive web interface for browsing and searching replays:
 ```
 actions/
 ├── extract_replay_data.py     # Main extraction script
-├── update_leaderboard.py      # Leaderboard generation
+├── recalculate_leaderboard.py  # Full leaderboard recalculation
+├── process_submission.py       # Incremental leaderboard updates
 └── requirements.txt           # Python dependencies
 
 public/data/

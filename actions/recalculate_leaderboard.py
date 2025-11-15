@@ -1,14 +1,20 @@
 """
-GitHub Actions - Leaderboard Update Script (Tier-based Champion Rating System)
-Processes submissions and updates the leaderboard.
+GitHub Actions - Full Leaderboard Recalculation Script
+Performs complete recalculation of the leaderboard from scratch.
 
-NEW TIER-BASED SYSTEM:
-- Players are assigned to tiers based on their initial OpenSkill (mu - sigma)
-- Each tier has a Champion Rating range, with Master tier maxing at 5500
-- Champion Rating changes are calculated from OpenSkill changes
-- Leaderboard uses Champion Rating for ranking within tiers
+TIER-BASED CHAMPION RATING SYSTEM:
+- Players are placed in tiers based on their INITIAL OpenSkill (mu - sigma)
+- Initial CR = middle of their tier's CR range
+- CR changes per game: min 2, max 30 based on opponent strength
+- Current tier displayed based on CURRENT CR
 
-Runs automatically on schedule or PR merge.
+USE THIS SCRIPT FOR:
+- Config changes (tier boundaries, CR ranges)
+- Bug fixes that require recalculation
+- Development and testing
+- Manual recalculation via workflow_dispatch
+
+FOR BOT SUBMISSIONS: Use process_submission.py instead (incremental updates)
 """
 
 import json
@@ -18,11 +24,18 @@ from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List, Any, Tuple
 
-# Add actions directory to path for config import
+# Add actions directory to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 
 # Import configuration
 from config import TIER_DEFINITIONS, TIER_LOGOS
+
+# Import shared tier utilities
+from tier_utils import (
+    MODEL, DEFAULT_MU, DEFAULT_SIGMA,
+    get_os_percentile, get_tier_from_os, get_tier_from_cr,
+    get_initial_champion_rating, calculate_dynamic_cr_change
+)
 
 # ==============================
 # Configuration
@@ -30,168 +43,6 @@ from config import TIER_DEFINITIONS, TIER_LOGOS
 
 LEADERBOARD_FILE = "public/data/leaderboard.json"
 SUBMISSIONS_DIR = "submissions/bo3"
-
-# Rating model config (OpenSkill PlackettLuce with reduced volatility)
-from openskill.models import PlackettLuce
-MODEL = PlackettLuce(mu=25.0, sigma=25.0/6.0, beta=25.0/6.0, tau=25.0/300.0)
-
-# Default seed values if replay data missing (more conservative)
-DEFAULT_MU = 25.0
-DEFAULT_SIGMA = 25.0 / 6.0  # Reduced from /3.0 to /6.0 for less volatility
-
-# OpenSkill percentile distribution (from your data)
-PERCENTILE_OS_POINTS = [
-    (1, 2.60),
-    (5, 7.26),
-    (10, 9.58),
-    (20, 12.21),
-    (30, 13.84),
-    (40, 14.86),
-    (50, 16.45),
-    (60, 18.17),
-    (70, 19.57),
-    (80, 21.80),
-    (90, 25.45),
-    (95, 29.43),
-    (96, 31.02),
-    (97, 32.61),
-    (98, 35.30),
-    (99, 39.68),
-]
-
-# Champion Rating conversion factor (reduced for more stable progression)
-CR_CONVERSION_FACTOR = 50.0  # Reduced from 100.0 to 50.0
-
-
-# ==============================
-# Tier system utilities
-# ==============================
-
-def get_os_percentile(os_value: float) -> float:
-    """Convert OpenSkill value to percentile using the provided distribution."""
-    if os_value <= PERCENTILE_OS_POINTS[0][1]:
-        return PERCENTILE_OS_POINTS[0][0]
-    if os_value >= PERCENTILE_OS_POINTS[-1][1]:
-        return PERCENTILE_OS_POINTS[-1][0]
-    
-    # Linear interpolation between points
-    for i in range(len(PERCENTILE_OS_POINTS) - 1):
-        p1, os1 = PERCENTILE_OS_POINTS[i]
-        p2, os2 = PERCENTILE_OS_POINTS[i + 1]
-        
-        if os1 <= os_value <= os2:
-            # Linear interpolation
-            ratio = (os_value - os1) / (os2 - os1)
-            return p1 + ratio * (p2 - p1)
-    
-    return 50.0  # fallback to median
-
-
-def get_tier_from_percentile(percentile: float) -> Tuple[str, int, int]:
-    """Get tier name and champion rating range from percentile."""
-    for tier_name, min_p, max_p, min_cr, max_cr in TIER_DEFINITIONS:
-        if min_p <= percentile < max_p:
-            return tier_name, min_cr, max_cr
-    
-    # Default to highest tier for 100th percentile
-    return TIER_DEFINITIONS[-1][0], TIER_DEFINITIONS[-1][3], TIER_DEFINITIONS[-1][4]
-
-
-def get_initial_champion_rating(tier_name: str, min_cr: int, max_cr: int) -> int:
-    """Get the middle Champion Rating for a tier (assigned to new players)."""
-    return (min_cr + max_cr) // 2
-
-
-def get_tier_from_cr(champion_rating: int) -> str:
-    """Get tier name from Champion Rating."""
-    for tier_name, _, _, min_cr, max_cr in TIER_DEFINITIONS:
-        if min_cr <= champion_rating < max_cr:
-            return tier_name
-    
-    # If CR is below lowest tier, return lowest tier
-    if champion_rating < TIER_DEFINITIONS[0][3]:  # Below Bronze minimum
-        return TIER_DEFINITIONS[0][0]  # Return Bronze
-    
-    # If CR is above highest tier, return highest tier
-    return TIER_DEFINITIONS[-1][0]
-
-
-def get_tier_with_match_requirements(champion_rating: int, matches_played: int) -> str:
-    """Get tier name considering both CR and minimum match requirements."""
-    # Get the tier based purely on Champion Rating
-    cr_tier = get_tier_from_cr(champion_rating)
-    
-    # Define minimum match requirements for each tier
-    TIER_MATCH_REQUIREMENTS = {
-        "Bronze": 0,      # No minimum - starting tier
-        "Silver": 5,      # Must play 5+ matches to advance from Bronze
-        "Gold": 10,       # Must play 10+ matches to reach Gold
-        "Platinum": 15,   # Must play 15+ matches to reach Platinum
-        "Diamond": 20,    # Must play 20+ matches to reach Diamond
-        "Master": 25,     # Must play 25+ matches to reach Master
-        "Grandmaster": 30 # Must play 30+ matches to reach Grandmaster
-    }
-    
-    # Find the highest tier the player can access based on matches played
-    max_tier_by_matches = "Bronze"
-    for tier_name, _, _, _, _ in TIER_DEFINITIONS:
-        required_matches = TIER_MATCH_REQUIREMENTS.get(tier_name, 0)
-        if matches_played >= required_matches:
-            max_tier_by_matches = tier_name
-        else:
-            break  # Tiers are in ascending order
-    
-    # Return the lower of the two constraints (CR tier vs match requirement tier)
-    tier_order = [tier[0] for tier in TIER_DEFINITIONS]
-    
-    cr_tier_index = tier_order.index(cr_tier) if cr_tier in tier_order else 0
-    match_tier_index = tier_order.index(max_tier_by_matches) if max_tier_by_matches in tier_order else 0
-    
-    # Use the lower tier (more restrictive)
-    final_tier_index = min(cr_tier_index, match_tier_index)
-    return tier_order[final_tier_index]
-
-
-def convert_os_delta_to_cr_delta(os_delta: float) -> int:
-    """Convert OpenSkill delta to Champion Rating delta (legacy linear method)."""
-    return int(round(os_delta * CR_CONVERSION_FACTOR))
-
-
-def calculate_dynamic_cr_change(winner_os: float, loser_os: float, is_winner: bool) -> int:
-    """
-    Calculate dynamic CR change based on OpenSkill difference.
-    - Base change: 15 CR
-    - Range: 2-30 CR
-    - When beating stronger opponent (OS diff > 15): higher CR gain (up to 30)
-    - When beating weaker opponent (OS diff > 15): lower CR gain (down to 2)
-    - Symmetric: loser loses what winner gains
-    """
-    CR_BASE_CHANGE = 15
-    CR_MIN_CHANGE = 2
-    CR_MAX_CHANGE = 30
-    OS_DIFF_THRESHOLD = 15.0
-    
-    os_difference = winner_os - loser_os
-    
-    # Normalize the difference to [-1, 1] range
-    normalized_diff = max(-1.0, min(1.0, os_difference / OS_DIFF_THRESHOLD))
-    
-    if is_winner:
-        # Winner gains more when beating stronger opponent (negative normalized_diff)
-        # Winner gains less when beating weaker opponent (positive normalized_diff)
-        cr_change = CR_BASE_CHANGE - (normalized_diff * (CR_BASE_CHANGE - CR_MIN_CHANGE))
-    else:
-        # Loser loses more when losing to weaker opponent (positive normalized_diff)
-        # Loser loses less when losing to stronger opponent (negative normalized_diff)
-        cr_change = -(CR_BASE_CHANGE + (normalized_diff * (CR_MAX_CHANGE - CR_BASE_CHANGE)))
-    
-    # Ensure we stay within bounds
-    if is_winner:
-        cr_change = max(CR_MIN_CHANGE, min(CR_MAX_CHANGE, cr_change))
-    else:
-        cr_change = max(-CR_MAX_CHANGE, min(-CR_MIN_CHANGE, cr_change))
-    
-    return int(round(cr_change))
 
 
 
@@ -275,7 +126,7 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
     for player in all_players:
         initial_os = get_player_initial_os(submissions, player)
         percentile = get_os_percentile(initial_os)
-        tier_name, min_cr, max_cr = get_tier_from_percentile(percentile)
+        tier_name, min_cr, max_cr = get_tier_from_os(initial_os)
         initial_cr = get_initial_champion_rating(tier_name, min_cr, max_cr)
         
         player_data[player] = {

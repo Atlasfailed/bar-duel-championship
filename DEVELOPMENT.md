@@ -16,7 +16,7 @@ These files are **ONLY** updated by GitHub Actions. Local changes will ALWAYS ca
 1. **For Local Testing Only**
    ```bash
    # Run locally to test your changes
-   python3 actions/update_leaderboard.py
+   python3 actions/recalculate_leaderboard.py
    
    # But DO NOT commit the results!
    git checkout -- public/data/*.json docs/data/*.json
@@ -57,7 +57,7 @@ git commit -m "Resolve conflicts: accept GitHub Actions data"
 1. Edit `actions/config.py` or other configuration files
 2. Test locally (optional):
    ```bash
-   python3 actions/update_leaderboard.py
+   python3 actions/recalculate_leaderboard.py
    # Review output but DON'T commit data files
    git checkout -- public/data/*.json docs/data/*.json
    ```
@@ -119,7 +119,7 @@ cd utilities && python3 test_bot.py
 cd utilities && python3 analyze_submissions.py
 
 # Test leaderboard calculation (but don't commit results!)
-python3 actions/update_leaderboard.py
+python3 actions/recalculate_leaderboard.py
 git checkout -- public/data/*.json docs/data/*.json
 ```
 

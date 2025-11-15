@@ -120,7 +120,7 @@ def main():
     
     print(f"\n🎉 Created {created} submission files!")
     print(f"📁 Files saved to submissions/bo3/")
-    print(f"🔄 Next: Run 'python3 actions/update_leaderboard.py' to update rankings")
+    print(f"🔄 Next: Run 'python3 actions/recalculate_leaderboard.py' to update rankings")
 
 if __name__ == "__main__":
     main()

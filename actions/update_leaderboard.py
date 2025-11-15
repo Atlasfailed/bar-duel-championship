@@ -169,8 +169,45 @@ def get_tier_with_match_requirements(champion_rating: int, matches_played: int) 
 
 
 def convert_os_delta_to_cr_delta(os_delta: float) -> int:
-    """Convert OpenSkill delta to Champion Rating delta."""
+    """Convert OpenSkill delta to Champion Rating delta (legacy linear method)."""
     return int(round(os_delta * CR_CONVERSION_FACTOR))
+
+
+def calculate_dynamic_cr_change(winner_os: float, loser_os: float, is_winner: bool) -> int:
+    """
+    Calculate dynamic CR change based on OpenSkill difference.
+    - Base change: 15 CR
+    - Range: 2-30 CR
+    - When beating stronger opponent (OS diff > 15): higher CR gain (up to 30)
+    - When beating weaker opponent (OS diff > 15): lower CR gain (down to 2)
+    - Symmetric: loser loses what winner gains
+    """
+    CR_BASE_CHANGE = 15
+    CR_MIN_CHANGE = 2
+    CR_MAX_CHANGE = 30
+    OS_DIFF_THRESHOLD = 15.0
+    
+    os_difference = winner_os - loser_os
+    
+    # Normalize the difference to [-1, 1] range
+    normalized_diff = max(-1.0, min(1.0, os_difference / OS_DIFF_THRESHOLD))
+    
+    if is_winner:
+        # Winner gains more when beating stronger opponent (negative normalized_diff)
+        # Winner gains less when beating weaker opponent (positive normalized_diff)
+        cr_change = CR_BASE_CHANGE - (normalized_diff * (CR_BASE_CHANGE - CR_MIN_CHANGE))
+    else:
+        # Loser loses more when losing to weaker opponent (positive normalized_diff)
+        # Loser loses less when losing to stronger opponent (negative normalized_diff)
+        cr_change = -(CR_BASE_CHANGE + (normalized_diff * (CR_MAX_CHANGE - CR_BASE_CHANGE)))
+    
+    # Ensure we stay within bounds
+    if is_winner:
+        cr_change = max(CR_MIN_CHANGE, min(CR_MAX_CHANGE, cr_change))
+    else:
+        cr_change = max(-CR_MAX_CHANGE, min(-CR_MIN_CHANGE, cr_change))
+    
+    return int(round(cr_change))
 
 
 
@@ -413,12 +450,17 @@ def _process_match_for_cr_changes(match: Dict[str, Any], players: List[str], pla
     p1_new_os = p1_new_mu - p1_new_sigma
     p2_new_os = p2_new_mu - p2_new_sigma
     
-    # Calculate OpenSkill deltas and convert to Champion Rating deltas
-    p1_os_delta = p1_new_os - p1_pre_os
-    p2_os_delta = p2_new_os - p2_pre_os
-    
-    p1_cr_delta = convert_os_delta_to_cr_delta(p1_os_delta)
-    p2_cr_delta = convert_os_delta_to_cr_delta(p2_os_delta)
+    # Calculate dynamic CR changes based on winner/loser and skill difference
+    if winner == p1:
+        p1_cr_delta = calculate_dynamic_cr_change(p1_pre_os, p2_pre_os, is_winner=True)
+        p2_cr_delta = calculate_dynamic_cr_change(p1_pre_os, p2_pre_os, is_winner=False)
+    elif winner == p2:
+        p2_cr_delta = calculate_dynamic_cr_change(p2_pre_os, p1_pre_os, is_winner=True)
+        p1_cr_delta = calculate_dynamic_cr_change(p2_pre_os, p1_pre_os, is_winner=False)
+    else:
+        # Tie - no CR change
+        p1_cr_delta = 0
+        p2_cr_delta = 0
     
     # Update player data
     if p1 in player_data:
@@ -504,12 +546,17 @@ def _process_replay_for_cr_changes(replay: Dict[str, Any], submission_players: L
     p1_new_os = p1_new_mu - p1_new_sigma
     p2_new_os = p2_new_mu - p2_new_sigma
     
-    # Calculate OpenSkill deltas and convert to Champion Rating deltas
-    p1_os_delta = p1_new_os - p1_pre_os
-    p2_os_delta = p2_new_os - p2_pre_os
-    
-    p1_cr_delta = convert_os_delta_to_cr_delta(p1_os_delta)
-    p2_cr_delta = convert_os_delta_to_cr_delta(p2_os_delta)
+    # Calculate dynamic CR changes based on winner/loser and skill difference
+    if winner == p1:
+        p1_cr_delta = calculate_dynamic_cr_change(p1_pre_os, p2_pre_os, is_winner=True)
+        p2_cr_delta = calculate_dynamic_cr_change(p1_pre_os, p2_pre_os, is_winner=False)
+    elif winner == p2:
+        p2_cr_delta = calculate_dynamic_cr_change(p2_pre_os, p1_pre_os, is_winner=True)
+        p1_cr_delta = calculate_dynamic_cr_change(p2_pre_os, p1_pre_os, is_winner=False)
+    else:
+        # Tie - no CR change
+        p1_cr_delta = 0
+        p2_cr_delta = 0
     
     # Update player data
     if p1 in player_data:

@@ -1,0 +1,64 @@
+{
+  "players": [
+    "eazyr",
+    "hehateme"
+  ],
+  "series_winner": "eazyr",
+  "wins": {
+    "eazyr": 3,
+    "hehateme": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "cdbc51685bbf5bd103d5307b1ec44ee3",
+      "map": "Theta Crystals 1.3",
+      "winner": "eazyr",
+      "duration_ms": 955400,
+      "seed_ratings": {
+        "hehateme": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "eazyr": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "74bf5168d447517d3bc6a72649a4843e",
+      "map": "Prismatic Anomaly v1.02",
+      "winner": "eazyr",
+      "duration_ms": 935567,
+      "seed_ratings": {
+        "hehateme": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "eazyr": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "0ac251689c35d509fec59479e3598101",
+      "map": "Supreme Isthmus v2.1",
+      "winner": "eazyr",
+      "duration_ms": 3824867,
+      "seed_ratings": {
+        "hehateme": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "eazyr": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-15T00:08:36.589034+00:00",
+  "submitted_by": "atlasfailed"
+}

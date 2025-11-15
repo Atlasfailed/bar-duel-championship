@@ -1,0 +1,64 @@
+{
+  "players": [
+    "[bruno]",
+    "midek"
+  ],
+  "series_winner": "[bruno]",
+  "wins": {
+    "[bruno]": 3,
+    "midek": 0
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "55f9306899df809761ce31a44e5e24a6",
+      "map": "Aurelia v4.1",
+      "winner": "[bruno]",
+      "duration_ms": 2875800,
+      "seed_ratings": {
+        "midek": {
+          "mu": 27.6,
+          "sigma": 4.49
+        },
+        "[bruno]": {
+          "mu": 23.3,
+          "sigma": 4.66
+        }
+      }
+    },
+    {
+      "id": "d21a326801cb1a03464f8145f779a5eb",
+      "map": "Eclipsed 0.9.8",
+      "winner": "[bruno]",
+      "duration_ms": 1681733,
+      "seed_ratings": {
+        "midek": {
+          "mu": 27.6,
+          "sigma": 4.49
+        },
+        "[bruno]": {
+          "mu": 23.3,
+          "sigma": 4.66
+        }
+      }
+    },
+    {
+      "id": "59223268f3c17632850edaa3b4a18a84",
+      "map": "The Halite Maze v1.4",
+      "winner": "[bruno]",
+      "duration_ms": 1164167,
+      "seed_ratings": {
+        "midek": {
+          "mu": 27.6,
+          "sigma": 4.49
+        },
+        "[bruno]": {
+          "mu": 23.3,
+          "sigma": 4.66
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-15T00:04:35.352720+00:00",
+  "submitted_by": "atlasfailed"
+}

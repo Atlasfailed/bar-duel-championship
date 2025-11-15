@@ -87,6 +87,11 @@ jobs:
         with:
           python-version: '3.12'
       
+      - name: Install dependencies
+        if: steps.validate.outputs.valid == 'true'
+        run: |
+          pip install openskill
+      
       - name: Update Leaderboard
         if: steps.validate.outputs.valid == 'true'
         run: |

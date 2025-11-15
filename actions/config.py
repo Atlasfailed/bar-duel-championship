@@ -7,17 +7,17 @@ Adjust these values to tune the rating and tier system.
 # Tier Definitions
 # ==============================
 # Format: (tier_name, min_percentile, max_percentile, min_cr, max_cr)
-# Percentile ranges define player distribution
+# Percentile thresholds define tier boundaries (e.g., Bronze = lower than 20th percentile)
 # CR ranges define the Champion Rating boundaries for each tier
 TIER_DEFINITIONS = [
     # Tier Name       Min %  Max %  Min CR  Max CR
-    ("Bronze",        1,     20,    900,    1200),  # Bottom 20%
-    ("Silver",        20,    40,    1200,   1500),  # 20-40%
-    ("Gold",          40,    60,    1500,   1800),  # 40-60%
-    ("Platinum",      60,    80,    1800,   2100),  # 60-80%
-    ("Diamond",       80,    95,    2100,   2500),  # 80-95%
-    ("Master",        95,    99,    2500,   3000),  # 95-99%
-    ("Grandmaster",   99,    100,   3000,   5000),  # Top 1%
+    ("Bronze",        1,     20,    900,    1200),  # Lower than 20th percentile
+    ("Silver",        20,    40,    1200,   1500),  # 20th-40th percentile
+    ("Gold",          40,    60,    1500,   1800),  # 40th-60th percentile
+    ("Platinum",      60,    80,    1800,   2100),  # 60th-80th percentile
+    ("Diamond",       80,    95,    2100,   2500),  # 80th-95th percentile
+    ("Master",        95,    99,    2500,   3000),  # 95th-99th percentile
+    ("Grandmaster",   99,    100,   3000,   5000),  # Top 1% (above 99th percentile)
 ]
 
 # Tier logos/icons for visual display (SVG file references)

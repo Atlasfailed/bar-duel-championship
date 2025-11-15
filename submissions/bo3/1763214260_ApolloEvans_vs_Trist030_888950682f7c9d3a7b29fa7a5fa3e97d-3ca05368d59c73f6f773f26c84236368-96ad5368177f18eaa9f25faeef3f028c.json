@@ -1,0 +1,64 @@
+{
+  "players": [
+    "ApolloEvans",
+    "Trist030"
+  ],
+  "series_winner": "ApolloEvans",
+  "wins": {
+    "ApolloEvans": 2,
+    "Trist030": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "888950682f7c9d3a7b29fa7a5fa3e97d",
+      "map": "Tau12",
+      "winner": "ApolloEvans",
+      "duration_ms": 2481467,
+      "seed_ratings": {
+        "ApolloEvans": {
+          "mu": 15.57,
+          "sigma": 5.71
+        },
+        "Trist030": {
+          "mu": 15.88,
+          "sigma": 7.27
+        }
+      }
+    },
+    {
+      "id": "3ca05368d59c73f6f773f26c84236368",
+      "map": "Taldarim_V3",
+      "winner": "ApolloEvans",
+      "duration_ms": 3286500,
+      "seed_ratings": {
+        "ApolloEvans": {
+          "mu": 14.48,
+          "sigma": 5.63
+        },
+        "Trist030": {
+          "mu": 17.91,
+          "sigma": 7.14
+        }
+      }
+    },
+    {
+      "id": "96ad5368177f18eaa9f25faeef3f028c",
+      "map": "Taldarim_V3",
+      "winner": "Trist030",
+      "duration_ms": 1439567,
+      "seed_ratings": {
+        "ApolloEvans": {
+          "mu": 14.48,
+          "sigma": 5.63
+        },
+        "Trist030": {
+          "mu": 17.91,
+          "sigma": 7.14
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-15T13:44:20.044342+00:00",
+  "submitted_by": "atlasfailed"
+}

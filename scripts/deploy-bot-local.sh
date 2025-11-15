@@ -4,9 +4,20 @@
 
 set -e
 
-# Configuration (adjust these for your setup)
-PI_HOST="${PI_HOST:-raspberrypi.local}"
-PI_USER="${PI_USER:-pi}"
+# Get script directory and project root
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+ENV_FILE="${PROJECT_ROOT}/bot/.env"
+
+# Load configuration from bot/.env file
+if [ -f "${ENV_FILE}" ]; then
+    # Source the .env file to get PI_HOSTNAME and PI_USERNAME
+    export $(grep -E '^PI_HOSTNAME=|^PI_USERNAME=' "${ENV_FILE}" | xargs)
+fi
+
+# Configuration (read from .env file, with fallback defaults)
+PI_HOST="${PI_HOST:-${PI_HOSTNAME:-raspberrypi.local}}"
+PI_USER="${PI_USER:-${PI_USERNAME:-pi}}"
 BOT_PATH="${BOT_PATH:-~/bar-duel-championship/bot}"
 
 # Colors for output
@@ -17,6 +28,11 @@ NC='\033[0m' # No Color
 
 echo -e "${GREEN}🤖 Bot Deployment Script${NC}"
 echo "================================"
+if [ -f "${ENV_FILE}" ]; then
+    echo "Config: Loaded from ${ENV_FILE}"
+else
+    echo "Config: Using defaults (${ENV_FILE} not found)"
+fi
 echo "Target: ${PI_USER}@${PI_HOST}"
 echo "Path: ${BOT_PATH}"
 echo ""

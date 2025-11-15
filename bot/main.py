@@ -337,6 +337,9 @@ async def submit(interaction: discord.Interaction, replays: str):
     
     # Fetch and validate replays
     try:
+        # Send initial status message
+        await interaction.followup.send("⏳ Fetching and validating replays...", ephemeral=True)
+        
         async with aiohttp.ClientSession() as session:
             replay_data = await asyncio.gather(*[fetch_replay(session, url) for url in urls])
             validated = [validate_replay(r) for r in replay_data]

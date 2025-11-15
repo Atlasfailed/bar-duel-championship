@@ -763,6 +763,134 @@
     "win_rate": 33.3,
     "most_played_faction": "Unknown"
   },
+  "eazyr": {
+    "player": "eazyr",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-06-17T19:29:14.000Z",
+        "replay_id": "0ac251689c35d509fec59479e3598101",
+        "map": "Supreme Isthmus v2.1",
+        "duration_formatted": "1h 3m 44s",
+        "won": true,
+        "opponent": "hehateme",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:18:12.000Z",
+        "replay_id": "74bf5168d447517d3bc6a72649a4843e",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "15m 35s",
+        "won": true,
+        "opponent": "hehateme",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:06:53.000Z",
+        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3",
+        "map": "Theta Crystals 1.3",
+        "duration_formatted": "15m 55s",
+        "won": true,
+        "opponent": "hehateme",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Supreme Isthmus v2.1": 1,
+      "Prismatic Anomaly v1.02": 1,
+      "Theta Crystals 1.3": 1
+    },
+    "opponents_faced": {
+      "hehateme": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-06-17T19:06:53.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3"
+      },
+      {
+        "date": "2025-06-17T19:18:12.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "74bf5168d447517d3bc6a72649a4843e"
+      },
+      {
+        "date": "2025-06-17T19:29:14.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "0ac251689c35d509fec59479e3598101"
+      }
+    ],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "hehateme": {
+    "player": "hehateme",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-06-17T19:29:14.000Z",
+        "replay_id": "0ac251689c35d509fec59479e3598101",
+        "map": "Supreme Isthmus v2.1",
+        "duration_formatted": "1h 3m 44s",
+        "won": false,
+        "opponent": "eazyr",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:18:12.000Z",
+        "replay_id": "74bf5168d447517d3bc6a72649a4843e",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "15m 35s",
+        "won": false,
+        "opponent": "eazyr",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:06:53.000Z",
+        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3",
+        "map": "Theta Crystals 1.3",
+        "duration_formatted": "15m 55s",
+        "won": false,
+        "opponent": "eazyr",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Supreme Isthmus v2.1": 1,
+      "Prismatic Anomaly v1.02": 1,
+      "Theta Crystals 1.3": 1
+    },
+    "opponents_faced": {
+      "eazyr": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-06-17T19:06:53.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3"
+      },
+      {
+        "date": "2025-06-17T19:18:12.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "74bf5168d447517d3bc6a72649a4843e"
+      },
+      {
+        "date": "2025-06-17T19:29:14.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "0ac251689c35d509fec59479e3598101"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
   "Kob": {
     "player": "Kob",
     "total_matches": 6,
@@ -1761,6 +1889,224 @@
     "win_rate": 66.7,
     "most_played_faction": "Unknown"
   },
+  "Tilfidius_Lamarre": {
+    "player": "Tilfidius_Lamarre",
+    "total_matches": 6,
+    "wins": 1,
+    "losses": 5,
+    "recent_matches": [
+      {
+        "date": "2025-05-25T22:10:22.000Z",
+        "replay_id": "4e95336861bfa9677f0ce7da28e9297c",
+        "map": "Jade Empress 1.41",
+        "duration_formatted": "18m 18s",
+        "won": false,
+        "opponent": "precisehawk4068",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-25T21:41:13.000Z",
+        "replay_id": "798e3368eed958bde3aba328001bbbca",
+        "map": "Eclipsed 0.9.8",
+        "duration_formatted": "26m 14s",
+        "won": false,
+        "opponent": "precisehawk4068",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-25T01:38:41.000Z",
+        "replay_id": "a1743268b52e49c67c4d65e7b05ba8c3",
+        "map": "Angel Crossing 1.5.1",
+        "duration_formatted": "50m 53s",
+        "won": false,
+        "opponent": "precisehawk4068",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-22T23:29:55.000Z",
+        "replay_id": "73b32f683f37de7882228234e5cd08b1",
+        "map": "Quicksilver Remake 1.24",
+        "duration_formatted": "30m 6s",
+        "won": false,
+        "opponent": "precisehawk4068",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-18T18:55:36.000Z",
+        "replay_id": "282d2a685e0cf13f2558773349dcd315",
+        "map": "Coastlines_Dry_V2.2.1",
+        "duration_formatted": "46m 43s",
+        "won": true,
+        "opponent": "precisehawk4068",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-18T00:11:53.000Z",
+        "replay_id": "c925296839245253b2d09c65c0b3d28c",
+        "map": "Altair_Crossing_V4.1",
+        "duration_formatted": "18m 27s",
+        "won": false,
+        "opponent": "precisehawk4068",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Jade Empress 1.41": 1,
+      "Eclipsed 0.9.8": 1,
+      "Angel Crossing 1.5.1": 1,
+      "Quicksilver Remake 1.24": 1,
+      "Coastlines_Dry_V2.2.1": 1,
+      "Altair_Crossing_V4.1": 1
+    },
+    "opponents_faced": {
+      "precisehawk4068": 6
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-18T00:11:53.000Z",
+        "skill": 7.4,
+        "replay_id": "c925296839245253b2d09c65c0b3d28c"
+      },
+      {
+        "date": "2025-05-18T18:55:36.000Z",
+        "skill": 7.4,
+        "replay_id": "282d2a685e0cf13f2558773349dcd315"
+      },
+      {
+        "date": "2025-05-22T23:29:55.000Z",
+        "skill": 7.4,
+        "replay_id": "73b32f683f37de7882228234e5cd08b1"
+      },
+      {
+        "date": "2025-05-25T01:38:41.000Z",
+        "skill": 7.4,
+        "replay_id": "a1743268b52e49c67c4d65e7b05ba8c3"
+      },
+      {
+        "date": "2025-05-25T21:41:13.000Z",
+        "skill": 7.4,
+        "replay_id": "798e3368eed958bde3aba328001bbbca"
+      },
+      {
+        "date": "2025-05-25T22:10:22.000Z",
+        "skill": 7.4,
+        "replay_id": "4e95336861bfa9677f0ce7da28e9297c"
+      }
+    ],
+    "win_rate": 16.7,
+    "most_played_faction": "Unknown"
+  },
+  "precisehawk4068": {
+    "player": "precisehawk4068",
+    "total_matches": 6,
+    "wins": 5,
+    "losses": 1,
+    "recent_matches": [
+      {
+        "date": "2025-05-25T22:10:22.000Z",
+        "replay_id": "4e95336861bfa9677f0ce7da28e9297c",
+        "map": "Jade Empress 1.41",
+        "duration_formatted": "18m 18s",
+        "won": true,
+        "opponent": "Tilfidius_Lamarre",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-25T21:41:13.000Z",
+        "replay_id": "798e3368eed958bde3aba328001bbbca",
+        "map": "Eclipsed 0.9.8",
+        "duration_formatted": "26m 14s",
+        "won": true,
+        "opponent": "Tilfidius_Lamarre",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-25T01:38:41.000Z",
+        "replay_id": "a1743268b52e49c67c4d65e7b05ba8c3",
+        "map": "Angel Crossing 1.5.1",
+        "duration_formatted": "50m 53s",
+        "won": true,
+        "opponent": "Tilfidius_Lamarre",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-22T23:29:55.000Z",
+        "replay_id": "73b32f683f37de7882228234e5cd08b1",
+        "map": "Quicksilver Remake 1.24",
+        "duration_formatted": "30m 6s",
+        "won": true,
+        "opponent": "Tilfidius_Lamarre",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-18T18:55:36.000Z",
+        "replay_id": "282d2a685e0cf13f2558773349dcd315",
+        "map": "Coastlines_Dry_V2.2.1",
+        "duration_formatted": "46m 43s",
+        "won": false,
+        "opponent": "Tilfidius_Lamarre",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-18T00:11:53.000Z",
+        "replay_id": "c925296839245253b2d09c65c0b3d28c",
+        "map": "Altair_Crossing_V4.1",
+        "duration_formatted": "18m 27s",
+        "won": true,
+        "opponent": "Tilfidius_Lamarre",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Jade Empress 1.41": 1,
+      "Eclipsed 0.9.8": 1,
+      "Angel Crossing 1.5.1": 1,
+      "Quicksilver Remake 1.24": 1,
+      "Coastlines_Dry_V2.2.1": 1,
+      "Altair_Crossing_V4.1": 1
+    },
+    "opponents_faced": {
+      "Tilfidius_Lamarre": 6
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-18T00:11:53.000Z",
+        "skill": 6.54,
+        "replay_id": "c925296839245253b2d09c65c0b3d28c"
+      },
+      {
+        "date": "2025-05-18T18:55:36.000Z",
+        "skill": 6.54,
+        "replay_id": "282d2a685e0cf13f2558773349dcd315"
+      },
+      {
+        "date": "2025-05-22T23:29:55.000Z",
+        "skill": 6.54,
+        "replay_id": "73b32f683f37de7882228234e5cd08b1"
+      },
+      {
+        "date": "2025-05-25T01:38:41.000Z",
+        "skill": 6.54,
+        "replay_id": "a1743268b52e49c67c4d65e7b05ba8c3"
+      },
+      {
+        "date": "2025-05-25T21:41:13.000Z",
+        "skill": 6.54,
+        "replay_id": "798e3368eed958bde3aba328001bbbca"
+      },
+      {
+        "date": "2025-05-25T22:10:22.000Z",
+        "skill": 6.54,
+        "replay_id": "4e95336861bfa9677f0ce7da28e9297c"
+      }
+    ],
+    "win_rate": 83.3,
+    "most_played_faction": "Unknown"
+  },
   "burtik": {
     "player": "burtik",
     "total_matches": 3,
@@ -1887,6 +2233,134 @@
       }
     ],
     "win_rate": 33.3,
+    "most_played_faction": "Unknown"
+  },
+  "[bruno]": {
+    "player": "[bruno]",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-05-24T19:47:37.000Z",
+        "replay_id": "59223268f3c17632850edaa3b4a18a84",
+        "map": "The Halite Maze v1.4",
+        "duration_formatted": "19m 24s",
+        "won": true,
+        "opponent": "midek",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-24T19:15:30.000Z",
+        "replay_id": "d21a326801cb1a03464f8145f779a5eb",
+        "map": "Eclipsed 0.9.8",
+        "duration_formatted": "28m 1s",
+        "won": true,
+        "opponent": "midek",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-23T22:40:21.000Z",
+        "replay_id": "55f9306899df809761ce31a44e5e24a6",
+        "map": "Aurelia v4.1",
+        "duration_formatted": "47m 55s",
+        "won": true,
+        "opponent": "midek",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "The Halite Maze v1.4": 1,
+      "Eclipsed 0.9.8": 1,
+      "Aurelia v4.1": 1
+    },
+    "opponents_faced": {
+      "midek": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-23T22:40:21.000Z",
+        "skill": 18.64,
+        "replay_id": "55f9306899df809761ce31a44e5e24a6"
+      },
+      {
+        "date": "2025-05-24T19:15:30.000Z",
+        "skill": 18.64,
+        "replay_id": "d21a326801cb1a03464f8145f779a5eb"
+      },
+      {
+        "date": "2025-05-24T19:47:37.000Z",
+        "skill": 18.64,
+        "replay_id": "59223268f3c17632850edaa3b4a18a84"
+      }
+    ],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "midek": {
+    "player": "midek",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-05-24T19:47:37.000Z",
+        "replay_id": "59223268f3c17632850edaa3b4a18a84",
+        "map": "The Halite Maze v1.4",
+        "duration_formatted": "19m 24s",
+        "won": false,
+        "opponent": "[bruno]",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-24T19:15:30.000Z",
+        "replay_id": "d21a326801cb1a03464f8145f779a5eb",
+        "map": "Eclipsed 0.9.8",
+        "duration_formatted": "28m 1s",
+        "won": false,
+        "opponent": "[bruno]",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-23T22:40:21.000Z",
+        "replay_id": "55f9306899df809761ce31a44e5e24a6",
+        "map": "Aurelia v4.1",
+        "duration_formatted": "47m 55s",
+        "won": false,
+        "opponent": "[bruno]",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "The Halite Maze v1.4": 1,
+      "Eclipsed 0.9.8": 1,
+      "Aurelia v4.1": 1
+    },
+    "opponents_faced": {
+      "[bruno]": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-23T22:40:21.000Z",
+        "skill": 23.11,
+        "replay_id": "55f9306899df809761ce31a44e5e24a6"
+      },
+      {
+        "date": "2025-05-24T19:15:30.000Z",
+        "skill": 23.11,
+        "replay_id": "d21a326801cb1a03464f8145f779a5eb"
+      },
+      {
+        "date": "2025-05-24T19:47:37.000Z",
+        "skill": 23.11,
+        "replay_id": "59223268f3c17632850edaa3b4a18a84"
+      }
+    ],
+    "win_rate": 0.0,
     "most_played_faction": "Unknown"
   },
   "KiiiTZZZ": {
@@ -2309,6 +2783,132 @@
       }
     ],
     "win_rate": 50.0,
+    "most_played_faction": "Unknown"
+  },
+  "GamerRKS": {
+    "player": "GamerRKS",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-05-08T20:57:32.000Z",
+        "replay_id": "bc1a1d686e5a38d06c12241ba482558c",
+        "map": "Incandescence Remake 3.3.1",
+        "duration_formatted": "42m 49s",
+        "won": false,
+        "opponent": "ibramoka",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-06T21:32:37.000Z",
+        "replay_id": "f57f1a68834b1ab07bcecc2aa90a3d69",
+        "map": "SpeedMetal BAR V2",
+        "duration_formatted": "20m 58s",
+        "won": false,
+        "opponent": "ibramoka",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-06T19:02:53.000Z",
+        "replay_id": "dd5c1a68e9cd7f495dcb6707f354568a",
+        "map": "SpeedMetal BAR V2",
+        "duration_formatted": "31m 37s",
+        "won": false,
+        "opponent": "ibramoka",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Incandescence Remake 3.3.1": 1,
+      "SpeedMetal BAR V2": 2
+    },
+    "opponents_faced": {
+      "ibramoka": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-06T19:02:53.000Z",
+        "skill": 0.6099999999999994,
+        "replay_id": "dd5c1a68e9cd7f495dcb6707f354568a"
+      },
+      {
+        "date": "2025-05-06T21:32:37.000Z",
+        "skill": 24.79,
+        "replay_id": "f57f1a68834b1ab07bcecc2aa90a3d69"
+      },
+      {
+        "date": "2025-05-08T20:57:32.000Z",
+        "skill": 5.970000000000001,
+        "replay_id": "bc1a1d686e5a38d06c12241ba482558c"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "ibramoka": {
+    "player": "ibramoka",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-05-08T20:57:32.000Z",
+        "replay_id": "bc1a1d686e5a38d06c12241ba482558c",
+        "map": "Incandescence Remake 3.3.1",
+        "duration_formatted": "42m 49s",
+        "won": true,
+        "opponent": "GamerRKS",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-06T21:32:37.000Z",
+        "replay_id": "f57f1a68834b1ab07bcecc2aa90a3d69",
+        "map": "SpeedMetal BAR V2",
+        "duration_formatted": "20m 58s",
+        "won": true,
+        "opponent": "GamerRKS",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-06T19:02:53.000Z",
+        "replay_id": "dd5c1a68e9cd7f495dcb6707f354568a",
+        "map": "SpeedMetal BAR V2",
+        "duration_formatted": "31m 37s",
+        "won": true,
+        "opponent": "GamerRKS",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Incandescence Remake 3.3.1": 1,
+      "SpeedMetal BAR V2": 2
+    },
+    "opponents_faced": {
+      "GamerRKS": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-06T19:02:53.000Z",
+        "skill": -0.1299999999999999,
+        "replay_id": "dd5c1a68e9cd7f495dcb6707f354568a"
+      },
+      {
+        "date": "2025-05-06T21:32:37.000Z",
+        "skill": 7.120000000000001,
+        "replay_id": "f57f1a68834b1ab07bcecc2aa90a3d69"
+      },
+      {
+        "date": "2025-05-08T20:57:32.000Z",
+        "skill": 9.420000000000002,
+        "replay_id": "bc1a1d686e5a38d06c12241ba482558c"
+      }
+    ],
+    "win_rate": 100.0,
     "most_played_faction": "Unknown"
   },
   "luca234": {
@@ -2823,6 +3423,134 @@
       }
     ],
     "win_rate": 25.0,
+    "most_played_faction": "Unknown"
+  },
+  "CafeConLeche": {
+    "player": "CafeConLeche",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-04-29T22:04:34.000Z",
+        "replay_id": "f24c116899bab4983712c7c4784a5db6",
+        "map": "High Noon Remake 1.0",
+        "duration_formatted": "35m 51s",
+        "won": false,
+        "opponent": "ashenknight",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-04-29T21:21:47.000Z",
+        "replay_id": "eb4211684e9181fcc627b75244a76fb9",
+        "map": "Hooked 1.1.1",
+        "duration_formatted": "34m 57s",
+        "won": false,
+        "opponent": "ashenknight",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-04-29T20:52:39.000Z",
+        "replay_id": "173c116859dd3c0eb0903d67d713a799",
+        "map": "Center Command BAR v1.0",
+        "duration_formatted": "24m 36s",
+        "won": false,
+        "opponent": "ashenknight",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "High Noon Remake 1.0": 1,
+      "Hooked 1.1.1": 1,
+      "Center Command BAR v1.0": 1
+    },
+    "opponents_faced": {
+      "ashenknight": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-04-29T20:52:39.000Z",
+        "skill": 10.330000000000002,
+        "replay_id": "173c116859dd3c0eb0903d67d713a799"
+      },
+      {
+        "date": "2025-04-29T21:21:47.000Z",
+        "skill": 10.330000000000002,
+        "replay_id": "eb4211684e9181fcc627b75244a76fb9"
+      },
+      {
+        "date": "2025-04-29T22:04:34.000Z",
+        "skill": 10.330000000000002,
+        "replay_id": "f24c116899bab4983712c7c4784a5db6"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "ashenknight": {
+    "player": "ashenknight",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-04-29T22:04:34.000Z",
+        "replay_id": "f24c116899bab4983712c7c4784a5db6",
+        "map": "High Noon Remake 1.0",
+        "duration_formatted": "35m 51s",
+        "won": true,
+        "opponent": "CafeConLeche",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-04-29T21:21:47.000Z",
+        "replay_id": "eb4211684e9181fcc627b75244a76fb9",
+        "map": "Hooked 1.1.1",
+        "duration_formatted": "34m 57s",
+        "won": true,
+        "opponent": "CafeConLeche",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-04-29T20:52:39.000Z",
+        "replay_id": "173c116859dd3c0eb0903d67d713a799",
+        "map": "Center Command BAR v1.0",
+        "duration_formatted": "24m 36s",
+        "won": true,
+        "opponent": "CafeConLeche",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "High Noon Remake 1.0": 1,
+      "Hooked 1.1.1": 1,
+      "Center Command BAR v1.0": 1
+    },
+    "opponents_faced": {
+      "CafeConLeche": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-04-29T20:52:39.000Z",
+        "skill": 6.74,
+        "replay_id": "173c116859dd3c0eb0903d67d713a799"
+      },
+      {
+        "date": "2025-04-29T21:21:47.000Z",
+        "skill": 6.74,
+        "replay_id": "eb4211684e9181fcc627b75244a76fb9"
+      },
+      {
+        "date": "2025-04-29T22:04:34.000Z",
+        "skill": 6.74,
+        "replay_id": "f24c116899bab4983712c7c4784a5db6"
+      }
+    ],
+    "win_rate": 100.0,
     "most_played_faction": "Unknown"
   }
 }

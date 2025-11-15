@@ -1,0 +1,3875 @@
+[
+  {
+    "id": "fd2a686878fbe4edfc3e60c0d605994b",
+    "url": "https://www.beyondallreason.info/replays?gameId=fd2a686878fbe4edfc3e60c0d605994b",
+    "date": "2025-07-04T19:26:53.000Z",
+    "submitted_at": "2025-10-24T15:18:19.304897+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Ancient Bastion Remake 0.5",
+    "duration_ms": 8725667,
+    "duration_formatted": "2h 25m 25s",
+    "winner": "GamingHFC",
+    "players": [
+      {
+        "name": "GamingHFC",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "soldierofwessex",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "GamingHFC",
+      "soldierofwessex"
+    ],
+    "series_winner": "GamingHFC",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28342-3044099",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-ancient-bastion-remake-05"
+    ]
+  },
+  {
+    "id": "1a5c66680ab2f55209885e1a63d97c4f",
+    "url": "https://www.beyondallreason.info/replays?gameId=1a5c66680ab2f55209885e1a63d97c4f",
+    "date": "2025-07-03T10:31:54.000Z",
+    "submitted_at": "2025-10-24T14:12:50.035501+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Special Creek 1.0",
+    "duration_ms": 5697167,
+    "duration_formatted": "1h 34m 57s",
+    "winner": "MIrzaa",
+    "players": [
+      {
+        "name": "Kommandant",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "MIrzaa",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kommandant",
+      "MIrzaa"
+    ],
+    "series_winner": "MIrzaa",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28342-3044099",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-special-creek-10"
+    ]
+  },
+  {
+    "id": "c7e26568e07b8b0146d06fc8f0efa461",
+    "url": "https://www.beyondallreason.info/replays?gameId=c7e26568e07b8b0146d06fc8f0efa461",
+    "date": "2025-07-03T01:54:15.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "Veld4",
+    "players": [
+      {
+        "name": "Alfranix951",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "Veld4",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Alfranix951",
+      "Veld4"
+    ],
+    "series_winner": "Veld4",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28342-3044099",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "1a8a65685a00c941b74d6b27d2a5c751",
+    "url": "https://www.beyondallreason.info/replays?gameId=1a8a65685a00c941b74d6b27d2a5c751",
+    "date": "2025-07-02T19:35:54.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "Veld4",
+    "players": [
+      {
+        "name": "Alfranix951",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "Veld4",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Alfranix951",
+      "Veld4"
+    ],
+    "series_winner": "Veld4",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28342-3044099",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "b2096568925ff8449f63ae7bac9e8e75",
+    "url": "https://www.beyondallreason.info/replays?gameId=b2096568925ff8449f63ae7bac9e8e75",
+    "date": "2025-07-02T10:28:02.000Z",
+    "submitted_at": "2025-10-24T14:12:50.035501+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Ancient Vault v1.4",
+    "duration_ms": 8730233,
+    "duration_formatted": "2h 25m 30s",
+    "winner": "MIrzaa",
+    "players": [
+      {
+        "name": "Kommandant",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "MIrzaa",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kommandant",
+      "MIrzaa"
+    ],
+    "series_winner": "MIrzaa",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-ancient-vault-v14"
+    ]
+  },
+  {
+    "id": "d2ba6468d4f433e7edb7afa91bc3c149",
+    "url": "https://www.beyondallreason.info/replays?gameId=d2ba6468d4f433e7edb7afa91bc3c149",
+    "date": "2025-07-02T04:51:30.000Z",
+    "submitted_at": "2025-10-24T14:12:50.035501+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "To Kill The Middle v1.1",
+    "duration_ms": 6749500,
+    "duration_formatted": "1h 52m 29s",
+    "winner": "MIrzaa",
+    "players": [
+      {
+        "name": "Kommandant",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "MIrzaa",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kommandant",
+      "MIrzaa"
+    ],
+    "series_winner": "MIrzaa",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-to-kill-the-middle-v11"
+    ]
+  },
+  {
+    "id": "0fb86468b069754bece068c7eac0838c",
+    "url": "https://www.beyondallreason.info/replays?gameId=0fb86468b069754bece068c7eac0838c",
+    "date": "2025-07-02T04:39:43.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "cibernixt",
+    "players": [
+      {
+        "name": "Efusion",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "cibernixt",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Efusion",
+      "cibernixt"
+    ],
+    "series_winner": "cibernixt",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "b7b0646888c5af0484648e6748f583c0",
+    "url": "https://www.beyondallreason.info/replays?gameId=b7b0646888c5af0484648e6748f583c0",
+    "date": "2025-07-02T04:08:23.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "cibernixt",
+    "players": [
+      {
+        "name": "Efusion",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "cibernixt",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Efusion",
+      "cibernixt"
+    ],
+    "series_winner": "cibernixt",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "9d8c64681d321b77824f6c71838a84a0",
+    "url": "https://www.beyondallreason.info/replays?gameId=9d8c64681d321b77824f6c71838a84a0",
+    "date": "2025-07-02T01:34:21.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "Alfranix951",
+    "players": [
+      {
+        "name": "Alfranix951",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "Veld4",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Alfranix951",
+      "Veld4"
+    ],
+    "series_winner": "Veld4",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "09be6368c12dd6d01f0eab6dcd3a04e8",
+    "url": "https://www.beyondallreason.info/replays?gameId=09be6368c12dd6d01f0eab6dcd3a04e8",
+    "date": "2025-07-01T10:52:57.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "Efusion",
+    "players": [
+      {
+        "name": "Efusion",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "cibernixt",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Efusion",
+      "cibernixt"
+    ],
+    "series_winner": "cibernixt",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "138263681ac7e4ea9ba9d64fa5ed1615",
+    "url": "https://www.beyondallreason.info/replays?gameId=138263681ac7e4ea9ba9d64fa5ed1615",
+    "date": "2025-07-01T06:37:07.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "Kommandant",
+    "players": [
+      {
+        "name": "Kommandant",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "MIrzaa",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Kommandant",
+      "MIrzaa"
+    ],
+    "series_winner": "Kommandant",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "e631606854ad3740c07b3cc874d61c9f",
+    "url": "https://www.beyondallreason.info/replays?gameId=e631606854ad3740c07b3cc874d61c9f",
+    "date": "2025-06-28T18:18:14.000Z",
+    "submitted_at": "2025-10-24T15:18:19.304897+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Cloud9_V2",
+    "duration_ms": 4011034,
+    "duration_formatted": "1h 6m 51s",
+    "winner": "GamingHFC",
+    "players": [
+      {
+        "name": "GamingHFC",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "soldierofwessex",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "GamingHFC",
+      "soldierofwessex"
+    ],
+    "series_winner": "GamingHFC",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-cloud9_v2"
+    ]
+  },
+  {
+    "id": "c5f75f68ae161fd879fc361d4c1b0126",
+    "url": "https://www.beyondallreason.info/replays?gameId=c5f75f68ae161fd879fc361d4c1b0126",
+    "date": "2025-06-28T14:10:13.000Z",
+    "submitted_at": "2025-10-24T15:18:19.304897+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Asteroid_Mines_V3",
+    "duration_ms": 4933600,
+    "duration_formatted": "1h 22m 13s",
+    "winner": "GamingHFC",
+    "players": [
+      {
+        "name": "GamingHFC",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "soldierofwessex",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "GamingHFC",
+      "soldierofwessex"
+    ],
+    "series_winner": "GamingHFC",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28332-7027e9e",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-asteroid_mines_v3"
+    ]
+  },
+  {
+    "id": "5d56586807baa8d8323280d676fe482b",
+    "url": "https://www.beyondallreason.info/replays?gameId=5d56586807baa8d8323280d676fe482b",
+    "date": "2025-06-22T19:15:41.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "lolh2o",
+    "players": [
+      {
+        "name": "Stargamer605",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "lolh2o",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Stargamer605",
+      "lolh2o"
+    ],
+    "series_winner": "lolh2o",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28248-1380e52",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "ed0e546874397545695fd85378016e30",
+    "url": "https://www.beyondallreason.info/replays?gameId=ed0e546874397545695fd85378016e30",
+    "date": "2025-06-19T13:21:49.000Z",
+    "submitted_at": "2025-10-25T12:54:42.488202+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Shallow Straits v1.0.1",
+    "duration_ms": 5680900,
+    "duration_formatted": "1h 34m 40s",
+    "winner": "Dootfu",
+    "players": [
+      {
+        "name": "Dootfu",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.74,
+        "sigma": 8.23,
+        "skill_estimate": 6.51
+      },
+      {
+        "name": "itz_myrk",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 18.79,
+        "sigma": 8.25,
+        "skill_estimate": 10.54
+      }
+    ],
+    "player_names": [
+      "Dootfu",
+      "itz_myrk"
+    ],
+    "series_winner": "Dootfu",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28248-1380e52",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-shallow-straits-v101"
+    ]
+  },
+  {
+    "id": "1d0354686ef0d90f2c55bb65be18de0e",
+    "url": "https://www.beyondallreason.info/replays?gameId=1d0354686ef0d90f2c55bb65be18de0e",
+    "date": "2025-06-19T12:31:25.000Z",
+    "submitted_at": "2025-10-25T12:54:42.488202+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Shallow Straits v1.0.1",
+    "duration_ms": 2972000,
+    "duration_formatted": "49m 32s",
+    "winner": "Dootfu",
+    "players": [
+      {
+        "name": "Dootfu",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.74,
+        "sigma": 8.23,
+        "skill_estimate": 6.51
+      },
+      {
+        "name": "itz_myrk",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 18.79,
+        "sigma": 8.25,
+        "skill_estimate": 10.54
+      }
+    ],
+    "player_names": [
+      "Dootfu",
+      "itz_myrk"
+    ],
+    "series_winner": "Dootfu",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28248-1380e52",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-shallow-straits-v101"
+    ]
+  },
+  {
+    "id": "96df536848a5f027d7b9441166f3e74e",
+    "url": "https://www.beyondallreason.info/replays?gameId=96df536848a5f027d7b9441166f3e74e",
+    "date": "2025-06-19T09:59:50.000Z",
+    "submitted_at": "2025-10-24T15:05:23.325433+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Flats and Forests v2.2",
+    "duration_ms": 5783534,
+    "duration_formatted": "1h 36m 23s",
+    "winner": "Stargamer605",
+    "players": [
+      {
+        "name": "Stargamer605",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "lolh2o",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "Stargamer605",
+      "lolh2o"
+    ],
+    "series_winner": "Stargamer605",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28248-1380e52",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-flats-and-forests-v22"
+    ]
+  },
+  {
+    "id": "c6a45268ebe36ab15aa1409321308b3e",
+    "url": "https://www.beyondallreason.info/replays?gameId=c6a45268ebe36ab15aa1409321308b3e",
+    "date": "2025-06-18T11:36:38.000Z",
+    "submitted_at": "2025-10-25T12:54:42.488202+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Comet Catcher Remake 1.8",
+    "duration_ms": 8652434,
+    "duration_formatted": "2h 24m 12s",
+    "winner": "itz_myrk",
+    "players": [
+      {
+        "name": "Dootfu",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "itz_myrk",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "Dootfu",
+      "itz_myrk"
+    ],
+    "series_winner": "Dootfu",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28248-1380e52",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-comet-catcher-remake-18"
+    ]
+  },
+  {
+    "id": "0ac251689c35d509fec59479e3598101",
+    "url": "https://www.beyondallreason.info/replays?gameId=0ac251689c35d509fec59479e3598101",
+    "date": "2025-06-17T19:29:14.000Z",
+    "submitted_at": "2025-11-15T00:08:36.589034+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Supreme Isthmus v2.1",
+    "duration_ms": 3824867,
+    "duration_formatted": "1h 3m 44s",
+    "winner": "eazyr",
+    "players": [
+      {
+        "name": "eazyr",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "hehateme",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "eazyr",
+      "hehateme"
+    ],
+    "series_winner": "eazyr",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28248-1380e52",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-supreme-isthmus-v21"
+    ]
+  },
+  {
+    "id": "74bf5168d447517d3bc6a72649a4843e",
+    "url": "https://www.beyondallreason.info/replays?gameId=74bf5168d447517d3bc6a72649a4843e",
+    "date": "2025-06-17T19:18:12.000Z",
+    "submitted_at": "2025-11-15T00:08:36.589034+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Prismatic Anomaly v1.02",
+    "duration_ms": 935567,
+    "duration_formatted": "15m 35s",
+    "winner": "eazyr",
+    "players": [
+      {
+        "name": "eazyr",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "hehateme",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "eazyr",
+      "hehateme"
+    ],
+    "series_winner": "eazyr",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28248-1380e52",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-prismatic-anomaly-v102"
+    ]
+  },
+  {
+    "id": "cdbc51685bbf5bd103d5307b1ec44ee3",
+    "url": "https://www.beyondallreason.info/replays?gameId=cdbc51685bbf5bd103d5307b1ec44ee3",
+    "date": "2025-06-17T19:06:53.000Z",
+    "submitted_at": "2025-11-15T00:08:36.589034+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Theta Crystals 1.3",
+    "duration_ms": 955400,
+    "duration_formatted": "15m 55s",
+    "winner": "eazyr",
+    "players": [
+      {
+        "name": "eazyr",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "hehateme",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "eazyr",
+      "hehateme"
+    ],
+    "series_winner": "eazyr",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28248-1380e52",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-theta-crystals-13"
+    ]
+  },
+  {
+    "id": "5b2d5068ef9cd7f0890dafe2a6c7b1e3",
+    "url": "https://www.beyondallreason.info/replays?gameId=5b2d5068ef9cd7f0890dafe2a6c7b1e3",
+    "date": "2025-06-16T14:42:35.000Z",
+    "submitted_at": "2025-10-24T15:05:23.325433+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Flats and Forests v2.2",
+    "duration_ms": 5038534,
+    "duration_formatted": "1h 23m 58s",
+    "winner": "Stargamer605",
+    "players": [
+      {
+        "name": "Stargamer605",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "lolh2o",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "Stargamer605",
+      "lolh2o"
+    ],
+    "series_winner": "Stargamer605",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28232-e362508",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-flats-and-forests-v22"
+    ]
+  },
+  {
+    "id": "c05c4f687ad8269fc96004a7ce962276",
+    "url": "https://www.beyondallreason.info/replays?gameId=c05c4f687ad8269fc96004a7ce962276",
+    "date": "2025-06-15T23:52:32.000Z",
+    "submitted_at": "2025-10-24T14:15:57.890945+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Full Metal Plate 1.7",
+    "duration_ms": 11939568,
+    "duration_formatted": "3h 18m 59s",
+    "winner": "xMAYHEMx",
+    "players": [
+      {
+        "name": "Kob",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "xMAYHEMx",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kob",
+      "xMAYHEMx"
+    ],
+    "series_winner": "xMAYHEMx",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28232-e362508",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-full-metal-plate-17"
+    ]
+  },
+  {
+    "id": "0f0a4f685adce2d007dce4656856dc8f",
+    "url": "https://www.beyondallreason.info/replays?gameId=0f0a4f685adce2d007dce4656856dc8f",
+    "date": "2025-06-15T17:59:43.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "jimmyneutron",
+    "players": [
+      {
+        "name": "jhonboy",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "jimmyneutron",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "jhonboy",
+      "jimmyneutron"
+    ],
+    "series_winner": "jimmyneutron",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28225-e6d92b1",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "46e54e68487fb1f032eeb078f8c776c2",
+    "url": "https://www.beyondallreason.info/replays?gameId=46e54e68487fb1f032eeb078f8c776c2",
+    "date": "2025-06-15T15:22:46.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "jimmyneutron",
+    "players": [
+      {
+        "name": "jhonboy",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "jimmyneutron",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "jhonboy",
+      "jimmyneutron"
+    ],
+    "series_winner": "jimmyneutron",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28225-e6d92b1",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "d9df4e686c51ad803bd6c5706d95c710",
+    "url": "https://www.beyondallreason.info/replays?gameId=d9df4e686c51ad803bd6c5706d95c710",
+    "date": "2025-06-15T14:59:37.000Z",
+    "submitted_at": "2025-10-24T15:05:23.325433+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Ancient Bastion Remake 0.5",
+    "duration_ms": 8107134,
+    "duration_formatted": "2h 15m 7s",
+    "winner": "lolh2o",
+    "players": [
+      {
+        "name": "Stargamer605",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "lolh2o",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Stargamer605",
+      "lolh2o"
+    ],
+    "series_winner": "Stargamer605",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28225-e6d92b1",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-ancient-bastion-remake-05"
+    ]
+  },
+  {
+    "id": "e2ad4c682faa23aa0125bb01fb66f9a1",
+    "url": "https://www.beyondallreason.info/replays?gameId=e2ad4c682faa23aa0125bb01fb66f9a1",
+    "date": "2025-06-13T23:01:54.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "jhonboy",
+    "players": [
+      {
+        "name": "jhonboy",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "jimmyneutron",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "jhonboy",
+      "jimmyneutron"
+    ],
+    "series_winner": "jimmyneutron",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28225-e6d92b1",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "c8dc4b68a518c625300c2ef8f9924df6",
+    "url": "https://www.beyondallreason.info/replays?gameId=c8dc4b68a518c625300c2ef8f9924df6",
+    "date": "2025-06-13T08:09:44.000Z",
+    "submitted_at": "2025-10-24T14:15:57.890945+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Full Metal Plate 1.7",
+    "duration_ms": 5821034,
+    "duration_formatted": "1h 37m 1s",
+    "winner": "xMAYHEMx",
+    "players": [
+      {
+        "name": "Kob",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "xMAYHEMx",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kob",
+      "xMAYHEMx"
+    ],
+    "series_winner": "xMAYHEMx",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28225-e6d92b1",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-full-metal-plate-17"
+    ]
+  },
+  {
+    "id": "6fb64b683ed32e9cda1af01b06a39ab4",
+    "url": "https://www.beyondallreason.info/replays?gameId=6fb64b683ed32e9cda1af01b06a39ab4",
+    "date": "2025-06-13T05:26:07.000Z",
+    "submitted_at": "2025-10-24T14:15:57.890945+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Full Metal Plate 1.7",
+    "duration_ms": 2698000,
+    "duration_formatted": "44m 58s",
+    "winner": "xMAYHEMx",
+    "players": [
+      {
+        "name": "Kob",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "xMAYHEMx",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Kob",
+      "xMAYHEMx"
+    ],
+    "series_winner": "xMAYHEMx",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28225-e6d92b1",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "map-full-metal-plate-17"
+    ]
+  },
+  {
+    "id": "a2804768bc284eda606ff70b67b01b22",
+    "url": "https://www.beyondallreason.info/replays?gameId=a2804768bc284eda606ff70b67b01b22",
+    "date": "2025-06-10T00:47:30.000Z",
+    "submitted_at": "2025-10-24T15:12:34.060855+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Flats and Forests v2.2",
+    "duration_ms": 4738400,
+    "duration_formatted": "1h 18m 58s",
+    "winner": "SuperSailer",
+    "players": [
+      {
+        "name": "Iris_",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "SuperSailer",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Iris_",
+      "SuperSailer"
+    ],
+    "series_winner": "Iris_",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28188-6e93371",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-flats-and-forests-v22"
+    ]
+  },
+  {
+    "id": "98d144682f1ecc56c319b54c3e8869ff",
+    "url": "https://www.beyondallreason.info/replays?gameId=98d144682f1ecc56c319b54c3e8869ff",
+    "date": "2025-06-07T23:56:08.000Z",
+    "submitted_at": "2025-10-24T12:55:38.739127+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "World In Flames v1.8",
+    "duration_ms": 5432801,
+    "duration_formatted": "1h 30m 32s",
+    "winner": "TwoInchTiger",
+    "players": [
+      {
+        "name": "TwoInchTiger",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "peterthegreat",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "TwoInchTiger",
+      "peterthegreat"
+    ],
+    "series_winner": "TwoInchTiger",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28176-e89104f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-world-in-flames-v18"
+    ]
+  },
+  {
+    "id": "459844680ec9be06eea729defcd96e62",
+    "url": "https://www.beyondallreason.info/replays?gameId=459844680ec9be06eea729defcd96e62",
+    "date": "2025-06-07T19:51:33.000Z",
+    "submitted_at": "2025-10-24T12:55:38.739127+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "World In Flames v1.8",
+    "duration_ms": 14352801,
+    "duration_formatted": "3h 59m 12s",
+    "winner": "TwoInchTiger",
+    "players": [
+      {
+        "name": "TwoInchTiger",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "peterthegreat",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "TwoInchTiger",
+      "peterthegreat"
+    ],
+    "series_winner": "TwoInchTiger",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28176-e89104f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-world-in-flames-v18"
+    ]
+  },
+  {
+    "id": "3b89446808fc536190ae131419453d2f",
+    "url": "https://www.beyondallreason.info/replays?gameId=3b89446808fc536190ae131419453d2f",
+    "date": "2025-06-07T18:47:23.000Z",
+    "submitted_at": "2025-10-24T12:55:38.739127+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "World In Flames v1.8",
+    "duration_ms": 3700767,
+    "duration_formatted": "1h 1m 40s",
+    "winner": "TwoInchTiger",
+    "players": [
+      {
+        "name": "TwoInchTiger",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "peterthegreat",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "TwoInchTiger",
+      "peterthegreat"
+    ],
+    "series_winner": "TwoInchTiger",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28176-e89104f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-world-in-flames-v18"
+    ]
+  },
+  {
+    "id": "852644689247f8145bb10d14db6d9924",
+    "url": "https://www.beyondallreason.info/replays?gameId=852644689247f8145bb10d14db6d9924",
+    "date": "2025-06-07T11:46:13.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "kosmiss",
+    "players": [
+      {
+        "name": "Firezar",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "kosmiss",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Firezar",
+      "kosmiss"
+    ],
+    "series_winner": "kosmiss",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28174-fbc8ab1",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "31e44168d70f0d98512b4fd8eba4f56f",
+    "url": "https://www.beyondallreason.info/replays?gameId=31e44168d70f0d98512b4fd8eba4f56f",
+    "date": "2025-06-05T18:38:41.000Z",
+    "submitted_at": "2025-10-24T15:12:34.060855+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Crater Islands Remake v1.0.1",
+    "duration_ms": 10053634,
+    "duration_formatted": "2h 47m 33s",
+    "winner": "Iris_",
+    "players": [
+      {
+        "name": "Iris_",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "SuperSailer",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "Iris_",
+      "SuperSailer"
+    ],
+    "series_winner": "Iris_",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28155-7d28101",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-crater-islands-remake-v101"
+    ]
+  },
+  {
+    "id": "9ef94068b89452e447c522918f150bca",
+    "url": "https://www.beyondallreason.info/replays?gameId=9ef94068b89452e447c522918f150bca",
+    "date": "2025-06-05T01:57:50.000Z",
+    "submitted_at": "2025-10-24T15:22:11.413310+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Sinkhole Network v1.1",
+    "duration_ms": 5241500,
+    "duration_formatted": "1h 27m 21s",
+    "winner": "xMAYHEMx",
+    "players": [
+      {
+        "name": "Kob",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "xMAYHEMx",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "Kob",
+      "xMAYHEMx"
+    ],
+    "series_winner": "xMAYHEMx",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28155-7d28101",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-sinkhole-network-v11"
+    ]
+  },
+  {
+    "id": "4bec406887cec1baa0a2172175bf1fb8",
+    "url": "https://www.beyondallreason.info/replays?gameId=4bec406887cec1baa0a2172175bf1fb8",
+    "date": "2025-06-05T01:00:59.000Z",
+    "submitted_at": "2025-10-24T15:12:34.060855+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Glacier Pass 1.2",
+    "duration_ms": 3713800,
+    "duration_formatted": "1h 1m 53s",
+    "winner": "Iris_",
+    "players": [
+      {
+        "name": "Iris_",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "SuperSailer",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "Iris_",
+      "SuperSailer"
+    ],
+    "series_winner": "Iris_",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28155-7d28101",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-glacier-pass-12"
+    ]
+  },
+  {
+    "id": "08c63f68309df75960d2e5772a8e7869",
+    "url": "https://www.beyondallreason.info/replays?gameId=08c63f68309df75960d2e5772a8e7869",
+    "date": "2025-06-04T04:05:28.000Z",
+    "submitted_at": "2025-10-24T15:22:11.413310+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Oort_Cloud_V2",
+    "duration_ms": 7526834,
+    "duration_formatted": "2h 5m 26s",
+    "winner": "xMAYHEMx",
+    "players": [
+      {
+        "name": "Kob",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "xMAYHEMx",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "Kob",
+      "xMAYHEMx"
+    ],
+    "series_winner": "xMAYHEMx",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28155-7d28101",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-oort_cloud_v2"
+    ]
+  },
+  {
+    "id": "d2ab3f68ba2db4a5b17592fc8aabf8c7",
+    "url": "https://www.beyondallreason.info/replays?gameId=d2ab3f68ba2db4a5b17592fc8aabf8c7",
+    "date": "2025-06-04T02:13:38.000Z",
+    "submitted_at": "2025-10-24T15:22:11.413310+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Cloud9_V2",
+    "duration_ms": 4776567,
+    "duration_formatted": "1h 19m 36s",
+    "winner": "xMAYHEMx",
+    "players": [
+      {
+        "name": "Kob",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "xMAYHEMx",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "Kob",
+      "xMAYHEMx"
+    ],
+    "series_winner": "xMAYHEMx",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28155-7d28101",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-cloud9_v2"
+    ]
+  },
+  {
+    "id": "22a33f688108cfe2e0132513a601ea4e",
+    "url": "https://www.beyondallreason.info/replays?gameId=22a33f688108cfe2e0132513a601ea4e",
+    "date": "2025-06-04T01:36:34.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "kosmiss",
+    "players": [
+      {
+        "name": "Firezar",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "kosmiss",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Firezar",
+      "kosmiss"
+    ],
+    "series_winner": "kosmiss",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28155-7d28101",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "d5863f68d1c2e8d042fb0a1b99507cf4",
+    "url": "https://www.beyondallreason.info/replays?gameId=d5863f68d1c2e8d042fb0a1b99507cf4",
+    "date": "2025-06-03T23:35:49.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "Firezar",
+    "players": [
+      {
+        "name": "Firezar",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "kosmiss",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Firezar",
+      "kosmiss"
+    ],
+    "series_winner": "kosmiss",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28155-7d28101",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "6b3c3e680c17f9093612b638147650d4",
+    "url": "https://www.beyondallreason.info/replays?gameId=6b3c3e680c17f9093612b638147650d4",
+    "date": "2025-06-03T00:06:03.000Z",
+    "submitted_at": "2025-10-24T12:56:48.531267+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Cloud9_V2",
+    "duration_ms": 11052767,
+    "duration_formatted": "3h 4m 12s",
+    "winner": "kosmiss",
+    "players": [
+      {
+        "name": "Firezar",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "kosmiss",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Firezar",
+      "kosmiss"
+    ],
+    "series_winner": "kosmiss",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28153-7b1f31c",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-cloud9_v2"
+    ]
+  },
+  {
+    "id": "4a013d685104bd14fd0d9492ee54bb19",
+    "url": "https://www.beyondallreason.info/replays?gameId=4a013d685104bd14fd0d9492ee54bb19",
+    "date": "2025-06-02T01:41:30.000Z",
+    "submitted_at": "2025-10-24T12:56:48.531267+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "SpeedMetal BAR V2",
+    "duration_ms": 10307568,
+    "duration_formatted": "2h 51m 47s",
+    "winner": "kosmiss",
+    "players": [
+      {
+        "name": "Firezar",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "kosmiss",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Firezar",
+      "kosmiss"
+    ],
+    "series_winner": "kosmiss",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28148-6eee3ff",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-speedmetal-bar-v2"
+    ]
+  },
+  {
+    "id": "b2fa3c68447970c3ba1f82e46a2b308f",
+    "url": "https://www.beyondallreason.info/replays?gameId=b2fa3c68447970c3ba1f82e46a2b308f",
+    "date": "2025-06-02T01:13:22.000Z",
+    "submitted_at": "2025-10-24T12:56:48.531267+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "SpeedMetal BAR V2",
+    "duration_ms": 1495167,
+    "duration_formatted": "24m 55s",
+    "winner": "kosmiss",
+    "players": [
+      {
+        "name": "Firezar",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "kosmiss",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "Firezar",
+      "kosmiss"
+    ],
+    "series_winner": "kosmiss",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28148-6eee3ff",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "map-speedmetal-bar-v2"
+    ]
+  },
+  {
+    "id": "589f3c68255738c360fca0de4e0271cb",
+    "url": "https://www.beyondallreason.info/replays?gameId=589f3c68255738c360fca0de4e0271cb",
+    "date": "2025-06-01T18:43:36.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "Nauvis",
+    "players": [
+      {
+        "name": "Nauvis",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "skeleboy",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Nauvis",
+      "skeleboy"
+    ],
+    "series_winner": "Nauvis",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28148-6eee3ff",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "fb953c68e5bb74edc474763657432b5f",
+    "url": "https://www.beyondallreason.info/replays?gameId=fb953c68e5bb74edc474763657432b5f",
+    "date": "2025-06-01T18:03:39.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "skeleboy",
+    "players": [
+      {
+        "name": "Nauvis",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "skeleboy",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Nauvis",
+      "skeleboy"
+    ],
+    "series_winner": "Nauvis",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28148-6eee3ff",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "23b83b689d4325b698d9b1e71e0229ce",
+    "url": "https://www.beyondallreason.info/replays?gameId=23b83b689d4325b698d9b1e71e0229ce",
+    "date": "2025-06-01T02:17:07.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "Nauvis",
+    "players": [
+      {
+        "name": "Nauvis",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "skeleboy",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "Nauvis",
+      "skeleboy"
+    ],
+    "series_winner": "Nauvis",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28135-f22505f",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "eaca3868c6f12a5875d501efe007202a",
+    "url": "https://www.beyondallreason.info/replays?gameId=eaca3868c6f12a5875d501efe007202a",
+    "date": "2025-05-29T21:00:26.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "Spadassin",
+    "players": [
+      {
+        "name": "No_face",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "Spadassin",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "No_face",
+      "Spadassin"
+    ],
+    "series_winner": "Spadassin",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28135-f22505f",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "7eb438686940bca86992367db8e86240",
+    "url": "https://www.beyondallreason.info/replays?gameId=7eb438686940bca86992367db8e86240",
+    "date": "2025-05-29T19:24:46.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "Spadassin",
+    "players": [
+      {
+        "name": "No_face",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "Spadassin",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "No_face",
+      "Spadassin"
+    ],
+    "series_winner": "Spadassin",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28135-f22505f",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "668d38683a3995054b1a42ac26f3931a",
+    "url": "https://www.beyondallreason.info/replays?gameId=668d38683a3995054b1a42ac26f3931a",
+    "date": "2025-05-29T16:37:58.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "No_face",
+    "players": [
+      {
+        "name": "No_face",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "Spadassin",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "No_face",
+      "Spadassin"
+    ],
+    "series_winner": "Spadassin",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28135-f22505f",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "4e95336861bfa9677f0ce7da28e9297c",
+    "url": "https://www.beyondallreason.info/replays?gameId=4e95336861bfa9677f0ce7da28e9297c",
+    "date": "2025-05-25T22:10:22.000Z",
+    "submitted_at": "2025-11-14T23:35:25.278150+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Jade Empress 1.41",
+    "duration_ms": 1098800,
+    "duration_formatted": "18m 18s",
+    "winner": "precisehawk4068",
+    "players": [
+      {
+        "name": "Tilfidius_Lamarre",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 14.4,
+        "sigma": 7.0,
+        "skill_estimate": 7.4
+      },
+      {
+        "name": "precisehawk4068",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.51,
+        "sigma": 7.97,
+        "skill_estimate": 6.54
+      }
+    ],
+    "player_names": [
+      "Tilfidius_Lamarre",
+      "precisehawk4068"
+    ],
+    "series_winner": "precisehawk4068",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28081-5435f0f",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-jade-empress-141"
+    ]
+  },
+  {
+    "id": "798e3368eed958bde3aba328001bbbca",
+    "url": "https://www.beyondallreason.info/replays?gameId=798e3368eed958bde3aba328001bbbca",
+    "date": "2025-05-25T21:41:13.000Z",
+    "submitted_at": "2025-11-14T23:35:25.278150+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Eclipsed 0.9.8",
+    "duration_ms": 1574800,
+    "duration_formatted": "26m 14s",
+    "winner": "precisehawk4068",
+    "players": [
+      {
+        "name": "Tilfidius_Lamarre",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 14.4,
+        "sigma": 7.0,
+        "skill_estimate": 7.4
+      },
+      {
+        "name": "precisehawk4068",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.51,
+        "sigma": 7.97,
+        "skill_estimate": 6.54
+      }
+    ],
+    "player_names": [
+      "Tilfidius_Lamarre",
+      "precisehawk4068"
+    ],
+    "series_winner": "precisehawk4068",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28081-5435f0f",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-eclipsed-098"
+    ]
+  },
+  {
+    "id": "ae8233684fca9043f7578728820fe743",
+    "url": "https://www.beyondallreason.info/replays?gameId=ae8233684fca9043f7578728820fe743",
+    "date": "2025-05-25T20:50:54.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "burtik",
+    "players": [
+      {
+        "name": "burtik",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "burtik2023",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "burtik",
+      "burtik2023"
+    ],
+    "series_winner": "burtik",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28081-5435f0f",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "a1743268b52e49c67c4d65e7b05ba8c3",
+    "url": "https://www.beyondallreason.info/replays?gameId=a1743268b52e49c67c4d65e7b05ba8c3",
+    "date": "2025-05-25T01:38:41.000Z",
+    "submitted_at": "2025-11-14T23:35:25.278150+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Angel Crossing 1.5.1",
+    "duration_ms": 3053467,
+    "duration_formatted": "50m 53s",
+    "winner": "precisehawk4068",
+    "players": [
+      {
+        "name": "Tilfidius_Lamarre",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 14.4,
+        "sigma": 7.0,
+        "skill_estimate": 7.4
+      },
+      {
+        "name": "precisehawk4068",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.51,
+        "sigma": 7.97,
+        "skill_estimate": 6.54
+      }
+    ],
+    "player_names": [
+      "Tilfidius_Lamarre",
+      "precisehawk4068"
+    ],
+    "series_winner": "precisehawk4068",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28081-5435f0f",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-angel-crossing-151"
+    ]
+  },
+  {
+    "id": "59223268f3c17632850edaa3b4a18a84",
+    "url": "https://www.beyondallreason.info/replays?gameId=59223268f3c17632850edaa3b4a18a84",
+    "date": "2025-05-24T19:47:37.000Z",
+    "submitted_at": "2025-11-15T00:04:35.352720+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "The Halite Maze v1.4",
+    "duration_ms": 1164167,
+    "duration_formatted": "19m 24s",
+    "winner": "[bruno]",
+    "players": [
+      {
+        "name": "[bruno]",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 23.3,
+        "sigma": 4.66,
+        "skill_estimate": 18.64
+      },
+      {
+        "name": "midek",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 27.6,
+        "sigma": 4.49,
+        "skill_estimate": 23.11
+      }
+    ],
+    "player_names": [
+      "[bruno]",
+      "midek"
+    ],
+    "series_winner": "[bruno]",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28081-5435f0f",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "mid-skill",
+      "map-the-halite-maze-v14"
+    ]
+  },
+  {
+    "id": "d21a326801cb1a03464f8145f779a5eb",
+    "url": "https://www.beyondallreason.info/replays?gameId=d21a326801cb1a03464f8145f779a5eb",
+    "date": "2025-05-24T19:15:30.000Z",
+    "submitted_at": "2025-11-15T00:04:35.352720+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Eclipsed 0.9.8",
+    "duration_ms": 1681733,
+    "duration_formatted": "28m 1s",
+    "winner": "[bruno]",
+    "players": [
+      {
+        "name": "[bruno]",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 23.3,
+        "sigma": 4.66,
+        "skill_estimate": 18.64
+      },
+      {
+        "name": "midek",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 27.6,
+        "sigma": 4.49,
+        "skill_estimate": 23.11
+      }
+    ],
+    "player_names": [
+      "[bruno]",
+      "midek"
+    ],
+    "series_winner": "[bruno]",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28081-5435f0f",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "mid-skill",
+      "map-eclipsed-098"
+    ]
+  },
+  {
+    "id": "55f9306899df809761ce31a44e5e24a6",
+    "url": "https://www.beyondallreason.info/replays?gameId=55f9306899df809761ce31a44e5e24a6",
+    "date": "2025-05-23T22:40:21.000Z",
+    "submitted_at": "2025-11-15T00:04:35.352720+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Aurelia v4.1",
+    "duration_ms": 2875800,
+    "duration_formatted": "47m 55s",
+    "winner": "[bruno]",
+    "players": [
+      {
+        "name": "[bruno]",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 23.3,
+        "sigma": 4.66,
+        "skill_estimate": 18.64
+      },
+      {
+        "name": "midek",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 27.6,
+        "sigma": 4.49,
+        "skill_estimate": 23.11
+      }
+    ],
+    "player_names": [
+      "[bruno]",
+      "midek"
+    ],
+    "series_winner": "[bruno]",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28081-5435f0f",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "mid-skill",
+      "map-aurelia-v41"
+    ]
+  },
+  {
+    "id": "73b32f683f37de7882228234e5cd08b1",
+    "url": "https://www.beyondallreason.info/replays?gameId=73b32f683f37de7882228234e5cd08b1",
+    "date": "2025-05-22T23:29:55.000Z",
+    "submitted_at": "2025-11-15T00:06:27.207533+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Quicksilver Remake 1.24",
+    "duration_ms": 1806267,
+    "duration_formatted": "30m 6s",
+    "winner": "precisehawk4068",
+    "players": [
+      {
+        "name": "Tilfidius_Lamarre",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 14.4,
+        "sigma": 7.0,
+        "skill_estimate": 7.4
+      },
+      {
+        "name": "precisehawk4068",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.51,
+        "sigma": 7.97,
+        "skill_estimate": 6.54
+      }
+    ],
+    "player_names": [
+      "Tilfidius_Lamarre",
+      "precisehawk4068"
+    ],
+    "series_winner": "precisehawk4068",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28081-5435f0f",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-quicksilver-remake-124"
+    ]
+  },
+  {
+    "id": "e0b92c68e825e3ed50a1aac2e8ae8e48",
+    "url": "https://www.beyondallreason.info/replays?gameId=e0b92c68e825e3ed50a1aac2e8ae8e48",
+    "date": "2025-05-20T17:20:32.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "burtik2023",
+    "players": [
+      {
+        "name": "burtik",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "burtik2023",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "burtik",
+      "burtik2023"
+    ],
+    "series_winner": "burtik",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28067-e0824d9",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "517f2b68810ad05cadf1993c3ba9c0ad",
+    "url": "https://www.beyondallreason.info/replays?gameId=517f2b68810ad05cadf1993c3ba9c0ad",
+    "date": "2025-05-19T18:58:25.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "burtik",
+    "players": [
+      {
+        "name": "burtik",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "burtik2023",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "burtik",
+      "burtik2023"
+    ],
+    "series_winner": "burtik",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28067-e0824d9",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "282d2a685e0cf13f2558773349dcd315",
+    "url": "https://www.beyondallreason.info/replays?gameId=282d2a685e0cf13f2558773349dcd315",
+    "date": "2025-05-18T18:55:36.000Z",
+    "submitted_at": "2025-11-15T00:06:27.207533+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Coastlines_Dry_V2.2.1",
+    "duration_ms": 2803700,
+    "duration_formatted": "46m 43s",
+    "winner": "Tilfidius_Lamarre",
+    "players": [
+      {
+        "name": "Tilfidius_Lamarre",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.4,
+        "sigma": 7.0,
+        "skill_estimate": 7.4
+      },
+      {
+        "name": "precisehawk4068",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 14.51,
+        "sigma": 7.97,
+        "skill_estimate": 6.54
+      }
+    ],
+    "player_names": [
+      "Tilfidius_Lamarre",
+      "precisehawk4068"
+    ],
+    "series_winner": "precisehawk4068",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28056-76889f6",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-coastlines_dry_v221"
+    ]
+  },
+  {
+    "id": "c925296839245253b2d09c65c0b3d28c",
+    "url": "https://www.beyondallreason.info/replays?gameId=c925296839245253b2d09c65c0b3d28c",
+    "date": "2025-05-18T00:11:53.000Z",
+    "submitted_at": "2025-11-15T00:06:27.207533+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Altair_Crossing_V4.1",
+    "duration_ms": 1107700,
+    "duration_formatted": "18m 27s",
+    "winner": "precisehawk4068",
+    "players": [
+      {
+        "name": "Tilfidius_Lamarre",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 14.4,
+        "sigma": 7.0,
+        "skill_estimate": 7.4
+      },
+      {
+        "name": "precisehawk4068",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.51,
+        "sigma": 7.97,
+        "skill_estimate": 6.54
+      }
+    ],
+    "player_names": [
+      "Tilfidius_Lamarre",
+      "precisehawk4068"
+    ],
+    "series_winner": "precisehawk4068",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28054-0f58869",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-altair_crossing_v41"
+    ]
+  },
+  {
+    "id": "eb962868144050737377ad994697975d",
+    "url": "https://www.beyondallreason.info/replays?gameId=eb962868144050737377ad994697975d",
+    "date": "2025-05-17T14:02:19.000Z",
+    "submitted_at": "2025-10-24T14:17:47.526719+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Crescent_Bay_V2",
+    "duration_ms": 310467,
+    "duration_formatted": "5m 10s",
+    "winner": "PuTZiii",
+    "players": [
+      {
+        "name": "KiiiTZZZ",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "PuTZiii",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "KiiiTZZZ",
+      "PuTZiii"
+    ],
+    "series_winner": "PuTZiii",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28023-888365f",
+    "is_tournament": true,
+    "tags": [
+      "short",
+      "map-crescent_bay_v2"
+    ]
+  },
+  {
+    "id": "2e832868f84e4612e43fcf88e87b96ad",
+    "url": "https://www.beyondallreason.info/replays?gameId=2e832868f84e4612e43fcf88e87b96ad",
+    "date": "2025-05-17T12:38:06.000Z",
+    "submitted_at": "2025-10-24T14:17:47.526719+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Comet Catcher Remake 1.8",
+    "duration_ms": 3742767,
+    "duration_formatted": "1h 2m 22s",
+    "winner": "PuTZiii",
+    "players": [
+      {
+        "name": "KiiiTZZZ",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "PuTZiii",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "KiiiTZZZ",
+      "PuTZiii"
+    ],
+    "series_winner": "PuTZiii",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28023-888365f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-comet-catcher-remake-18"
+    ]
+  },
+  {
+    "id": "664028683d979d49ade59ba642c102df",
+    "url": "https://www.beyondallreason.info/replays?gameId=664028683d979d49ade59ba642c102df",
+    "date": "2025-05-17T07:53:10.000Z",
+    "submitted_at": "2025-10-24T14:17:47.526719+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Comet Catcher Remake 1.8",
+    "duration_ms": 15933100,
+    "duration_formatted": "4h 25m 33s",
+    "winner": "PuTZiii",
+    "players": [
+      {
+        "name": "KiiiTZZZ",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "PuTZiii",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "KiiiTZZZ",
+      "PuTZiii"
+    ],
+    "series_winner": "PuTZiii",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28023-888365f",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-comet-catcher-remake-18"
+    ]
+  },
+  {
+    "id": "ccf41f684d8f7088a30027825a51ab98",
+    "url": "https://www.beyondallreason.info/replays?gameId=ccf41f684d8f7088a30027825a51ab98",
+    "date": "2025-05-11T00:52:28.000Z",
+    "submitted_at": "2025-10-24T15:11:25.727473+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "All That Glitters v2.2",
+    "duration_ms": 6175634,
+    "duration_formatted": "1h 42m 55s",
+    "winner": "TwoInchTiger",
+    "players": [
+      {
+        "name": "TwoInchTiger",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "peterthegreat",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "TwoInchTiger",
+      "peterthegreat"
+    ],
+    "series_winner": "TwoInchTiger",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28003-14c2574",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-all-that-glitters-v22"
+    ]
+  },
+  {
+    "id": "42ec1f68a5bb847623912022f559b44e",
+    "url": "https://www.beyondallreason.info/replays?gameId=42ec1f68a5bb847623912022f559b44e",
+    "date": "2025-05-11T00:16:02.000Z",
+    "submitted_at": "2025-10-25T13:37:52.104631+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Sand Crowns 1.0",
+    "duration_ms": 8620967,
+    "duration_formatted": "2h 23m 40s",
+    "winner": "JohnnyCrisp",
+    "players": [
+      {
+        "name": "JohnnyCrisp",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.23,
+        "sigma": 8.21,
+        "skill_estimate": 6.02
+      },
+      {
+        "name": "Sgtghost20",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "JohnnyCrisp",
+      "Sgtghost20"
+    ],
+    "series_winner": "JohnnyCrisp",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28003-14c2574",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-sand-crowns-10"
+    ]
+  },
+  {
+    "id": "8ddb1f683607e388da90d09e3544aec8",
+    "url": "https://www.beyondallreason.info/replays?gameId=8ddb1f683607e388da90d09e3544aec8",
+    "date": "2025-05-10T23:04:45.000Z",
+    "submitted_at": "2025-10-24T15:11:25.727473+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "All That Glitters v2.2",
+    "duration_ms": 6173734,
+    "duration_formatted": "1h 42m 53s",
+    "winner": "TwoInchTiger",
+    "players": [
+      {
+        "name": "TwoInchTiger",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "peterthegreat",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "TwoInchTiger",
+      "peterthegreat"
+    ],
+    "series_winner": "TwoInchTiger",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28003-14c2574",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-all-that-glitters-v22"
+    ]
+  },
+  {
+    "id": "6dc91f68dbd85eb87f496d54897d7ed5",
+    "url": "https://www.beyondallreason.info/replays?gameId=6dc91f68dbd85eb87f496d54897d7ed5",
+    "date": "2025-05-10T21:47:25.000Z",
+    "submitted_at": "2025-10-25T13:37:52.104631+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Esker Creek 1.3",
+    "duration_ms": 3807300,
+    "duration_formatted": "1h 3m 27s",
+    "winner": "JohnnyCrisp",
+    "players": [
+      {
+        "name": "JohnnyCrisp",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.23,
+        "sigma": 8.21,
+        "skill_estimate": 6.02
+      },
+      {
+        "name": "Sgtghost20",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "JohnnyCrisp",
+      "Sgtghost20"
+    ],
+    "series_winner": "JohnnyCrisp",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28003-14c2574",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-esker-creek-13"
+    ]
+  },
+  {
+    "id": "6ec11f684be234d16587a65da144191a",
+    "url": "https://www.beyondallreason.info/replays?gameId=6ec11f684be234d16587a65da144191a",
+    "date": "2025-05-10T21:13:18.000Z",
+    "submitted_at": "2025-10-24T15:11:25.727473+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "All That Glitters v2.2",
+    "duration_ms": 6499500,
+    "duration_formatted": "1h 48m 19s",
+    "winner": "TwoInchTiger",
+    "players": [
+      {
+        "name": "TwoInchTiger",
+        "faction": "Unknown",
+        "is_winner": true
+      },
+      {
+        "name": "peterthegreat",
+        "faction": "Unknown",
+        "is_winner": false
+      }
+    ],
+    "player_names": [
+      "TwoInchTiger",
+      "peterthegreat"
+    ],
+    "series_winner": "TwoInchTiger",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28003-14c2574",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-all-that-glitters-v22"
+    ]
+  },
+  {
+    "id": "df9f1f68220ece0e579b22064f5c82ea",
+    "url": "https://www.beyondallreason.info/replays?gameId=df9f1f68220ece0e579b22064f5c82ea",
+    "date": "2025-05-10T18:50:07.000Z",
+    "submitted_at": "2025-10-25T13:37:52.104631+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Ancient Bastion Remake 0.5",
+    "duration_ms": 4431700,
+    "duration_formatted": "1h 13m 51s",
+    "winner": "JohnnyCrisp",
+    "players": [
+      {
+        "name": "JohnnyCrisp",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 14.23,
+        "sigma": 8.21,
+        "skill_estimate": 6.02
+      },
+      {
+        "name": "Sgtghost20",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "JohnnyCrisp",
+      "Sgtghost20"
+    ],
+    "series_winner": "JohnnyCrisp",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28003-14c2574",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-ancient-bastion-remake-05"
+    ]
+  },
+  {
+    "id": "95d51e68ef4c1ba09cc188f6891fb759",
+    "url": "https://www.beyondallreason.info/replays?gameId=95d51e68ef4c1ba09cc188f6891fb759",
+    "date": "2025-05-10T04:27:01.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "FailedLight",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "FailedLight",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "FailedLight"
+    ],
+    "series_winner": "FailedLight",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-28000-0dbaf00",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "a62f1d681b55ac6c3e5884af42ae1a40",
+    "url": "https://www.beyondallreason.info/replays?gameId=a62f1d681b55ac6c3e5884af42ae1a40",
+    "date": "2025-05-08T22:26:46.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "FailedLight",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "FailedLight",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "FailedLight"
+    ],
+    "series_winner": "FailedLight",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-27994-2b3c6a9",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "bc1a1d686e5a38d06c12241ba482558c",
+    "url": "https://www.beyondallreason.info/replays?gameId=bc1a1d686e5a38d06c12241ba482558c",
+    "date": "2025-05-08T20:57:32.000Z",
+    "submitted_at": "2025-11-14T23:54:05.519298+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Incandescence Remake 3.3.1",
+    "duration_ms": 2569667,
+    "duration_formatted": "42m 49s",
+    "winner": "ibramoka",
+    "players": [
+      {
+        "name": "GamerRKS",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 14.07,
+        "sigma": 8.1,
+        "skill_estimate": 5.970000000000001
+      },
+      {
+        "name": "ibramoka",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 17.21,
+        "sigma": 7.79,
+        "skill_estimate": 9.420000000000002
+      }
+    ],
+    "player_names": [
+      "GamerRKS",
+      "ibramoka"
+    ],
+    "series_winner": "ibramoka",
+    "engine_version": "2025.04.04",
+    "game_version": "Beyond All Reason test-27993-fb463a0",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-incandescence-remake-331"
+    ]
+  },
+  {
+    "id": "f57f1a68834b1ab07bcecc2aa90a3d69",
+    "url": "https://www.beyondallreason.info/replays?gameId=f57f1a68834b1ab07bcecc2aa90a3d69",
+    "date": "2025-05-06T21:32:37.000Z",
+    "submitted_at": "2025-11-14T23:54:05.519298+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "SpeedMetal BAR V2",
+    "duration_ms": 1258600,
+    "duration_formatted": "20m 58s",
+    "winner": "ibramoka",
+    "players": [
+      {
+        "name": "GamerRKS",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 28.66,
+        "sigma": 3.87,
+        "skill_estimate": 24.79
+      },
+      {
+        "name": "ibramoka",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 10.97,
+        "sigma": 3.85,
+        "skill_estimate": 7.120000000000001
+      }
+    ],
+    "player_names": [
+      "GamerRKS",
+      "ibramoka"
+    ],
+    "series_winner": "ibramoka",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27972-ab22667",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "mid-skill",
+      "map-speedmetal-bar-v2"
+    ]
+  },
+  {
+    "id": "dd5c1a68e9cd7f495dcb6707f354568a",
+    "url": "https://www.beyondallreason.info/replays?gameId=dd5c1a68e9cd7f495dcb6707f354568a",
+    "date": "2025-05-06T19:02:53.000Z",
+    "submitted_at": "2025-11-14T23:54:05.519298+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "SpeedMetal BAR V2",
+    "duration_ms": 1897934,
+    "duration_formatted": "31m 37s",
+    "winner": "ibramoka",
+    "players": [
+      {
+        "name": "GamerRKS",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 5.52,
+        "sigma": 4.91,
+        "skill_estimate": 0.6099999999999994
+      },
+      {
+        "name": "ibramoka",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 6.72,
+        "sigma": 6.85,
+        "skill_estimate": -0.1299999999999999
+      }
+    ],
+    "player_names": [
+      "GamerRKS",
+      "ibramoka"
+    ],
+    "series_winner": "ibramoka",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27972-ab22667",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-speedmetal-bar-v2"
+    ]
+  },
+  {
+    "id": "test3333333333333333333333333333333",
+    "url": "https://www.beyondallreason.info/replays?gameId=test3333333333333333333333333333333",
+    "date": "2025-05-04T16:00:00.000Z",
+    "submitted_at": "2025-10-24T15:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Test Map",
+    "duration_ms": 10000000,
+    "duration_formatted": "2h 46m 40s",
+    "winner": "DocStudios",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 14.8
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 18.0
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "luca234"
+    ],
+    "series_winner": "DocStudios",
+    "engine_version": "",
+    "game_version": "",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill",
+      "map-test-map"
+    ]
+  },
+  {
+    "id": "test2222222222222222222222222222222",
+    "url": "https://www.beyondallreason.info/replays?gameId=test2222222222222222222222222222222",
+    "date": "2025-05-04T15:30:00.000Z",
+    "submitted_at": "2025-10-24T15:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Test Map",
+    "duration_ms": 11000000,
+    "duration_formatted": "3h 3m 20s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 14.8
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 18.0
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "luca234"
+    ],
+    "series_winner": "DocStudios",
+    "engine_version": "",
+    "game_version": "",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill",
+      "map-test-map"
+    ]
+  },
+  {
+    "id": "test1111111111111111111111111111111",
+    "url": "https://www.beyondallreason.info/replays?gameId=test1111111111111111111111111111111",
+    "date": "2025-05-04T15:00:00.000Z",
+    "submitted_at": "2025-10-24T15:00:00Z",
+    "submitted_by": "unknown",
+    "map": "Test Map",
+    "duration_ms": 12000000,
+    "duration_formatted": "3h 20m 0s",
+    "winner": "DocStudios",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": true,
+        "skill_estimate": 14.8
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": false,
+        "skill_estimate": 18.0
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "luca234"
+    ],
+    "series_winner": "DocStudios",
+    "engine_version": "",
+    "game_version": "",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "mid-skill",
+      "map-test-map"
+    ]
+  },
+  {
+    "id": "9b001768e1e004286a06b7de3bea6fce",
+    "url": "https://www.beyondallreason.info/replays?gameId=9b001768e1e004286a06b7de3bea6fce",
+    "date": "2025-05-04T05:52:27.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "DocStudios",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "FailedLight",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "FailedLight"
+    ],
+    "series_winner": "FailedLight",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27951-49e7bee",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "15461668eab68a13abfc2d17798f2324",
+    "url": "https://www.beyondallreason.info/replays?gameId=15461668eab68a13abfc2d17798f2324",
+    "date": "2025-05-03T16:36:37.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "sultans590",
+    "players": [
+      {
+        "name": "ibrawod",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "sultans590",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "ibrawod",
+      "sultans590"
+    ],
+    "series_winner": "sultans590",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27945-5259a61",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "98f11568ad0722c98cce6c01f7078c1a",
+    "url": "https://www.beyondallreason.info/replays?gameId=98f11568ad0722c98cce6c01f7078c1a",
+    "date": "2025-05-03T10:36:08.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27944-12f7ff8",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "82801568348b5d14fa9189b15158e497",
+    "url": "https://www.beyondallreason.info/replays?gameId=82801568348b5d14fa9189b15158e497",
+    "date": "2025-05-03T02:33:38.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "DocStudios",
+    "players": [
+      {
+        "name": "DocStudios",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "FailedLight",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "DocStudios",
+      "FailedLight"
+    ],
+    "series_winner": "FailedLight",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27943-233a6e9",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "893d15688f1ebb7a6cb69a929842633a",
+    "url": "https://www.beyondallreason.info/replays?gameId=893d15688f1ebb7a6cb69a929842633a",
+    "date": "2025-05-02T21:47:53.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "sultans590",
+    "players": [
+      {
+        "name": "ibrawod",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "sultans590",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "ibrawod",
+      "sultans590"
+    ],
+    "series_winner": "sultans590",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27942-c74481c",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "96e31468bf40ef80f4e89b9c0fcc8c0e",
+    "url": "https://www.beyondallreason.info/replays?gameId=96e31468bf40ef80f4e89b9c0fcc8c0e",
+    "date": "2025-05-02T15:24:06.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27940-e122095",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "bdd814686a173d1c5b3ef7cd47512f85",
+    "url": "https://www.beyondallreason.info/replays?gameId=bdd814686a173d1c5b3ef7cd47512f85",
+    "date": "2025-05-02T14:37:49.000Z",
+    "submitted_at": "2025-10-24T12:57:42.258117+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Failed Negotiations 1.0",
+    "duration_ms": 2435000,
+    "duration_formatted": "40m 35s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27940-e122095",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "map-failed-negotiations-10"
+    ]
+  },
+  {
+    "id": "157d1468191ab37850b97d5d6414159c",
+    "url": "https://www.beyondallreason.info/replays?gameId=157d1468191ab37850b97d5d6414159c",
+    "date": "2025-05-02T08:06:45.000Z",
+    "submitted_at": "2025-10-24T12:57:42.258117+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Silent Sea v1.0.1",
+    "duration_ms": 12912234,
+    "duration_formatted": "3h 35m 12s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27936-6065d61",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-silent-sea-v101"
+    ]
+  },
+  {
+    "id": "2964146806f0d15134816eab79e66eda",
+    "url": "https://www.beyondallreason.info/replays?gameId=2964146806f0d15134816eab79e66eda",
+    "date": "2025-05-02T06:20:25.000Z",
+    "submitted_at": "2025-10-24T12:57:42.258117+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Shore_to_Shore_V3",
+    "duration_ms": 5910800,
+    "duration_formatted": "1h 38m 30s",
+    "winner": "luca234",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": false
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": true
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27936-6065d61",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "map-shore_to_shore_v3"
+    ]
+  },
+  {
+    "id": "abc713686b5552dc09568b8d2b83e26e",
+    "url": "https://www.beyondallreason.info/replays?gameId=abc713686b5552dc09568b8d2b83e26e",
+    "date": "2025-05-01T19:12:43.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "jel523",
+    "players": [
+      {
+        "name": "jel523",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "luca234",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "jel523",
+      "luca234"
+    ],
+    "series_winner": "luca234",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27932-4e75bcf",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "856511682594357d5fa41809bf9dcc78",
+    "url": "https://www.beyondallreason.info/replays?gameId=856511682594357d5fa41809bf9dcc78",
+    "date": "2025-04-29T23:49:25.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_3",
+    "duration_ms": 840000,
+    "duration_formatted": "14m 0s",
+    "winner": "LastBlast",
+    "players": [
+      {
+        "name": "LastBlast",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "SomeTenRandom",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "LastBlast",
+      "SomeTenRandom"
+    ],
+    "series_winner": "LastBlast",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27918-bdd8ef1",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_3"
+    ]
+  },
+  {
+    "id": "f24c116899bab4983712c7c4784a5db6",
+    "url": "https://www.beyondallreason.info/replays?gameId=f24c116899bab4983712c7c4784a5db6",
+    "date": "2025-04-29T22:04:34.000Z",
+    "submitted_at": "2025-11-14T23:47:57.377335+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "High Noon Remake 1.0",
+    "duration_ms": 2151267,
+    "duration_formatted": "35m 51s",
+    "winner": "ashenknight",
+    "players": [
+      {
+        "name": "CafeConLeche",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.94,
+        "sigma": 6.61,
+        "skill_estimate": 10.330000000000002
+      },
+      {
+        "name": "ashenknight",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 13.73,
+        "sigma": 6.99,
+        "skill_estimate": 6.74
+      }
+    ],
+    "player_names": [
+      "CafeConLeche",
+      "ashenknight"
+    ],
+    "series_winner": "ashenknight",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27918-bdd8ef1",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-high-noon-remake-10"
+    ]
+  },
+  {
+    "id": "eb4211684e9181fcc627b75244a76fb9",
+    "url": "https://www.beyondallreason.info/replays?gameId=eb4211684e9181fcc627b75244a76fb9",
+    "date": "2025-04-29T21:21:47.000Z",
+    "submitted_at": "2025-11-14T23:47:57.377335+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Hooked 1.1.1",
+    "duration_ms": 2097800,
+    "duration_formatted": "34m 57s",
+    "winner": "ashenknight",
+    "players": [
+      {
+        "name": "CafeConLeche",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.94,
+        "sigma": 6.61,
+        "skill_estimate": 10.330000000000002
+      },
+      {
+        "name": "ashenknight",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 13.73,
+        "sigma": 6.99,
+        "skill_estimate": 6.74
+      }
+    ],
+    "player_names": [
+      "CafeConLeche",
+      "ashenknight"
+    ],
+    "series_winner": "ashenknight",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27918-bdd8ef1",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-hooked-111"
+    ]
+  },
+  {
+    "id": "173c116859dd3c0eb0903d67d713a799",
+    "url": "https://www.beyondallreason.info/replays?gameId=173c116859dd3c0eb0903d67d713a799",
+    "date": "2025-04-29T20:52:39.000Z",
+    "submitted_at": "2025-11-14T23:47:57.377335+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Center Command BAR v1.0",
+    "duration_ms": 1476033,
+    "duration_formatted": "24m 36s",
+    "winner": "ashenknight",
+    "players": [
+      {
+        "name": "CafeConLeche",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.94,
+        "sigma": 6.61,
+        "skill_estimate": 10.330000000000002
+      },
+      {
+        "name": "ashenknight",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 13.73,
+        "sigma": 6.99,
+        "skill_estimate": 6.74
+      }
+    ],
+    "player_names": [
+      "CafeConLeche",
+      "ashenknight"
+    ],
+    "series_winner": "ashenknight",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27918-bdd8ef1",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-center-command-bar-v10"
+    ]
+  },
+  {
+    "id": "472d116889e0801d27c60b0a07b6b93c",
+    "url": "https://www.beyondallreason.info/replays?gameId=472d116889e0801d27c60b0a07b6b93c",
+    "date": "2025-04-29T19:49:27.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "ibrawod",
+    "players": [
+      {
+        "name": "ibrawod",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "sultans590",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "ibrawod",
+      "sultans590"
+    ],
+    "series_winner": "sultans590",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27918-bdd8ef1",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "32fa0e686234ae8ca75de8e4283ecda1",
+    "url": "https://www.beyondallreason.info/replays?gameId=32fa0e686234ae8ca75de8e4283ecda1",
+    "date": "2025-04-28T03:46:58.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_2",
+    "duration_ms": 720000,
+    "duration_formatted": "12m 0s",
+    "winner": "SomeTenRandom",
+    "players": [
+      {
+        "name": "LastBlast",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "SomeTenRandom",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "LastBlast",
+      "SomeTenRandom"
+    ],
+    "series_winner": "LastBlast",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27905-d5e853e",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_2"
+    ]
+  },
+  {
+    "id": "e3c80e682eb0cdde27cf0719805c7327",
+    "url": "https://www.beyondallreason.info/replays?gameId=e3c80e682eb0cdde27cf0719805c7327",
+    "date": "2025-04-28T00:16:35.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "LastBlast",
+    "players": [
+      {
+        "name": "LastBlast",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "SomeTenRandom",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "LastBlast",
+      "SomeTenRandom"
+    ],
+    "series_winner": "LastBlast",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27905-d5e853e",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  },
+  {
+    "id": "faab0a6886396fc33910368cd3c5e049",
+    "url": "https://www.beyondallreason.info/replays?gameId=faab0a6886396fc33910368cd3c5e049",
+    "date": "2025-04-24T21:24:10.000Z",
+    "submitted_at": "",
+    "submitted_by": "unknown",
+    "map": "Map_1",
+    "duration_ms": 600000,
+    "duration_formatted": "10m 0s",
+    "winner": "LastBlast",
+    "players": [
+      {
+        "name": "LastBlast",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      },
+      {
+        "name": "SomeTenRandom",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 5.56,
+        "skill_estimate": 11.110000000000003
+      }
+    ],
+    "player_names": [
+      "LastBlast",
+      "SomeTenRandom"
+    ],
+    "series_winner": "SomeTenRandom",
+    "engine_version": "2025.04.01",
+    "game_version": "Beyond All Reason test-27891-387cdf6",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-map_1"
+    ]
+  }
+]

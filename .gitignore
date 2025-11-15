@@ -43,9 +43,6 @@ env/
 *.backup2
 
 # Auto-generated data files (managed by GitHub Actions)
-public/data/leaderboard.json
+# Keep these tracked but expect merge conflicts - resolve with remote version
 public/data/replay_database.json
 public/data/player_match_history.json
-docs/data/leaderboard.json
-docs/data/replay_database.json
-docs/data/player_match_history.json

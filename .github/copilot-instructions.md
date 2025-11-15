@@ -39,6 +39,11 @@ This repository implements a minimal Discord submission bot plus Github Actions 
   - For leaderboard edits: run `python actions/update_leaderboard.py` and verify `public/data/leaderboard.json` is written and valid JSON.
 - When editing any code that writes data or commits: ensure commit messages include `[skip ci]` when appropriate to avoid CI loops, and preserve the repository's current commit/branch patterns.
 
+### Git workflow and merge conflicts
+- For future updates, only `public/data/leaderboard.json` and `docs/data/leaderboard.json` should cause conflicts. When that happens, just accept the remote version since GitHub Actions will regenerate them with your config changes.
+- Use `git checkout --theirs <file> && git add <file>` to accept remote version during merge conflicts.
+- Avoid committing auto-generated data files unless necessary; they're managed by CI and updated hourly.
+
 ### Examples to reference in code changes
 - Replay URL pattern and validation: `REPLAY_URL_PATTERN = re.compile(r"https?://api\.bar-rts\.com/replays/([A-Za-z0-9]+)$")` in `bot/main.py` (use this exact pattern when parsing replay links).
 - GitHub PR creation flow: see `create_github_pr()` in `bot/main.py` — branch naming and file creation format are implemented there.

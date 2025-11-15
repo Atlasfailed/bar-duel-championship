@@ -104,7 +104,7 @@
     "type": "player"
   },
   {
-    "player": "lolh2o",
+    "player": "peterthegreat",
     "tier": "Silver",
     "initial_cr": 1050,
     "current_cr": 1246,
@@ -118,7 +118,7 @@
     "type": "player"
   },
   {
-    "player": "peterthegreat",
+    "player": "Kommandant",
     "tier": "Silver",
     "initial_cr": 1050,
     "current_cr": 1246,
@@ -132,7 +132,7 @@
     "type": "player"
   },
   {
-    "player": "Kommandant",
+    "player": "lolh2o",
     "tier": "Silver",
     "initial_cr": 1050,
     "current_cr": 1246,
@@ -201,6 +201,20 @@
     "type": "player"
   },
   {
+    "player": "eazyr",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 1485,
+    "matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "winrate": 100.0,
+    "initial_os": 8.34,
+    "percentile": 7.33,
+    "tier_rank": 4,
+    "type": "player"
+  },
+  {
     "player": "ashenknight",
     "tier": "Bronze",
     "initial_cr": 1050,
@@ -211,7 +225,7 @@
     "winrate": 100.0,
     "initial_os": 6.74,
     "percentile": 4.55,
-    "tier_rank": 4,
+    "tier_rank": 5,
     "type": "player"
   },
   {
@@ -225,7 +239,7 @@
     "winrate": 100.0,
     "initial_os": -0.13,
     "percentile": 1,
-    "tier_rank": 5,
+    "tier_rank": 6,
     "type": "player"
   },
   {
@@ -239,49 +253,7 @@
     "winrate": 66.7,
     "initial_os": 8.34,
     "percentile": 7.33,
-    "tier_rank": 6,
-    "type": "player"
-  },
-  {
-    "player": "cibernixt",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 1148,
-    "matches": 3,
-    "wins": 2,
-    "losses": 1,
-    "winrate": 66.7,
-    "initial_os": 11.11,
-    "percentile": 15.82,
     "tier_rank": 7,
-    "type": "player"
-  },
-  {
-    "player": "Veld4",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 1148,
-    "matches": 3,
-    "wins": 2,
-    "losses": 1,
-    "winrate": 66.7,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 8,
-    "type": "player"
-  },
-  {
-    "player": "Nauvis",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 1148,
-    "matches": 3,
-    "wins": 2,
-    "losses": 1,
-    "winrate": 66.7,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 9,
     "type": "player"
   },
   {
@@ -295,49 +267,7 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 10,
-    "type": "player"
-  },
-  {
-    "player": "jimmyneutron",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 1148,
-    "matches": 3,
-    "wins": 2,
-    "losses": 1,
-    "winrate": 66.7,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 11,
-    "type": "player"
-  },
-  {
-    "player": "sultans590",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 1148,
-    "matches": 3,
-    "wins": 2,
-    "losses": 1,
-    "winrate": 66.7,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 12,
-    "type": "player"
-  },
-  {
-    "player": "Iris_",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 1148,
-    "matches": 3,
-    "wins": 2,
-    "losses": 1,
-    "winrate": 66.7,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 13,
+    "tier_rank": 8,
     "type": "player"
   },
   {
@@ -351,7 +281,21 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 14,
+    "tier_rank": 9,
+    "type": "player"
+  },
+  {
+    "player": "Nauvis",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 1148,
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "winrate": 66.7,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "tier_rank": 10,
     "type": "player"
   },
   {
@@ -365,7 +309,77 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "tier_rank": 11,
+    "type": "player"
+  },
+  {
+    "player": "jimmyneutron",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 1148,
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "winrate": 66.7,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "tier_rank": 12,
+    "type": "player"
+  },
+  {
+    "player": "cibernixt",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 1148,
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "winrate": 66.7,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "tier_rank": 13,
+    "type": "player"
+  },
+  {
+    "player": "sultans590",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 1148,
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "winrate": 66.7,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "tier_rank": 14,
+    "type": "player"
+  },
+  {
+    "player": "Veld4",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 1148,
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "winrate": 66.7,
+    "initial_os": 11.11,
+    "percentile": 15.82,
     "tier_rank": 15,
+    "type": "player"
+  },
+  {
+    "player": "Iris_",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 1148,
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "winrate": 66.7,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "tier_rank": 16,
     "type": "player"
   },
   {
@@ -379,7 +393,7 @@
     "winrate": 50.0,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 16,
+    "tier_rank": 17,
     "type": "player"
   },
   {
@@ -393,7 +407,7 @@
     "winrate": 50.0,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 17,
+    "tier_rank": 18,
     "type": "player"
   },
   {
@@ -407,25 +421,11 @@
     "winrate": 41.7,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 18,
-    "type": "player"
-  },
-  {
-    "player": "No_face",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 991,
-    "matches": 3,
-    "wins": 1,
-    "losses": 2,
-    "winrate": 33.3,
-    "initial_os": 11.11,
-    "percentile": 15.82,
     "tier_rank": 19,
     "type": "player"
   },
   {
-    "player": "Alfranix951",
+    "player": "skeleboy",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 991,
@@ -439,7 +439,7 @@
     "type": "player"
   },
   {
-    "player": "burtik2023",
+    "player": "No_face",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 991,
@@ -453,7 +453,7 @@
     "type": "player"
   },
   {
-    "player": "jhonboy",
+    "player": "KiiiTZZZ",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 991,
@@ -467,7 +467,7 @@
     "type": "player"
   },
   {
-    "player": "KiiiTZZZ",
+    "player": "SuperSailer",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 991,
@@ -481,7 +481,7 @@
     "type": "player"
   },
   {
-    "player": "ibrawod",
+    "player": "jhonboy",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 991,
@@ -495,7 +495,7 @@
     "type": "player"
   },
   {
-    "player": "SuperSailer",
+    "player": "Alfranix951",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 991,
@@ -509,7 +509,7 @@
     "type": "player"
   },
   {
-    "player": "skeleboy",
+    "player": "burtik2023",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 991,
@@ -537,13 +537,13 @@
     "type": "player"
   },
   {
-    "player": "TwoInchTiger",
+    "player": "ibrawod",
     "tier": "Bronze",
     "initial_cr": 1050,
-    "current_cr": 932,
-    "matches": 6,
-    "wins": 2,
-    "losses": 4,
+    "current_cr": 991,
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
     "winrate": 33.3,
     "initial_os": 11.11,
     "percentile": 15.82,
@@ -579,6 +579,20 @@
     "type": "player"
   },
   {
+    "player": "TwoInchTiger",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 932,
+    "matches": 6,
+    "wins": 2,
+    "losses": 4,
+    "winrate": 33.3,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "tier_rank": 31,
+    "type": "player"
+  },
+  {
     "player": "itz_myrk",
     "tier": "Bronze",
     "initial_cr": 1050,
@@ -589,7 +603,7 @@
     "winrate": 33.3,
     "initial_os": 8.34,
     "percentile": 7.33,
-    "tier_rank": 31,
+    "tier_rank": 32,
     "type": "player"
   },
   {
@@ -603,7 +617,7 @@
     "winrate": 0.0,
     "initial_os": 0.61,
     "percentile": 1,
-    "tier_rank": 32,
+    "tier_rank": 33,
     "type": "player"
   },
   {
@@ -617,7 +631,7 @@
     "winrate": 33.3,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 33,
+    "tier_rank": 34,
     "type": "player"
   },
   {
@@ -631,7 +645,7 @@
     "winrate": 33.3,
     "initial_os": 8.34,
     "percentile": 7.33,
-    "tier_rank": 34,
+    "tier_rank": 35,
     "type": "player"
   },
   {
@@ -645,7 +659,7 @@
     "winrate": 0.0,
     "initial_os": 10.33,
     "percentile": 12.85,
-    "tier_rank": 35,
+    "tier_rank": 36,
     "type": "player"
   },
   {
@@ -659,7 +673,7 @@
     "winrate": 33.3,
     "initial_os": 8.34,
     "percentile": 7.33,
-    "tier_rank": 36,
+    "tier_rank": 37,
     "type": "player"
   },
   {
@@ -673,7 +687,21 @@
     "winrate": 16.7,
     "initial_os": 7.4,
     "percentile": 5.3,
-    "tier_rank": 37,
+    "tier_rank": 38,
+    "type": "player"
+  },
+  {
+    "player": "hehateme",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 696,
+    "matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "winrate": 0.0,
+    "initial_os": 8.34,
+    "percentile": 7.33,
+    "tier_rank": 39,
     "type": "player"
   },
   {
@@ -687,7 +715,7 @@
     "winrate": 26.7,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 38,
+    "tier_rank": 40,
     "type": "player"
   },
   {
@@ -701,7 +729,7 @@
     "winrate": 0.0,
     "initial_os": 8.34,
     "percentile": 7.33,
-    "tier_rank": 39,
+    "tier_rank": 41,
     "type": "player"
   }
 ]

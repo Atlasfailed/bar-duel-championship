@@ -112,11 +112,11 @@ ssh "${PI_USER}@${PI_HOST}" << EOF
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo ""
     echo "📅 Deployment Date/Time: \$(date '+%Y-%m-%d %H:%M:%S %Z')"
-    echo "📦 Git Commit: \$(git rev-parse --short HEAD 2>/dev/null || echo 'unknown')"
-    echo "📝 Git Commit Date: \$(git log -1 --format='%ci' 2>/dev/null || echo 'unknown')"
-    echo "🌿 Git Branch: \$(git branch --show-current 2>/dev/null || echo 'unknown')"
+    echo "📦 Git Commit: \$(git rev-parse --short HEAD 2>/dev/null || echo unknown)"
+    echo "📝 Git Commit Date: \$(git log -1 --format=%ci 2>/dev/null || echo unknown)"
+    echo "🌿 Git Branch: \$(git branch --show-current 2>/dev/null || echo unknown)"
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-EOF
+DEPLOY_EOF
 
 echo ""
 echo -e "${GREEN}✅ Deployment complete!${NC}"

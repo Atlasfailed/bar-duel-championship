@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Shadow1711",
+    "yanmad"
+  ],
+  "series_winner": "yanmad",
+  "wins": {
+    "Shadow1711": 0,
+    "yanmad": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "65233b68df8f4283518d88bcbe5baa7d",
+      "map": "Prismatic Anomaly v1.02",
+      "winner": "yanmad",
+      "duration_ms": 1245033,
+      "seed_ratings": {
+        "Shadow1711": {
+          "mu": 9.41,
+          "sigma": 6.61
+        },
+        "yanmad": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "be283b684041fd2717f4d3df7b993113",
+      "map": "Mithril Mountain v2.0.1",
+      "winner": "yanmad",
+      "duration_ms": 1902033,
+      "seed_ratings": {
+        "Shadow1711": {
+          "mu": 9.41,
+          "sigma": 6.61
+        },
+        "yanmad": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "cb303b68acbde32fcd2f14136d610ddf",
+      "map": "Supreme_Crossing 2.2",
+      "winner": "yanmad",
+      "duration_ms": 2576133,
+      "seed_ratings": {
+        "Shadow1711": {
+          "mu": 9.41,
+          "sigma": 6.61
+        },
+        "yanmad": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-15T00:00:57.602940+00:00",
+  "submitted_by": "atlasfailed"
+}

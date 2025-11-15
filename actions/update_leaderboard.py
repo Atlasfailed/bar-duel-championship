@@ -18,6 +18,12 @@ from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List, Any, Tuple
 
+# Add actions directory to path for config import
+sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
+
+# Import configuration
+from config import TIER_DEFINITIONS, TIER_LOGOS
+
 # ==============================
 # Configuration
 # ==============================
@@ -52,28 +58,6 @@ PERCENTILE_OS_POINTS = [
     (98, 35.30),
     (99, 39.68),
 ]
-
-# Tier definitions with more gradual Champion Rating ranges
-TIER_DEFINITIONS = [
-    ("Bronze",      1,   20,  900, 1200),  # Bottom 20%: 900-1200 CR (300 CR range)
-    ("Silver",     20,   40, 1200, 1500),  # 20-40%: 1200-1500 CR (300 CR range)
-    ("Gold",       40,   60, 1500, 1800),  # 40-60%: 1500-1800 CR (300 CR range)
-    ("Platinum",   60,   80, 1800, 2100),  # 60-80%: 1800-2100 CR (300 CR range)
-    ("Diamond",    80,   95, 2100, 2500),  # 80-95%: 2100-2500 CR (400 CR range)
-    ("Master",     95,   99, 2500, 3000),  # 95-99%: 2500-3000 CR (500 CR range)
-    ("Grandmaster", 99, 100, 3000, 5000),  # Top 1%: 3000+ CR (unlimited)
-]
-
-# Tier logos/icons for visual display
-TIER_LOGOS = {
-    "Bronze": "🥉",
-    "Silver": "🥈", 
-    "Gold": "🥇",
-    "Platinum": "💎",
-    "Diamond": "💠",
-    "Master": "⭐",
-    "Grandmaster": "👑"
-}
 
 # Champion Rating conversion factor (reduced for more stable progression)
 CR_CONVERSION_FACTOR = 50.0  # Reduced from 100.0 to 50.0

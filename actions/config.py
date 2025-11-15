@@ -6,28 +6,29 @@ Adjust these values to tune the rating and tier system.
 # ==============================
 # Tier Definitions
 # ==============================
-# Format: (tier_name, min_skill, max_skill, min_cr, max_cr, initial_cr)
-# Skill ranges are based on BAR 1v1 skill ratings
+# Format: (tier_name, min_percentile, max_percentile, min_cr, max_cr)
+# Percentile ranges define player distribution
 # CR ranges define the Champion Rating boundaries for each tier
-# initial_cr is the starting CR for players in this tier
 TIER_DEFINITIONS = [
-    # Tier Name    Min Skill  Max Skill  Min CR  Max CR  Initial CR
-    ("Bronze",     0,         10,        500,    850,    650),
-    ("Silver",     10,        20,        850,    1250,   1050),
-    ("Gold",       20,        30,        1250,   1650,   1450),
-    ("Platinum",   30,        40,        1650,   2050,   1850),
-    ("Diamond",    40,        50,        2050,   2450,   2250),
-    ("Master",     50,        999,       2450,   5000,   2650),
+    # Tier Name       Min %  Max %  Min CR  Max CR
+    ("Bronze",        1,     20,    900,    1200),  # Bottom 20%
+    ("Silver",        20,    40,    1200,   1500),  # 20-40%
+    ("Gold",          40,    60,    1500,   1800),  # 40-60%
+    ("Platinum",      60,    80,    1800,   2100),  # 60-80%
+    ("Diamond",       80,    95,    2100,   2500),  # 80-95%
+    ("Master",        95,    99,    2500,   3000),  # 95-99%
+    ("Grandmaster",   99,    100,   3000,   5000),  # Top 1%
 ]
 
-# Tier logos/icons for visual display
+# Tier logos/icons for visual display (SVG file references)
 TIER_LOGOS = {
-    "Bronze": "🥉",
-    "Silver": "🥈", 
-    "Gold": "🥇",
-    "Platinum": "💎",
-    "Diamond": "💠",
-    "Master": "⭐",
+    "Bronze": "static/images/tiers/bronze.svg",
+    "Silver": "static/images/tiers/silver.svg", 
+    "Gold": "static/images/tiers/gold.svg",
+    "Platinum": "static/images/tiers/platinum.svg",
+    "Diamond": "static/images/tiers/diamond.svg",
+    "Master": "static/images/tiers/master.svg",
+    "Grandmaster": "static/images/tiers/master.svg",  # Use master.svg for grandmaster
 }
 
 # ==============================

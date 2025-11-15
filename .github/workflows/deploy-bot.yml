@@ -1,0 +1,96 @@
+name: Deploy Bot to Pi Zero
+
+on:
+  workflow_dispatch:
+    inputs:
+      restart_only:
+        description: 'Only restart bot (skip git pull)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts || true
+      
+      - name: Pull latest code on Pi Zero
+        if: inputs.restart_only == false
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            set -e
+            cd ${{ secrets.BOT_PATH || '~/bar-duel-championship/bot' }}
+            echo "Pulling latest code..."
+            git pull origin main
+            echo "Code updated successfully"
+          EOF
+      
+      - name: Restart bot service
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            set -e
+            cd ${{ secrets.BOT_PATH || '~/bar-duel-championship/bot' }}
+            
+            # Try systemd service first, then fallback to process management
+            if systemctl is-active --quiet bar-bot 2>/dev/null; then
+              echo "Restarting systemd service: bar-bot"
+              sudo systemctl restart bar-bot
+              sleep 2
+              systemctl status bar-bot --no-pager || true
+            elif pgrep -f "python.*main.py" > /dev/null; then
+              echo "Restarting bot process..."
+              pkill -f "python.*main.py"
+              sleep 2
+              # Restart in background (adjust path/command as needed)
+              nohup python3 main.py > bot.log 2>&1 &
+              echo "Bot restarted (PID: $!)"
+            else
+              echo "No running bot found. Starting bot..."
+              nohup python3 main.py > bot.log 2>&1 &
+              echo "Bot started (PID: $!)"
+            fi
+            
+            echo "Bot deployment complete"
+          EOF
+      
+      - name: Verify bot is running
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            sleep 3
+            if systemctl is-active --quiet bar-bot 2>/dev/null; then
+              echo "✅ Bot service is running (systemd)"
+              systemctl status bar-bot --no-pager -l || true
+            elif pgrep -f "python.*main.py" > /dev/null; then
+              echo "✅ Bot process is running"
+              ps aux | grep "python.*main.py" | grep -v grep || true
+            else
+              echo "⚠️ Warning: Bot process not found after restart"
+              exit 1
+            fi
+          EOF
+      
+      - name: Summary
+        run: |
+          echo "## Bot Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ inputs.restart_only }}" == "true" ]; then
+            echo "**Mode**: Restart only (no git pull)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Mode**: Full deployment (git pull + restart)" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Deployed to**: ${{ secrets.SSH_HOST }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Bot path**: ${{ secrets.BOT_PATH || '~/bar-duel-championship/bot' }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Deployment completed successfully" >> $GITHUB_STEP_SUMMARY
+

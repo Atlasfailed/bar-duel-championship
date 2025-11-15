@@ -381,25 +381,39 @@ async def submit(interaction: discord.Interaction, replays: str):
     now = datetime.now(timezone.utc)
     for replay in validated:
         start_time = replay.get("startTime")
-        if start_time:
-            try:
-                # Handle ISO format with or without Z
-                start_str = start_time.replace("Z", "+00:00") if start_time.endswith("Z") else start_time
-                start = datetime.fromisoformat(start_str)
-                age = (now - start).days
-                if age > MAX_REPLAY_AGE_DAYS:
-                    return await interaction.followup.send(
-                        f"❌ Replay `{replay['id']}` is {age} days old (max: {MAX_REPLAY_AGE_DAYS} days)",
-                        ephemeral=True
-                    )
-            except Exception as e:
-                # If we can't parse the date, log but don't fail (some replays might have invalid dates)
-                print(f"Warning: Could not parse startTime for replay {replay.get('id')}: {e}")
-                # Still check if we can determine age from other means
-                pass
-        else:
-            # No startTime - warn but allow (some old replays might not have this)
-            print(f"Warning: Replay {replay.get('id')} has no startTime field")
+        replay_id = replay.get("id", "unknown")
+        
+        if not start_time:
+            # No startTime - reject to be safe (replays should have timestamps)
+            return await interaction.followup.send(
+                f"❌ Replay `{replay_id}` is missing startTime field and cannot be validated",
+                ephemeral=True
+            )
+        
+        try:
+            # Handle ISO format with or without Z
+            start_str = start_time.replace("Z", "+00:00") if start_time.endswith("Z") else start_time
+            start = datetime.fromisoformat(start_str)
+            age = (now - start).days
+            
+            if age > MAX_REPLAY_AGE_DAYS:
+                return await interaction.followup.send(
+                    f"❌ Replay `{replay_id}` is {age} days old (max: {MAX_REPLAY_AGE_DAYS} days)",
+                    ephemeral=True
+                )
+        except ValueError as e:
+            # Date parsing error - reject to be safe
+            return await interaction.followup.send(
+                f"❌ Replay `{replay_id}` has invalid startTime format: {start_time}",
+                ephemeral=True
+            )
+        except Exception as e:
+            # Unexpected error - log and reject to be safe
+            print(f"Error checking replay age for {replay_id}: {e}")
+            return await interaction.followup.send(
+                f"❌ Error validating replay `{replay_id}` age: {e}",
+                ephemeral=True
+            )
     
     # Create submission payload
     payload = {

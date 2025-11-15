@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Tilfidius_Lamarre",
+    "precisehawk4068"
+  ],
+  "series_winner": "precisehawk4068",
+  "wins": {
+    "Tilfidius_Lamarre": 1,
+    "precisehawk4068": 2
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "c925296839245253b2d09c65c0b3d28c",
+      "map": "Altair_Crossing_V4.1",
+      "winner": "precisehawk4068",
+      "duration_ms": 1107700,
+      "seed_ratings": {
+        "Tilfidius_Lamarre": {
+          "mu": 14.4,
+          "sigma": 7.0
+        },
+        "precisehawk4068": {
+          "mu": 14.51,
+          "sigma": 7.97
+        }
+      }
+    },
+    {
+      "id": "282d2a685e0cf13f2558773349dcd315",
+      "map": "Coastlines_Dry_V2.2.1",
+      "winner": "Tilfidius_Lamarre",
+      "duration_ms": 2803700,
+      "seed_ratings": {
+        "precisehawk4068": {
+          "mu": 14.51,
+          "sigma": 7.97
+        },
+        "Tilfidius_Lamarre": {
+          "mu": 14.4,
+          "sigma": 7.0
+        }
+      }
+    },
+    {
+      "id": "73b32f683f37de7882228234e5cd08b1",
+      "map": "Quicksilver Remake 1.24",
+      "winner": "precisehawk4068",
+      "duration_ms": 1806267,
+      "seed_ratings": {
+        "Tilfidius_Lamarre": {
+          "mu": 14.4,
+          "sigma": 7.0
+        },
+        "precisehawk4068": {
+          "mu": 14.51,
+          "sigma": 7.97
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-15T00:06:27.207533+00:00",
+  "submitted_by": "atlasfailed"
+}

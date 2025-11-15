@@ -74,14 +74,42 @@ jobs:
             --subject "✅ ${{ github.event.pull_request.title }}" \
             --body "🤖 Automated merge of validated submission"
       
-      - name: Trigger Leaderboard Update
+      - name: Checkout main branch
         if: steps.validate.outputs.valid == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      
+      - name: Set up Python
+        if: steps.validate.outputs.valid == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Update Leaderboard
+        if: steps.validate.outputs.valid == 'true'
         run: |
-          echo "🚀 Triggering leaderboard update workflow..."
-          gh workflow run update-leaderboard.yml --ref main
-          echo "✅ Leaderboard update triggered"
+          echo "📊 Updating leaderboard..."
+          python3 actions/update_leaderboard.py
+          echo "✅ Leaderboard updated"
+      
+      - name: Commit and push leaderboard changes
+        if: steps.validate.outputs.valid == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          if git diff --quiet public/data/leaderboard.json docs/data/leaderboard.json public/data/player_match_history.json docs/data/player_match_history.json public/data/replay_database.json docs/data/replay_database.json; then
+            echo "📌 No leaderboard changes to commit"
+          else
+            git add public/data/*.json docs/data/*.json
+            git commit -m "📊 Auto-update leaderboard after submission
+
+[skip ci]"
+            git push
+            echo "✅ Leaderboard changes pushed"
+          fi
       
       - name: Summary
         if: always()

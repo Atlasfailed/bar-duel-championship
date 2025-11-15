@@ -335,7 +335,30 @@ async def submit(interaction: discord.Interaction, replays: str):
         return await interaction.followup.send(f"❌ {e}", ephemeral=True)
     
     if not series_winner:
-        return await interaction.followup.send(f"❌ No clear winner (need {REQUIRED_WINS_FOR_SERIES}+ wins)", ephemeral=True)
+        # Check which replays are missing winner info
+        missing_winners = []
+        for i, replay in enumerate(validated, 1):
+            if not replay.get("winner"):
+                missing_winners.append(f"{i}. `{replay['id']}`")
+        
+        if missing_winners:
+            error_msg = [
+                f"❌ Cannot determine series winner: {len(missing_winners)} replay(s) missing winner information",
+                "",
+                "**Replays without winner data:**",
+                "\n".join(missing_winners),
+                "",
+                "⚠️ The BAR API doesn't always include winner information for replays.",
+                "Please verify the replays manually or try submitting different replays."
+            ]
+            return await interaction.followup.send("\n".join(error_msg), ephemeral=True)
+        else:
+            # All replays have winners but no one has 2+ wins (tie scenario)
+            wins_str = ", ".join([f"{name}: {count}" for name, count in wins.items()])
+            return await interaction.followup.send(
+                f"❌ No clear winner (need {REQUIRED_WINS_FOR_SERIES}+ wins). Current wins: {wins_str}",
+                ephemeral=True
+            )
     
     # Check replay age
     now = datetime.now(timezone.utc)

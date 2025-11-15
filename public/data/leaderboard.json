@@ -1,5 +1,5 @@
 {
-  "updated_at": "2025-11-15T09:00:20.955129+00:00",
+  "updated_at": "2025-11-15T09:02:11.535981+00:00",
   "player_count": 50,
   "entries": [
     {
@@ -113,7 +113,7 @@
       "type": "player"
     },
     {
-      "player": "lolh2o",
+      "player": "Kommandant",
       "tier": "Silver",
       "initial_cr": 1050,
       "current_cr": 1246,
@@ -128,7 +128,7 @@
       "type": "player"
     },
     {
-      "player": "Kommandant",
+      "player": "peterthegreat",
       "tier": "Silver",
       "initial_cr": 1050,
       "current_cr": 1246,
@@ -143,7 +143,7 @@
       "type": "player"
     },
     {
-      "player": "peterthegreat",
+      "player": "lolh2o",
       "tier": "Silver",
       "initial_cr": 1050,
       "current_cr": 1246,
@@ -276,7 +276,7 @@
       "type": "player"
     },
     {
-      "player": "sultans590",
+      "player": "jimmyneutron",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 1148,
@@ -291,7 +291,7 @@
       "type": "player"
     },
     {
-      "player": "Nauvis",
+      "player": "cibernixt",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 1148,
@@ -306,7 +306,7 @@
       "type": "player"
     },
     {
-      "player": "Spadassin",
+      "player": "PuTZiii",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 1148,
@@ -321,7 +321,7 @@
       "type": "player"
     },
     {
-      "player": "PuTZiii",
+      "player": "burtik",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 1148,
@@ -336,7 +336,7 @@
       "type": "player"
     },
     {
-      "player": "jimmyneutron",
+      "player": "Nauvis",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 1148,
@@ -351,7 +351,7 @@
       "type": "player"
     },
     {
-      "player": "cibernixt",
+      "player": "sultans590",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 1148,
@@ -366,7 +366,7 @@
       "type": "player"
     },
     {
-      "player": "Veld4",
+      "player": "Iris_",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 1148,
@@ -381,7 +381,7 @@
       "type": "player"
     },
     {
-      "player": "Iris_",
+      "player": "Veld4",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 1148,
@@ -396,7 +396,7 @@
       "type": "player"
     },
     {
-      "player": "burtik",
+      "player": "Spadassin",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 1148,
@@ -411,21 +411,6 @@
       "type": "player"
     },
     {
-      "player": "SomeTenRandom",
-      "tier": "Bronze",
-      "initial_cr": 1050,
-      "current_cr": 1089,
-      "matches": 6,
-      "wins": 3,
-      "losses": 3,
-      "winrate": 50.0,
-      "initial_os": 11.11,
-      "percentile": 15.82,
-      "latest_os": 12.81,
-      "tier_rank": 17,
-      "type": "player"
-    },
-    {
       "player": "LastBlast",
       "tier": "Bronze",
       "initial_cr": 1050,
@@ -437,6 +422,21 @@
       "initial_os": 11.11,
       "percentile": 15.82,
       "latest_os": 9.66,
+      "tier_rank": 17,
+      "type": "player"
+    },
+    {
+      "player": "SomeTenRandom",
+      "tier": "Bronze",
+      "initial_cr": 1050,
+      "current_cr": 1089,
+      "matches": 6,
+      "wins": 3,
+      "losses": 3,
+      "winrate": 50.0,
+      "initial_os": 11.11,
+      "percentile": 15.82,
+      "latest_os": 12.81,
       "tier_rank": 18,
       "type": "player"
     },
@@ -456,7 +456,7 @@
       "type": "player"
     },
     {
-      "player": "Efusion",
+      "player": "burtik2023",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 991,
@@ -486,7 +486,7 @@
       "type": "player"
     },
     {
-      "player": "jhonboy",
+      "player": "Alfranix951",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 991,
@@ -501,7 +501,7 @@
       "type": "player"
     },
     {
-      "player": "KiiiTZZZ",
+      "player": "Efusion",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 991,
@@ -516,7 +516,7 @@
       "type": "player"
     },
     {
-      "player": "SuperSailer",
+      "player": "jhonboy",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 991,
@@ -531,7 +531,7 @@
       "type": "player"
     },
     {
-      "player": "burtik2023",
+      "player": "No_face",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 991,
@@ -561,7 +561,7 @@
       "type": "player"
     },
     {
-      "player": "No_face",
+      "player": "KiiiTZZZ",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 991,
@@ -576,7 +576,7 @@
       "type": "player"
     },
     {
-      "player": "Alfranix951",
+      "player": "SuperSailer",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 991,
@@ -591,7 +591,7 @@
       "type": "player"
     },
     {
-      "player": "TwoInchTiger",
+      "player": "MIrzaa",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 932,
@@ -606,7 +606,7 @@
       "type": "player"
     },
     {
-      "player": "Stargamer605",
+      "player": "TwoInchTiger",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 932,
@@ -621,7 +621,7 @@
       "type": "player"
     },
     {
-      "player": "MIrzaa",
+      "player": "Stargamer605",
       "tier": "Bronze",
       "initial_cr": 1050,
       "current_cr": 932,

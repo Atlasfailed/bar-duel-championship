@@ -342,8 +342,8 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
         
         winrate = round((data["wins"] / total_matches) * 100.0, 1) if total_matches > 0 else 0.0
         
-        # Update tier based on current CR AND minimum match requirements
-        current_tier = get_tier_with_match_requirements(data["current_cr"], total_matches)
+        # Update tier based on current CR only (no match requirements for tournament)
+        current_tier = get_tier_from_cr(data["current_cr"])
         
         # Calculate latest OpenSkill (mu - sigma)
         latest_os = None
@@ -364,7 +364,7 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
             "latest_os": latest_os
         })
     
-    # Sort by tier first (highest tier first), then by current Champion Rating within tier
+    # Sort by tier first (highest tier first = highest index), then by current Champion Rating within tier
     tier_order = {name: i for i, (name, _, _, _, _) in enumerate(TIER_DEFINITIONS)}
     results.sort(key=lambda x: (-tier_order.get(x["tier"], -1), -x["current_cr"]))
     

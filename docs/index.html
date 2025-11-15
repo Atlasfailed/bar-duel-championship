@@ -350,6 +350,7 @@
             <th scope="col">Player</th>
             <th scope="col">Tier</th>
             <th scope="col">Champion Rating</th>
+            <th scope="col">OpenSkill (1v1)</th>
             <th scope="col">Record</th>
             <th scope="col">Win Rate</th>
           </tr>
@@ -360,13 +361,13 @@
         if (entry.type === 'tier_header') {
           const tierBadge = getTierBadgeHTML(entry.tier);
           table += `<tr class="tier-header-row" style="background:#21262d;border-top:2px solid #30363d;">
-            <td colspan="6" style="padding:1rem;text-align:center;font-weight:700;font-size:1.1em;color:#58a6ff;">
+            <td colspan="7" style="padding:1rem;text-align:center;font-weight:700;font-size:1.1em;color:#58a6ff;">
               <div class="tier-heading">${tierBadge} ${escapeHtml(entry.tier)} TIER (${escapeHtml(entry.tier_info)}) ${tierBadge}</div>
             </td>
           </tr>`;
         } else if (entry.type === 'tier_separator') {
           table += `<tr class="tier-separator-row" style="height:10px;background:transparent;">
-            <td colspan="6" style="padding:0;border:none;"></td>
+            <td colspan="7" style="padding:0;border:none;"></td>
           </tr>`;
         } else if (entry.type === 'player') {
           const wins = Number(entry.wins)||0, losses=Number(entry.losses)||0;
@@ -378,6 +379,7 @@
           const tierRank = entry.tier_rank || '?';
           const meta = [entry.team, entry.country].filter(Boolean).map(escapeHtml).join(' &bull; ');
           const metaHtml = meta ? `<span class="player-meta" style="display:block;margin-top:.2rem;color:#8b949e;font-size:.85rem;">${meta}</span>` : '';
+          const latestOs = entry.latest_os != null ? Number(entry.latest_os).toFixed(2) : 'N/A';
 
           table += `<tr class="player-row ${tierClass}">
             <td class="rank">#${tierRank}</td>
@@ -388,6 +390,7 @@
               </span>
             </td>
             <td class="mmr" style="font-family:'Courier New',monospace;color:#58a6ff;font-weight:600">${crDisplay}</td>
+            <td class="os" style="font-family:'Courier New',monospace;color:#79c0ff;font-weight:500">${latestOs}</td>
             <td class="record">${wins}W-${losses}L</td>
             <td class="win-rate">${winRate}%</td>
           </tr>`;

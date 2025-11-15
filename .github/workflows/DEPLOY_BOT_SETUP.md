@@ -1,6 +1,33 @@
 # Bot Deployment Workflow Setup
 
-This workflow allows you to deploy the bot to your Pi Zero with a single click from GitHub Actions.
+⚠️ **IMPORTANT**: GitHub Actions runners run in the cloud and **cannot access devices on your local network** unless:
+- You use a **self-hosted runner** on your local network, OR
+- You use the **local deployment script** instead
+
+## Option 1: Local Deployment Script (Recommended for Local Network)
+
+If your Pi Zero is on your local network, use the local script:
+
+```bash
+# From your local machine (on same network as Pi Zero)
+cd /path/to/bar-duel-championship
+./scripts/deploy-bot-local.sh
+
+# Custom settings:
+PI_HOST=192.168.1.100 PI_USER=pi ./scripts/deploy-bot-local.sh
+
+# Restart only (no git pull):
+./scripts/deploy-bot-local.sh --restart-only
+```
+
+The script will:
+- Pull latest code from GitHub
+- Restart the bot service
+- Verify it's running
+
+## Option 2: GitHub Actions Workflow (Cloud Runner)
+
+This workflow allows you to deploy the bot to your Pi Zero with a single click from GitHub Actions, but **requires your Pi Zero to be accessible from the internet** (not recommended for security).
 
 ## Required GitHub Secrets
 

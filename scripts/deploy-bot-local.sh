@@ -1,0 +1,92 @@
+#!/bin/bash
+# Local bot deployment script
+# Run this script from your local machine to deploy bot to Pi Zero on local network
+
+set -e
+
+# Configuration (adjust these for your setup)
+PI_HOST="${PI_HOST:-raspberrypi.local}"
+PI_USER="${PI_USER:-pi}"
+BOT_PATH="${BOT_PATH:-~/bar-duel-championship/bot}"
+
+# Colors for output
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+echo -e "${GREEN}🤖 Bot Deployment Script${NC}"
+echo "================================"
+echo "Target: ${PI_USER}@${PI_HOST}"
+echo "Path: ${BOT_PATH}"
+echo ""
+
+# Check if restart-only flag is set
+RESTART_ONLY=false
+if [ "$1" == "--restart-only" ] || [ "$1" == "-r" ]; then
+    RESTART_ONLY=true
+    echo -e "${YELLOW}Mode: Restart only (skipping git pull)${NC}"
+else
+    echo -e "${GREEN}Mode: Full deployment (git pull + restart)${NC}"
+fi
+echo ""
+
+# Pull latest code
+if [ "$RESTART_ONLY" = false ]; then
+    echo -e "${GREEN}📥 Pulling latest code...${NC}"
+    ssh "${PI_USER}@${PI_HOST}" << EOF
+        set -e
+        cd ${BOT_PATH}
+        echo "Current directory: \$(pwd)"
+        echo "Current branch: \$(git branch --show-current)"
+        git pull origin main
+        echo "✅ Code updated"
+EOF
+    echo ""
+fi
+
+# Restart bot
+echo -e "${GREEN}🔄 Restarting bot...${NC}"
+ssh "${PI_USER}@${PI_HOST}" << EOF
+    set -e
+    cd ${BOT_PATH}
+    
+    # Try systemd service first
+    if systemctl is-active --quiet bar-bot 2>/dev/null; then
+        echo "Restarting systemd service: bar-bot"
+        sudo systemctl restart bar-bot
+        sleep 2
+        systemctl status bar-bot --no-pager || true
+    elif pgrep -f "python.*main.py" > /dev/null; then
+        echo "Restarting bot process..."
+        pkill -f "python.*main.py"
+        sleep 2
+        nohup python3 main.py > bot.log 2>&1 &
+        echo "Bot restarted (PID: \$!)"
+    else
+        echo "No running bot found. Starting bot..."
+        nohup python3 main.py > bot.log 2>&1 &
+        echo "Bot started (PID: \$!)"
+    fi
+EOF
+echo ""
+
+# Verify bot is running
+echo -e "${GREEN}✅ Verifying bot status...${NC}"
+ssh "${PI_USER}@${PI_HOST}" << EOF
+    sleep 2
+    if systemctl is-active --quiet bar-bot 2>/dev/null; then
+        echo "✅ Bot service is running (systemd)"
+        systemctl status bar-bot --no-pager -l || true
+    elif pgrep -f "python.*main.py" > /dev/null; then
+        echo "✅ Bot process is running"
+        ps aux | grep "python.*main.py" | grep -v grep || true
+    else
+        echo -e "${RED}⚠️  Warning: Bot process not found after restart${NC}"
+        exit 1
+    fi
+EOF
+
+echo ""
+echo -e "${GREEN}✅ Deployment complete!${NC}"
+

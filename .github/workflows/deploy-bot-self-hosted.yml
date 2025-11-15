@@ -1,0 +1,68 @@
+name: Deploy Bot to Pi Zero (Self-Hosted Runner)
+
+on:
+  workflow_dispatch:
+    inputs:
+      restart_only:
+        description: 'Only restart bot (skip git pull)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  deploy:
+    # This requires a self-hosted runner on your local network
+    runs-on: self-hosted
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Pull latest code on Pi Zero
+        if: inputs.restart_only == false
+        run: |
+          set -e
+          cd ${{ secrets.BOT_PATH || '~/bar-duel-championship/bot' }}
+          echo "Pulling latest code..."
+          git pull origin main
+          echo "Code updated successfully"
+      
+      - name: Restart bot service
+        run: |
+          set -e
+          cd ${{ secrets.BOT_PATH || '~/bar-duel-championship/bot' }}
+          
+          # Try systemd service first, then fallback to process management
+          if systemctl is-active --quiet bar-bot 2>/dev/null; then
+            echo "Restarting systemd service: bar-bot"
+            sudo systemctl restart bar-bot
+            sleep 2
+            systemctl status bar-bot --no-pager || true
+          elif pgrep -f "python.*main.py" > /dev/null; then
+            echo "Restarting bot process..."
+            pkill -f "python.*main.py"
+            sleep 2
+            nohup python3 main.py > bot.log 2>&1 &
+            echo "Bot restarted (PID: $!)"
+          else
+            echo "No running bot found. Starting bot..."
+            nohup python3 main.py > bot.log 2>&1 &
+            echo "Bot started (PID: $!)"
+          fi
+          
+          echo "Bot deployment complete"
+      
+      - name: Verify bot is running
+        run: |
+          sleep 3
+          if systemctl is-active --quiet bar-bot 2>/dev/null; then
+            echo "✅ Bot service is running (systemd)"
+            systemctl status bar-bot --no-pager -l || true
+          elif pgrep -f "python.*main.py" > /dev/null; then
+            echo "✅ Bot process is running"
+            ps aux | grep "python.*main.py" | grep -v grep || true
+          else
+            echo "⚠️ Warning: Bot process not found after restart"
+            exit 1
+          fi
+

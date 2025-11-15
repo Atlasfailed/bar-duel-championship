@@ -195,8 +195,11 @@
         const response=await fetch(`${LEADERBOARD_URL}?t=${Date.now()}`);
         if(!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         const data=await response.json();
-        displayLeaderboard(data);
-        updateStats(data);
+        // Handle both old format (array) and new format (object with entries)
+        const entries = Array.isArray(data) ? data : (data.entries || []);
+        const updatedAt = data.updated_at || null;
+        displayLeaderboard(entries);
+        updateStats(entries, updatedAt);
       }catch(err){
         if (!leaderboardEl) return;
         leaderboardEl.innerHTML=`
@@ -396,7 +399,7 @@
       hasRenderedLeaderboard = true;
     }
 
-    function updateStats(entries){
+    function updateStats(entries, updatedAt){
       const totalPlayersEl=document.getElementById('total-players');
       const totalMatchesEl=document.getElementById('total-matches');
       const activeTiersEl=document.getElementById('active-tiers');
@@ -412,7 +415,16 @@
       if(totalPlayersEl) totalPlayersEl.textContent=totalPlayers.toLocaleString();
       if(totalMatchesEl) totalMatchesEl.textContent=totalMatches.toLocaleString();
       if(activeTiersEl) activeTiersEl.textContent=String(activeTiers);
-      if(updateTimeEl) updateTimeEl.textContent=new Date().toLocaleString();
+      
+      // Use timestamp from data if available, otherwise current time
+      if(updateTimeEl) {
+        if (updatedAt) {
+          const date = new Date(updatedAt);
+          updateTimeEl.textContent = date.toLocaleString();
+        } else {
+          updateTimeEl.textContent = new Date().toLocaleString();
+        }
+      }
     }
 
     loadLeaderboard();

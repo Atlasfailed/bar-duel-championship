@@ -567,15 +567,23 @@ def update_leaderboard():
     player_count = sum(1 for entry in leaderboard if entry.get("type") == "player")
     print(f"Ranked {player_count} players")
 
+    # Add metadata with update timestamp
+    update_timestamp = datetime.now(timezone.utc).isoformat()
+    leaderboard_data = {
+        "updated_at": update_timestamp,
+        "player_count": player_count,
+        "entries": leaderboard
+    }
+
     # Ensure output directory exists
     os.makedirs(os.path.dirname(LEADERBOARD_FILE), exist_ok=True)
 
     # Save leaderboard
     with open(LEADERBOARD_FILE, 'w') as f:
-        json.dump(leaderboard, f, indent=2)
+        json.dump(leaderboard_data, f, indent=2)
 
     print(f"Leaderboard saved to {LEADERBOARD_FILE}")
-    print(f"Updated at {datetime.now(timezone.utc).isoformat()}Z")
+    print(f"Updated at {update_timestamp}Z")
 
     # Print full leaderboard with tier separations
     if leaderboard:

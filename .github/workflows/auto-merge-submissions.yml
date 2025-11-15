@@ -104,9 +104,7 @@ jobs:
             echo "📌 No leaderboard changes to commit"
           else
             git add public/data/*.json docs/data/*.json
-            git commit -m "📊 Auto-update leaderboard after submission
-
-[skip ci]"
+            git commit -m "📊 Auto-update leaderboard after submission [skip ci]"
             git push
             echo "✅ Leaderboard changes pushed"
           fi

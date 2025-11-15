@@ -1,0 +1,64 @@
+{
+  "players": [
+    "AK_minionek",
+    "neon212"
+  ],
+  "series_winner": "neon212",
+  "wins": {
+    "AK_minionek": 0,
+    "neon212": 2
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "7b6761681339193b8c3a97ddc50e997e",
+      "map": "Angel Crossing 1.5.1",
+      "winner": "neon212",
+      "duration_ms": 5880967,
+      "seed_ratings": {
+        "AK_minionek": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "neon212": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "1b8c6168037923f3aa9b432182f2603d",
+      "map": "Bismuth Valley v2.4.1",
+      "winner": null,
+      "duration_ms": 1584000,
+      "seed_ratings": {
+        "neon212": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "AK_minionek": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "7a926168e58454d9b2eabf9e47e26b35",
+      "map": "Great Divide V1",
+      "winner": "neon212",
+      "duration_ms": 2767467,
+      "seed_ratings": {
+        "neon212": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "AK_minionek": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-15T14:25:37.567964+00:00",
+  "submitted_by": "atlasfailed"
+}

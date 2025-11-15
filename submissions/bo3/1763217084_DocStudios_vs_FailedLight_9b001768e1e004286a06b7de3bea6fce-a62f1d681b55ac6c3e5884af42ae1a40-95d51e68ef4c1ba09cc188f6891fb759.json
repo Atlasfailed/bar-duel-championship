@@ -1,0 +1,64 @@
+{
+  "players": [
+    "DocStudios",
+    "FailedLight"
+  ],
+  "series_winner": "FailedLight",
+  "wins": {
+    "DocStudios": 1,
+    "FailedLight": 2
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "9b001768e1e004286a06b7de3bea6fce",
+      "map": "Omega Valley V1.01",
+      "winner": "FailedLight",
+      "duration_ms": 13477101,
+      "seed_ratings": {
+        "FailedLight": {
+          "mu": 17.12,
+          "sigma": 8.06
+        },
+        "DocStudios": {
+          "mu": 14.8,
+          "sigma": 8.18
+        }
+      }
+    },
+    {
+      "id": "a62f1d681b55ac6c3e5884af42ae1a40",
+      "map": "Twin Lakes Park Redux 1.2.2",
+      "winner": "FailedLight",
+      "duration_ms": 11519301,
+      "seed_ratings": {
+        "FailedLight": {
+          "mu": 17.12,
+          "sigma": 8.06
+        },
+        "DocStudios": {
+          "mu": 14.8,
+          "sigma": 8.18
+        }
+      }
+    },
+    {
+      "id": "95d51e68ef4c1ba09cc188f6891fb759",
+      "map": "Jade Empress 1.41",
+      "winner": "DocStudios",
+      "duration_ms": 10102767,
+      "seed_ratings": {
+        "FailedLight": {
+          "mu": 17.12,
+          "sigma": 8.06
+        },
+        "DocStudios": {
+          "mu": 14.8,
+          "sigma": 8.18
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-15T14:31:24.269366+00:00",
+  "submitted_by": "atlasfailed"
+}

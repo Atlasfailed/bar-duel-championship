@@ -483,8 +483,22 @@ async def on_ready():
 async def on_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
     """Handle command errors"""
     print(f"❌ Error in /{interaction.command.name}: {error}")
-    if not interaction.response.is_done():
-        await interaction.response.send_message(f"❌ Error: {error}", ephemeral=True)
+    
+    # Handle interaction expiration gracefully
+    if isinstance(error, discord.errors.NotFound) and "Unknown interaction" in str(error):
+        print(f"⚠️ Interaction expired for /{interaction.command.name} - user will need to resubmit")
+        return
+    
+    # Try to respond if interaction is still valid
+    try:
+        if not interaction.response.is_done():
+            await interaction.response.send_message(f"❌ Error: {error}", ephemeral=True)
+        else:
+            # Already responded, try followup
+            await interaction.followup.send(f"❌ Error: {error}", ephemeral=True)
+    except (discord.errors.NotFound, discord.errors.InteractionResponded) as e:
+        # Interaction expired or already responded - can't send error message
+        print(f"⚠️ Cannot send error message: {e}")
 
 def main():
     """Start the bot"""

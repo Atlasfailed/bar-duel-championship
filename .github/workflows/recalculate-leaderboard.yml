@@ -1,25 +1,15 @@
-name: Process New Submissions
+name: Recalculate Full Leaderboard
 
 on:
-  pull_request:
-    types: [closed]
-    branches: [main]
-    paths: ['submissions/bo3/**']
-  push:
-    branches: [main]
-    paths: ['submissions/bo3/**']
-  schedule:
-    # Run every hour to catch any missed updates
-    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for recalculation (e.g., config changes, bug fix)'
+        required: false
+        default: 'Manual recalculation'
 
 jobs:
-  update-data:
-    # Run when PR is merged or push to submissions (bot submissions only)
-    # Note: For merged PRs, this runs on the 'push' event that follows the merge
-    if: |
-      (github.event.pull_request.merged == true) || 
-      (github.event_name == 'push' && contains(github.event.head_commit.message, 'Bo3 Submission')) ||
-      (github.event_name == 'schedule')
+  recalculate-all:
     runs-on: ubuntu-latest
     
     permissions:
@@ -43,11 +33,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install --no-cache-dir -r actions/requirements.txt
       
-      - name: Update leaderboard
+      - name: Full leaderboard recalculation
         run: |
-          echo "Processing submissions and updating leaderboard..."
+          echo "Starting full leaderboard recalculation..."
+          echo "Reason: ${{ github.event.inputs.reason }}"
           python actions/update_leaderboard.py
-          echo "Leaderboard update complete"
+          echo "Leaderboard recalculation complete"
       
       - name: Extract replay data
         run: |
@@ -106,34 +97,42 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add ${{ steps.changes.outputs.files }}
-          git commit -m "Process new submissions and update leaderboard [skip ci]
+          git commit -m "Full leaderboard recalculation [skip ci]
 
-          Automated incremental update from new bot submissions
-          - Updated player rankings based on new matches
-          - Extracted replay information
-          - Generated player match histories
+          Reason: ${{ github.event.inputs.reason }}
           
-          Triggered by: ${{ github.event_name }}"
+          Complete recalculation of all rankings and statistics:
+          - Reprocessed all submissions
+          - Recalculated player rankings
+          - Updated replay database
+          - Regenerated match histories
+          
+          Triggered manually by: ${{ github.actor }}"
           git push
       
       - name: Summary
         run: |
-          echo "## Data Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Full Recalculation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Reason**: ${{ github.event.inputs.reason }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Triggered by**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.changes.outputs.changed }}" == "true" ]; then
-            echo "**Data updated successfully**" >> $GITHUB_STEP_SUMMARY
-            echo "Changes committed and pushed to repository" >> $GITHUB_STEP_SUMMARY
+            echo "**Status**: ✅ Data updated successfully" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "**Updated files:**" >> $GITHUB_STEP_SUMMARY
             for file in ${{ steps.changes.outputs.files }}; do
               echo "- $file" >> $GITHUB_STEP_SUMMARY
             done
           else
-            echo "**No changes needed**" >> $GITHUB_STEP_SUMMARY
-            echo "All data is already up to date" >> $GITHUB_STEP_SUMMARY
+            echo "**Status**: ℹ️ No changes needed" >> $GITHUB_STEP_SUMMARY
+            echo "All data was already up to date" >> $GITHUB_STEP_SUMMARY
           fi
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Live site**: https://atlasfailed.github.io/bar-duel-championship/" >> $GITHUB_STEP_SUMMARY
-          echo "**Leaderboard**: https://atlasfailed.github.io/bar-duel-championship/data/leaderboard.json" >> $GITHUB_STEP_SUMMARY
-          echo "**Replay Database**: https://atlasfailed.github.io/bar-duel-championship/data/replay_database.json" >> $GITHUB_STEP_SUMMARY
-          echo "**Match Histories**: https://atlasfailed.github.io/bar-duel-championship/data/player_match_history.json" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Quick Links:**" >> $GITHUB_STEP_SUMMARY
+          echo "- 🏆 [Live Leaderboard](https://atlasfailed.github.io/bar-duel-championship/)" >> $GITHUB_STEP_SUMMARY
+          echo "- 📊 [Leaderboard Data](https://atlasfailed.github.io/bar-duel-championship/data/leaderboard.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- 🎮 [Replay Database](https://atlasfailed.github.io/bar-duel-championship/data/replay_database.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- 📈 [Match Histories](https://atlasfailed.github.io/bar-duel-championship/data/player_match_history.json)" >> $GITHUB_STEP_SUMMARY

@@ -40,6 +40,12 @@ pytest bot/tests/ --cov=bot --cov-report=html
   - Age limit enforcement
   - Date parsing
   - Edge cases
+  - ⚠️ **Note**: Originally only tested date parsing, not rejection logic
+
+- **`test_submit_age_validation.py`** - Tests age validation in submit flow
+  - **NEW**: Actually tests that old replays are rejected
+  - Tests rejection logic, not just date parsing
+  - Includes real-world test cases (151 days old replays)
 
 - **`test_config_compliance.py`** - Tests that verify config values
   - All limits are set correctly

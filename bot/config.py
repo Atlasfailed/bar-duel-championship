@@ -46,10 +46,10 @@ REQUIRED_WINS_FOR_SERIES = 2
 # ==============================
 
 # Maximum age of replay in days (default: 30 days)
-MAX_REPLAY_AGE_DAYS = 30
+MAX_REPLAY_AGE_DAYS = 40
 
-# Maximum time between replays in seconds (default: 24 hours)
-MAX_TIME_BETWEEN_REPLAYS_SEC = 86400
+# Maximum time between replays in days (default: 1 day)
+MAX_TIME_BETWEEN_REPLAYS_DAYS = 10
 
 # ==============================
 # API Request Settings

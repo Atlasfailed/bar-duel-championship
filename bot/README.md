@@ -111,7 +111,7 @@ GitHub Pages (displays leaderboard)
 | `GITHUB_BASE_BRANCH` | No | main | Target branch for PRs |
 | `TEAM_SIZE` | No | 1 | Players per team |
 | `MAX_REPLAY_AGE_DAYS` | No | 30 | Max age for replays |
-| `MAX_TIME_BETWEEN_REPLAYS_SEC` | No | 86400 | Max time between games |
+| `MAX_TIME_BETWEEN_REPLAYS_DAYS` | No | 1 | Max time between games (in days) |
 
 ## 🛡️ Security
 

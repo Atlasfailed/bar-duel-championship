@@ -164,14 +164,31 @@ def validate_replay(replay: Dict[str, Any]) -> Dict[str, Any]:
         players.append({"name": name, "skill": mu})
         seed_ratings[name] = {"mu": mu, "sigma": sigma}
     
+    # Try to get winner from gamestats first (preferred method)
     gamestats = replay.get(GAMESTATS_PATH, {})
-    winner_id = get_field_value(gamestats, WINNER_ID_FIELDS)
+    winner_id = get_field_value(gamestats, WINNER_ID_FIELDS) if gamestats else None
     winner = None
-    for p in players_data:
-        p_team_id = get_field_value(p, TEAM_ID_FIELDS)
-        if p_team_id == winner_id:
-            winner = get_field_value(p, PLAYER_NAME_FIELDS)
-            break
+    
+    if winner_id is not None:
+        # Winner from gamestats.winningTeamId
+        for p in players_data:
+            p_team_id = get_field_value(p, TEAM_ID_FIELDS)
+            if p_team_id == winner_id:
+                winner = get_field_value(p, PLAYER_NAME_FIELDS)
+                break
+    else:
+        # Fallback: Check AllyTeams for winningTeam field
+        ally_teams = replay.get(ALLY_TEAMS_PATH, [])
+        for ally_team in ally_teams:
+            if ally_team.get("winningTeam") is True:
+                team_players = ally_team.get(PLAYERS_PATH, [])
+                for player in team_players:
+                    team_id = get_field_value(player, TEAM_ID_FIELDS)
+                    if team_id is not None and team_id >= MIN_TEAM_ID:
+                        winner = get_field_value(player, PLAYER_NAME_FIELDS)
+                        break
+                if winner:
+                    break
     
     start_time = get_field_value(replay, START_TIME_FIELDS, "")
     duration_ms = get_field_value(replay, DURATION_FIELDS, 0)

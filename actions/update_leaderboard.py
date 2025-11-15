@@ -270,7 +270,9 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
             "wins": 0,
             "losses": 0,
             "cr_changes": [],
-            "opponents": []
+            "opponents": [],
+            "latest_os_mu": None,
+            "latest_os_sigma": None
         }
         
         print(f"  {player}: OS={initial_os:.2f}, P{percentile:.1f}, {tier_name}, CR={initial_cr}")
@@ -306,6 +308,11 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
         # Update tier based on current CR AND minimum match requirements
         current_tier = get_tier_with_match_requirements(data["current_cr"], total_matches)
         
+        # Calculate latest OpenSkill (mu - sigma)
+        latest_os = None
+        if data["latest_os_mu"] is not None and data["latest_os_sigma"] is not None:
+            latest_os = round(data["latest_os_mu"] - data["latest_os_sigma"], 2)
+        
         results.append({
             "player": player,
             "tier": current_tier,
@@ -316,7 +323,8 @@ def calculate_player_champion_ratings(submissions: List[Dict[str, Any]]) -> List
             "losses": data["losses"],
             "winrate": winrate,
             "initial_os": round(data["initial_os"], 6),
-            "percentile": round(data["percentile"], 2)
+            "percentile": round(data["percentile"], 2),
+            "latest_os": latest_os
         })
     
     # Sort by tier first (highest tier first), then by current Champion Rating within tier
@@ -418,6 +426,8 @@ def _process_match_for_cr_changes(match: Dict[str, Any], players: List[str], pla
         player_data[p1]["cr_changes"].append(p1_cr_delta)
         player_data[p1]["matches"] += 1
         player_data[p1]["opponents"].append(p2)
+        player_data[p1]["latest_os_mu"] = p1_new_mu
+        player_data[p1]["latest_os_sigma"] = p1_new_sigma
         if winner == p1:
             player_data[p1]["wins"] += 1
         else:
@@ -428,6 +438,8 @@ def _process_match_for_cr_changes(match: Dict[str, Any], players: List[str], pla
         player_data[p2]["cr_changes"].append(p2_cr_delta)
         player_data[p2]["matches"] += 1
         player_data[p2]["opponents"].append(p1)
+        player_data[p2]["latest_os_mu"] = p2_new_mu
+        player_data[p2]["latest_os_sigma"] = p2_new_sigma
         if winner == p2:
             player_data[p2]["wins"] += 1
         else:
@@ -505,6 +517,8 @@ def _process_replay_for_cr_changes(replay: Dict[str, Any], submission_players: L
         player_data[p1]["cr_changes"].append(p1_cr_delta)
         player_data[p1]["matches"] += 1
         player_data[p1]["opponents"].append(p2)
+        player_data[p1]["latest_os_mu"] = p1_new_mu
+        player_data[p1]["latest_os_sigma"] = p1_new_sigma
         if winner == p1:
             player_data[p1]["wins"] += 1
         else:
@@ -515,6 +529,8 @@ def _process_replay_for_cr_changes(replay: Dict[str, Any], submission_players: L
         player_data[p2]["cr_changes"].append(p2_cr_delta)
         player_data[p2]["matches"] += 1
         player_data[p2]["opponents"].append(p1)
+        player_data[p2]["latest_os_mu"] = p2_new_mu
+        player_data[p2]["latest_os_sigma"] = p2_new_sigma
         if winner == p2:
             player_data[p2]["wins"] += 1
         else:

@@ -17,6 +17,7 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 10.03,
     "tier_rank": 1,
     "type": "player"
   },
@@ -44,6 +45,7 @@
     "winrate": 83.3,
     "initial_os": 6.54,
     "percentile": 4.38,
+    "latest_os": 9.43,
     "tier_rank": 1,
     "type": "player"
   },
@@ -58,6 +60,7 @@
     "winrate": 66.7,
     "initial_os": 8.34,
     "percentile": 7.33,
+    "latest_os": 9.66,
     "tier_rank": 2,
     "type": "player"
   },
@@ -72,6 +75,7 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 12.81,
     "tier_rank": 3,
     "type": "player"
   },
@@ -86,6 +90,7 @@
     "winrate": 66.7,
     "initial_os": 8.34,
     "percentile": 7.33,
+    "latest_os": 9.66,
     "tier_rank": 4,
     "type": "player"
   },
@@ -100,21 +105,8 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 13.06,
     "tier_rank": 5,
-    "type": "player"
-  },
-  {
-    "player": "peterthegreat",
-    "tier": "Silver",
-    "initial_cr": 1050,
-    "current_cr": 1246,
-    "matches": 6,
-    "wins": 4,
-    "losses": 2,
-    "winrate": 66.7,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 6,
     "type": "player"
   },
   {
@@ -128,7 +120,8 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 7,
+    "latest_os": 12.81,
+    "tier_rank": 6,
     "type": "player"
   },
   {
@@ -142,6 +135,22 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 12.81,
+    "tier_rank": 7,
+    "type": "player"
+  },
+  {
+    "player": "peterthegreat",
+    "tier": "Silver",
+    "initial_cr": 1050,
+    "current_cr": 1246,
+    "matches": 6,
+    "wins": 4,
+    "losses": 2,
+    "winrate": 66.7,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 12.81,
     "tier_rank": 8,
     "type": "player"
   },
@@ -169,6 +178,7 @@
     "winrate": 100.0,
     "initial_os": 18.64,
     "percentile": 63.36,
+    "latest_os": 20.26,
     "tier_rank": 1,
     "type": "player"
   },
@@ -183,6 +193,7 @@
     "winrate": 0.0,
     "initial_os": 23.11,
     "percentile": 83.59,
+    "latest_os": 21.75,
     "tier_rank": 2,
     "type": "player"
   },
@@ -197,6 +208,7 @@
     "winrate": 100.0,
     "initial_os": 6.02,
     "percentile": 3.94,
+    "latest_os": 9.09,
     "tier_rank": 3,
     "type": "player"
   },
@@ -211,6 +223,7 @@
     "winrate": 100.0,
     "initial_os": 8.34,
     "percentile": 7.33,
+    "latest_os": 11.24,
     "tier_rank": 4,
     "type": "player"
   },
@@ -225,6 +238,7 @@
     "winrate": 100.0,
     "initial_os": 6.74,
     "percentile": 4.55,
+    "latest_os": 9.42,
     "tier_rank": 5,
     "type": "player"
   },
@@ -239,6 +253,7 @@
     "winrate": 100.0,
     "initial_os": -0.13,
     "percentile": 1,
+    "latest_os": 11.74,
     "tier_rank": 6,
     "type": "player"
   },
@@ -253,11 +268,12 @@
     "winrate": 66.7,
     "initial_os": 8.34,
     "percentile": 7.33,
+    "latest_os": 9.76,
     "tier_rank": 7,
     "type": "player"
   },
   {
-    "player": "Nauvis",
+    "player": "Iris_",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 1148,
@@ -267,6 +283,7 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 12.81,
     "tier_rank": 8,
     "type": "player"
   },
@@ -281,11 +298,12 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 12.81,
     "tier_rank": 9,
     "type": "player"
   },
   {
-    "player": "jimmyneutron",
+    "player": "cibernixt",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 1148,
@@ -295,11 +313,12 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 12.81,
     "tier_rank": 10,
     "type": "player"
   },
   {
-    "player": "Iris_",
+    "player": "Nauvis",
     "tier": "Bronze",
     "initial_cr": 1050,
     "current_cr": 1148,
@@ -309,6 +328,7 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 12.81,
     "tier_rank": 11,
     "type": "player"
   },
@@ -323,7 +343,23 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 12.81,
     "tier_rank": 12,
+    "type": "player"
+  },
+  {
+    "player": "jimmyneutron",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 1148,
+    "matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "winrate": 66.7,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 12.81,
+    "tier_rank": 13,
     "type": "player"
   },
   {
@@ -337,7 +373,8 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 13,
+    "latest_os": 12.81,
+    "tier_rank": 14,
     "type": "player"
   },
   {
@@ -351,20 +388,7 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 14,
-    "type": "player"
-  },
-  {
-    "player": "cibernixt",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 1148,
-    "matches": 3,
-    "wins": 2,
-    "losses": 1,
-    "winrate": 66.7,
-    "initial_os": 11.11,
-    "percentile": 15.82,
+    "latest_os": 12.81,
     "tier_rank": 15,
     "type": "player"
   },
@@ -379,21 +403,8 @@
     "winrate": 66.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 12.81,
     "tier_rank": 16,
-    "type": "player"
-  },
-  {
-    "player": "LastBlast",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 1089,
-    "matches": 6,
-    "wins": 3,
-    "losses": 3,
-    "winrate": 50.0,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 17,
     "type": "player"
   },
   {
@@ -407,6 +418,22 @@
     "winrate": 50.0,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 12.81,
+    "tier_rank": 17,
+    "type": "player"
+  },
+  {
+    "player": "LastBlast",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 1089,
+    "matches": 6,
+    "wins": 3,
+    "losses": 3,
+    "winrate": 50.0,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 9.66,
     "tier_rank": 18,
     "type": "player"
   },
@@ -421,105 +448,8 @@
     "winrate": 41.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 11.4,
     "tier_rank": 19,
-    "type": "player"
-  },
-  {
-    "player": "skeleboy",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 991,
-    "matches": 3,
-    "wins": 1,
-    "losses": 2,
-    "winrate": 33.3,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 20,
-    "type": "player"
-  },
-  {
-    "player": "Alfranix951",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 991,
-    "matches": 3,
-    "wins": 1,
-    "losses": 2,
-    "winrate": 33.3,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 21,
-    "type": "player"
-  },
-  {
-    "player": "KiiiTZZZ",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 991,
-    "matches": 3,
-    "wins": 1,
-    "losses": 2,
-    "winrate": 33.3,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 22,
-    "type": "player"
-  },
-  {
-    "player": "ibrawod",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 991,
-    "matches": 3,
-    "wins": 1,
-    "losses": 2,
-    "winrate": 33.3,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 23,
-    "type": "player"
-  },
-  {
-    "player": "burtik2023",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 991,
-    "matches": 3,
-    "wins": 1,
-    "losses": 2,
-    "winrate": 33.3,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 24,
-    "type": "player"
-  },
-  {
-    "player": "jhonboy",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 991,
-    "matches": 3,
-    "wins": 1,
-    "losses": 2,
-    "winrate": 33.3,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 25,
-    "type": "player"
-  },
-  {
-    "player": "Efusion",
-    "tier": "Bronze",
-    "initial_cr": 1050,
-    "current_cr": 991,
-    "matches": 3,
-    "wins": 1,
-    "losses": 2,
-    "winrate": 33.3,
-    "initial_os": 11.11,
-    "percentile": 15.82,
-    "tier_rank": 26,
     "type": "player"
   },
   {
@@ -533,7 +463,38 @@
     "winrate": 33.3,
     "initial_os": 11.11,
     "percentile": 15.82,
-    "tier_rank": 27,
+    "latest_os": 9.66,
+    "tier_rank": 20,
+    "type": "player"
+  },
+  {
+    "player": "skeleboy",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 991,
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "winrate": 33.3,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 9.66,
+    "tier_rank": 21,
+    "type": "player"
+  },
+  {
+    "player": "jhonboy",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 991,
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "winrate": 33.3,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 9.66,
+    "tier_rank": 22,
     "type": "player"
   },
   {
@@ -547,6 +508,82 @@
     "winrate": 33.3,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 9.66,
+    "tier_rank": 23,
+    "type": "player"
+  },
+  {
+    "player": "Alfranix951",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 991,
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "winrate": 33.3,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 9.66,
+    "tier_rank": 24,
+    "type": "player"
+  },
+  {
+    "player": "Efusion",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 991,
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "winrate": 33.3,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 9.66,
+    "tier_rank": 25,
+    "type": "player"
+  },
+  {
+    "player": "burtik2023",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 991,
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "winrate": 33.3,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 9.66,
+    "tier_rank": 26,
+    "type": "player"
+  },
+  {
+    "player": "ibrawod",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 991,
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "winrate": 33.3,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 9.66,
+    "tier_rank": 27,
+    "type": "player"
+  },
+  {
+    "player": "KiiiTZZZ",
+    "tier": "Bronze",
+    "initial_cr": 1050,
+    "current_cr": 991,
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "winrate": 33.3,
+    "initial_os": 11.11,
+    "percentile": 15.82,
+    "latest_os": 9.66,
     "tier_rank": 28,
     "type": "player"
   },
@@ -561,6 +598,7 @@
     "winrate": 33.3,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 9.66,
     "tier_rank": 29,
     "type": "player"
   },
@@ -575,6 +613,7 @@
     "winrate": 33.3,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 9.66,
     "tier_rank": 30,
     "type": "player"
   },
@@ -589,6 +628,7 @@
     "winrate": 33.3,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 9.66,
     "tier_rank": 31,
     "type": "player"
   },
@@ -603,6 +643,7 @@
     "winrate": 33.3,
     "initial_os": 8.34,
     "percentile": 7.33,
+    "latest_os": 7.79,
     "tier_rank": 32,
     "type": "player"
   },
@@ -617,6 +658,7 @@
     "winrate": 0.0,
     "initial_os": 0.61,
     "percentile": 1,
+    "latest_os": 3.97,
     "tier_rank": 33,
     "type": "player"
   },
@@ -631,6 +673,7 @@
     "winrate": 33.3,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 9.66,
     "tier_rank": 34,
     "type": "player"
   },
@@ -645,6 +688,7 @@
     "winrate": 33.3,
     "initial_os": 8.34,
     "percentile": 7.33,
+    "latest_os": 12.81,
     "tier_rank": 35,
     "type": "player"
   },
@@ -659,6 +703,7 @@
     "winrate": 0.0,
     "initial_os": 10.33,
     "percentile": 12.85,
+    "latest_os": 8.28,
     "tier_rank": 36,
     "type": "player"
   },
@@ -673,6 +718,7 @@
     "winrate": 33.3,
     "initial_os": 8.34,
     "percentile": 7.33,
+    "latest_os": 12.81,
     "tier_rank": 37,
     "type": "player"
   },
@@ -687,6 +733,7 @@
     "winrate": 16.7,
     "initial_os": 7.4,
     "percentile": 5.3,
+    "latest_os": 5.56,
     "tier_rank": 38,
     "type": "player"
   },
@@ -701,6 +748,7 @@
     "winrate": 0.0,
     "initial_os": 8.34,
     "percentile": 7.33,
+    "latest_os": 5.97,
     "tier_rank": 39,
     "type": "player"
   },
@@ -715,6 +763,7 @@
     "winrate": 26.7,
     "initial_os": 11.11,
     "percentile": 15.82,
+    "latest_os": 9.0,
     "tier_rank": 40,
     "type": "player"
   },
@@ -729,6 +778,7 @@
     "winrate": 0.0,
     "initial_os": 8.34,
     "percentile": 7.33,
+    "latest_os": 5.71,
     "tier_rank": 41,
     "type": "player"
   }

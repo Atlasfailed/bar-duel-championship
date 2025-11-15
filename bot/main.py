@@ -55,8 +55,9 @@ GITHUB_REPO = os.getenv("GITHUB_REPO", "Atlasfailed/bar-duel-championship").stri
 GITHUB_BASE_BRANCH = os.getenv("GITHUB_BASE_BRANCH", "main").strip()
 
 # Allow environment override for replay age (defaults to config value)
-MAX_REPLAY_AGE_DAYS = int(os.getenv("MAX_REPLAY_AGE_DAYS", str(CONFIG_MAX_REPLAY_AGE_DAYS)))
-MAX_TIME_BETWEEN_REPLAYS_DAYS = int(os.getenv("MAX_TIME_BETWEEN_REPLAYS_DAYS", str(CONFIG_MAX_TIME_BETWEEN_REPLAYS_DAYS)))
+# Note: Using new variable names to avoid conflicts with old .env files
+MAX_REPLAY_AGE_DAYS = int(os.getenv("BOT_MAX_REPLAY_AGE_DAYS", str(CONFIG_MAX_REPLAY_AGE_DAYS)))
+MAX_TIME_BETWEEN_REPLAYS_DAYS = int(os.getenv("BOT_MAX_TIME_BETWEEN_REPLAYS_DAYS", str(CONFIG_MAX_TIME_BETWEEN_REPLAYS_DAYS)))
 
 if not DISCORD_TOKEN:
     raise RuntimeError("❌ DISCORD_TOKEN required in .env file")

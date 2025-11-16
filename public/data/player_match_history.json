@@ -795,6 +795,134 @@
     "win_rate": 100.0,
     "most_played_faction": "Unknown"
   },
+  "AresSVK": {
+    "player": "AresSVK",
+    "total_matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-11-14T23:02:28.000Z",
+        "replay_id": "04b5176922e99722c1be2890144974ef",
+        "map": "Nine_Metal_Islands_V1",
+        "duration_formatted": "36m 16s",
+        "won": false,
+        "opponent": "JanikPavlik",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T19:00:48.000Z",
+        "replay_id": "607c17694efd9921e01e6cf19bd0dc88",
+        "map": "Canis River v1.4",
+        "duration_formatted": "41m 26s",
+        "won": true,
+        "opponent": "JanikPavlik",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T15:21:25.000Z",
+        "replay_id": "f54817695177db4a3817c3bd9e4772ce",
+        "map": "Aurelia v4.1",
+        "duration_formatted": "30m 13s",
+        "won": false,
+        "opponent": "JanikPavlik",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Nine_Metal_Islands_V1": 1,
+      "Canis River v1.4": 1,
+      "Aurelia v4.1": 1
+    },
+    "opponents_faced": {
+      "JanikPavlik": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-14T15:21:25.000Z",
+        "skill": 8.29,
+        "replay_id": "f54817695177db4a3817c3bd9e4772ce"
+      },
+      {
+        "date": "2025-11-14T19:00:48.000Z",
+        "skill": 8.29,
+        "replay_id": "607c17694efd9921e01e6cf19bd0dc88"
+      },
+      {
+        "date": "2025-11-14T23:02:28.000Z",
+        "skill": 8.29,
+        "replay_id": "04b5176922e99722c1be2890144974ef"
+      }
+    ],
+    "win_rate": 33.3,
+    "most_played_faction": "Unknown"
+  },
+  "JanikPavlik": {
+    "player": "JanikPavlik",
+    "total_matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "recent_matches": [
+      {
+        "date": "2025-11-14T23:02:28.000Z",
+        "replay_id": "04b5176922e99722c1be2890144974ef",
+        "map": "Nine_Metal_Islands_V1",
+        "duration_formatted": "36m 16s",
+        "won": true,
+        "opponent": "AresSVK",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T19:00:48.000Z",
+        "replay_id": "607c17694efd9921e01e6cf19bd0dc88",
+        "map": "Canis River v1.4",
+        "duration_formatted": "41m 26s",
+        "won": false,
+        "opponent": "AresSVK",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T15:21:25.000Z",
+        "replay_id": "f54817695177db4a3817c3bd9e4772ce",
+        "map": "Aurelia v4.1",
+        "duration_formatted": "30m 13s",
+        "won": true,
+        "opponent": "AresSVK",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Nine_Metal_Islands_V1": 1,
+      "Canis River v1.4": 1,
+      "Aurelia v4.1": 1
+    },
+    "opponents_faced": {
+      "AresSVK": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-14T15:21:25.000Z",
+        "skill": 18.36,
+        "replay_id": "f54817695177db4a3817c3bd9e4772ce"
+      },
+      {
+        "date": "2025-11-14T19:00:48.000Z",
+        "skill": 18.36,
+        "replay_id": "607c17694efd9921e01e6cf19bd0dc88"
+      },
+      {
+        "date": "2025-11-14T23:02:28.000Z",
+        "skill": 18.36,
+        "replay_id": "04b5176922e99722c1be2890144974ef"
+      }
+    ],
+    "win_rate": 66.7,
+    "most_played_faction": "Unknown"
+  },
   "Qxo0": {
     "player": "Qxo0",
     "total_matches": 3,

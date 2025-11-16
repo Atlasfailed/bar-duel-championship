@@ -588,6 +588,48 @@
     ]
   },
   {
+    "id": "04b5176922e99722c1be2890144974ef",
+    "url": "https://www.beyondallreason.info/replays?gameId=04b5176922e99722c1be2890144974ef",
+    "date": "2025-11-14T23:02:28.000Z",
+    "submitted_at": "2025-11-16T12:08:54.510623+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Nine_Metal_Islands_V1",
+    "duration_ms": 2176867,
+    "duration_formatted": "36m 16s",
+    "winner": "JanikPavlik",
+    "players": [
+      {
+        "name": "AresSVK",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 15.87,
+        "sigma": 7.58,
+        "skill_estimate": 8.29
+      },
+      {
+        "name": "JanikPavlik",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 25.94,
+        "sigma": 7.58,
+        "skill_estimate": 18.36
+      }
+    ],
+    "player_names": [
+      "AresSVK",
+      "JanikPavlik"
+    ],
+    "series_winner": "JanikPavlik",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28898-8bc4afb",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-nine_metal_islands_v1"
+    ]
+  },
+  {
     "id": "5a9e17693027d1d028190d2b84bf2d16",
     "url": "https://www.beyondallreason.info/replays?gameId=5a9e17693027d1d028190d2b84bf2d16",
     "date": "2025-11-14T21:25:46.000Z",
@@ -714,6 +756,48 @@
     ]
   },
   {
+    "id": "607c17694efd9921e01e6cf19bd0dc88",
+    "url": "https://www.beyondallreason.info/replays?gameId=607c17694efd9921e01e6cf19bd0dc88",
+    "date": "2025-11-14T19:00:48.000Z",
+    "submitted_at": "2025-11-16T12:08:54.510623+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Canis River v1.4",
+    "duration_ms": 2486234,
+    "duration_formatted": "41m 26s",
+    "winner": "AresSVK",
+    "players": [
+      {
+        "name": "AresSVK",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 15.87,
+        "sigma": 7.58,
+        "skill_estimate": 8.29
+      },
+      {
+        "name": "JanikPavlik",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 25.94,
+        "sigma": 7.58,
+        "skill_estimate": 18.36
+      }
+    ],
+    "player_names": [
+      "AresSVK",
+      "JanikPavlik"
+    ],
+    "series_winner": "JanikPavlik",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28898-8bc4afb",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-canis-river-v14"
+    ]
+  },
+  {
     "id": "8876176961e3fc53f35891ee8fe82863",
     "url": "https://www.beyondallreason.info/replays?gameId=8876176961e3fc53f35891ee8fe82863",
     "date": "2025-11-14T18:35:52.000Z",
@@ -795,6 +879,48 @@
       "long",
       "beginner-friendly",
       "map-great-divide-v1"
+    ]
+  },
+  {
+    "id": "f54817695177db4a3817c3bd9e4772ce",
+    "url": "https://www.beyondallreason.info/replays?gameId=f54817695177db4a3817c3bd9e4772ce",
+    "date": "2025-11-14T15:21:25.000Z",
+    "submitted_at": "2025-11-16T12:08:54.510623+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Aurelia v4.1",
+    "duration_ms": 1813133,
+    "duration_formatted": "30m 13s",
+    "winner": "JanikPavlik",
+    "players": [
+      {
+        "name": "AresSVK",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 15.87,
+        "sigma": 7.58,
+        "skill_estimate": 8.29
+      },
+      {
+        "name": "JanikPavlik",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 25.94,
+        "sigma": 7.58,
+        "skill_estimate": 18.36
+      }
+    ],
+    "player_names": [
+      "AresSVK",
+      "JanikPavlik"
+    ],
+    "series_winner": "JanikPavlik",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28898-8bc4afb",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-aurelia-v41"
     ]
   },
   {

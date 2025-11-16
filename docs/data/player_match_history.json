@@ -1,4 +1,926 @@
 {
+  "ReeseChloris1": {
+    "player": "ReeseChloris1",
+    "total_matches": 2,
+    "wins": 0,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-11-16T01:03:55.000Z",
+        "replay_id": "fb22196960a05709cd40d82ce778b12c",
+        "map": "Small_Supreme_Battlefield_V3",
+        "duration_formatted": "1h 27m 11s",
+        "won": false,
+        "opponent": "YunaXTuna",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-16T00:20:58.000Z",
+        "replay_id": "ea181969cbd2bec1a6e7590fcade2110",
+        "map": "Tangerine_Remake 1.0",
+        "duration_formatted": "25m 54s",
+        "won": false,
+        "opponent": "YunaXTuna",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Small_Supreme_Battlefield_V3": 1,
+      "Tangerine_Remake 1.0": 1
+    },
+    "opponents_faced": {
+      "YunaXTuna": 2
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-16T00:20:58.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "ea181969cbd2bec1a6e7590fcade2110"
+      },
+      {
+        "date": "2025-11-16T01:03:55.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "fb22196960a05709cd40d82ce778b12c"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "YunaXTuna": {
+    "player": "YunaXTuna",
+    "total_matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-11-16T01:03:55.000Z",
+        "replay_id": "fb22196960a05709cd40d82ce778b12c",
+        "map": "Small_Supreme_Battlefield_V3",
+        "duration_formatted": "1h 27m 11s",
+        "won": true,
+        "opponent": "ReeseChloris1",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-16T00:20:58.000Z",
+        "replay_id": "ea181969cbd2bec1a6e7590fcade2110",
+        "map": "Tangerine_Remake 1.0",
+        "duration_formatted": "25m 54s",
+        "won": true,
+        "opponent": "ReeseChloris1",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Small_Supreme_Battlefield_V3": 1,
+      "Tangerine_Remake 1.0": 1
+    },
+    "opponents_faced": {
+      "ReeseChloris1": 2
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-16T00:20:58.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "ea181969cbd2bec1a6e7590fcade2110"
+      },
+      {
+        "date": "2025-11-16T01:03:55.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "fb22196960a05709cd40d82ce778b12c"
+      }
+    ],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "DrJayTray": {
+    "player": "DrJayTray",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T14:26:31.000Z",
+        "replay_id": "978d18691d6cf8305e725831a95f3863",
+        "map": "Center Command BAR v1.0",
+        "duration_formatted": "1h 10m 8s",
+        "won": false,
+        "opponent": "Imalog",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T14:03:39.000Z",
+        "replay_id": "3b8818691ba49be31dac35f7b22b8806",
+        "map": "Shore_to_Shore_V3",
+        "duration_formatted": "21m 12s",
+        "won": false,
+        "opponent": "Imalog",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T13:20:31.000Z",
+        "replay_id": "1f7e1869795c27c13bb06b0f2e032f0e",
+        "map": "Aethermoor Creek 1.0",
+        "duration_formatted": "33m 41s",
+        "won": false,
+        "opponent": "Imalog",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Center Command BAR v1.0": 1,
+      "Shore_to_Shore_V3": 1,
+      "Aethermoor Creek 1.0": 1
+    },
+    "opponents_faced": {
+      "Imalog": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-15T13:20:31.000Z",
+        "skill": 11.750000000000002,
+        "replay_id": "1f7e1869795c27c13bb06b0f2e032f0e"
+      },
+      {
+        "date": "2025-11-15T14:03:39.000Z",
+        "skill": 11.750000000000002,
+        "replay_id": "3b8818691ba49be31dac35f7b22b8806"
+      },
+      {
+        "date": "2025-11-15T14:26:31.000Z",
+        "skill": 11.750000000000002,
+        "replay_id": "978d18691d6cf8305e725831a95f3863"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "Imalog": {
+    "player": "Imalog",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T14:26:31.000Z",
+        "replay_id": "978d18691d6cf8305e725831a95f3863",
+        "map": "Center Command BAR v1.0",
+        "duration_formatted": "1h 10m 8s",
+        "won": true,
+        "opponent": "DrJayTray",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T14:03:39.000Z",
+        "replay_id": "3b8818691ba49be31dac35f7b22b8806",
+        "map": "Shore_to_Shore_V3",
+        "duration_formatted": "21m 12s",
+        "won": true,
+        "opponent": "DrJayTray",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T13:20:31.000Z",
+        "replay_id": "1f7e1869795c27c13bb06b0f2e032f0e",
+        "map": "Aethermoor Creek 1.0",
+        "duration_formatted": "33m 41s",
+        "won": true,
+        "opponent": "DrJayTray",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Center Command BAR v1.0": 1,
+      "Shore_to_Shore_V3": 1,
+      "Aethermoor Creek 1.0": 1
+    },
+    "opponents_faced": {
+      "DrJayTray": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-15T13:20:31.000Z",
+        "skill": 17.84,
+        "replay_id": "1f7e1869795c27c13bb06b0f2e032f0e"
+      },
+      {
+        "date": "2025-11-15T14:03:39.000Z",
+        "skill": 17.84,
+        "replay_id": "3b8818691ba49be31dac35f7b22b8806"
+      },
+      {
+        "date": "2025-11-15T14:26:31.000Z",
+        "skill": 17.84,
+        "replay_id": "978d18691d6cf8305e725831a95f3863"
+      }
+    ],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "Salt001": {
+    "player": "Salt001",
+    "total_matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T13:17:18.000Z",
+        "replay_id": "5e7d1869f2c05bbdad54bf4d0e0651a9",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "1h 22m 40s",
+        "won": false,
+        "opponent": "greenolizer",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T12:58:05.000Z",
+        "replay_id": "dd781869dee0ab377e880637367a706b",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "15m 42s",
+        "won": true,
+        "opponent": "greenolizer",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T12:36:07.000Z",
+        "replay_id": "b77318699530fe5a20f8f842798d36de",
+        "map": "Asteroid_Mines_V3",
+        "duration_formatted": "16m 33s",
+        "won": true,
+        "opponent": "greenolizer",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Full Metal Plate 1.7": 2,
+      "Asteroid_Mines_V3": 1
+    },
+    "opponents_faced": {
+      "greenolizer": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-15T12:36:07.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "b77318699530fe5a20f8f842798d36de"
+      },
+      {
+        "date": "2025-11-15T12:58:05.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "dd781869dee0ab377e880637367a706b"
+      },
+      {
+        "date": "2025-11-15T13:17:18.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "5e7d1869f2c05bbdad54bf4d0e0651a9"
+      }
+    ],
+    "win_rate": 66.7,
+    "most_played_faction": "Unknown"
+  },
+  "greenolizer": {
+    "player": "greenolizer",
+    "total_matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T13:17:18.000Z",
+        "replay_id": "5e7d1869f2c05bbdad54bf4d0e0651a9",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "1h 22m 40s",
+        "won": true,
+        "opponent": "Salt001",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T12:58:05.000Z",
+        "replay_id": "dd781869dee0ab377e880637367a706b",
+        "map": "Full Metal Plate 1.7",
+        "duration_formatted": "15m 42s",
+        "won": false,
+        "opponent": "Salt001",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T12:36:07.000Z",
+        "replay_id": "b77318699530fe5a20f8f842798d36de",
+        "map": "Asteroid_Mines_V3",
+        "duration_formatted": "16m 33s",
+        "won": false,
+        "opponent": "Salt001",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Full Metal Plate 1.7": 2,
+      "Asteroid_Mines_V3": 1
+    },
+    "opponents_faced": {
+      "Salt001": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-15T12:36:07.000Z",
+        "skill": 11.54,
+        "replay_id": "b77318699530fe5a20f8f842798d36de"
+      },
+      {
+        "date": "2025-11-15T12:58:05.000Z",
+        "skill": 11.54,
+        "replay_id": "dd781869dee0ab377e880637367a706b"
+      },
+      {
+        "date": "2025-11-15T13:17:18.000Z",
+        "skill": 11.54,
+        "replay_id": "5e7d1869f2c05bbdad54bf4d0e0651a9"
+      }
+    ],
+    "win_rate": 33.3,
+    "most_played_faction": "Unknown"
+  },
+  "Gretya": {
+    "player": "Gretya",
+    "total_matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T13:08:45.000Z",
+        "replay_id": "5d7b1869bc2ab878adfd4bbd17b776eb",
+        "map": "Pinewood_Derby_V1",
+        "duration_formatted": "47m 35s",
+        "won": false,
+        "opponent": "plwtx",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T18:35:52.000Z",
+        "replay_id": "8876176961e3fc53f35891ee8fe82863",
+        "map": "Glacier Pass 1.2",
+        "duration_formatted": "1h 4m 38s",
+        "won": true,
+        "opponent": "plwtx",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T17:13:23.000Z",
+        "replay_id": "3363176913bc160225c7759d1b1fe045",
+        "map": "Great Divide V1",
+        "duration_formatted": "42m 53s",
+        "won": true,
+        "opponent": "plwtx",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Pinewood_Derby_V1": 1,
+      "Glacier Pass 1.2": 1,
+      "Great Divide V1": 1
+    },
+    "opponents_faced": {
+      "plwtx": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-14T17:13:23.000Z",
+        "skill": 8.189999999999998,
+        "replay_id": "3363176913bc160225c7759d1b1fe045"
+      },
+      {
+        "date": "2025-11-14T18:35:52.000Z",
+        "skill": 8.189999999999998,
+        "replay_id": "8876176961e3fc53f35891ee8fe82863"
+      },
+      {
+        "date": "2025-11-15T13:08:45.000Z",
+        "skill": 8.189999999999998,
+        "replay_id": "5d7b1869bc2ab878adfd4bbd17b776eb"
+      }
+    ],
+    "win_rate": 66.7,
+    "most_played_faction": "Unknown"
+  },
+  "plwtx": {
+    "player": "plwtx",
+    "total_matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T13:08:45.000Z",
+        "replay_id": "5d7b1869bc2ab878adfd4bbd17b776eb",
+        "map": "Pinewood_Derby_V1",
+        "duration_formatted": "47m 35s",
+        "won": true,
+        "opponent": "Gretya",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T18:35:52.000Z",
+        "replay_id": "8876176961e3fc53f35891ee8fe82863",
+        "map": "Glacier Pass 1.2",
+        "duration_formatted": "1h 4m 38s",
+        "won": false,
+        "opponent": "Gretya",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T17:13:23.000Z",
+        "replay_id": "3363176913bc160225c7759d1b1fe045",
+        "map": "Great Divide V1",
+        "duration_formatted": "42m 53s",
+        "won": false,
+        "opponent": "Gretya",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Pinewood_Derby_V1": 1,
+      "Glacier Pass 1.2": 1,
+      "Great Divide V1": 1
+    },
+    "opponents_faced": {
+      "Gretya": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-14T17:13:23.000Z",
+        "skill": 2.7300000000000004,
+        "replay_id": "3363176913bc160225c7759d1b1fe045"
+      },
+      {
+        "date": "2025-11-14T18:35:52.000Z",
+        "skill": 2.7300000000000004,
+        "replay_id": "8876176961e3fc53f35891ee8fe82863"
+      },
+      {
+        "date": "2025-11-15T13:08:45.000Z",
+        "skill": 2.7300000000000004,
+        "replay_id": "5d7b1869bc2ab878adfd4bbd17b776eb"
+      }
+    ],
+    "win_rate": 33.3,
+    "most_played_faction": "Unknown"
+  },
+  "eazyr": {
+    "player": "eazyr",
+    "total_matches": 6,
+    "wins": 3,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T02:37:19.000Z",
+        "replay_id": "5fe717692b7aa03d738ec9fd28baafc3",
+        "map": "All That Simmers v1.1.1",
+        "duration_formatted": "56m 28s",
+        "won": false,
+        "opponent": "hehateme",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T02:07:32.000Z",
+        "replay_id": "64e01769b523506bcfe77ec0b0522679",
+        "map": "Aethermoor Creek 1.0",
+        "duration_formatted": "52m 8s",
+        "won": false,
+        "opponent": "hehateme",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T01:46:42.000Z",
+        "replay_id": "82db1769eeaca8b2d36266ace2cd787b",
+        "map": "Red Rock Desert v2",
+        "duration_formatted": "33m 52s",
+        "won": false,
+        "opponent": "hehateme",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:29:14.000Z",
+        "replay_id": "0ac251689c35d509fec59479e3598101",
+        "map": "Supreme Isthmus v2.1",
+        "duration_formatted": "1h 3m 44s",
+        "won": true,
+        "opponent": "hehateme",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:18:12.000Z",
+        "replay_id": "74bf5168d447517d3bc6a72649a4843e",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "15m 35s",
+        "won": true,
+        "opponent": "hehateme",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:06:53.000Z",
+        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3",
+        "map": "Theta Crystals 1.3",
+        "duration_formatted": "15m 55s",
+        "won": true,
+        "opponent": "hehateme",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "All That Simmers v1.1.1": 1,
+      "Aethermoor Creek 1.0": 1,
+      "Red Rock Desert v2": 1,
+      "Supreme Isthmus v2.1": 1,
+      "Prismatic Anomaly v1.02": 1,
+      "Theta Crystals 1.3": 1
+    },
+    "opponents_faced": {
+      "hehateme": 6
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-06-17T19:06:53.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3"
+      },
+      {
+        "date": "2025-06-17T19:18:12.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "74bf5168d447517d3bc6a72649a4843e"
+      },
+      {
+        "date": "2025-06-17T19:29:14.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "0ac251689c35d509fec59479e3598101"
+      },
+      {
+        "date": "2025-11-15T01:46:42.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "82db1769eeaca8b2d36266ace2cd787b"
+      },
+      {
+        "date": "2025-11-15T02:07:32.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "64e01769b523506bcfe77ec0b0522679"
+      },
+      {
+        "date": "2025-11-15T02:37:19.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "5fe717692b7aa03d738ec9fd28baafc3"
+      }
+    ],
+    "win_rate": 50.0,
+    "most_played_faction": "Unknown"
+  },
+  "hehateme": {
+    "player": "hehateme",
+    "total_matches": 6,
+    "wins": 3,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T02:37:19.000Z",
+        "replay_id": "5fe717692b7aa03d738ec9fd28baafc3",
+        "map": "All That Simmers v1.1.1",
+        "duration_formatted": "56m 28s",
+        "won": true,
+        "opponent": "eazyr",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T02:07:32.000Z",
+        "replay_id": "64e01769b523506bcfe77ec0b0522679",
+        "map": "Aethermoor Creek 1.0",
+        "duration_formatted": "52m 8s",
+        "won": true,
+        "opponent": "eazyr",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T01:46:42.000Z",
+        "replay_id": "82db1769eeaca8b2d36266ace2cd787b",
+        "map": "Red Rock Desert v2",
+        "duration_formatted": "33m 52s",
+        "won": true,
+        "opponent": "eazyr",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:29:14.000Z",
+        "replay_id": "0ac251689c35d509fec59479e3598101",
+        "map": "Supreme Isthmus v2.1",
+        "duration_formatted": "1h 3m 44s",
+        "won": false,
+        "opponent": "eazyr",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:18:12.000Z",
+        "replay_id": "74bf5168d447517d3bc6a72649a4843e",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "15m 35s",
+        "won": false,
+        "opponent": "eazyr",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-17T19:06:53.000Z",
+        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3",
+        "map": "Theta Crystals 1.3",
+        "duration_formatted": "15m 55s",
+        "won": false,
+        "opponent": "eazyr",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "All That Simmers v1.1.1": 1,
+      "Aethermoor Creek 1.0": 1,
+      "Red Rock Desert v2": 1,
+      "Supreme Isthmus v2.1": 1,
+      "Prismatic Anomaly v1.02": 1,
+      "Theta Crystals 1.3": 1
+    },
+    "opponents_faced": {
+      "eazyr": 6
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-06-17T19:06:53.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3"
+      },
+      {
+        "date": "2025-06-17T19:18:12.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "74bf5168d447517d3bc6a72649a4843e"
+      },
+      {
+        "date": "2025-06-17T19:29:14.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "0ac251689c35d509fec59479e3598101"
+      },
+      {
+        "date": "2025-11-15T01:46:42.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "82db1769eeaca8b2d36266ace2cd787b"
+      },
+      {
+        "date": "2025-11-15T02:07:32.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "64e01769b523506bcfe77ec0b0522679"
+      },
+      {
+        "date": "2025-11-15T02:37:19.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "5fe717692b7aa03d738ec9fd28baafc3"
+      }
+    ],
+    "win_rate": 50.0,
+    "most_played_faction": "Unknown"
+  },
+  "GibChechens": {
+    "player": "GibChechens",
+    "total_matches": 2,
+    "wins": 0,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T00:55:19.000Z",
+        "replay_id": "77cf176949e5bc1ac17d29b04fec8bc3",
+        "map": "Aethermoor Creek 1.0",
+        "duration_formatted": "1h 14m 31s",
+        "won": false,
+        "opponent": "rikstagram91",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T00:05:50.000Z",
+        "replay_id": "dec3176927895e5e27fe7366c1e78896",
+        "map": "Geyser Plains BAR v1.2.1",
+        "duration_formatted": "41m 0s",
+        "won": false,
+        "opponent": "rikstagram91",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Aethermoor Creek 1.0": 1,
+      "Geyser Plains BAR v1.2.1": 1
+    },
+    "opponents_faced": {
+      "rikstagram91": 2
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-15T00:05:50.000Z",
+        "skill": 10.910000000000002,
+        "replay_id": "dec3176927895e5e27fe7366c1e78896"
+      },
+      {
+        "date": "2025-11-15T00:55:19.000Z",
+        "skill": 7.6499999999999995,
+        "replay_id": "77cf176949e5bc1ac17d29b04fec8bc3"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "rikstagram91": {
+    "player": "rikstagram91",
+    "total_matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T00:55:19.000Z",
+        "replay_id": "77cf176949e5bc1ac17d29b04fec8bc3",
+        "map": "Aethermoor Creek 1.0",
+        "duration_formatted": "1h 14m 31s",
+        "won": true,
+        "opponent": "GibChechens",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T00:05:50.000Z",
+        "replay_id": "dec3176927895e5e27fe7366c1e78896",
+        "map": "Geyser Plains BAR v1.2.1",
+        "duration_formatted": "41m 0s",
+        "won": true,
+        "opponent": "GibChechens",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Aethermoor Creek 1.0": 1,
+      "Geyser Plains BAR v1.2.1": 1
+    },
+    "opponents_faced": {
+      "GibChechens": 2
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-15T00:05:50.000Z",
+        "skill": 11.89,
+        "replay_id": "dec3176927895e5e27fe7366c1e78896"
+      },
+      {
+        "date": "2025-11-15T00:55:19.000Z",
+        "skill": 12.819999999999999,
+        "replay_id": "77cf176949e5bc1ac17d29b04fec8bc3"
+      }
+    ],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
+  "Qxo0": {
+    "player": "Qxo0",
+    "total_matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "recent_matches": [
+      {
+        "date": "2025-11-14T21:25:46.000Z",
+        "replay_id": "5a9e17693027d1d028190d2b84bf2d16",
+        "map": "Plains and Passes v1.0",
+        "duration_formatted": "7m 40s",
+        "won": true,
+        "opponent": "iley12",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T20:35:30.000Z",
+        "replay_id": "9292176942e12ce97d26486c27d5876a",
+        "map": "Supreme Isthmus v2.1",
+        "duration_formatted": "33m 47s",
+        "won": false,
+        "opponent": "iley12",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T19:02:22.000Z",
+        "replay_id": "be7c17693bddec89c224cbedc83ffb80",
+        "map": "Supreme Isthmus v2.1",
+        "duration_formatted": "1h 26m 0s",
+        "won": true,
+        "opponent": "iley12",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Plains and Passes v1.0": 1,
+      "Supreme Isthmus v2.1": 2
+    },
+    "opponents_faced": {
+      "iley12": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-14T19:02:22.000Z",
+        "skill": 15.2,
+        "replay_id": "be7c17693bddec89c224cbedc83ffb80"
+      },
+      {
+        "date": "2025-11-14T20:35:30.000Z",
+        "skill": 15.2,
+        "replay_id": "9292176942e12ce97d26486c27d5876a"
+      },
+      {
+        "date": "2025-11-14T21:25:46.000Z",
+        "skill": 15.2,
+        "replay_id": "5a9e17693027d1d028190d2b84bf2d16"
+      }
+    ],
+    "win_rate": 66.7,
+    "most_played_faction": "Unknown"
+  },
+  "iley12": {
+    "player": "iley12",
+    "total_matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-11-14T21:25:46.000Z",
+        "replay_id": "5a9e17693027d1d028190d2b84bf2d16",
+        "map": "Plains and Passes v1.0",
+        "duration_formatted": "7m 40s",
+        "won": false,
+        "opponent": "Qxo0",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T20:35:30.000Z",
+        "replay_id": "9292176942e12ce97d26486c27d5876a",
+        "map": "Supreme Isthmus v2.1",
+        "duration_formatted": "33m 47s",
+        "won": true,
+        "opponent": "Qxo0",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T19:02:22.000Z",
+        "replay_id": "be7c17693bddec89c224cbedc83ffb80",
+        "map": "Supreme Isthmus v2.1",
+        "duration_formatted": "1h 26m 0s",
+        "won": false,
+        "opponent": "Qxo0",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Plains and Passes v1.0": 1,
+      "Supreme Isthmus v2.1": 2
+    },
+    "opponents_faced": {
+      "Qxo0": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-14T19:02:22.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "be7c17693bddec89c224cbedc83ffb80"
+      },
+      {
+        "date": "2025-11-14T20:35:30.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "9292176942e12ce97d26486c27d5876a"
+      },
+      {
+        "date": "2025-11-14T21:25:46.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "5a9e17693027d1d028190d2b84bf2d16"
+      }
+    ],
+    "win_rate": 33.3,
+    "most_played_faction": "Unknown"
+  },
   "GamingHFC": {
     "player": "GamingHFC",
     "total_matches": 3,
@@ -511,6 +1433,134 @@
     "win_rate": 66.7,
     "most_played_faction": "Unknown"
   },
+  "AK_minionek": {
+    "player": "AK_minionek",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-06-29T19:22:34.000Z",
+        "replay_id": "7a926168e58454d9b2eabf9e47e26b35",
+        "map": "Great Divide V1",
+        "duration_formatted": "46m 7s",
+        "won": false,
+        "opponent": "neon212",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-29T18:55:23.000Z",
+        "replay_id": "1b8c6168037923f3aa9b432182f2603d",
+        "map": "Bismuth Valley v2.4.1",
+        "duration_formatted": "26m 24s",
+        "won": false,
+        "opponent": "neon212",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-29T16:19:07.000Z",
+        "replay_id": "7b6761681339193b8c3a97ddc50e997e",
+        "map": "Angel Crossing 1.5.1",
+        "duration_formatted": "1h 38m 0s",
+        "won": false,
+        "opponent": "neon212",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Great Divide V1": 1,
+      "Bismuth Valley v2.4.1": 1,
+      "Angel Crossing 1.5.1": 1
+    },
+    "opponents_faced": {
+      "neon212": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-06-29T16:19:07.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "7b6761681339193b8c3a97ddc50e997e"
+      },
+      {
+        "date": "2025-06-29T18:55:23.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "1b8c6168037923f3aa9b432182f2603d"
+      },
+      {
+        "date": "2025-06-29T19:22:34.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "7a926168e58454d9b2eabf9e47e26b35"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "neon212": {
+    "player": "neon212",
+    "total_matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "recent_matches": [
+      {
+        "date": "2025-06-29T19:22:34.000Z",
+        "replay_id": "7a926168e58454d9b2eabf9e47e26b35",
+        "map": "Great Divide V1",
+        "duration_formatted": "46m 7s",
+        "won": true,
+        "opponent": "AK_minionek",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-29T18:55:23.000Z",
+        "replay_id": "1b8c6168037923f3aa9b432182f2603d",
+        "map": "Bismuth Valley v2.4.1",
+        "duration_formatted": "26m 24s",
+        "won": false,
+        "opponent": "AK_minionek",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-06-29T16:19:07.000Z",
+        "replay_id": "7b6761681339193b8c3a97ddc50e997e",
+        "map": "Angel Crossing 1.5.1",
+        "duration_formatted": "1h 38m 0s",
+        "won": true,
+        "opponent": "AK_minionek",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Great Divide V1": 1,
+      "Bismuth Valley v2.4.1": 1,
+      "Angel Crossing 1.5.1": 1
+    },
+    "opponents_faced": {
+      "AK_minionek": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-06-29T16:19:07.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "7b6761681339193b8c3a97ddc50e997e"
+      },
+      {
+        "date": "2025-06-29T18:55:23.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "1b8c6168037923f3aa9b432182f2603d"
+      },
+      {
+        "date": "2025-06-29T19:22:34.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "7a926168e58454d9b2eabf9e47e26b35"
+      }
+    ],
+    "win_rate": 66.7,
+    "most_played_faction": "Unknown"
+  },
   "Stargamer605": {
     "player": "Stargamer605",
     "total_matches": 4,
@@ -763,132 +1813,130 @@
     "win_rate": 33.3,
     "most_played_faction": "Unknown"
   },
-  "eazyr": {
-    "player": "eazyr",
+  "ApolloEvans": {
+    "player": "ApolloEvans",
     "total_matches": 3,
-    "wins": 3,
-    "losses": 0,
+    "wins": 2,
+    "losses": 1,
     "recent_matches": [
       {
-        "date": "2025-06-17T19:29:14.000Z",
-        "replay_id": "0ac251689c35d509fec59479e3598101",
-        "map": "Supreme Isthmus v2.1",
-        "duration_formatted": "1h 3m 44s",
-        "won": true,
-        "opponent": "hehateme",
+        "date": "2025-06-19T06:26:30.000Z",
+        "replay_id": "96ad5368177f18eaa9f25faeef3f028c",
+        "map": "Taldarim_V3",
+        "duration_formatted": "23m 59s",
+        "won": false,
+        "opponent": "Trist030",
         "faction": "Unknown"
       },
       {
-        "date": "2025-06-17T19:18:12.000Z",
-        "replay_id": "74bf5168d447517d3bc6a72649a4843e",
-        "map": "Prismatic Anomaly v1.02",
-        "duration_formatted": "15m 35s",
+        "date": "2025-06-19T05:29:32.000Z",
+        "replay_id": "3ca05368d59c73f6f773f26c84236368",
+        "map": "Taldarim_V3",
+        "duration_formatted": "54m 46s",
         "won": true,
-        "opponent": "hehateme",
+        "opponent": "Trist030",
         "faction": "Unknown"
       },
       {
-        "date": "2025-06-17T19:06:53.000Z",
-        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3",
-        "map": "Theta Crystals 1.3",
-        "duration_formatted": "15m 55s",
+        "date": "2025-06-16T21:15:52.000Z",
+        "replay_id": "888950682f7c9d3a7b29fa7a5fa3e97d",
+        "map": "Tau12",
+        "duration_formatted": "41m 21s",
         "won": true,
-        "opponent": "hehateme",
+        "opponent": "Trist030",
         "faction": "Unknown"
       }
     ],
     "favorite_factions": {},
     "maps_played": {
-      "Supreme Isthmus v2.1": 1,
-      "Prismatic Anomaly v1.02": 1,
-      "Theta Crystals 1.3": 1
+      "Taldarim_V3": 2,
+      "Tau12": 1
     },
     "opponents_faced": {
-      "hehateme": 3
+      "Trist030": 3
     },
     "avg_match_duration": 0,
     "skill_progression": [
       {
-        "date": "2025-06-17T19:06:53.000Z",
-        "skill": 8.340000000000002,
-        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3"
+        "date": "2025-06-16T21:15:52.000Z",
+        "skill": 9.86,
+        "replay_id": "888950682f7c9d3a7b29fa7a5fa3e97d"
       },
       {
-        "date": "2025-06-17T19:18:12.000Z",
-        "skill": 8.340000000000002,
-        "replay_id": "74bf5168d447517d3bc6a72649a4843e"
+        "date": "2025-06-19T05:29:32.000Z",
+        "skill": 8.850000000000001,
+        "replay_id": "3ca05368d59c73f6f773f26c84236368"
       },
       {
-        "date": "2025-06-17T19:29:14.000Z",
-        "skill": 8.340000000000002,
-        "replay_id": "0ac251689c35d509fec59479e3598101"
+        "date": "2025-06-19T06:26:30.000Z",
+        "skill": 8.850000000000001,
+        "replay_id": "96ad5368177f18eaa9f25faeef3f028c"
       }
     ],
-    "win_rate": 100.0,
+    "win_rate": 66.7,
     "most_played_faction": "Unknown"
   },
-  "hehateme": {
-    "player": "hehateme",
+  "Trist030": {
+    "player": "Trist030",
     "total_matches": 3,
-    "wins": 0,
-    "losses": 3,
+    "wins": 1,
+    "losses": 2,
     "recent_matches": [
       {
-        "date": "2025-06-17T19:29:14.000Z",
-        "replay_id": "0ac251689c35d509fec59479e3598101",
-        "map": "Supreme Isthmus v2.1",
-        "duration_formatted": "1h 3m 44s",
-        "won": false,
-        "opponent": "eazyr",
+        "date": "2025-06-19T06:26:30.000Z",
+        "replay_id": "96ad5368177f18eaa9f25faeef3f028c",
+        "map": "Taldarim_V3",
+        "duration_formatted": "23m 59s",
+        "won": true,
+        "opponent": "ApolloEvans",
         "faction": "Unknown"
       },
       {
-        "date": "2025-06-17T19:18:12.000Z",
-        "replay_id": "74bf5168d447517d3bc6a72649a4843e",
-        "map": "Prismatic Anomaly v1.02",
-        "duration_formatted": "15m 35s",
+        "date": "2025-06-19T05:29:32.000Z",
+        "replay_id": "3ca05368d59c73f6f773f26c84236368",
+        "map": "Taldarim_V3",
+        "duration_formatted": "54m 46s",
         "won": false,
-        "opponent": "eazyr",
+        "opponent": "ApolloEvans",
         "faction": "Unknown"
       },
       {
-        "date": "2025-06-17T19:06:53.000Z",
-        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3",
-        "map": "Theta Crystals 1.3",
-        "duration_formatted": "15m 55s",
+        "date": "2025-06-16T21:15:52.000Z",
+        "replay_id": "888950682f7c9d3a7b29fa7a5fa3e97d",
+        "map": "Tau12",
+        "duration_formatted": "41m 21s",
         "won": false,
-        "opponent": "eazyr",
+        "opponent": "ApolloEvans",
         "faction": "Unknown"
       }
     ],
     "favorite_factions": {},
     "maps_played": {
-      "Supreme Isthmus v2.1": 1,
-      "Prismatic Anomaly v1.02": 1,
-      "Theta Crystals 1.3": 1
+      "Taldarim_V3": 2,
+      "Tau12": 1
     },
     "opponents_faced": {
-      "eazyr": 3
+      "ApolloEvans": 3
     },
     "avg_match_duration": 0,
     "skill_progression": [
       {
-        "date": "2025-06-17T19:06:53.000Z",
-        "skill": 8.340000000000002,
-        "replay_id": "cdbc51685bbf5bd103d5307b1ec44ee3"
+        "date": "2025-06-16T21:15:52.000Z",
+        "skill": 8.610000000000001,
+        "replay_id": "888950682f7c9d3a7b29fa7a5fa3e97d"
       },
       {
-        "date": "2025-06-17T19:18:12.000Z",
-        "skill": 8.340000000000002,
-        "replay_id": "74bf5168d447517d3bc6a72649a4843e"
+        "date": "2025-06-19T05:29:32.000Z",
+        "skill": 10.77,
+        "replay_id": "3ca05368d59c73f6f773f26c84236368"
       },
       {
-        "date": "2025-06-17T19:29:14.000Z",
-        "skill": 8.340000000000002,
-        "replay_id": "0ac251689c35d509fec59479e3598101"
+        "date": "2025-06-19T06:26:30.000Z",
+        "skill": 10.77,
+        "replay_id": "96ad5368177f18eaa9f25faeef3f028c"
       }
     ],
-    "win_rate": 0.0,
+    "win_rate": 33.3,
     "most_played_faction": "Unknown"
   },
   "Kob": {
@@ -2361,6 +3409,130 @@
       }
     ],
     "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "Berseker000": {
+    "player": "Berseker000",
+    "total_matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-05-23T16:13:46.000Z",
+        "replay_id": "ba9e3068616c7e6ba26ed275338d0572",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "1h 33m 46s",
+        "won": true,
+        "opponent": "galgtonold",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-23T16:06:25.000Z",
+        "replay_id": "019d306830ab4041be0528c650292c3c",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "5m 30s",
+        "won": false,
+        "opponent": "galgtonold",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-23T15:42:50.000Z",
+        "replay_id": "7a9730686d111dc1e3bd2cf6a7827aff",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "20m 52s",
+        "won": false,
+        "opponent": "galgtonold",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Prismatic Anomaly v1.02": 3
+    },
+    "opponents_faced": {
+      "galgtonold": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-23T15:42:50.000Z",
+        "skill": 7.04,
+        "replay_id": "7a9730686d111dc1e3bd2cf6a7827aff"
+      },
+      {
+        "date": "2025-05-23T16:06:25.000Z",
+        "skill": 7.04,
+        "replay_id": "019d306830ab4041be0528c650292c3c"
+      },
+      {
+        "date": "2025-05-23T16:13:46.000Z",
+        "skill": 7.04,
+        "replay_id": "ba9e3068616c7e6ba26ed275338d0572"
+      }
+    ],
+    "win_rate": 33.3,
+    "most_played_faction": "Unknown"
+  },
+  "galgtonold": {
+    "player": "galgtonold",
+    "total_matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "recent_matches": [
+      {
+        "date": "2025-05-23T16:13:46.000Z",
+        "replay_id": "ba9e3068616c7e6ba26ed275338d0572",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "1h 33m 46s",
+        "won": false,
+        "opponent": "Berseker000",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-23T16:06:25.000Z",
+        "replay_id": "019d306830ab4041be0528c650292c3c",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "5m 30s",
+        "won": true,
+        "opponent": "Berseker000",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-05-23T15:42:50.000Z",
+        "replay_id": "7a9730686d111dc1e3bd2cf6a7827aff",
+        "map": "Prismatic Anomaly v1.02",
+        "duration_formatted": "20m 52s",
+        "won": true,
+        "opponent": "Berseker000",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Prismatic Anomaly v1.02": 3
+    },
+    "opponents_faced": {
+      "Berseker000": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-05-23T15:42:50.000Z",
+        "skill": 32.42,
+        "replay_id": "7a9730686d111dc1e3bd2cf6a7827aff"
+      },
+      {
+        "date": "2025-05-23T16:06:25.000Z",
+        "skill": 32.769999999999996,
+        "replay_id": "019d306830ab4041be0528c650292c3c"
+      },
+      {
+        "date": "2025-05-23T16:13:46.000Z",
+        "skill": 32.769999999999996,
+        "replay_id": "ba9e3068616c7e6ba26ed275338d0572"
+      }
+    ],
+    "win_rate": 66.7,
     "most_played_faction": "Unknown"
   },
   "KiiiTZZZ": {

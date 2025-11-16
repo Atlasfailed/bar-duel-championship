@@ -1,0 +1,64 @@
+{
+  "players": [
+    "CommanderXy",
+    "Timastartis"
+  ],
+  "series_winner": "CommanderXy",
+  "wins": {
+    "CommanderXy": 2,
+    "Timastartis": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "031d166910c05c3002e54321349ef66d",
+      "map": "Center Command BAR v1.0",
+      "winner": "CommanderXy",
+      "duration_ms": 1614167,
+      "seed_ratings": {
+        "CommanderXy": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "Timastartis": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "ad231669a8325298c1ee64565abd624f",
+      "map": "Center Command BAR v1.0",
+      "winner": "Timastartis",
+      "duration_ms": 2360700,
+      "seed_ratings": {
+        "CommanderXy": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "Timastartis": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "6f3016693b5b8a61b416a71c0b3ce190",
+      "map": "Pinewood_Derby_V1",
+      "winner": "CommanderXy",
+      "duration_ms": 2329100,
+      "seed_ratings": {
+        "CommanderXy": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "Timastartis": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-16T12:56:30.110973+00:00",
+  "submitted_by": "atlasfailed"
+}

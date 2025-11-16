@@ -15,7 +15,7 @@ import os
 
 # Import main functions
 from process_submission import process_new_submissions
-from extract_replay_data import extract_replay_data
+from extract_replay_data import extract_replay_data_incremental
 
 if __name__ == "__main__":
     try:
@@ -25,11 +25,11 @@ if __name__ == "__main__":
         print("=" * 60)
         process_new_submissions()
         
-        # Step 2: Update replay database and player match history
+        # Step 2: Update replay database and player match history (incremental)
         print("\n" + "=" * 60)
         print("Step 2: Updating replay database and player match history...")
         print("=" * 60)
-        extract_replay_data()
+        extract_replay_data_incremental()
         
         print("\n✅ All updates complete!")
         

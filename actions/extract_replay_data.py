@@ -50,18 +50,26 @@ from extraction_config import (
 
 def fetch_replay_details(replay_id: str) -> Optional[Dict[str, Any]]:
     """Fetch detailed replay information from BAR API."""
+    # Skip test/fake replay IDs
+    if replay_id.startswith("test") or len(replay_id) < 32:
+        print(f"  Skipping test/fake replay ID: {replay_id}")
+        return None
+    
     try:
         url = f"{BAR_API_BASE}/replays/{replay_id}"
         response = requests.get(url, timeout=API_TIMEOUT_SECONDS)
         
         if response.status_code == 200:
             return response.json()
+        elif response.status_code == 404:
+            print(f"  Warning: Replay {replay_id} not found (404) - skipping")
+            return None
         else:
-            print(f"Failed to fetch replay {replay_id}: HTTP {response.status_code}")
+            print(f"  Failed to fetch replay {replay_id}: HTTP {response.status_code}")
             return None
         
     except Exception as e:
-        print(f"Error fetching replay {replay_id}: {e}")
+        print(f"  Error fetching replay {replay_id}: {e}")
         return None
 
 
@@ -440,9 +448,113 @@ def format_duration(duration_ms: int) -> str:
 # Main functions
 # ==============================
 
+def load_existing_replay_database() -> List[Dict[str, Any]]:
+    """Load existing replay database."""
+    if not os.path.exists(REPLAY_DATABASE_FILE):
+        return []
+    
+    try:
+        with open(REPLAY_DATABASE_FILE, 'r') as f:
+            data = json.load(f)
+            if isinstance(data, list):
+                return data
+            return []
+    except Exception as e:
+        print(f"Failed to load existing replay database: {e}")
+        return []
+
+def load_processed_replay_submissions() -> set:
+    """Load set of already processed submission filenames for replay data."""
+    # Use the same file as process_submission.py for consistency
+    processed_file = "public/data/.processed_submissions.json"
+    if not os.path.exists(processed_file):
+        return set()
+    
+    try:
+        with open(processed_file, 'r') as f:
+            data = json.load(f)
+            return set(data.get("processed", []))
+    except Exception as e:
+        print(f"Failed to load processed submissions: {e}")
+        return set()
+
+def extract_replay_data_incremental():
+    """Incremental update of replay data - only processes new submissions."""
+    print("Loading existing replay database...")
+    existing_replays = load_existing_replay_database()
+    existing_replay_ids = {r.get("id") for r in existing_replays if r.get("id")}
+    print(f"Found {len(existing_replays)} existing replays")
+    
+    # Load processed submissions
+    processed = load_processed_replay_submissions()
+    print(f"Already processed: {len(processed)} submissions")
+    
+    # Get new submissions
+    submissions_path = Path(SUBMISSIONS_DIR)
+    if not submissions_path.exists():
+        print("No submissions directory found")
+        return
+    
+    new_submissions = []
+    for file in sorted(submissions_path.glob("*.json")):
+        if file.name not in processed:
+            try:
+                with open(file, 'r') as f:
+                    data = json.load(f)
+                    new_submissions.append((file.name, data))
+            except Exception as e:
+                print(f"Failed to load {file.name}: {e}")
+    
+    if not new_submissions:
+        print("No new submissions to process for replay data")
+        return
+    
+    print(f"Processing {len(new_submissions)} new submissions for replay data...")
+    
+    # Extract new replay data
+    new_replay_database = extract_replay_database([sub for _, sub in new_submissions])
+    
+    # Merge with existing replays (new replays take precedence)
+    replay_id_map = {r.get("id"): r for r in existing_replays if r.get("id")}
+    for new_replay in new_replay_database:
+        replay_id = new_replay.get("id")
+        if replay_id:
+            replay_id_map[replay_id] = new_replay
+    
+    # Convert back to list and sort by date
+    replay_database = list(replay_id_map.values())
+    replay_database.sort(key=lambda x: x.get("date", ""), reverse=True)
+    
+    # Generate player match histories
+    player_histories = generate_player_match_history(replay_database)
+    
+    # Ensure output directory exists
+    os.makedirs(os.path.dirname(REPLAY_DATABASE_FILE), exist_ok=True)
+    os.makedirs(os.path.dirname(PLAYER_MATCH_HISTORY_FILE), exist_ok=True)
+    
+    # Save replay database
+    with open(REPLAY_DATABASE_FILE, 'w') as f:
+        json.dump(replay_database, f, indent=2)
+    
+    # Save player match histories
+    with open(PLAYER_MATCH_HISTORY_FILE, 'w') as f:
+        json.dump(player_histories, f, indent=2)
+    
+    print(f"Replay database saved to {REPLAY_DATABASE_FILE}")
+    print(f"Player match histories saved to {PLAYER_MATCH_HISTORY_FILE}")
+    print(f"Updated at {datetime.now(timezone.utc).isoformat()}Z")
+    
+    # Print summary
+    if replay_database:
+        new_count = len(new_replay_database)
+        print(f"\nSummary:")
+        print(f"  New replays added: {new_count}")
+        print(f"  Total replays: {len(replay_database)}")
+        print(f"  Players tracked: {len(player_histories)}")
+
 def extract_replay_data():
-    """Main function to extract replay data."""
-    print("Extracting replay data...")
+    """Main function to extract replay data (full rebuild)."""
+    print("Extracting replay data (full rebuild)...")
     
     # Load submissions
     submissions = process_submissions_for_replay_data()

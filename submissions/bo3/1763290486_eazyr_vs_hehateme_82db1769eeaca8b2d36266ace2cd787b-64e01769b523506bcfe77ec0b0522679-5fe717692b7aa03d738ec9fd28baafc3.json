@@ -1,0 +1,64 @@
+{
+  "players": [
+    "eazyr",
+    "hehateme"
+  ],
+  "series_winner": "hehateme",
+  "wins": {
+    "eazyr": 0,
+    "hehateme": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "82db1769eeaca8b2d36266ace2cd787b",
+      "map": "Red Rock Desert v2",
+      "winner": "hehateme",
+      "duration_ms": 2032067,
+      "seed_ratings": {
+        "hehateme": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "eazyr": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "64e01769b523506bcfe77ec0b0522679",
+      "map": "Aethermoor Creek 1.0",
+      "winner": "hehateme",
+      "duration_ms": 3128667,
+      "seed_ratings": {
+        "hehateme": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "eazyr": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "5fe717692b7aa03d738ec9fd28baafc3",
+      "map": "All That Simmers v1.1.1",
+      "winner": "hehateme",
+      "duration_ms": 3388534,
+      "seed_ratings": {
+        "hehateme": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "eazyr": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-16T10:54:46.372451+00:00",
+  "submitted_by": "atlasfailed"
+}

@@ -1,5 +1,89 @@
 [
   {
+    "id": "fb22196960a05709cd40d82ce778b12c",
+    "url": "https://www.beyondallreason.info/replays?gameId=fb22196960a05709cd40d82ce778b12c",
+    "date": "2025-11-16T01:03:55.000Z",
+    "submitted_at": "2025-11-16T11:20:37.032350+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Small_Supreme_Battlefield_V3",
+    "duration_ms": 5231434,
+    "duration_formatted": "1h 27m 11s",
+    "winner": "YunaXTuna",
+    "players": [
+      {
+        "name": "ReeseChloris1",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "YunaXTuna",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "ReeseChloris1",
+      "YunaXTuna"
+    ],
+    "series_winner": "YunaXTuna",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28917-02acca8",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-small_supreme_battlefield_v3"
+    ]
+  },
+  {
+    "id": "ea181969cbd2bec1a6e7590fcade2110",
+    "url": "https://www.beyondallreason.info/replays?gameId=ea181969cbd2bec1a6e7590fcade2110",
+    "date": "2025-11-16T00:20:58.000Z",
+    "submitted_at": "2025-11-16T11:20:37.032350+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Tangerine_Remake 1.0",
+    "duration_ms": 1554867,
+    "duration_formatted": "25m 54s",
+    "winner": "YunaXTuna",
+    "players": [
+      {
+        "name": "ReeseChloris1",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "YunaXTuna",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "ReeseChloris1",
+      "YunaXTuna"
+    ],
+    "series_winner": "YunaXTuna",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28917-02acca8",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-tangerine_remake-10"
+    ]
+  },
+  {
     "id": "978d18691d6cf8305e725831a95f3863",
     "url": "https://www.beyondallreason.info/replays?gameId=978d18691d6cf8305e725831a95f3863",
     "date": "2025-11-15T14:26:31.000Z",
@@ -417,6 +501,90 @@
       "long",
       "beginner-friendly",
       "map-red-rock-desert-v2"
+    ]
+  },
+  {
+    "id": "77cf176949e5bc1ac17d29b04fec8bc3",
+    "url": "https://www.beyondallreason.info/replays?gameId=77cf176949e5bc1ac17d29b04fec8bc3",
+    "date": "2025-11-15T00:55:19.000Z",
+    "submitted_at": "2025-11-16T11:13:19.844702+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Aethermoor Creek 1.0",
+    "duration_ms": 4471700,
+    "duration_formatted": "1h 14m 31s",
+    "winner": "rikstagram91",
+    "players": [
+      {
+        "name": "GibChechens",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 15.27,
+        "sigma": 7.62,
+        "skill_estimate": 7.6499999999999995
+      },
+      {
+        "name": "rikstagram91",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.58,
+        "sigma": 3.76,
+        "skill_estimate": 12.819999999999999
+      }
+    ],
+    "player_names": [
+      "GibChechens",
+      "rikstagram91"
+    ],
+    "series_winner": "rikstagram91",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28898-8bc4afb",
+    "is_tournament": true,
+    "tags": [
+      "epic",
+      "beginner-friendly",
+      "map-aethermoor-creek-10"
+    ]
+  },
+  {
+    "id": "dec3176927895e5e27fe7366c1e78896",
+    "url": "https://www.beyondallreason.info/replays?gameId=dec3176927895e5e27fe7366c1e78896",
+    "date": "2025-11-15T00:05:50.000Z",
+    "submitted_at": "2025-11-16T11:13:19.844702+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Geyser Plains BAR v1.2.1",
+    "duration_ms": 2460700,
+    "duration_formatted": "41m 0s",
+    "winner": "rikstagram91",
+    "players": [
+      {
+        "name": "GibChechens",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 18.92,
+        "sigma": 8.01,
+        "skill_estimate": 10.910000000000002
+      },
+      {
+        "name": "rikstagram91",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 15.67,
+        "sigma": 3.78,
+        "skill_estimate": 11.89
+      }
+    ],
+    "player_names": [
+      "GibChechens",
+      "rikstagram91"
+    ],
+    "series_winner": "rikstagram91",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28898-8bc4afb",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-geyser-plains-bar-v121"
     ]
   },
   {

@@ -1,4 +1,102 @@
 {
+  "ReeseChloris1": {
+    "player": "ReeseChloris1",
+    "total_matches": 2,
+    "wins": 0,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-11-16T01:03:55.000Z",
+        "replay_id": "fb22196960a05709cd40d82ce778b12c",
+        "map": "Small_Supreme_Battlefield_V3",
+        "duration_formatted": "1h 27m 11s",
+        "won": false,
+        "opponent": "YunaXTuna",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-16T00:20:58.000Z",
+        "replay_id": "ea181969cbd2bec1a6e7590fcade2110",
+        "map": "Tangerine_Remake 1.0",
+        "duration_formatted": "25m 54s",
+        "won": false,
+        "opponent": "YunaXTuna",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Small_Supreme_Battlefield_V3": 1,
+      "Tangerine_Remake 1.0": 1
+    },
+    "opponents_faced": {
+      "YunaXTuna": 2
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-16T00:20:58.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "ea181969cbd2bec1a6e7590fcade2110"
+      },
+      {
+        "date": "2025-11-16T01:03:55.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "fb22196960a05709cd40d82ce778b12c"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "YunaXTuna": {
+    "player": "YunaXTuna",
+    "total_matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-11-16T01:03:55.000Z",
+        "replay_id": "fb22196960a05709cd40d82ce778b12c",
+        "map": "Small_Supreme_Battlefield_V3",
+        "duration_formatted": "1h 27m 11s",
+        "won": true,
+        "opponent": "ReeseChloris1",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-16T00:20:58.000Z",
+        "replay_id": "ea181969cbd2bec1a6e7590fcade2110",
+        "map": "Tangerine_Remake 1.0",
+        "duration_formatted": "25m 54s",
+        "won": true,
+        "opponent": "ReeseChloris1",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Small_Supreme_Battlefield_V3": 1,
+      "Tangerine_Remake 1.0": 1
+    },
+    "opponents_faced": {
+      "ReeseChloris1": 2
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-16T00:20:58.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "ea181969cbd2bec1a6e7590fcade2110"
+      },
+      {
+        "date": "2025-11-16T01:03:55.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "fb22196960a05709cd40d82ce778b12c"
+      }
+    ],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
   "DrJayTray": {
     "player": "DrJayTray",
     "total_matches": 3,
@@ -597,6 +695,104 @@
       }
     ],
     "win_rate": 50.0,
+    "most_played_faction": "Unknown"
+  },
+  "GibChechens": {
+    "player": "GibChechens",
+    "total_matches": 2,
+    "wins": 0,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T00:55:19.000Z",
+        "replay_id": "77cf176949e5bc1ac17d29b04fec8bc3",
+        "map": "Aethermoor Creek 1.0",
+        "duration_formatted": "1h 14m 31s",
+        "won": false,
+        "opponent": "rikstagram91",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T00:05:50.000Z",
+        "replay_id": "dec3176927895e5e27fe7366c1e78896",
+        "map": "Geyser Plains BAR v1.2.1",
+        "duration_formatted": "41m 0s",
+        "won": false,
+        "opponent": "rikstagram91",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Aethermoor Creek 1.0": 1,
+      "Geyser Plains BAR v1.2.1": 1
+    },
+    "opponents_faced": {
+      "rikstagram91": 2
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-15T00:05:50.000Z",
+        "skill": 10.910000000000002,
+        "replay_id": "dec3176927895e5e27fe7366c1e78896"
+      },
+      {
+        "date": "2025-11-15T00:55:19.000Z",
+        "skill": 7.6499999999999995,
+        "replay_id": "77cf176949e5bc1ac17d29b04fec8bc3"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "rikstagram91": {
+    "player": "rikstagram91",
+    "total_matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-11-15T00:55:19.000Z",
+        "replay_id": "77cf176949e5bc1ac17d29b04fec8bc3",
+        "map": "Aethermoor Creek 1.0",
+        "duration_formatted": "1h 14m 31s",
+        "won": true,
+        "opponent": "GibChechens",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-15T00:05:50.000Z",
+        "replay_id": "dec3176927895e5e27fe7366c1e78896",
+        "map": "Geyser Plains BAR v1.2.1",
+        "duration_formatted": "41m 0s",
+        "won": true,
+        "opponent": "GibChechens",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Aethermoor Creek 1.0": 1,
+      "Geyser Plains BAR v1.2.1": 1
+    },
+    "opponents_faced": {
+      "GibChechens": 2
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-15T00:05:50.000Z",
+        "skill": 11.89,
+        "replay_id": "dec3176927895e5e27fe7366c1e78896"
+      },
+      {
+        "date": "2025-11-15T00:55:19.000Z",
+        "skill": 12.819999999999999,
+        "replay_id": "77cf176949e5bc1ac17d29b04fec8bc3"
+      }
+    ],
+    "win_rate": 100.0,
     "most_played_faction": "Unknown"
   },
   "Qxo0": {

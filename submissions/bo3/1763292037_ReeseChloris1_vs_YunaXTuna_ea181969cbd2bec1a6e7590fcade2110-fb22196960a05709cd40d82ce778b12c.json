@@ -1,0 +1,48 @@
+{
+  "players": [
+    "ReeseChloris1",
+    "YunaXTuna"
+  ],
+  "series_winner": "YunaXTuna",
+  "wins": {
+    "ReeseChloris1": 0,
+    "YunaXTuna": 2
+  },
+  "total_games": 2,
+  "matches": [
+    {
+      "id": "ea181969cbd2bec1a6e7590fcade2110",
+      "map": "Tangerine_Remake 1.0",
+      "winner": "YunaXTuna",
+      "duration_ms": 1554867,
+      "seed_ratings": {
+        "YunaXTuna": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "ReeseChloris1": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "fb22196960a05709cd40d82ce778b12c",
+      "map": "Small_Supreme_Battlefield_V3",
+      "winner": "YunaXTuna",
+      "duration_ms": 5231434,
+      "seed_ratings": {
+        "YunaXTuna": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "ReeseChloris1": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-16T11:20:37.032350+00:00",
+  "submitted_by": "atlasfailed"
+}

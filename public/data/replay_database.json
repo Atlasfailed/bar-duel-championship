@@ -924,6 +924,132 @@
     ]
   },
   {
+    "id": "6f3016693b5b8a61b416a71c0b3ce190",
+    "url": "https://www.beyondallreason.info/replays?gameId=6f3016693b5b8a61b416a71c0b3ce190",
+    "date": "2025-11-13T19:24:31.000Z",
+    "submitted_at": "2025-11-16T12:56:30.110973+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Pinewood_Derby_V1",
+    "duration_ms": 2329100,
+    "duration_formatted": "38m 49s",
+    "winner": "CommanderXy",
+    "players": [
+      {
+        "name": "CommanderXy",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "Timastartis",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "CommanderXy",
+      "Timastartis"
+    ],
+    "series_winner": "CommanderXy",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28880-bf7ac6e",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-pinewood_derby_v1"
+    ]
+  },
+  {
+    "id": "ad231669a8325298c1ee64565abd624f",
+    "url": "https://www.beyondallreason.info/replays?gameId=ad231669a8325298c1ee64565abd624f",
+    "date": "2025-11-13T18:30:05.000Z",
+    "submitted_at": "2025-11-16T12:56:30.110973+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Center Command BAR v1.0",
+    "duration_ms": 2360700,
+    "duration_formatted": "39m 20s",
+    "winner": "Timastartis",
+    "players": [
+      {
+        "name": "CommanderXy",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "Timastartis",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "CommanderXy",
+      "Timastartis"
+    ],
+    "series_winner": "CommanderXy",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28880-bf7ac6e",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-center-command-bar-v10"
+    ]
+  },
+  {
+    "id": "031d166910c05c3002e54321349ef66d",
+    "url": "https://www.beyondallreason.info/replays?gameId=031d166910c05c3002e54321349ef66d",
+    "date": "2025-11-13T18:01:39.000Z",
+    "submitted_at": "2025-11-16T12:56:30.110973+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Center Command BAR v1.0",
+    "duration_ms": 1614167,
+    "duration_formatted": "26m 54s",
+    "winner": "CommanderXy",
+    "players": [
+      {
+        "name": "CommanderXy",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "Timastartis",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "CommanderXy",
+      "Timastartis"
+    ],
+    "series_winner": "CommanderXy",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28880-bf7ac6e",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-center-command-bar-v10"
+    ]
+  },
+  {
     "id": "fd2a686878fbe4edfc3e60c0d605994b",
     "url": "https://www.beyondallreason.info/replays?gameId=fd2a686878fbe4edfc3e60c0d605994b",
     "date": "2025-07-04T19:26:53.000Z",

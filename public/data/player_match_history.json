@@ -1049,6 +1049,132 @@
     "win_rate": 33.3,
     "most_played_faction": "Unknown"
   },
+  "CommanderXy": {
+    "player": "CommanderXy",
+    "total_matches": 3,
+    "wins": 2,
+    "losses": 1,
+    "recent_matches": [
+      {
+        "date": "2025-11-13T19:24:31.000Z",
+        "replay_id": "6f3016693b5b8a61b416a71c0b3ce190",
+        "map": "Pinewood_Derby_V1",
+        "duration_formatted": "38m 49s",
+        "won": true,
+        "opponent": "Timastartis",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-13T18:30:05.000Z",
+        "replay_id": "ad231669a8325298c1ee64565abd624f",
+        "map": "Center Command BAR v1.0",
+        "duration_formatted": "39m 20s",
+        "won": false,
+        "opponent": "Timastartis",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-13T18:01:39.000Z",
+        "replay_id": "031d166910c05c3002e54321349ef66d",
+        "map": "Center Command BAR v1.0",
+        "duration_formatted": "26m 54s",
+        "won": true,
+        "opponent": "Timastartis",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Pinewood_Derby_V1": 1,
+      "Center Command BAR v1.0": 2
+    },
+    "opponents_faced": {
+      "Timastartis": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-13T18:01:39.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "031d166910c05c3002e54321349ef66d"
+      },
+      {
+        "date": "2025-11-13T18:30:05.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "ad231669a8325298c1ee64565abd624f"
+      },
+      {
+        "date": "2025-11-13T19:24:31.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "6f3016693b5b8a61b416a71c0b3ce190"
+      }
+    ],
+    "win_rate": 66.7,
+    "most_played_faction": "Unknown"
+  },
+  "Timastartis": {
+    "player": "Timastartis",
+    "total_matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "recent_matches": [
+      {
+        "date": "2025-11-13T19:24:31.000Z",
+        "replay_id": "6f3016693b5b8a61b416a71c0b3ce190",
+        "map": "Pinewood_Derby_V1",
+        "duration_formatted": "38m 49s",
+        "won": false,
+        "opponent": "CommanderXy",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-13T18:30:05.000Z",
+        "replay_id": "ad231669a8325298c1ee64565abd624f",
+        "map": "Center Command BAR v1.0",
+        "duration_formatted": "39m 20s",
+        "won": true,
+        "opponent": "CommanderXy",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-13T18:01:39.000Z",
+        "replay_id": "031d166910c05c3002e54321349ef66d",
+        "map": "Center Command BAR v1.0",
+        "duration_formatted": "26m 54s",
+        "won": false,
+        "opponent": "CommanderXy",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Pinewood_Derby_V1": 1,
+      "Center Command BAR v1.0": 2
+    },
+    "opponents_faced": {
+      "CommanderXy": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-13T18:01:39.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "031d166910c05c3002e54321349ef66d"
+      },
+      {
+        "date": "2025-11-13T18:30:05.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "ad231669a8325298c1ee64565abd624f"
+      },
+      {
+        "date": "2025-11-13T19:24:31.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "6f3016693b5b8a61b416a71c0b3ce190"
+      }
+    ],
+    "win_rate": 33.3,
+    "most_played_faction": "Unknown"
+  },
   "GamingHFC": {
     "player": "GamingHFC",
     "total_matches": 3,

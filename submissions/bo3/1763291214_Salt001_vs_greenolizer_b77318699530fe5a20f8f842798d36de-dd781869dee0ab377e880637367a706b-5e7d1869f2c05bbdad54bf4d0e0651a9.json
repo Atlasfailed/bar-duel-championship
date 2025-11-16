@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Salt001",
+    "greenolizer"
+  ],
+  "series_winner": "Salt001",
+  "wins": {
+    "Salt001": 2,
+    "greenolizer": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "b77318699530fe5a20f8f842798d36de",
+      "map": "Asteroid_Mines_V3",
+      "winner": "Salt001",
+      "duration_ms": 993200,
+      "seed_ratings": {
+        "greenolizer": {
+          "mu": 19.61,
+          "sigma": 8.07
+        },
+        "Salt001": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "dd781869dee0ab377e880637367a706b",
+      "map": "Full Metal Plate 1.7",
+      "winner": "Salt001",
+      "duration_ms": 942433,
+      "seed_ratings": {
+        "greenolizer": {
+          "mu": 19.61,
+          "sigma": 8.07
+        },
+        "Salt001": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "5e7d1869f2c05bbdad54bf4d0e0651a9",
+      "map": "Full Metal Plate 1.7",
+      "winner": "greenolizer",
+      "duration_ms": 4960934,
+      "seed_ratings": {
+        "greenolizer": {
+          "mu": 19.61,
+          "sigma": 8.07
+        },
+        "Salt001": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-16T11:06:53.962512+00:00",
+  "submitted_by": "atlasfailed"
+}

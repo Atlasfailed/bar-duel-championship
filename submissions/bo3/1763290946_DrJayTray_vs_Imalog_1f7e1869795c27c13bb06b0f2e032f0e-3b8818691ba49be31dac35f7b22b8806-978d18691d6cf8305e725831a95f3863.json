@@ -1,0 +1,64 @@
+{
+  "players": [
+    "DrJayTray",
+    "Imalog"
+  ],
+  "series_winner": "Imalog",
+  "wins": {
+    "DrJayTray": 0,
+    "Imalog": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "1f7e1869795c27c13bb06b0f2e032f0e",
+      "map": "Aethermoor Creek 1.0",
+      "winner": "Imalog",
+      "duration_ms": 2021000,
+      "seed_ratings": {
+        "Imalog": {
+          "mu": 23.89,
+          "sigma": 6.05
+        },
+        "DrJayTray": {
+          "mu": 19.78,
+          "sigma": 8.03
+        }
+      }
+    },
+    {
+      "id": "3b8818691ba49be31dac35f7b22b8806",
+      "map": "Shore_to_Shore_V3",
+      "winner": "Imalog",
+      "duration_ms": 1272133,
+      "seed_ratings": {
+        "DrJayTray": {
+          "mu": 19.78,
+          "sigma": 8.03
+        },
+        "Imalog": {
+          "mu": 23.89,
+          "sigma": 6.05
+        }
+      }
+    },
+    {
+      "id": "978d18691d6cf8305e725831a95f3863",
+      "map": "Center Command BAR v1.0",
+      "winner": "Imalog",
+      "duration_ms": 4208567,
+      "seed_ratings": {
+        "DrJayTray": {
+          "mu": 19.78,
+          "sigma": 8.03
+        },
+        "Imalog": {
+          "mu": 23.89,
+          "sigma": 6.05
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-16T11:02:26.152534+00:00",
+  "submitted_by": "atlasfailed"
+}

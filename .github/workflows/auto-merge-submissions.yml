@@ -90,7 +90,7 @@ jobs:
       - name: Install dependencies
         if: steps.validate.outputs.valid == 'true'
         run: |
-          pip install openskill
+          pip install -r actions/requirements.txt
       
       - name: Update Leaderboard
         if: steps.validate.outputs.valid == 'true'

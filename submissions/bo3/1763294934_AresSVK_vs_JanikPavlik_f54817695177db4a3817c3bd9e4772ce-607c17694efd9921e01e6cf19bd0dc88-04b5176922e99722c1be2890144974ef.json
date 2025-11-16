@@ -1,0 +1,64 @@
+{
+  "players": [
+    "AresSVK",
+    "JanikPavlik"
+  ],
+  "series_winner": "JanikPavlik",
+  "wins": {
+    "AresSVK": 1,
+    "JanikPavlik": 2
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "f54817695177db4a3817c3bd9e4772ce",
+      "map": "Aurelia v4.1",
+      "winner": "JanikPavlik",
+      "duration_ms": 1813133,
+      "seed_ratings": {
+        "JanikPavlik": {
+          "mu": 25.94,
+          "sigma": 7.58
+        },
+        "AresSVK": {
+          "mu": 15.87,
+          "sigma": 7.58
+        }
+      }
+    },
+    {
+      "id": "607c17694efd9921e01e6cf19bd0dc88",
+      "map": "Canis River v1.4",
+      "winner": "AresSVK",
+      "duration_ms": 2486234,
+      "seed_ratings": {
+        "JanikPavlik": {
+          "mu": 25.94,
+          "sigma": 7.58
+        },
+        "AresSVK": {
+          "mu": 15.87,
+          "sigma": 7.58
+        }
+      }
+    },
+    {
+      "id": "04b5176922e99722c1be2890144974ef",
+      "map": "Nine_Metal_Islands_V1",
+      "winner": "JanikPavlik",
+      "duration_ms": 2176867,
+      "seed_ratings": {
+        "JanikPavlik": {
+          "mu": 25.94,
+          "sigma": 7.58
+        },
+        "AresSVK": {
+          "mu": 15.87,
+          "sigma": 7.58
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-16T12:08:54.510623+00:00",
+  "submitted_by": "atlasfailed"
+}

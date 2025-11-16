@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Gretya",
+    "plwtx"
+  ],
+  "series_winner": "Gretya",
+  "wins": {
+    "Gretya": 2,
+    "plwtx": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "3363176913bc160225c7759d1b1fe045",
+      "map": "Great Divide V1",
+      "winner": "Gretya",
+      "duration_ms": 2573000,
+      "seed_ratings": {
+        "plwtx": {
+          "mu": 10.85,
+          "sigma": 8.12
+        },
+        "Gretya": {
+          "mu": 16.33,
+          "sigma": 8.14
+        }
+      }
+    },
+    {
+      "id": "8876176961e3fc53f35891ee8fe82863",
+      "map": "Glacier Pass 1.2",
+      "winner": "Gretya",
+      "duration_ms": 3878300,
+      "seed_ratings": {
+        "plwtx": {
+          "mu": 10.85,
+          "sigma": 8.12
+        },
+        "Gretya": {
+          "mu": 16.33,
+          "sigma": 8.14
+        }
+      }
+    },
+    {
+      "id": "5d7b1869bc2ab878adfd4bbd17b776eb",
+      "map": "Pinewood_Derby_V1",
+      "winner": "plwtx",
+      "duration_ms": 2855033,
+      "seed_ratings": {
+        "plwtx": {
+          "mu": 10.85,
+          "sigma": 8.12
+        },
+        "Gretya": {
+          "mu": 16.33,
+          "sigma": 8.14
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-16T10:47:15.625318+00:00",
+  "submitted_by": "atlasfailed"
+}

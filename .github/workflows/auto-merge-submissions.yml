@@ -105,12 +105,21 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          if git diff --quiet public/data/leaderboard.json docs/data/leaderboard.json public/data/player_match_history.json docs/data/player_match_history.json public/data/replay_database.json docs/data/replay_database.json; then
+          # Always commit .processed_submissions.json if it exists (critical for tracking)
+          if [ -f "public/data/.processed_submissions.json" ]; then
+            git add public/data/.processed_submissions.json
+          fi
+          
+          if git diff --quiet public/data/leaderboard.json docs/data/leaderboard.json public/data/player_match_history.json docs/data/player_match_history.json public/data/replay_database.json docs/data/replay_database.json public/data/.processed_submissions.json 2>/dev/null; then
             echo "📌 No leaderboard changes to commit"
           else
             # Force add files that are in .gitignore (to allow CI updates but prevent local interference)
             git add -f public/data/leaderboard.json public/data/player_match_history.json public/data/replay_database.json
             git add -f docs/data/leaderboard.json docs/data/player_match_history.json docs/data/replay_database.json
+            # Add processed submissions file (not in .gitignore, but ensure it's committed)
+            if [ -f "public/data/.processed_submissions.json" ]; then
+              git add public/data/.processed_submissions.json
+            fi
             git commit -m "📊 Auto-update leaderboard after submission [skip ci]"
             git push
             echo "✅ Leaderboard changes pushed"

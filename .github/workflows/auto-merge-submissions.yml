@@ -108,7 +108,9 @@ jobs:
           if git diff --quiet public/data/leaderboard.json docs/data/leaderboard.json public/data/player_match_history.json docs/data/player_match_history.json public/data/replay_database.json docs/data/replay_database.json; then
             echo "📌 No leaderboard changes to commit"
           else
-            git add public/data/*.json docs/data/*.json
+            # Force add files that are in .gitignore (to allow CI updates but prevent local interference)
+            git add -f public/data/leaderboard.json public/data/player_match_history.json public/data/replay_database.json
+            git add -f docs/data/leaderboard.json docs/data/player_match_history.json docs/data/replay_database.json
             git commit -m "📊 Auto-update leaderboard after submission [skip ci]"
             git push
             echo "✅ Leaderboard changes pushed"

@@ -16,7 +16,7 @@ import os
 import sys
 from pathlib import Path
 from datetime import datetime, timezone
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Tuple
 import requests
 import time
 
@@ -478,32 +478,42 @@ def load_processed_replay_submissions() -> set:
         print(f"Failed to load processed submissions: {e}")
         return set()
 
-def extract_replay_data_incremental():
-    """Incremental update of replay data - only processes new submissions."""
+def extract_replay_data_incremental(new_submissions_list: Optional[List[Tuple[str, Dict[str, Any]]]] = None):
+    """Incremental update of replay data - only processes new submissions.
+    
+    Args:
+        new_submissions_list: Optional list of (filename, submission_data) tuples.
+                             If None, will load from processed submissions file.
+    """
     print("Loading existing replay database...")
     existing_replays = load_existing_replay_database()
     existing_replay_ids = {r.get("id") for r in existing_replays if r.get("id")}
     print(f"Found {len(existing_replays)} existing replays")
     
-    # Load processed submissions
-    processed = load_processed_replay_submissions()
-    print(f"Already processed: {len(processed)} submissions")
-    
-    # Get new submissions
-    submissions_path = Path(SUBMISSIONS_DIR)
-    if not submissions_path.exists():
-        print("No submissions directory found")
-        return
-    
-    new_submissions = []
-    for file in sorted(submissions_path.glob("*.json")):
-        if file.name not in processed:
-            try:
-                with open(file, 'r') as f:
-                    data = json.load(f)
-                    new_submissions.append((file.name, data))
-            except Exception as e:
-                print(f"Failed to load {file.name}: {e}")
+    # Get new submissions - either from parameter or from file
+    if new_submissions_list is None:
+        # Load processed submissions
+        processed = load_processed_replay_submissions()
+        print(f"Already processed: {len(processed)} submissions")
+        
+        # Get new submissions
+        submissions_path = Path(SUBMISSIONS_DIR)
+        if not submissions_path.exists():
+            print("No submissions directory found")
+            return
+        
+        new_submissions = []
+        for file in sorted(submissions_path.glob("*.json")):
+            if file.name not in processed:
+                try:
+                    with open(file, 'r') as f:
+                        data = json.load(f)
+                        new_submissions.append((file.name, data))
+                except Exception as e:
+                    print(f"Failed to load {file.name}: {e}")
+    else:
+        new_submissions = new_submissions_list
+        print(f"Processing {len(new_submissions)} submissions for replay data...")
     
     if not new_submissions:
         print("No new submissions to process for replay data")

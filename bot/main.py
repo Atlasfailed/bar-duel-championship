@@ -477,6 +477,38 @@ async def on_ready():
     print(f"📊 Serving {len(client.guilds)} servers")
     
     try:
+        # Remove any old commands that aren't /submit using HTTP API
+        try:
+            # Fetch existing global commands
+            async with aiohttp.ClientSession() as session:
+                headers = {
+                    "Authorization": f"Bot {DISCORD_TOKEN}",
+                    "Content-Type": "application/json"
+                }
+                app_id = client.user.id if client.user else None
+                
+                if app_id:
+                    # Get existing commands
+                    async with session.get(
+                        f"https://discord.com/api/v10/applications/{app_id}/commands",
+                        headers=headers
+                    ) as resp:
+                        if resp.status == 200:
+                            commands = await resp.json()
+                            # Delete commands that aren't /submit
+                            for cmd in commands:
+                                if cmd.get("name") != "submit":
+                                    cmd_id = cmd.get("id")
+                                    async with session.delete(
+                                        f"https://discord.com/api/v10/applications/{app_id}/commands/{cmd_id}",
+                                        headers=headers
+                                    ) as del_resp:
+                                        if del_resp.status in (200, 204):
+                                            print(f"🗑️  Removed old command: /{cmd.get('name')}")
+        except Exception as e:
+            print(f"⚠️  Could not remove old commands: {e}")
+        
+        # Sync commands (will sync only /submit which is registered)
         synced = await tree.sync()
         print(f"✅ Synced {len(synced)} command(s)")
         print("📋 Active command: /submit")

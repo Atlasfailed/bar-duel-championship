@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Gsealy",
+    "gman001"
+  ],
+  "series_winner": "Gsealy",
+  "wins": {
+    "Gsealy": 2,
+    "gman001": 1
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "30ff18697a64f524c521cfaaa7151ec9",
+      "map": "The Tartar Steppe v1.1",
+      "winner": "gman001",
+      "duration_ms": 1733667,
+      "seed_ratings": {
+        "Gsealy": {
+          "mu": 4.73,
+          "sigma": 6.72
+        },
+        "gman001": {
+          "mu": 7.31,
+          "sigma": 6.88
+        }
+      }
+    },
+    {
+      "id": "ab0619693d98f91c2902b02cf595be7a",
+      "map": "The Tartar Steppe v1.1",
+      "winner": "Gsealy",
+      "duration_ms": 1889200,
+      "seed_ratings": {
+        "Gsealy": {
+          "mu": 4.73,
+          "sigma": 6.72
+        },
+        "gman001": {
+          "mu": 7.31,
+          "sigma": 6.88
+        }
+      }
+    },
+    {
+      "id": "6a0f196946e0c2028eaf81960f66dfa2",
+      "map": "The Tartar Steppe v1.1",
+      "winner": "Gsealy",
+      "duration_ms": 1795700,
+      "seed_ratings": {
+        "Gsealy": {
+          "mu": 4.73,
+          "sigma": 6.72
+        },
+        "gman001": {
+          "mu": 7.31,
+          "sigma": 6.88
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-21T15:08:49.287202+00:00",
+  "submitted_by": "atlasfailed"
+}

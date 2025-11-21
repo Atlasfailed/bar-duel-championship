@@ -1,0 +1,64 @@
+{
+  "players": [
+    "Florkini",
+    "ThomasNCG"
+  ],
+  "series_winner": "ThomasNCG",
+  "wins": {
+    "Florkini": 0,
+    "ThomasNCG": 3
+  },
+  "total_games": 3,
+  "matches": [
+    {
+      "id": "328b176979417c9985fa9a019910164b",
+      "map": "Comet Catcher Remake 1.8",
+      "winner": "ThomasNCG",
+      "duration_ms": 1000067,
+      "seed_ratings": {
+        "ThomasNCG": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "Florkini": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "53901769b7fdb49d7472b0ee40de8969",
+      "map": "Comet Catcher Remake 1.8",
+      "winner": "ThomasNCG",
+      "duration_ms": 2258500,
+      "seed_ratings": {
+        "ThomasNCG": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "Florkini": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    },
+    {
+      "id": "429a1769678a954260e5e4b7f37f0900",
+      "map": "Angel Crossing 1.5.1",
+      "winner": "ThomasNCG",
+      "duration_ms": 2159067,
+      "seed_ratings": {
+        "ThomasNCG": {
+          "mu": 16.67,
+          "sigma": 8.33
+        },
+        "Florkini": {
+          "mu": 16.67,
+          "sigma": 8.33
+        }
+      }
+    }
+  ],
+  "submitted_at": "2025-11-21T15:12:47.341408+00:00",
+  "submitted_by": "atlasfailed"
+}

@@ -795,6 +795,48 @@
     ]
   },
   {
+    "id": "429a1769678a954260e5e4b7f37f0900",
+    "url": "https://www.beyondallreason.info/replays?gameId=429a1769678a954260e5e4b7f37f0900",
+    "date": "2025-11-14T21:08:18.000Z",
+    "submitted_at": "2025-11-21T15:12:47.341408+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Angel Crossing 1.5.1",
+    "duration_ms": 2159067,
+    "duration_formatted": "35m 59s",
+    "winner": "ThomasNCG",
+    "players": [
+      {
+        "name": "Florkini",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "ThomasNCG",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "Florkini",
+      "ThomasNCG"
+    ],
+    "series_winner": "ThomasNCG",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28898-8bc4afb",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-angel-crossing-151"
+    ]
+  },
+  {
     "id": "9292176942e12ce97d26486c27d5876a",
     "url": "https://www.beyondallreason.info/replays?gameId=9292176942e12ce97d26486c27d5876a",
     "date": "2025-11-14T20:35:30.000Z",
@@ -834,6 +876,90 @@
       "long",
       "beginner-friendly",
       "map-supreme-isthmus-v21"
+    ]
+  },
+  {
+    "id": "53901769b7fdb49d7472b0ee40de8969",
+    "url": "https://www.beyondallreason.info/replays?gameId=53901769b7fdb49d7472b0ee40de8969",
+    "date": "2025-11-14T20:25:55.000Z",
+    "submitted_at": "2025-11-21T15:12:47.341408+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Comet Catcher Remake 1.8",
+    "duration_ms": 2258500,
+    "duration_formatted": "37m 38s",
+    "winner": "ThomasNCG",
+    "players": [
+      {
+        "name": "Florkini",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "ThomasNCG",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "Florkini",
+      "ThomasNCG"
+    ],
+    "series_winner": "ThomasNCG",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28898-8bc4afb",
+    "is_tournament": true,
+    "tags": [
+      "long",
+      "beginner-friendly",
+      "map-comet-catcher-remake-18"
+    ]
+  },
+  {
+    "id": "328b176979417c9985fa9a019910164b",
+    "url": "https://www.beyondallreason.info/replays?gameId=328b176979417c9985fa9a019910164b",
+    "date": "2025-11-14T20:04:02.000Z",
+    "submitted_at": "2025-11-21T15:12:47.341408+00:00",
+    "submitted_by": "atlasfailed",
+    "map": "Comet Catcher Remake 1.8",
+    "duration_ms": 1000067,
+    "duration_formatted": "16m 40s",
+    "winner": "ThomasNCG",
+    "players": [
+      {
+        "name": "Florkini",
+        "faction": "Unknown",
+        "is_winner": false,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      },
+      {
+        "name": "ThomasNCG",
+        "faction": "Unknown",
+        "is_winner": true,
+        "mu": 16.67,
+        "sigma": 8.33,
+        "skill_estimate": 8.340000000000002
+      }
+    ],
+    "player_names": [
+      "Florkini",
+      "ThomasNCG"
+    ],
+    "series_winner": "ThomasNCG",
+    "engine_version": "2025.04.08",
+    "game_version": "Beyond All Reason test-28898-8bc4afb",
+    "is_tournament": true,
+    "tags": [
+      "medium",
+      "beginner-friendly",
+      "map-comet-catcher-remake-18"
     ]
   },
   {

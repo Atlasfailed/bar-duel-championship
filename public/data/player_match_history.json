@@ -1173,6 +1173,132 @@
     "win_rate": 33.3,
     "most_played_faction": "Unknown"
   },
+  "Florkini": {
+    "player": "Florkini",
+    "total_matches": 3,
+    "wins": 0,
+    "losses": 3,
+    "recent_matches": [
+      {
+        "date": "2025-11-14T21:08:18.000Z",
+        "replay_id": "429a1769678a954260e5e4b7f37f0900",
+        "map": "Angel Crossing 1.5.1",
+        "duration_formatted": "35m 59s",
+        "won": false,
+        "opponent": "ThomasNCG",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T20:25:55.000Z",
+        "replay_id": "53901769b7fdb49d7472b0ee40de8969",
+        "map": "Comet Catcher Remake 1.8",
+        "duration_formatted": "37m 38s",
+        "won": false,
+        "opponent": "ThomasNCG",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T20:04:02.000Z",
+        "replay_id": "328b176979417c9985fa9a019910164b",
+        "map": "Comet Catcher Remake 1.8",
+        "duration_formatted": "16m 40s",
+        "won": false,
+        "opponent": "ThomasNCG",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Angel Crossing 1.5.1": 1,
+      "Comet Catcher Remake 1.8": 2
+    },
+    "opponents_faced": {
+      "ThomasNCG": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-14T20:04:02.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "328b176979417c9985fa9a019910164b"
+      },
+      {
+        "date": "2025-11-14T20:25:55.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "53901769b7fdb49d7472b0ee40de8969"
+      },
+      {
+        "date": "2025-11-14T21:08:18.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "429a1769678a954260e5e4b7f37f0900"
+      }
+    ],
+    "win_rate": 0.0,
+    "most_played_faction": "Unknown"
+  },
+  "ThomasNCG": {
+    "player": "ThomasNCG",
+    "total_matches": 3,
+    "wins": 3,
+    "losses": 0,
+    "recent_matches": [
+      {
+        "date": "2025-11-14T21:08:18.000Z",
+        "replay_id": "429a1769678a954260e5e4b7f37f0900",
+        "map": "Angel Crossing 1.5.1",
+        "duration_formatted": "35m 59s",
+        "won": true,
+        "opponent": "Florkini",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T20:25:55.000Z",
+        "replay_id": "53901769b7fdb49d7472b0ee40de8969",
+        "map": "Comet Catcher Remake 1.8",
+        "duration_formatted": "37m 38s",
+        "won": true,
+        "opponent": "Florkini",
+        "faction": "Unknown"
+      },
+      {
+        "date": "2025-11-14T20:04:02.000Z",
+        "replay_id": "328b176979417c9985fa9a019910164b",
+        "map": "Comet Catcher Remake 1.8",
+        "duration_formatted": "16m 40s",
+        "won": true,
+        "opponent": "Florkini",
+        "faction": "Unknown"
+      }
+    ],
+    "favorite_factions": {},
+    "maps_played": {
+      "Angel Crossing 1.5.1": 1,
+      "Comet Catcher Remake 1.8": 2
+    },
+    "opponents_faced": {
+      "Florkini": 3
+    },
+    "avg_match_duration": 0,
+    "skill_progression": [
+      {
+        "date": "2025-11-14T20:04:02.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "328b176979417c9985fa9a019910164b"
+      },
+      {
+        "date": "2025-11-14T20:25:55.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "53901769b7fdb49d7472b0ee40de8969"
+      },
+      {
+        "date": "2025-11-14T21:08:18.000Z",
+        "skill": 8.340000000000002,
+        "replay_id": "429a1769678a954260e5e4b7f37f0900"
+      }
+    ],
+    "win_rate": 100.0,
+    "most_played_faction": "Unknown"
+  },
   "CommanderXy": {
     "player": "CommanderXy",
     "total_matches": 3,
